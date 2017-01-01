@@ -7,7 +7,6 @@ import os
 import pickle
 
 class Options():
-
     def __init__(self, path, listOfPackages):
         self.path = path
         self.listOfPackages = listOfPackages
@@ -21,7 +20,6 @@ class Options():
         self.helper.find_and_compile(self.listOfPackages)
 
     def find_functions(self):
-
         functionDeclarations = self.ff.get_function_declarations_from_obj_code() #returns a unique list of functions declared in the object files
         self.gv.machine_code_operand_list = self.ff.get_machine_code_operands(self.path) #returns a list of all function references in the object files
         self.ff.calculate_distance(self.gv.machine_code_operand_list,declarationlist=functionDeclarations) # for each function, calculates the number average distance of references to it
@@ -35,12 +33,11 @@ class Options():
         #preprocess data for use in neural network
         check = set([(d['name'], os.path.basename(d['filename']).replace('.c','')) for d in self.gv.source_code_function_list])
         functionDeclarations = [d for d in functionDeclarations if (os.path.basename(d['file']).replace('.o.txt',''), d['match'].group(1)) not in check] #removes any functions not also in source code
-
+        
           # sort by function name and filename#
         functionDeclarations = self.ff.sort_list_of_dicts(functionDeclarations,'file')
         self.gv.source_code_function_list = self.ff.sort_list_of_dicts(self.gv.source_code_function_list, 'name')
-
-
+        
         formattedInput = list()
         formattedLabels = list()
         for f in functionDeclarations:
@@ -51,9 +48,7 @@ class Options():
 
         self.picksave(formattedInput, self.path + 'function_declarations')
         self.picksave(formattedLabels, self.path + 'source_code_function_list')
-
-
-
+        
     def find_if_while_statements(self):
         reg = list()
         reg.append(self.gv.regular_expressions['if_statements'])
@@ -68,14 +63,9 @@ class Options():
         for statement in whilelist:
             self.ff.match_line_numbers(statement)
         self.vectors.vectorise([1,0])
-
-
         filenamedata = input('Please choose a name to save the data you have collected\n')
         self.picksave(self.gv.machine_code_instruction_list_vectorised, self.path + filenamedata + '_data.pickle')
         self.picksave(self.gv.machine_code_instruction_list_labels, self.path + filenamedata + '_labels.pickle')
-
-
-
 
     def run_network(self):
         filelocdata = input('Please input pickle file where data resides:\n')
@@ -91,18 +81,14 @@ class Options():
         x_shape = (len(data)/sequencelength,sequencelength,dims)
         y_shape = (len(labels)/sequencelengthlabels,sequencelengthlabels,dimslabels)
         nn = NeuralNetwork.NeuralNetwork(batch_size=batch_size, epochs=epochs, data=data,labels=labels)
-
         nn.setupNetwork(x_shape, y_shape, dims, dimslabels, sequencelength)
-
-
 
     def picksave(self, data, fileloc):
         with open(fileloc, 'wb') as handle:
             pickle.dump(data, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
     def pickload(self, fileloc):
-
         with open(fileloc, 'rb') as handle:
             p = pickle.load(handle)
-
         return p
+    
