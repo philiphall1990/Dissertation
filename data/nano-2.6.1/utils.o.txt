@@ -1,0 +1,225 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-utils.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <gedit_utils_get_stdin>:
+gedit_utils_get_stdin():
+./src/utils.c:33
+   0:	55                   	push   %rbp
+   1:	53                   	push   %rbx
+./src/utils.c:41
+   2:	b9 10 00 00 00       	mov    $0x10,%ecx
+./src/utils.c:33
+   7:	48 81 ec a8 00 00 00 	sub    $0xa8,%rsp
+./src/utils.c:41
+   e:	48 8d 74 24 10       	lea    0x10(%rsp),%rsi
+./src/utils.c:33
+  13:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  1a:	00 00 
+  1c:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+  23:	00 
+  24:	31 c0                	xor    %eax,%eax
+./src/utils.c:41
+  26:	48 89 f7             	mov    %rsi,%rdi
+  29:	fc                   	cld    
+  2a:	f3 48 ab             	rep stos %rax,%es:(%rdi)
+./src/utils.c:48
+  2d:	31 c9                	xor    %ecx,%ecx
+  2f:	31 d2                	xor    %edx,%edx
+  31:	49 89 e0             	mov    %rsp,%r8
+  34:	bf 01 00 00 00       	mov    $0x1,%edi
+./src/utils.c:42
+  39:	48 83 4c 24 10 01    	orq    $0x1,0x10(%rsp)
+./src/utils.c:45
+  3f:	48 c7 04 24 00 00 00 	movq   $0x0,(%rsp)
+  46:	00 
+./src/utils.c:46
+  47:	48 c7 44 24 08 a0 86 	movq   $0x186a0,0x8(%rsp)
+  4e:	01 00 
+./src/utils.c:49
+  50:	31 ed                	xor    %ebp,%ebp
+./src/utils.c:48
+  52:	e8 00 00 00 00       	callq  57 <gedit_utils_get_stdin+0x57>
+  57:	83 f8 01             	cmp    $0x1,%eax
+  5a:	0f 85 8b 00 00 00    	jne    eb <gedit_utils_get_stdin+0xeb>
+./src/utils.c:51 (discriminator 1)
+  60:	bf 01 04 00 00       	mov    $0x401,%edi
+  65:	e8 00 00 00 00       	callq  6a <gedit_utils_get_stdin+0x6a>
+./src/utils.c:52 (discriminator 1)
+  6a:	48 85 c0             	test   %rax,%rax
+./src/utils.c:51 (discriminator 1)
+  6d:	48 89 c3             	mov    %rax,%rbx
+./src/utils.c:52 (discriminator 1)
+  70:	0f 84 ba 00 00 00    	je     130 <gedit_utils_get_stdin+0x130>
+./src/utils.c:54
+  76:	31 ff                	xor    %edi,%edi
+  78:	e8 00 00 00 00       	callq  7d <gedit_utils_get_stdin+0x7d>
+  7d:	48 89 c5             	mov    %rax,%rbp
+./src/utils.c:56
+  80:	eb 40                	jmp    c2 <gedit_utils_get_stdin+0xc2>
+  82:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+fread():
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:295
+  88:	48 8b 0d 00 00 00 00 	mov    0x0(%rip),%rcx        # 8f <gedit_utils_get_stdin+0x8f>
+  8f:	ba 00 04 00 00       	mov    $0x400,%edx
+  94:	be 01 00 00 00       	mov    $0x1,%esi
+  99:	48 89 df             	mov    %rbx,%rdi
+  9c:	e8 00 00 00 00       	callq  a1 <gedit_utils_get_stdin+0xa1>
+gedit_utils_get_stdin():
+./src/utils.c:60
+  a1:	48 89 de             	mov    %rbx,%rsi
+./src/utils.c:59
+  a4:	89 c0                	mov    %eax,%eax
+./src/utils.c:60
+  a6:	48 89 ef             	mov    %rbp,%rdi
+./src/utils.c:59
+  a9:	c6 04 03 00          	movb   $0x0,(%rbx,%rax,1)
+./src/utils.c:60
+  ad:	e8 00 00 00 00       	callq  b2 <gedit_utils_get_stdin+0xb2>
+./src/utils.c:62
+  b2:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # b9 <gedit_utils_get_stdin+0xb9>
+  b9:	e8 00 00 00 00       	callq  be <gedit_utils_get_stdin+0xbe>
+  be:	85 c0                	test   %eax,%eax
+  c0:	75 4e                	jne    110 <gedit_utils_get_stdin+0x110>
+./src/utils.c:56
+  c2:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # c9 <gedit_utils_get_stdin+0xc9>
+  c9:	e8 00 00 00 00       	callq  ce <gedit_utils_get_stdin+0xce>
+  ce:	85 c0                	test   %eax,%eax
+  d0:	74 b6                	je     88 <gedit_utils_get_stdin+0x88>
+./src/utils.c:72
+  d2:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # d9 <gedit_utils_get_stdin+0xd9>
+  d9:	e8 00 00 00 00       	callq  de <gedit_utils_get_stdin+0xde>
+./src/utils.c:74
+  de:	48 89 ef             	mov    %rbp,%rdi
+  e1:	31 f6                	xor    %esi,%esi
+  e3:	e8 00 00 00 00       	callq  e8 <gedit_utils_get_stdin+0xe8>
+  e8:	48 89 c5             	mov    %rax,%rbp
+./src/utils.c:75
+  eb:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+  f2:	00 
+  f3:	64 48 33 14 25 28 00 	xor    %fs:0x28,%rdx
+  fa:	00 00 
+  fc:	48 89 e8             	mov    %rbp,%rax
+  ff:	75 46                	jne    147 <gedit_utils_get_stdin+0x147>
+ 101:	48 81 c4 a8 00 00 00 	add    $0xa8,%rsp
+ 108:	5b                   	pop    %rbx
+ 109:	5d                   	pop    %rbp
+ 10a:	c3                   	retq   
+ 10b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/utils.c:66
+ 110:	48 89 df             	mov    %rbx,%rdi
+ 113:	e8 00 00 00 00       	callq  118 <gedit_utils_get_stdin+0x118>
+./src/utils.c:67
+ 118:	48 89 ef             	mov    %rbp,%rdi
+ 11b:	be 01 00 00 00       	mov    $0x1,%esi
+./src/utils.c:68
+ 120:	31 ed                	xor    %ebp,%ebp
+./src/utils.c:67
+ 122:	e8 00 00 00 00       	callq  127 <gedit_utils_get_stdin+0x127>
+./src/utils.c:68
+ 127:	eb c2                	jmp    eb <gedit_utils_get_stdin+0xeb>
+ 129:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/utils.c:52
+ 130:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 137 <gedit_utils_get_stdin+0x137>
+ 137:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 13e <gedit_utils_get_stdin+0x13e>
+ 13e:	31 ff                	xor    %edi,%edi
+ 140:	e8 00 00 00 00       	callq  145 <gedit_utils_get_stdin+0x145>
+ 145:	eb a4                	jmp    eb <gedit_utils_get_stdin+0xeb>
+./src/utils.c:75
+ 147:	e8 00 00 00 00       	callq  14c <gedit_utils_get_stdin+0x14c>
+ 14c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000000150 <create_button_with_stock_image>:
+create_button_with_stock_image():
+./src/utils.c:79
+ 150:	41 55                	push   %r13
+ 152:	41 54                	push   %r12
+ 154:	49 89 fc             	mov    %rdi,%r12
+ 157:	55                   	push   %rbp
+ 158:	53                   	push   %rbx
+ 159:	48 89 f5             	mov    %rsi,%rbp
+./src/utils.c:86
+ 15c:	31 ff                	xor    %edi,%edi
+ 15e:	be 02 00 00 00       	mov    $0x2,%esi
+./src/utils.c:79
+ 163:	48 83 ec 08          	sub    $0x8,%rsp
+./src/utils.c:86
+ 167:	e8 00 00 00 00       	callq  16c <create_button_with_stock_image+0x1c>
+./src/utils.c:88
+ 16c:	48 89 ef             	mov    %rbp,%rdi
+./src/utils.c:86
+ 16f:	48 89 c3             	mov    %rax,%rbx
+./src/utils.c:88
+ 172:	be 04 00 00 00       	mov    $0x4,%esi
+ 177:	e8 00 00 00 00       	callq  17c <create_button_with_stock_image+0x2c>
+ 17c:	49 89 c5             	mov    %rax,%r13
+./src/utils.c:89
+ 17f:	e8 00 00 00 00       	callq  184 <create_button_with_stock_image+0x34>
+ 184:	48 89 df             	mov    %rbx,%rdi
+ 187:	48 89 c6             	mov    %rax,%rsi
+ 18a:	48 89 c5             	mov    %rax,%rbp
+ 18d:	e8 00 00 00 00       	callq  192 <create_button_with_stock_image+0x42>
+ 192:	45 31 c0             	xor    %r8d,%r8d
+ 195:	31 c9                	xor    %ecx,%ecx
+ 197:	31 d2                	xor    %edx,%edx
+ 199:	4c 89 ee             	mov    %r13,%rsi
+ 19c:	48 89 c7             	mov    %rax,%rdi
+ 19f:	e8 00 00 00 00       	callq  1a4 <create_button_with_stock_image+0x54>
+./src/utils.c:91
+ 1a4:	4c 89 e7             	mov    %r12,%rdi
+ 1a7:	e8 00 00 00 00       	callq  1ac <create_button_with_stock_image+0x5c>
+./src/utils.c:92
+ 1ac:	48 89 ee             	mov    %rbp,%rsi
+./src/utils.c:91
+ 1af:	49 89 c4             	mov    %rax,%r12
+./src/utils.c:92
+ 1b2:	48 89 df             	mov    %rbx,%rdi
+ 1b5:	e8 00 00 00 00       	callq  1ba <create_button_with_stock_image+0x6a>
+ 1ba:	45 31 c0             	xor    %r8d,%r8d
+ 1bd:	31 c9                	xor    %ecx,%ecx
+ 1bf:	31 d2                	xor    %edx,%edx
+ 1c1:	4c 89 e6             	mov    %r12,%rsi
+ 1c4:	48 89 c7             	mov    %rax,%rdi
+ 1c7:	e8 00 00 00 00       	callq  1cc <create_button_with_stock_image+0x7c>
+./src/utils.c:94
+ 1cc:	66 0f ef db          	pxor   %xmm3,%xmm3
+ 1d0:	f3 0f 10 0d 00 00 00 	movss  0x0(%rip),%xmm1        # 1d8 <create_button_with_stock_image+0x88>
+ 1d7:	00 
+ 1d8:	0f 28 c1             	movaps %xmm1,%xmm0
+ 1db:	0f 28 d3             	movaps %xmm3,%xmm2
+ 1de:	e8 00 00 00 00       	callq  1e3 <create_button_with_stock_image+0x93>
+ 1e3:	48 89 c5             	mov    %rax,%rbp
+./src/utils.c:95
+ 1e6:	e8 00 00 00 00       	callq  1eb <create_button_with_stock_image+0x9b>
+ 1eb:	48 89 ef             	mov    %rbp,%rdi
+ 1ee:	48 89 c6             	mov    %rax,%rsi
+ 1f1:	49 89 c4             	mov    %rax,%r12
+ 1f4:	e8 00 00 00 00       	callq  1f9 <create_button_with_stock_image+0xa9>
+ 1f9:	48 89 de             	mov    %rbx,%rsi
+ 1fc:	48 89 c7             	mov    %rax,%rdi
+ 1ff:	e8 00 00 00 00       	callq  204 <create_button_with_stock_image+0xb4>
+./src/utils.c:97
+ 204:	e8 00 00 00 00       	callq  209 <create_button_with_stock_image+0xb9>
+./src/utils.c:98
+ 209:	4c 89 e6             	mov    %r12,%rsi
+ 20c:	48 89 c7             	mov    %rax,%rdi
+./src/utils.c:97
+ 20f:	48 89 c3             	mov    %rax,%rbx
+./src/utils.c:98
+ 212:	e8 00 00 00 00       	callq  217 <create_button_with_stock_image+0xc7>
+ 217:	48 89 ee             	mov    %rbp,%rsi
+ 21a:	48 89 c7             	mov    %rax,%rdi
+ 21d:	e8 00 00 00 00       	callq  222 <create_button_with_stock_image+0xd2>
+./src/utils.c:99
+ 222:	48 89 df             	mov    %rbx,%rdi
+ 225:	e8 00 00 00 00       	callq  22a <create_button_with_stock_image+0xda>
+./src/utils.c:102
+ 22a:	48 83 c4 08          	add    $0x8,%rsp
+ 22e:	48 89 d8             	mov    %rbx,%rax
+ 231:	5b                   	pop    %rbx
+ 232:	5d                   	pop    %rbp
+ 233:	41 5c                	pop    %r12
+ 235:	41 5d                	pop    %r13
+ 237:	c3                   	retq   

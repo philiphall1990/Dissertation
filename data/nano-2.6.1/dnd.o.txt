@@ -1,0 +1,376 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-dnd.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <dnd_drag_motion_handler>:
+dnd_drag_motion_handler():
+./src/dnd.c:187
+   0:	41 55                	push   %r13
+   2:	41 54                	push   %r12
+./src/dnd.c:193
+   4:	45 31 e4             	xor    %r12d,%r12d
+./src/dnd.c:187
+   7:	55                   	push   %rbp
+   8:	53                   	push   %rbx
+   9:	48 83 ec 08          	sub    $0x8,%rsp
+./src/dnd.c:192
+   d:	48 8b 5e 30          	mov    0x30(%rsi),%rbx
+./src/dnd.c:193
+  11:	48 85 db             	test   %rbx,%rbx
+  14:	74 3b                	je     51 <dnd_drag_motion_handler+0x51>
+./src/dnd.c:197
+  16:	41 bd 01 00 00 00    	mov    $0x1,%r13d
+  1c:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/dnd.c:194
+  20:	48 8b 3b             	mov    (%rbx),%rdi
+  23:	e8 00 00 00 00       	callq  28 <dnd_drag_motion_handler+0x28>
+./src/dnd.c:196
+  28:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 2f <dnd_drag_motion_handler+0x2f>
+./src/dnd.c:194
+  2f:	48 89 c5             	mov    %rax,%rbp
+./src/dnd.c:196
+  32:	48 89 c7             	mov    %rax,%rdi
+  35:	e8 00 00 00 00       	callq  3a <dnd_drag_motion_handler+0x3a>
+./src/dnd.c:198
+  3a:	48 89 ef             	mov    %rbp,%rdi
+./src/dnd.c:197
+  3d:	85 c0                	test   %eax,%eax
+  3f:	45 0f 44 e5          	cmove  %r13d,%r12d
+./src/dnd.c:198
+  43:	e8 00 00 00 00       	callq  48 <dnd_drag_motion_handler+0x48>
+./src/dnd.c:199
+  48:	48 8b 5b 08          	mov    0x8(%rbx),%rbx
+./src/dnd.c:193
+  4c:	48 85 db             	test   %rbx,%rbx
+  4f:	75 cf                	jne    20 <dnd_drag_motion_handler+0x20>
+./src/dnd.c:227
+  51:	48 83 c4 08          	add    $0x8,%rsp
+  55:	44 89 e0             	mov    %r12d,%eax
+  58:	5b                   	pop    %rbx
+  59:	5d                   	pop    %rbp
+  5a:	41 5c                	pop    %r12
+  5c:	41 5d                	pop    %r13
+  5e:	c3                   	retq   
+  5f:	90                   	nop
+
+0000000000000060 <dnd_drag_data_recieved_handler>:
+dnd_drag_data_recieved_handler():
+./src/dnd.c:89
+  60:	41 57                	push   %r15
+  62:	41 56                	push   %r14
+  64:	41 55                	push   %r13
+  66:	41 54                	push   %r12
+  68:	49 89 fd             	mov    %rdi,%r13
+  6b:	55                   	push   %rbp
+  6c:	53                   	push   %rbx
+  6d:	49 89 f4             	mov    %rsi,%r12
+  70:	4c 89 c5             	mov    %r8,%rbp
+  73:	44 89 cb             	mov    %r9d,%ebx
+  76:	48 83 ec 08          	sub    $0x8,%rsp
+./src/dnd.c:103
+  7a:	48 8b 46 30          	mov    0x30(%rsi),%rax
+  7e:	48 8b 38             	mov    (%rax),%rdi
+  81:	e8 00 00 00 00       	callq  86 <dnd_drag_data_recieved_handler+0x26>
+  86:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 8d <dnd_drag_data_recieved_handler+0x2d>
+  8d:	48 89 c7             	mov    %rax,%rdi
+  90:	e8 00 00 00 00       	callq  95 <dnd_drag_data_recieved_handler+0x35>
+  95:	85 c0                	test   %eax,%eax
+  97:	74 18                	je     b1 <dnd_drag_data_recieved_handler+0x51>
+./src/dnd.c:108
+  99:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 9f <dnd_drag_data_recieved_handler+0x3f>
+  9f:	85 c0                	test   %eax,%eax
+  a1:	0f 85 e9 01 00 00    	jne    290 <dnd_drag_data_recieved_handler+0x230>
+./src/dnd.c:114
+  a7:	c7 05 00 00 00 00 01 	movl   $0x1,0x0(%rip)        # b1 <dnd_drag_data_recieved_handler+0x51>
+  ae:	00 00 00 
+./src/dnd.c:137
+  b1:	83 fb 04             	cmp    $0x4,%ebx
+  b4:	48 8b 7d 20          	mov    0x20(%rbp),%rdi
+  b8:	75 05                	jne    bf <dnd_drag_data_recieved_handler+0x5f>
+  ba:	48 85 ff             	test   %rdi,%rdi
+  bd:	75 31                	jne    f0 <dnd_drag_data_recieved_handler+0x90>
+./src/dnd.c:166
+  bf:	e8 00 00 00 00       	callq  c4 <dnd_drag_data_recieved_handler+0x64>
+./src/dnd.c:167
+  c4:	31 ff                	xor    %edi,%edi
+  c6:	e8 00 00 00 00       	callq  cb <dnd_drag_data_recieved_handler+0x6b>
+./src/dnd.c:169
+  cb:	83 fb 01             	cmp    $0x1,%ebx
+  ce:	0f 84 6c 02 00 00    	je     340 <dnd_drag_data_recieved_handler+0x2e0>
+./src/dnd.c:175
+  d4:	83 fb 03             	cmp    $0x3,%ebx
+  d7:	0f 84 e3 01 00 00    	je     2c0 <dnd_drag_data_recieved_handler+0x260>
+./src/dnd.c:183
+  dd:	48 83 c4 08          	add    $0x8,%rsp
+  e1:	5b                   	pop    %rbx
+  e2:	5d                   	pop    %rbp
+  e3:	41 5c                	pop    %r12
+  e5:	41 5d                	pop    %r13
+  e7:	41 5e                	pop    %r14
+  e9:	41 5f                	pop    %r15
+  eb:	c3                   	retq   
+  ec:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/dnd.c:138
+  f0:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # f7 <dnd_drag_data_recieved_handler+0x97>
+  f7:	ba ff ff ff ff       	mov    $0xffffffff,%edx
+  fc:	e8 00 00 00 00       	callq  101 <dnd_drag_data_recieved_handler+0xa1>
+./src/dnd.c:139
+ 101:	48 8b 38             	mov    (%rax),%rdi
+./src/dnd.c:138
+ 104:	49 89 c5             	mov    %rax,%r13
+./src/dnd.c:139
+ 107:	48 85 ff             	test   %rdi,%rdi
+ 10a:	0f 84 10 02 00 00    	je     320 <dnd_drag_data_recieved_handler+0x2c0>
+./src/dnd.c:140
+ 110:	80 3f 00             	cmpb   $0x0,(%rdi)
+ 113:	0f 84 07 02 00 00    	je     320 <dnd_drag_data_recieved_handler+0x2c0>
+ 119:	31 db                	xor    %ebx,%ebx
+./src/dnd.c:154
+ 11b:	4c 8d 35 00 00 00 00 	lea    0x0(%rip),%r14        # 122 <dnd_drag_data_recieved_handler+0xc2>
+ 122:	e9 ad 00 00 00       	jmpq   1d4 <dnd_drag_data_recieved_handler+0x174>
+ 127:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 12e:	00 00 
+./src/dnd.c:146
+ 130:	83 fb 01             	cmp    $0x1,%ebx
+ 133:	0f 84 d7 01 00 00    	je     310 <dnd_drag_data_recieved_handler+0x2b0>
+./src/dnd.c:148
+ 139:	be 20 00 00 00       	mov    $0x20,%esi
+ 13e:	48 89 ef             	mov    %rbp,%rdi
+ 141:	e8 00 00 00 00       	callq  146 <dnd_drag_data_recieved_handler+0xe6>
+ 146:	48 85 c0             	test   %rax,%rax
+ 149:	0f 84 a9 01 00 00    	je     2f8 <dnd_drag_data_recieved_handler+0x298>
+./src/dnd.c:149
+ 14f:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 156 <dnd_drag_data_recieved_handler+0xf6>
+ 156:	ba ff ff ff ff       	mov    $0xffffffff,%edx
+ 15b:	48 89 ef             	mov    %rbp,%rdi
+ 15e:	e8 00 00 00 00       	callq  163 <dnd_drag_data_recieved_handler+0x103>
+./src/dnd.c:150
+ 163:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 16a <dnd_drag_data_recieved_handler+0x10a>
+./src/dnd.c:149
+ 16a:	49 89 c4             	mov    %rax,%r12
+./src/dnd.c:150
+ 16d:	48 89 c6             	mov    %rax,%rsi
+ 170:	e8 00 00 00 00       	callq  175 <dnd_drag_data_recieved_handler+0x115>
+./src/dnd.c:151
+ 175:	4c 89 e7             	mov    %r12,%rdi
+./src/dnd.c:150
+ 178:	49 89 c7             	mov    %rax,%r15
+./src/dnd.c:151
+ 17b:	e8 00 00 00 00       	callq  180 <dnd_drag_data_recieved_handler+0x120>
+./src/dnd.c:154
+ 180:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 187 <dnd_drag_data_recieved_handler+0x127>
+ 187:	4c 89 f6             	mov    %r14,%rsi
+ 18a:	4c 89 fa             	mov    %r15,%rdx
+ 18d:	31 c0                	xor    %eax,%eax
+ 18f:	e8 00 00 00 00       	callq  194 <dnd_drag_data_recieved_handler+0x134>
+./src/dnd.c:156
+ 194:	4c 89 ff             	mov    %r15,%rdi
+./src/dnd.c:154
+ 197:	49 89 c4             	mov    %rax,%r12
+./src/dnd.c:156
+ 19a:	e8 00 00 00 00       	callq  19f <dnd_drag_data_recieved_handler+0x13f>
+./src/dnd.c:157
+ 19f:	31 f6                	xor    %esi,%esi
+ 1a1:	4c 89 e7             	mov    %r12,%rdi
+ 1a4:	e8 00 00 00 00       	callq  1a9 <dnd_drag_data_recieved_handler+0x149>
+./src/dnd.c:158
+ 1a9:	4c 89 e7             	mov    %r12,%rdi
+ 1ac:	e8 00 00 00 00       	callq  1b1 <dnd_drag_data_recieved_handler+0x151>
+./src/dnd.c:160
+ 1b1:	48 89 ef             	mov    %rbp,%rdi
+ 1b4:	e8 00 00 00 00       	callq  1b9 <dnd_drag_data_recieved_handler+0x159>
+./src/dnd.c:139
+ 1b9:	49 8b 7c dd 08       	mov    0x8(%r13,%rbx,8),%rdi
+ 1be:	48 85 ff             	test   %rdi,%rdi
+ 1c1:	0f 84 59 01 00 00    	je     320 <dnd_drag_data_recieved_handler+0x2c0>
+ 1c7:	48 83 c3 01          	add    $0x1,%rbx
+./src/dnd.c:140
+ 1cb:	80 3f 00             	cmpb   $0x0,(%rdi)
+ 1ce:	0f 84 4c 01 00 00    	je     320 <dnd_drag_data_recieved_handler+0x2c0>
+./src/dnd.c:142
+ 1d4:	e8 00 00 00 00       	callq  1d9 <dnd_drag_data_recieved_handler+0x179>
+ 1d9:	48 89 c7             	mov    %rax,%rdi
+ 1dc:	e8 00 00 00 00       	callq  1e1 <dnd_drag_data_recieved_handler+0x181>
+ 1e1:	48 89 c7             	mov    %rax,%rdi
+ 1e4:	e8 00 00 00 00       	callq  1e9 <dnd_drag_data_recieved_handler+0x189>
+./src/dnd.c:143
+ 1e9:	48 85 db             	test   %rbx,%rbx
+./src/dnd.c:142
+ 1ec:	48 89 c5             	mov    %rax,%rbp
+./src/dnd.c:143
+ 1ef:	0f 85 3b ff ff ff    	jne    130 <dnd_drag_data_recieved_handler+0xd0>
+dnd_open_first_file():
+./src/dnd.c:68
+ 1f5:	e8 00 00 00 00       	callq  1fa <dnd_drag_data_recieved_handler+0x19a>
+ 1fa:	85 c0                	test   %eax,%eax
+ 1fc:	75 b3                	jne    1b1 <dnd_drag_data_recieved_handler+0x151>
+./src/dnd.c:70
+ 1fe:	bf 18 00 00 00       	mov    $0x18,%edi
+ 203:	e8 00 00 00 00       	callq  208 <dnd_drag_data_recieved_handler+0x1a8>
+./src/dnd.c:71
+ 208:	48 89 ef             	mov    %rbp,%rdi
+./src/dnd.c:70
+ 20b:	49 89 c4             	mov    %rax,%r12
+./src/dnd.c:71
+ 20e:	e8 00 00 00 00       	callq  213 <dnd_drag_data_recieved_handler+0x1b3>
+./src/dnd.c:72
+ 213:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 21a <dnd_drag_data_recieved_handler+0x1ba>
+./src/dnd.c:71
+ 21a:	49 89 04 24          	mov    %rax,(%r12)
+./src/dnd.c:72
+ 21e:	31 c0                	xor    %eax,%eax
+ 220:	48 8b 32             	mov    (%rdx),%rsi
+ 223:	8b 4e 10             	mov    0x10(%rsi),%ecx
+ 226:	85 c9                	test   %ecx,%ecx
+ 228:	0f 85 2a 01 00 00    	jne    358 <dnd_drag_data_recieved_handler+0x2f8>
+./src/dnd.c:74
+ 22e:	41 c6 44 24 14 0a    	movb   $0xa,0x14(%r12)
+./src/dnd.c:72
+ 234:	49 89 44 24 08       	mov    %rax,0x8(%r12)
+./src/dnd.c:75
+ 239:	4c 89 e6             	mov    %r12,%rsi
+ 23c:	48 8b 42 08          	mov    0x8(%rdx),%rax
+./src/dnd.c:73
+ 240:	41 89 4c 24 10       	mov    %ecx,0x10(%r12)
+./src/dnd.c:75
+ 245:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 249:	e8 00 00 00 00       	callq  24e <dnd_drag_data_recieved_handler+0x1ee>
+ 24e:	85 c0                	test   %eax,%eax
+ 250:	0f 85 53 ff ff ff    	jne    1a9 <dnd_drag_data_recieved_handler+0x149>
+./src/dnd.c:78
+ 256:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 25d <dnd_drag_data_recieved_handler+0x1fd>
+ 25d:	48 8b 38             	mov    (%rax),%rdi
+ 260:	e8 00 00 00 00       	callq  265 <dnd_drag_data_recieved_handler+0x205>
+./src/dnd.c:79
+ 265:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 26c <dnd_drag_data_recieved_handler+0x20c>
+ 26c:	4c 89 20             	mov    %r12,(%rax)
+./src/dnd.c:80
+ 26f:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 273:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 277:	e8 00 00 00 00       	callq  27c <dnd_drag_data_recieved_handler+0x21c>
+./src/dnd.c:81
+ 27c:	e8 00 00 00 00       	callq  281 <dnd_drag_data_recieved_handler+0x221>
+ 281:	e9 2b ff ff ff       	jmpq   1b1 <dnd_drag_data_recieved_handler+0x151>
+ 286:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 28d:	00 00 00 
+dnd_drag_data_recieved_handler():
+./src/dnd.c:109
+ 290:	c7 05 00 00 00 00 00 	movl   $0x0,0x0(%rip)        # 29a <dnd_drag_data_recieved_handler+0x23a>
+ 297:	00 00 00 
+./src/dnd.c:183
+ 29a:	48 83 c4 08          	add    $0x8,%rsp
+./src/dnd.c:110
+ 29e:	4c 89 ef             	mov    %r13,%rdi
+./src/dnd.c:183
+ 2a1:	5b                   	pop    %rbx
+ 2a2:	5d                   	pop    %rbp
+ 2a3:	41 5c                	pop    %r12
+ 2a5:	41 5d                	pop    %r13
+ 2a7:	41 5e                	pop    %r14
+ 2a9:	41 5f                	pop    %r15
+./src/dnd.c:110
+ 2ab:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 2b2 <dnd_drag_data_recieved_handler+0x252>
+ 2b2:	e9 00 00 00 00       	jmpq   2b7 <dnd_drag_data_recieved_handler+0x257>
+ 2b7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 2be:	00 00 
+./src/dnd.c:176
+ 2c0:	48 8b 7d 20          	mov    0x20(%rbp),%rdi
+ 2c4:	31 d2                	xor    %edx,%edx
+ 2c6:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+ 2cd:	e8 00 00 00 00       	callq  2d2 <dnd_drag_data_recieved_handler+0x272>
+ 2d2:	85 c0                	test   %eax,%eax
+ 2d4:	0f 84 03 fe ff ff    	je     dd <dnd_drag_data_recieved_handler+0x7d>
+./src/dnd.c:178
+ 2da:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 2e1 <dnd_drag_data_recieved_handler+0x281>
+ 2e1:	31 f6                	xor    %esi,%esi
+ 2e3:	e8 00 00 00 00       	callq  2e8 <dnd_drag_data_recieved_handler+0x288>
+./src/dnd.c:177
+ 2e8:	48 89 45 10          	mov    %rax,0x10(%rbp)
+ 2ec:	e9 ec fd ff ff       	jmpq   dd <dnd_drag_data_recieved_handler+0x7d>
+ 2f1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/dnd.c:153
+ 2f8:	48 89 ef             	mov    %rbp,%rdi
+ 2fb:	e8 00 00 00 00       	callq  300 <dnd_drag_data_recieved_handler+0x2a0>
+ 300:	49 89 c7             	mov    %rax,%r15
+ 303:	e9 78 fe ff ff       	jmpq   180 <dnd_drag_data_recieved_handler+0x120>
+ 308:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 30f:	00 
+./src/dnd.c:147
+ 310:	e8 00 00 00 00       	callq  315 <dnd_drag_data_recieved_handler+0x2b5>
+ 315:	e9 1f fe ff ff       	jmpq   139 <dnd_drag_data_recieved_handler+0xd9>
+ 31a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/dnd.c:183
+ 320:	48 83 c4 08          	add    $0x8,%rsp
+./src/dnd.c:163
+ 324:	4c 89 ef             	mov    %r13,%rdi
+./src/dnd.c:183
+ 327:	5b                   	pop    %rbx
+ 328:	5d                   	pop    %rbp
+ 329:	41 5c                	pop    %r12
+ 32b:	41 5d                	pop    %r13
+ 32d:	41 5e                	pop    %r14
+ 32f:	41 5f                	pop    %r15
+./src/dnd.c:163
+ 331:	e9 00 00 00 00       	jmpq   336 <dnd_drag_data_recieved_handler+0x2d6>
+ 336:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 33d:	00 00 00 
+./src/dnd.c:173
+ 340:	e8 00 00 00 00       	callq  345 <dnd_drag_data_recieved_handler+0x2e5>
+./src/dnd.c:174
+ 345:	41 c7 44 24 40 04 00 	movl   $0x4,0x40(%r12)
+ 34c:	00 00 
+ 34e:	e9 8a fd ff ff       	jmpq   dd <dnd_drag_data_recieved_handler+0x7d>
+ 353:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+dnd_open_first_file():
+./src/dnd.c:72
+ 358:	48 8b 7e 08          	mov    0x8(%rsi),%rdi
+ 35c:	e8 00 00 00 00       	callq  361 <dnd_drag_data_recieved_handler+0x301>
+ 361:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 368 <dnd_drag_data_recieved_handler+0x308>
+ 368:	48 8b 0a             	mov    (%rdx),%rcx
+ 36b:	8b 49 10             	mov    0x10(%rcx),%ecx
+ 36e:	e9 bb fe ff ff       	jmpq   22e <dnd_drag_data_recieved_handler+0x1ce>
+dnd_drag_data_recieved_handler():
+ 373:	0f 1f 00             	nopl   (%rax)
+ 376:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 37d:	00 00 00 
+
+0000000000000380 <dnd_init>:
+dnd_init():
+./src/dnd.c:54
+ 380:	53                   	push   %rbx
+./src/dnd.c:55
+ 381:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 388 <dnd_init+0x8>
+./src/dnd.c:54
+ 388:	48 89 fb             	mov    %rdi,%rbx
+./src/dnd.c:55
+ 38b:	41 b8 02 00 00 00    	mov    $0x2,%r8d
+ 391:	b9 04 00 00 00       	mov    $0x4,%ecx
+ 396:	be 07 00 00 00       	mov    $0x7,%esi
+ 39b:	e8 00 00 00 00       	callq  3a0 <dnd_init+0x20>
+./src/dnd.c:57
+ 3a0:	48 89 df             	mov    %rbx,%rdi
+ 3a3:	be 50 00 00 00       	mov    $0x50,%esi
+ 3a8:	e8 00 00 00 00       	callq  3ad <dnd_init+0x2d>
+ 3ad:	48 8d 15 ac fc ff ff 	lea    -0x354(%rip),%rdx        # 60 <dnd_drag_data_recieved_handler>
+ 3b4:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 3bb <dnd_init+0x3b>
+ 3bb:	45 31 c9             	xor    %r9d,%r9d
+ 3be:	45 31 c0             	xor    %r8d,%r8d
+ 3c1:	31 c9                	xor    %ecx,%ecx
+ 3c3:	48 89 c7             	mov    %rax,%rdi
+ 3c6:	e8 00 00 00 00       	callq  3cb <dnd_init+0x4b>
+./src/dnd.c:59
+ 3cb:	48 89 df             	mov    %rbx,%rdi
+ 3ce:	be 50 00 00 00       	mov    $0x50,%esi
+ 3d3:	e8 00 00 00 00       	callq  3d8 <dnd_init+0x58>
+./src/dnd.c:61
+ 3d8:	5b                   	pop    %rbx
+./src/dnd.c:59
+ 3d9:	48 8d 15 20 fc ff ff 	lea    -0x3e0(%rip),%rdx        # 0 <dnd_drag_motion_handler>
+ 3e0:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 3e7 <dnd_init+0x67>
+ 3e7:	45 31 c9             	xor    %r9d,%r9d
+ 3ea:	45 31 c0             	xor    %r8d,%r8d
+ 3ed:	31 c9                	xor    %ecx,%ecx
+ 3ef:	48 89 c7             	mov    %rax,%rdi
+ 3f2:	e9 00 00 00 00       	jmpq   3f7 <dnd_init+0x77>

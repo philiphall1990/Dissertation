@@ -1,0 +1,662 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-file.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <check_file_writable>:
+check_file_writable():
+./src/file.c:35
+   0:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 7 <check_file_writable+0x7>
+./src/file.c:32
+   7:	48 83 ec 08          	sub    $0x8,%rsp
+./src/file.c:35
+   b:	e8 00 00 00 00       	callq  10 <check_file_writable+0x10>
+  10:	48 89 c7             	mov    %rax,%rdi
+  13:	31 c0                	xor    %eax,%eax
+  15:	48 85 ff             	test   %rdi,%rdi
+  18:	74 0a                	je     24 <check_file_writable+0x24>
+./src/file.c:36
+  1a:	e8 00 00 00 00       	callq  1f <check_file_writable+0x1f>
+./src/file.c:37
+  1f:	b8 01 00 00 00       	mov    $0x1,%eax
+./src/file.c:40
+  24:	48 83 c4 08          	add    $0x8,%rsp
+  28:	c3                   	retq   
+  29:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000000030 <get_file_basename>:
+get_file_basename():
+./src/file.c:48
+  30:	48 85 ff             	test   %rdi,%rdi
+./src/file.c:43
+  33:	41 54                	push   %r12
+  35:	41 89 f4             	mov    %esi,%r12d
+  38:	55                   	push   %rbp
+  39:	53                   	push   %rbx
+./src/file.c:48
+  3a:	74 7c                	je     b8 <get_file_basename+0x88>
+./src/file.c:50
+  3c:	45 31 c0             	xor    %r8d,%r8d
+  3f:	31 c9                	xor    %ecx,%ecx
+  41:	31 d2                	xor    %edx,%edx
+  43:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+  4a:	48 89 fb             	mov    %rdi,%rbx
+  4d:	e8 00 00 00 00       	callq  52 <get_file_basename+0x22>
+./src/file.c:49
+  52:	48 89 c7             	mov    %rax,%rdi
+  55:	e8 00 00 00 00       	callq  5a <get_file_basename+0x2a>
+./src/file.c:52
+  5a:	45 31 c0             	xor    %r8d,%r8d
+  5d:	31 c9                	xor    %ecx,%ecx
+  5f:	31 d2                	xor    %edx,%edx
+  61:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+  68:	48 89 df             	mov    %rbx,%rdi
+./src/file.c:49
+  6b:	48 89 c5             	mov    %rax,%rbp
+./src/file.c:52
+  6e:	e8 00 00 00 00       	callq  73 <get_file_basename+0x43>
+./src/file.c:51
+  73:	be 10 00 00 00       	mov    $0x10,%esi
+  78:	48 89 c7             	mov    %rax,%rdi
+  7b:	e8 00 00 00 00       	callq  80 <get_file_basename+0x50>
+./src/file.c:59
+  80:	45 85 e4             	test   %r12d,%r12d
+  83:	74 14                	je     99 <get_file_basename+0x69>
+./src/file.c:60
+  85:	85 c0                	test   %eax,%eax
+  87:	74 52                	je     db <get_file_basename+0xab>
+./src/file.c:66
+  89:	48 89 df             	mov    %rbx,%rdi
+  8c:	e8 00 00 00 00       	callq  91 <get_file_basename+0x61>
+  91:	85 c0                	test   %eax,%eax
+  93:	0f 84 a7 00 00 00    	je     140 <get_file_basename+0x110>
+./src/file.c:76
+  99:	48 89 ef             	mov    %rbp,%rdi
+  9c:	e8 00 00 00 00       	callq  a1 <get_file_basename+0x71>
+./src/file.c:77
+  a1:	48 89 ef             	mov    %rbp,%rdi
+./src/file.c:76
+  a4:	48 89 c3             	mov    %rax,%rbx
+./src/file.c:77
+  a7:	e8 00 00 00 00       	callq  ac <get_file_basename+0x7c>
+./src/file.c:80
+  ac:	48 89 d8             	mov    %rbx,%rax
+  af:	5b                   	pop    %rbx
+  b0:	5d                   	pop    %rbp
+  b1:	41 5c                	pop    %r12
+  b3:	c3                   	retq   
+  b4:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/file.c:55
+  b8:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # bf <get_file_basename+0x8f>
+  bf:	31 ff                	xor    %edi,%edi
+  c1:	ba 05 00 00 00       	mov    $0x5,%edx
+  c6:	e8 00 00 00 00       	callq  cb <get_file_basename+0x9b>
+  cb:	48 89 c7             	mov    %rax,%rdi
+  ce:	e8 00 00 00 00       	callq  d3 <get_file_basename+0xa3>
+./src/file.c:59
+  d3:	45 85 e4             	test   %r12d,%r12d
+./src/file.c:55
+  d6:	48 89 c5             	mov    %rax,%rbp
+./src/file.c:59
+  d9:	74 be                	je     99 <get_file_basename+0x69>
+./src/file.c:61
+  db:	48 89 ef             	mov    %rbp,%rdi
+  de:	e8 00 00 00 00       	callq  e3 <get_file_basename+0xb3>
+./src/file.c:62
+  e3:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # ea <get_file_basename+0xba>
+  ea:	48 89 c7             	mov    %rax,%rdi
+./src/file.c:61
+  ed:	49 89 c4             	mov    %rax,%r12
+./src/file.c:62
+  f0:	e8 00 00 00 00       	callq  f5 <get_file_basename+0xc5>
+./src/file.c:63
+  f5:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # fc <get_file_basename+0xcc>
+./src/file.c:69
+  fc:	4c 89 e7             	mov    %r12,%rdi
+  ff:	e8 00 00 00 00       	callq  104 <get_file_basename+0xd4>
+./src/file.c:70
+ 104:	49 8b 3c 24          	mov    (%r12),%rdi
+ 108:	e8 00 00 00 00       	callq  10d <get_file_basename+0xdd>
+./src/file.c:71
+ 10d:	be 01 00 00 00       	mov    $0x1,%esi
+./src/file.c:70
+ 112:	48 89 c3             	mov    %rax,%rbx
+./src/file.c:71
+ 115:	4c 89 e7             	mov    %r12,%rdi
+ 118:	e8 00 00 00 00       	callq  11d <get_file_basename+0xed>
+./src/file.c:75
+ 11d:	48 85 db             	test   %rbx,%rbx
+ 120:	0f 84 73 ff ff ff    	je     99 <get_file_basename+0x69>
+./src/file.c:77
+ 126:	48 89 ef             	mov    %rbp,%rdi
+ 129:	e8 00 00 00 00       	callq  12e <get_file_basename+0xfe>
+./src/file.c:80
+ 12e:	48 89 d8             	mov    %rbx,%rax
+ 131:	5b                   	pop    %rbx
+ 132:	5d                   	pop    %rbp
+ 133:	41 5c                	pop    %r12
+ 135:	c3                   	retq   
+ 136:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 13d:	00 00 00 
+./src/file.c:67
+ 140:	48 89 ef             	mov    %rbp,%rdi
+ 143:	e8 00 00 00 00       	callq  148 <get_file_basename+0x118>
+./src/file.c:68
+ 148:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 14f <get_file_basename+0x11f>
+ 14f:	48 89 c7             	mov    %rax,%rdi
+./src/file.c:67
+ 152:	49 89 c4             	mov    %rax,%r12
+./src/file.c:68
+ 155:	e8 00 00 00 00       	callq  15a <get_file_basename+0x12a>
+./src/file.c:69
+ 15a:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 161 <get_file_basename+0x131>
+ 161:	eb 99                	jmp    fc <get_file_basename+0xcc>
+ 163:	0f 1f 00             	nopl   (%rax)
+ 166:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 16d:	00 00 00 
+
+0000000000000170 <parse_file_uri>:
+parse_file_uri():
+./src/file.c:83
+ 170:	53                   	push   %rbx
+./src/file.c:87
+ 171:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 178 <parse_file_uri+0x8>
+ 178:	be 05 00 00 00       	mov    $0x5,%esi
+./src/file.c:83
+ 17d:	48 89 fb             	mov    %rdi,%rbx
+./src/file.c:87
+ 180:	e8 00 00 00 00       	callq  185 <parse_file_uri+0x15>
+ 185:	48 85 c0             	test   %rax,%rax
+ 188:	74 16                	je     1a0 <parse_file_uri+0x30>
+./src/file.c:88
+ 18a:	48 89 df             	mov    %rbx,%rdi
+ 18d:	31 d2                	xor    %edx,%edx
+ 18f:	31 f6                	xor    %esi,%esi
+./src/file.c:103
+ 191:	5b                   	pop    %rbx
+./src/file.c:88
+ 192:	e9 00 00 00 00       	jmpq   197 <parse_file_uri+0x27>
+ 197:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 19e:	00 00 
+./src/file.c:90
+ 1a0:	48 89 df             	mov    %rbx,%rdi
+ 1a3:	e8 00 00 00 00       	callq  1a8 <parse_file_uri+0x38>
+ 1a8:	85 c0                	test   %eax,%eax
+ 1aa:	75 1c                	jne    1c8 <parse_file_uri+0x58>
+./src/file.c:93
+ 1ac:	e8 00 00 00 00       	callq  1b1 <parse_file_uri+0x41>
+ 1b1:	48 89 de             	mov    %rbx,%rsi
+ 1b4:	48 89 c7             	mov    %rax,%rdi
+ 1b7:	31 d2                	xor    %edx,%edx
+./src/file.c:103
+ 1b9:	5b                   	pop    %rbx
+./src/file.c:93
+ 1ba:	31 c0                	xor    %eax,%eax
+ 1bc:	e9 00 00 00 00       	jmpq   1c1 <parse_file_uri+0x51>
+ 1c1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/file.c:91
+ 1c8:	48 89 df             	mov    %rbx,%rdi
+./src/file.c:103
+ 1cb:	5b                   	pop    %rbx
+./src/file.c:91
+ 1cc:	e9 00 00 00 00       	jmpq   1d1 <parse_file_uri+0x61>
+ 1d1:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 1d6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 1dd:	00 00 00 
+
+00000000000001e0 <file_open_real>:
+file_open_real():
+./src/file.c:106
+ 1e0:	41 57                	push   %r15
+ 1e2:	41 56                	push   %r14
+ 1e4:	49 89 fe             	mov    %rdi,%r14
+ 1e7:	41 55                	push   %r13
+ 1e9:	41 54                	push   %r12
+ 1eb:	49 89 f4             	mov    %rsi,%r12
+ 1ee:	55                   	push   %rbp
+ 1ef:	53                   	push   %rbx
+ 1f0:	48 81 ec 98 00 00 00 	sub    $0x98,%rsp
+ 1f7:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 1fe:	00 00 
+ 200:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 207:	00 
+ 208:	31 c0                	xor    %eax,%eax
+./src/file.c:109
+ 20a:	48 c7 44 24 28 00 00 	movq   $0x0,0x28(%rsp)
+ 211:	00 00 
+./src/file.c:116
+ 213:	48 8d 6c 24 28       	lea    0x28(%rsp),%rbp
+./src/file.c:114
+ 218:	e8 00 00 00 00       	callq  21d <file_open_real+0x3d>
+ 21d:	4c 89 f7             	mov    %r14,%rdi
+ 220:	48 89 c6             	mov    %rax,%rsi
+ 223:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 228:	e8 00 00 00 00       	callq  22d <file_open_real+0x4d>
+ 22d:	48 89 c7             	mov    %rax,%rdi
+ 230:	e8 00 00 00 00       	callq  235 <file_open_real+0x55>
+./src/file.c:116
+ 235:	49 8b 3c 24          	mov    (%r12),%rdi
+ 239:	48 8d 54 24 20       	lea    0x20(%rsp),%rdx
+ 23e:	48 8d 74 24 18       	lea    0x18(%rsp),%rsi
+ 243:	48 89 e9             	mov    %rbp,%rcx
+./src/file.c:114
+ 246:	49 89 c5             	mov    %rax,%r13
+./src/file.c:116
+ 249:	e8 00 00 00 00       	callq  24e <file_open_real+0x6e>
+ 24e:	85 c0                	test   %eax,%eax
+ 250:	0f 84 a2 01 00 00    	je     3f8 <file_open_real+0x218>
+ 256:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+./src/file.c:128
+ 25b:	e8 00 00 00 00       	callq  260 <file_open_real+0x80>
+./src/file.c:129
+ 260:	3c 0a                	cmp    $0xa,%al
+./src/file.c:128
+ 262:	41 88 44 24 14       	mov    %al,0x14(%r12)
+./src/file.c:129
+ 267:	74 0a                	je     273 <file_open_real+0x93>
+./src/file.c:130
+ 269:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+ 26e:	e8 00 00 00 00       	callq  273 <file_open_real+0x93>
+./src/file.c:132
+ 273:	49 8b 5c 24 08       	mov    0x8(%r12),%rbx
+ 278:	48 85 db             	test   %rbx,%rbx
+ 27b:	0f 84 cd 01 00 00    	je     44e <file_open_real+0x26e>
+./src/file.c:140
+ 281:	48 83 7c 24 20 00    	cmpq   $0x0,0x20(%rsp)
+ 287:	74 5f                	je     2e8 <file_open_real+0x108>
+ 289:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+./src/file.c:142
+ 28e:	48 85 ff             	test   %rdi,%rdi
+ 291:	75 3a                	jne    2cd <file_open_real+0xed>
+ 293:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/file.c:147
+ 298:	48 83 ec 08          	sub    $0x8,%rsp
+ 29c:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 2a3 <file_open_real+0xc3>
+ 2a3:	45 31 c9             	xor    %r9d,%r9d
+ 2a6:	55                   	push   %rbp
+ 2a7:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 2ac:	45 31 c0             	xor    %r8d,%r8d
+ 2af:	48 89 d9             	mov    %rbx,%rcx
+ 2b2:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+ 2b9:	e8 00 00 00 00       	callq  2be <file_open_real+0xde>
+./src/file.c:148
+ 2be:	48 8b 7c 24 38       	mov    0x38(%rsp),%rdi
+./src/file.c:147
+ 2c3:	49 89 c7             	mov    %rax,%r15
+./src/file.c:148
+ 2c6:	5a                   	pop    %rdx
+ 2c7:	59                   	pop    %rcx
+ 2c8:	48 85 ff             	test   %rdi,%rdi
+ 2cb:	74 2a                	je     2f7 <file_open_real+0x117>
+./src/file.c:144
+ 2cd:	e8 00 00 00 00       	callq  2d2 <file_open_real+0xf2>
+./src/file.c:143
+ 2d2:	48 8d 1d 00 00 00 00 	lea    0x0(%rip),%rbx        # 2d9 <file_open_real+0xf9>
+./src/file.c:145
+ 2d9:	48 c7 44 24 28 00 00 	movq   $0x0,0x28(%rsp)
+ 2e0:	00 00 
+ 2e2:	eb b4                	jmp    298 <file_open_real+0xb8>
+ 2e4:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/file.c:150
+ 2e8:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 2ef <file_open_real+0x10f>
+ 2ef:	e8 00 00 00 00       	callq  2f4 <file_open_real+0x114>
+ 2f4:	49 89 c7             	mov    %rax,%r15
+./src/file.c:151
+ 2f7:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+ 2fc:	e8 00 00 00 00       	callq  301 <file_open_real+0x121>
+./src/file.c:153
+ 301:	49 8b 7c 24 08       	mov    0x8(%r12),%rdi
+ 306:	48 39 fb             	cmp    %rdi,%rbx
+ 309:	74 1f                	je     32a <file_open_real+0x14a>
+./src/file.c:154
+ 30b:	e8 00 00 00 00       	callq  310 <file_open_real+0x130>
+./src/file.c:155
+ 310:	48 89 df             	mov    %rbx,%rdi
+ 313:	e8 00 00 00 00       	callq  318 <file_open_real+0x138>
+ 318:	49 89 44 24 08       	mov    %rax,0x8(%r12)
+./src/file.c:156
+ 31d:	41 8b 44 24 10       	mov    0x10(%r12),%eax
+ 322:	85 c0                	test   %eax,%eax
+ 324:	0f 85 16 01 00 00    	jne    440 <file_open_real+0x260>
+./src/file.c:162
+ 32a:	4c 89 f7             	mov    %r14,%rdi
+./src/file.c:165
+ 32d:	48 8d 5c 24 30       	lea    0x30(%rsp),%rbx
+./src/file.c:162
+ 332:	e8 00 00 00 00       	callq  337 <file_open_real+0x157>
+./src/file.c:164
+ 337:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 33e <file_open_real+0x15e>
+ 33e:	31 d2                	xor    %edx,%edx
+ 340:	4c 89 ef             	mov    %r13,%rdi
+ 343:	e8 00 00 00 00       	callq  348 <file_open_real+0x168>
+./src/file.c:165
+ 348:	48 89 de             	mov    %rbx,%rsi
+ 34b:	4c 89 ef             	mov    %r13,%rdi
+ 34e:	e8 00 00 00 00       	callq  353 <file_open_real+0x173>
+./src/file.c:166
+ 353:	4c 89 ff             	mov    %r15,%rdi
+ 356:	e8 00 00 00 00       	callq  35b <file_open_real+0x17b>
+ 35b:	4c 89 fa             	mov    %r15,%rdx
+ 35e:	89 c1                	mov    %eax,%ecx
+ 360:	48 89 de             	mov    %rbx,%rsi
+ 363:	4c 89 ef             	mov    %r13,%rdi
+ 366:	e8 00 00 00 00       	callq  36b <file_open_real+0x18b>
+./src/file.c:167
+ 36b:	48 89 de             	mov    %rbx,%rsi
+ 36e:	4c 89 ef             	mov    %r13,%rdi
+ 371:	e8 00 00 00 00       	callq  376 <file_open_real+0x196>
+./src/file.c:168
+ 376:	48 89 de             	mov    %rbx,%rsi
+ 379:	4c 89 ef             	mov    %r13,%rdi
+ 37c:	e8 00 00 00 00       	callq  381 <file_open_real+0x1a1>
+./src/file.c:169
+ 381:	31 f6                	xor    %esi,%esi
+ 383:	4c 89 ef             	mov    %r13,%rdi
+ 386:	e8 00 00 00 00       	callq  38b <file_open_real+0x1ab>
+./src/file.c:170
+ 38b:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+ 390:	4c 89 f7             	mov    %r14,%rdi
+ 393:	e8 00 00 00 00       	callq  398 <file_open_real+0x1b8>
+ 398:	66 0f ef d2          	pxor   %xmm2,%xmm2
+ 39c:	31 d2                	xor    %edx,%edx
+ 39e:	48 89 de             	mov    %rbx,%rsi
+ 3a1:	48 89 c7             	mov    %rax,%rdi
+ 3a4:	66 0f 28 ca          	movapd %xmm2,%xmm1
+ 3a8:	66 0f 28 c2          	movapd %xmm2,%xmm0
+ 3ac:	e8 00 00 00 00       	callq  3b1 <file_open_real+0x1d1>
+./src/file.c:171
+ 3b1:	4c 89 ff             	mov    %r15,%rdi
+ 3b4:	e8 00 00 00 00       	callq  3b9 <file_open_real+0x1d9>
+./src/file.c:173
+ 3b9:	4c 89 f7             	mov    %r14,%rdi
+ 3bc:	e8 00 00 00 00       	callq  3c1 <file_open_real+0x1e1>
+./src/file.c:174
+ 3c1:	31 ff                	xor    %edi,%edi
+ 3c3:	e8 00 00 00 00       	callq  3c8 <file_open_real+0x1e8>
+./src/file.c:177
+ 3c8:	31 c0                	xor    %eax,%eax
+./src/file.c:178
+ 3ca:	48 8b 8c 24 88 00 00 	mov    0x88(%rsp),%rcx
+ 3d1:	00 
+ 3d2:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+ 3d9:	00 00 
+ 3db:	0f 85 c7 00 00 00    	jne    4a8 <file_open_real+0x2c8>
+ 3e1:	48 81 c4 98 00 00 00 	add    $0x98,%rsp
+ 3e8:	5b                   	pop    %rbx
+ 3e9:	5d                   	pop    %rbp
+ 3ea:	41 5c                	pop    %r12
+ 3ec:	41 5d                	pop    %r13
+ 3ee:	41 5e                	pop    %r14
+ 3f0:	41 5f                	pop    %r15
+ 3f2:	c3                   	retq   
+ 3f3:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/file.c:117
+ 3f8:	49 8b 3c 24          	mov    (%r12),%rdi
+ 3fc:	be 10 00 00 00       	mov    $0x10,%esi
+ 401:	e8 00 00 00 00       	callq  406 <file_open_real+0x226>
+ 406:	85 c0                	test   %eax,%eax
+ 408:	75 67                	jne    471 <file_open_real+0x291>
+./src/file.c:123
+ 40a:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 40f:	e8 00 00 00 00       	callq  414 <file_open_real+0x234>
+./src/file.c:125
+ 414:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 41b <file_open_real+0x23b>
+./src/file.c:124
+ 41b:	48 c7 44 24 28 00 00 	movq   $0x0,0x28(%rsp)
+ 422:	00 00 
+./src/file.c:125
+ 424:	e8 00 00 00 00       	callq  429 <file_open_real+0x249>
+ 429:	48 89 c7             	mov    %rax,%rdi
+ 42c:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 431:	e9 25 fe ff ff       	jmpq   25b <file_open_real+0x7b>
+ 436:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 43d:	00 00 00 
+./src/file.c:157
+ 440:	41 c7 44 24 10 00 00 	movl   $0x0,0x10(%r12)
+ 447:	00 00 
+ 449:	e9 dc fe ff ff       	jmpq   32a <file_open_real+0x14a>
+./src/file.c:135
+ 44e:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+ 453:	e8 00 00 00 00       	callq  458 <file_open_real+0x278>
+./src/file.c:136
+ 458:	48 85 c0             	test   %rax,%rax
+./src/file.c:135
+ 45b:	48 89 c3             	mov    %rax,%rbx
+./src/file.c:136
+ 45e:	0f 85 1d fe ff ff    	jne    281 <file_open_real+0xa1>
+./src/file.c:137
+ 464:	e8 00 00 00 00       	callq  469 <file_open_real+0x289>
+ 469:	48 89 c3             	mov    %rax,%rbx
+ 46c:	e9 10 fe ff ff       	jmpq   281 <file_open_real+0xa1>
+./src/file.c:118
+ 471:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 476:	4c 89 f7             	mov    %r14,%rdi
+ 479:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 47d:	e8 00 00 00 00       	callq  482 <file_open_real+0x2a2>
+ 482:	be 03 00 00 00       	mov    $0x3,%esi
+ 487:	48 89 c7             	mov    %rax,%rdi
+ 48a:	31 c0                	xor    %eax,%eax
+ 48c:	48 89 da             	mov    %rbx,%rdx
+ 48f:	e8 00 00 00 00       	callq  494 <file_open_real+0x2b4>
+./src/file.c:120
+ 494:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 499:	e8 00 00 00 00       	callq  49e <file_open_real+0x2be>
+./src/file.c:121
+ 49e:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 4a3:	e9 22 ff ff ff       	jmpq   3ca <file_open_real+0x1ea>
+./src/file.c:178
+ 4a8:	e8 00 00 00 00       	callq  4ad <file_open_real+0x2cd>
+ 4ad:	0f 1f 00             	nopl   (%rax)
+
+00000000000004b0 <file_save_real>:
+file_save_real():
+./src/file.c:181
+ 4b0:	41 56                	push   %r14
+ 4b2:	41 55                	push   %r13
+ 4b4:	49 89 fe             	mov    %rdi,%r14
+ 4b7:	41 54                	push   %r12
+ 4b9:	55                   	push   %rbp
+ 4ba:	48 89 f5             	mov    %rsi,%rbp
+ 4bd:	53                   	push   %rbx
+ 4be:	48 81 ec d0 00 00 00 	sub    $0xd0,%rsp
+ 4c5:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 4cc:	00 00 
+ 4ce:	48 89 84 24 c8 00 00 	mov    %rax,0xc8(%rsp)
+ 4d5:	00 
+ 4d6:	31 c0                	xor    %eax,%eax
+./src/file.c:190
+ 4d8:	4c 8d 64 24 20       	lea    0x20(%rsp),%r12
+./src/file.c:186
+ 4dd:	48 c7 44 24 18 00 00 	movq   $0x0,0x18(%rsp)
+ 4e4:	00 00 
+./src/file.c:191
+ 4e6:	4c 8d 6c 24 70       	lea    0x70(%rsp),%r13
+./src/file.c:188
+ 4eb:	e8 00 00 00 00       	callq  4f0 <file_save_real+0x40>
+ 4f0:	4c 89 f7             	mov    %r14,%rdi
+ 4f3:	48 89 c6             	mov    %rax,%rsi
+ 4f6:	e8 00 00 00 00       	callq  4fb <file_save_real+0x4b>
+ 4fb:	48 89 c7             	mov    %rax,%rdi
+ 4fe:	e8 00 00 00 00       	callq  503 <file_save_real+0x53>
+./src/file.c:190
+ 503:	4c 89 e6             	mov    %r12,%rsi
+./src/file.c:188
+ 506:	48 89 c3             	mov    %rax,%rbx
+./src/file.c:190
+ 509:	48 89 c7             	mov    %rax,%rdi
+ 50c:	e8 00 00 00 00       	callq  511 <file_save_real+0x61>
+./src/file.c:191
+ 511:	4c 89 ee             	mov    %r13,%rsi
+ 514:	48 89 df             	mov    %rbx,%rdi
+ 517:	e8 00 00 00 00       	callq  51c <file_save_real+0x6c>
+./src/file.c:192
+ 51c:	31 c9                	xor    %ecx,%ecx
+ 51e:	4c 89 ea             	mov    %r13,%rdx
+ 521:	4c 89 e6             	mov    %r12,%rsi
+ 524:	48 89 df             	mov    %rbx,%rdi
+ 527:	e8 00 00 00 00       	callq  52c <file_save_real+0x7c>
+ 52c:	48 89 04 24          	mov    %rax,(%rsp)
+./src/file.c:194
+ 530:	0f b6 45 14          	movzbl 0x14(%rbp),%eax
+ 534:	3c 0d                	cmp    $0xd,%al
+ 536:	0f 84 34 01 00 00    	je     670 <file_save_real+0x1c0>
+ 53c:	3c 17                	cmp    $0x17,%al
+ 53e:	0f 84 dc 00 00 00    	je     620 <file_save_real+0x170>
+./src/file.c:202
+ 544:	48 8b 55 08          	mov    0x8(%rbp),%rdx
+ 548:	48 85 d2             	test   %rdx,%rdx
+ 54b:	0f 84 77 01 00 00    	je     6c8 <file_save_real+0x218>
+./src/file.c:204
+ 551:	48 83 ec 08          	sub    $0x8,%rsp
+ 555:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 55c <file_save_real+0xac>
+ 55c:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+ 563:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+ 568:	50                   	push   %rax
+ 569:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+ 56e:	4c 8d 4c 24 20       	lea    0x20(%rsp),%r9
+ 573:	4c 8d 44 24 18       	lea    0x18(%rsp),%r8
+ 578:	e8 00 00 00 00       	callq  57d <file_save_real+0xcd>
+./src/file.c:205
+ 57d:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+./src/file.c:204
+ 582:	49 89 c4             	mov    %rax,%r12
+./src/file.c:205
+ 585:	e8 00 00 00 00       	callq  58a <file_save_real+0xda>
+./src/file.c:206
+ 58a:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 58f:	5a                   	pop    %rdx
+ 590:	59                   	pop    %rcx
+ 591:	48 85 c0             	test   %rax,%rax
+ 594:	0f 85 9e 00 00 00    	jne    638 <file_save_real+0x188>
+./src/file.c:220
+ 59a:	48 8b 7d 00          	mov    0x0(%rbp),%rdi
+ 59e:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 5a5 <file_save_real+0xf5>
+ 5a5:	e8 00 00 00 00       	callq  5aa <file_save_real+0xfa>
+./src/file.c:221
+ 5aa:	48 85 c0             	test   %rax,%rax
+./src/file.c:220
+ 5ad:	48 89 c5             	mov    %rax,%rbp
+./src/file.c:221
+ 5b0:	0f 84 6c 01 00 00    	je     722 <file_save_real+0x272>
+./src/file.c:226
+ 5b6:	48 8b 54 24 10       	mov    0x10(%rsp),%rdx
+ 5bb:	48 89 c1             	mov    %rax,%rcx
+ 5be:	be 01 00 00 00       	mov    $0x1,%esi
+ 5c3:	4c 89 e7             	mov    %r12,%rdi
+ 5c6:	e8 00 00 00 00       	callq  5cb <file_save_real+0x11b>
+ 5cb:	48 3b 44 24 10       	cmp    0x10(%rsp),%rax
+ 5d0:	0f 85 12 01 00 00    	jne    6e8 <file_save_real+0x238>
+./src/file.c:232
+ 5d6:	31 f6                	xor    %esi,%esi
+ 5d8:	48 89 df             	mov    %rbx,%rdi
+ 5db:	e8 00 00 00 00       	callq  5e0 <file_save_real+0x130>
+./src/file.c:233
+ 5e0:	48 89 ef             	mov    %rbp,%rdi
+ 5e3:	e8 00 00 00 00       	callq  5e8 <file_save_real+0x138>
+./src/file.c:234
+ 5e8:	4c 89 e7             	mov    %r12,%rdi
+ 5eb:	e8 00 00 00 00       	callq  5f0 <file_save_real+0x140>
+./src/file.c:236
+ 5f0:	31 c0                	xor    %eax,%eax
+./src/file.c:237
+ 5f2:	48 8b 8c 24 c8 00 00 	mov    0xc8(%rsp),%rcx
+ 5f9:	00 
+ 5fa:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+ 601:	00 00 
+ 603:	0f 85 27 01 00 00    	jne    730 <file_save_real+0x280>
+ 609:	48 81 c4 d0 00 00 00 	add    $0xd0,%rsp
+ 610:	5b                   	pop    %rbx
+ 611:	5d                   	pop    %rbp
+ 612:	41 5c                	pop    %r12
+ 614:	41 5d                	pop    %r13
+ 616:	41 5e                	pop    %r14
+ 618:	c3                   	retq   
+ 619:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/file.c:199
+ 620:	48 89 e7             	mov    %rsp,%rdi
+ 623:	be 17 00 00 00       	mov    $0x17,%esi
+ 628:	e8 00 00 00 00       	callq  62d <file_save_real+0x17d>
+ 62d:	e9 12 ff ff ff       	jmpq   544 <file_save_real+0x94>
+ 632:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/file.c:207
+ 638:	83 78 04 01          	cmpl   $0x1,0x4(%rax)
+ 63c:	74 4a                	je     688 <file_save_real+0x1d8>
+./src/file.c:213
+ 63e:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 642:	4c 89 f7             	mov    %r14,%rdi
+ 645:	e8 00 00 00 00       	callq  64a <file_save_real+0x19a>
+ 64a:	be 03 00 00 00       	mov    $0x3,%esi
+ 64f:	48 89 c7             	mov    %rax,%rdi
+ 652:	31 c0                	xor    %eax,%eax
+ 654:	48 89 da             	mov    %rbx,%rdx
+ 657:	e8 00 00 00 00       	callq  65c <file_save_real+0x1ac>
+./src/file.c:216
+ 65c:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+ 661:	e8 00 00 00 00       	callq  666 <file_save_real+0x1b6>
+./src/file.c:217
+ 666:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 66b:	eb 85                	jmp    5f2 <file_save_real+0x142>
+ 66d:	0f 1f 00             	nopl   (%rax)
+./src/file.c:196
+ 670:	48 89 e7             	mov    %rsp,%rdi
+ 673:	be 0d 00 00 00       	mov    $0xd,%esi
+ 678:	e8 00 00 00 00       	callq  67d <file_save_real+0x1cd>
+./src/file.c:197
+ 67d:	e9 c2 fe ff ff       	jmpq   544 <file_save_real+0x94>
+ 682:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/file.c:209
+ 688:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+./src/file.c:210
+ 68c:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 693 <file_save_real+0x1e3>
+ 693:	ba 05 00 00 00       	mov    $0x5,%edx
+ 698:	31 ff                	xor    %edi,%edi
+ 69a:	e8 00 00 00 00       	callq  69f <file_save_real+0x1ef>
+./src/file.c:209
+ 69f:	4c 89 f7             	mov    %r14,%rdi
+./src/file.c:210
+ 6a2:	48 89 c3             	mov    %rax,%rbx
+./src/file.c:209
+ 6a5:	e8 00 00 00 00       	callq  6aa <file_save_real+0x1fa>
+ 6aa:	48 89 e9             	mov    %rbp,%rcx
+ 6ad:	48 89 c7             	mov    %rax,%rdi
+ 6b0:	48 89 da             	mov    %rbx,%rdx
+ 6b3:	be 03 00 00 00       	mov    $0x3,%esi
+ 6b8:	31 c0                	xor    %eax,%eax
+ 6ba:	e8 00 00 00 00       	callq  6bf <file_save_real+0x20f>
+./src/file.c:211
+ 6bf:	eb 9b                	jmp    65c <file_save_real+0x1ac>
+ 6c1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/file.c:203
+ 6c8:	e8 00 00 00 00       	callq  6cd <file_save_real+0x21d>
+ 6cd:	48 89 c7             	mov    %rax,%rdi
+ 6d0:	e8 00 00 00 00       	callq  6d5 <file_save_real+0x225>
+ 6d5:	48 89 c2             	mov    %rax,%rdx
+ 6d8:	48 89 45 08          	mov    %rax,0x8(%rbp)
+ 6dc:	e9 70 fe ff ff       	jmpq   551 <file_save_real+0xa1>
+ 6e1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/file.c:228
+ 6e8:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 6ef <file_save_real+0x23f>
+ 6ef:	ba 05 00 00 00       	mov    $0x5,%edx
+ 6f4:	31 ff                	xor    %edi,%edi
+ 6f6:	e8 00 00 00 00       	callq  6fb <file_save_real+0x24b>
+./src/file.c:227
+ 6fb:	4c 89 f7             	mov    %r14,%rdi
+./src/file.c:228
+ 6fe:	48 89 c3             	mov    %rax,%rbx
+./src/file.c:227
+ 701:	e8 00 00 00 00       	callq  706 <file_save_real+0x256>
+ 706:	48 89 da             	mov    %rbx,%rdx
+ 709:	48 89 c7             	mov    %rax,%rdi
+ 70c:	be 03 00 00 00       	mov    $0x3,%esi
+ 711:	31 c0                	xor    %eax,%eax
+ 713:	e8 00 00 00 00       	callq  718 <file_save_real+0x268>
+./src/file.c:229
+ 718:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 71d:	e9 d0 fe ff ff       	jmpq   5f2 <file_save_real+0x142>
+./src/file.c:223
+ 722:	ba 05 00 00 00       	mov    $0x5,%edx
+ 727:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 72e <file_save_real+0x27e>
+ 72e:	eb c4                	jmp    6f4 <file_save_real+0x244>
+./src/file.c:237
+ 730:	e8 00 00 00 00       	callq  735 <file_save_real+0x285>

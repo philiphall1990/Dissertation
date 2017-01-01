@@ -1,0 +1,1096 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-view.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <set_view_scroll>:
+set_view_scroll():
+./src/view.c:307
+   0:	c7 05 00 00 00 00 01 	movl   $0x1,0x0(%rip)        # a <set_view_scroll+0xa>
+   7:	00 00 00 
+   a:	c3                   	retq   
+   b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000000010 <cb_modified_changed>:
+cb_modified_changed():
+./src/view.c:219
+  10:	41 56                	push   %r14
+  12:	41 55                	push   %r13
+  14:	49 89 f6             	mov    %rsi,%r14
+  17:	41 54                	push   %r12
+  19:	55                   	push   %rbp
+  1a:	49 89 fd             	mov    %rdi,%r13
+  1d:	53                   	push   %rbx
+./src/view.c:223
+  1e:	e8 00 00 00 00       	callq  23 <cb_modified_changed+0x13>
+  23:	41 89 c4             	mov    %eax,%r12d
+./src/view.c:224
+  26:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 2d <cb_modified_changed+0x1d>
+  2d:	be 01 00 00 00       	mov    $0x1,%esi
+  32:	48 8b 00             	mov    (%rax),%rax
+  35:	48 8b 38             	mov    (%rax),%rdi
+  38:	e8 00 00 00 00       	callq  3d <cb_modified_changed+0x2d>
+./src/view.c:225
+  3d:	45 85 e4             	test   %r12d,%r12d
+./src/view.c:224
+  40:	48 89 c5             	mov    %rax,%rbp
+./src/view.c:225
+  43:	0f 84 a7 00 00 00    	je     f0 <cb_modified_changed+0xe0>
+./src/view.c:226
+  49:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 50 <cb_modified_changed+0x40>
+  50:	48 89 c6             	mov    %rax,%rsi
+  53:	31 d2                	xor    %edx,%edx
+  55:	31 c0                	xor    %eax,%eax
+  57:	e8 00 00 00 00       	callq  5c <cb_modified_changed+0x4c>
+  5c:	48 89 c3             	mov    %rax,%rbx
+./src/view.c:231
+  5f:	48 89 ef             	mov    %rbp,%rdi
+  62:	e8 00 00 00 00       	callq  67 <cb_modified_changed+0x57>
+./src/view.c:232
+  67:	e8 00 00 00 00       	callq  6c <cb_modified_changed+0x5c>
+  6c:	4c 89 f7             	mov    %r14,%rdi
+  6f:	48 89 c5             	mov    %rax,%rbp
+  72:	e8 00 00 00 00       	callq  77 <cb_modified_changed+0x67>
+  77:	48 89 ee             	mov    %rbp,%rsi
+  7a:	48 89 c7             	mov    %rax,%rdi
+  7d:	e8 00 00 00 00       	callq  82 <cb_modified_changed+0x72>
+  82:	48 89 de             	mov    %rbx,%rsi
+  85:	48 89 c7             	mov    %rax,%rdi
+  88:	e8 00 00 00 00       	callq  8d <cb_modified_changed+0x7d>
+./src/view.c:233
+  8d:	48 89 df             	mov    %rbx,%rdi
+  90:	e8 00 00 00 00       	callq  95 <cb_modified_changed+0x85>
+./src/view.c:234
+  95:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 9c <cb_modified_changed+0x8c>
+  9c:	48 8b 00             	mov    (%rax),%rax
+  9f:	48 8b 38             	mov    (%rax),%rdi
+  a2:	b8 01 00 00 00       	mov    $0x1,%eax
+  a7:	48 85 ff             	test   %rdi,%rdi
+  aa:	74 31                	je     dd <cb_modified_changed+0xcd>
+./src/view.c:236
+  ac:	45 31 c0             	xor    %r8d,%r8d
+  af:	31 c9                	xor    %ecx,%ecx
+  b1:	31 d2                	xor    %edx,%edx
+  b3:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+  ba:	e8 00 00 00 00       	callq  bf <cb_modified_changed+0xaf>
+./src/view.c:235
+  bf:	be 10 00 00 00       	mov    $0x10,%esi
+  c4:	48 89 c7             	mov    %rax,%rdi
+  c7:	e8 00 00 00 00       	callq  cc <cb_modified_changed+0xbc>
+  cc:	85 c0                	test   %eax,%eax
+  ce:	0f 94 c0             	sete   %al
+  d1:	45 85 e4             	test   %r12d,%r12d
+  d4:	40 0f 95 c7          	setne  %dil
+  d8:	09 f8                	or     %edi,%eax
+  da:	0f b6 c0             	movzbl %al,%eax
+./src/view.c:239
+  dd:	5b                   	pop    %rbx
+  de:	5d                   	pop    %rbp
+  df:	41 5c                	pop    %r12
+  e1:	41 5d                	pop    %r13
+  e3:	41 5e                	pop    %r14
+./src/view.c:238
+  e5:	89 c7                	mov    %eax,%edi
+  e7:	e9 00 00 00 00       	jmpq   ec <cb_modified_changed+0xdc>
+  ec:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/view.c:228
+  f0:	48 89 c7             	mov    %rax,%rdi
+  f3:	e8 00 00 00 00       	callq  f8 <cb_modified_changed+0xe8>
+./src/view.c:229
+  f8:	4c 89 ef             	mov    %r13,%rdi
+./src/view.c:228
+  fb:	48 89 c3             	mov    %rax,%rbx
+./src/view.c:229
+  fe:	e8 00 00 00 00       	callq  103 <cb_modified_changed+0xf3>
+ 103:	e9 57 ff ff ff       	jmpq   5f <cb_modified_changed+0x4f>
+ 108:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 10f:	00 
+
+0000000000000110 <cb_mark_changed>:
+cb_mark_changed():
+./src/view.c:268
+ 110:	48 83 ec 08          	sub    $0x8,%rsp
+./src/view.c:269
+ 114:	31 d2                	xor    %edx,%edx
+ 116:	31 f6                	xor    %esi,%esi
+ 118:	e8 00 00 00 00       	callq  11d <cb_mark_changed+0xd>
+./src/view.c:271
+ 11d:	48 83 c4 08          	add    $0x8,%rsp
+./src/view.c:269
+ 121:	89 c7                	mov    %eax,%edi
+ 123:	e9 00 00 00 00       	jmpq   128 <cb_mark_changed+0x18>
+ 128:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 12f:	00 
+
+0000000000000130 <cb_focus_event>:
+cb_focus_event():
+./src/view.c:274
+ 130:	41 55                	push   %r13
+ 132:	41 54                	push   %r12
+ 134:	55                   	push   %rbp
+ 135:	53                   	push   %rbx
+ 136:	48 89 fd             	mov    %rdi,%rbp
+ 139:	48 89 f3             	mov    %rsi,%rbx
+ 13c:	48 83 ec 08          	sub    $0x8,%rsp
+./src/view.c:275
+ 140:	e8 00 00 00 00       	callq  145 <cb_focus_event+0x15>
+ 145:	48 89 ef             	mov    %rbp,%rdi
+ 148:	48 89 c6             	mov    %rax,%rsi
+ 14b:	49 89 c4             	mov    %rax,%r12
+ 14e:	e8 00 00 00 00       	callq  153 <cb_focus_event+0x23>
+ 153:	48 8b 78 78          	mov    0x78(%rax),%rdi
+ 157:	31 d2                	xor    %edx,%edx
+ 159:	31 f6                	xor    %esi,%esi
+ 15b:	e8 00 00 00 00       	callq  160 <cb_focus_event+0x30>
+ 160:	85 c0                	test   %eax,%eax
+ 162:	74 2c                	je     190 <cb_focus_event+0x60>
+./src/view.c:279
+ 164:	66 83 7b 12 00       	cmpw   $0x0,0x12(%rbx)
+ 169:	75 15                	jne    180 <cb_focus_event+0x50>
+./src/view.c:281
+ 16b:	48 83 c4 08          	add    $0x8,%rsp
+ 16f:	5b                   	pop    %rbx
+ 170:	5d                   	pop    %rbp
+ 171:	41 5c                	pop    %r12
+ 173:	41 5d                	pop    %r13
+ 175:	c3                   	retq   
+ 176:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 17d:	00 00 00 
+ 180:	48 83 c4 08          	add    $0x8,%rsp
+ 184:	5b                   	pop    %rbx
+ 185:	5d                   	pop    %rbp
+ 186:	41 5c                	pop    %r12
+ 188:	41 5d                	pop    %r13
+./src/view.c:280
+ 18a:	e9 00 00 00 00       	jmpq   18f <cb_focus_event+0x5f>
+ 18f:	90                   	nop
+./src/view.c:276
+ 190:	45 31 ed             	xor    %r13d,%r13d
+ 193:	66 83 7b 12 00       	cmpw   $0x0,0x12(%rbx)
+./src/view.c:278
+ 198:	4c 89 e6             	mov    %r12,%rsi
+ 19b:	48 89 ef             	mov    %rbp,%rdi
+./src/view.c:276
+ 19e:	41 0f 94 c5          	sete   %r13b
+./src/view.c:278
+ 1a2:	e8 00 00 00 00       	callq  1a7 <cb_focus_event+0x77>
+./src/view.c:276
+ 1a7:	48 8b 78 78          	mov    0x78(%rax),%rdi
+ 1ab:	e8 00 00 00 00       	callq  1b0 <cb_focus_event+0x80>
+ 1b0:	44 89 ee             	mov    %r13d,%esi
+ 1b3:	48 89 c7             	mov    %rax,%rdi
+ 1b6:	e8 00 00 00 00       	callq  1bb <cb_focus_event+0x8b>
+ 1bb:	eb a7                	jmp    164 <cb_focus_event+0x34>
+ 1bd:	0f 1f 00             	nopl   (%rax)
+
+00000000000001c0 <cb_button_press_event>:
+cb_button_press_event():
+./src/view.c:199
+ 1c0:	41 57                	push   %r15
+ 1c2:	41 56                	push   %r14
+ 1c4:	41 55                	push   %r13
+ 1c6:	41 54                	push   %r12
+ 1c8:	55                   	push   %rbp
+ 1c9:	53                   	push   %rbx
+ 1ca:	48 89 fd             	mov    %rdi,%rbp
+ 1cd:	48 89 f3             	mov    %rsi,%rbx
+ 1d0:	48 81 ec 18 01 00 00 	sub    $0x118,%rsp
+ 1d7:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 1de:	00 00 
+ 1e0:	48 89 84 24 08 01 00 	mov    %rax,0x108(%rsp)
+ 1e7:	00 
+ 1e8:	31 c0                	xor    %eax,%eax
+./src/view.c:203
+ 1ea:	e8 00 00 00 00       	callq  1ef <cb_button_press_event+0x2f>
+ 1ef:	48 89 ef             	mov    %rbp,%rdi
+ 1f2:	48 89 c6             	mov    %rax,%rsi
+ 1f5:	49 89 c4             	mov    %rax,%r12
+ 1f8:	e8 00 00 00 00       	callq  1fd <cb_button_press_event+0x3d>
+ 1fd:	48 89 c7             	mov    %rax,%rdi
+ 200:	e8 00 00 00 00       	callq  205 <cb_button_press_event+0x45>
+./src/view.c:205
+ 205:	83 7b 34 03          	cmpl   $0x3,0x34(%rbx)
+ 209:	74 35                	je     240 <cb_button_press_event+0x80>
+./src/view.c:216
+ 20b:	31 c0                	xor    %eax,%eax
+ 20d:	48 8b 8c 24 08 01 00 	mov    0x108(%rsp),%rcx
+ 214:	00 
+ 215:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+ 21c:	00 00 
+ 21e:	0f 85 dd 00 00 00    	jne    301 <cb_button_press_event+0x141>
+ 224:	48 81 c4 18 01 00 00 	add    $0x118,%rsp
+ 22b:	5b                   	pop    %rbx
+ 22c:	5d                   	pop    %rbp
+ 22d:	41 5c                	pop    %r12
+ 22f:	41 5d                	pop    %r13
+ 231:	41 5e                	pop    %r14
+ 233:	41 5f                	pop    %r15
+ 235:	c3                   	retq   
+ 236:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 23d:	00 00 00 
+./src/view.c:205 (discriminator 1)
+ 240:	83 3b 04             	cmpl   $0x4,(%rbx)
+ 243:	75 c6                	jne    20b <cb_button_press_event+0x4b>
+./src/view.c:206
+ 245:	f2 44 0f 2c 7b 20    	cvttsd2si 0x20(%rbx),%r15d
+ 24b:	f2 44 0f 2c 73 18    	cvttsd2si 0x18(%rbx),%r14d
+ 251:	48 8b 5b 08          	mov    0x8(%rbx),%rbx
+./src/view.c:207
+ 255:	4c 89 e6             	mov    %r12,%rsi
+ 258:	48 89 ef             	mov    %rbp,%rdi
+ 25b:	49 89 c5             	mov    %rax,%r13
+ 25e:	e8 00 00 00 00       	callq  263 <cb_button_press_event+0xa3>
+./src/view.c:206
+ 263:	48 89 de             	mov    %rbx,%rsi
+ 266:	48 89 c7             	mov    %rax,%rdi
+ 269:	e8 00 00 00 00       	callq  26e <cb_button_press_event+0xae>
+ 26e:	4c 89 e6             	mov    %r12,%rsi
+ 271:	48 89 ef             	mov    %rbp,%rdi
+ 274:	89 c3                	mov    %eax,%ebx
+ 276:	e8 00 00 00 00       	callq  27b <cb_button_press_event+0xbb>
+ 27b:	4c 8d 4c 24 0c       	lea    0xc(%rsp),%r9
+ 280:	4c 8d 44 24 08       	lea    0x8(%rsp),%r8
+ 285:	44 89 f9             	mov    %r15d,%ecx
+ 288:	44 89 f2             	mov    %r14d,%edx
+ 28b:	89 de                	mov    %ebx,%esi
+ 28d:	48 89 c7             	mov    %rax,%rdi
+ 290:	e8 00 00 00 00       	callq  295 <cb_button_press_event+0xd5>
+./src/view.c:209
+ 295:	44 8b 7c 24 0c       	mov    0xc(%rsp),%r15d
+ 29a:	44 8b 74 24 08       	mov    0x8(%rsp),%r14d
+ 29f:	48 8d 5c 24 10       	lea    0x10(%rsp),%rbx
+ 2a4:	4c 89 e6             	mov    %r12,%rsi
+ 2a7:	48 89 ef             	mov    %rbp,%rdi
+./src/view.c:210
+ 2aa:	4c 8d a4 24 b0 00 00 	lea    0xb0(%rsp),%r12
+ 2b1:	00 
+ 2b2:	48 8d 6c 24 60       	lea    0x60(%rsp),%rbp
+./src/view.c:209
+ 2b7:	e8 00 00 00 00       	callq  2bc <cb_button_press_event+0xfc>
+ 2bc:	44 89 f9             	mov    %r15d,%ecx
+ 2bf:	48 89 c7             	mov    %rax,%rdi
+ 2c2:	44 89 f2             	mov    %r14d,%edx
+ 2c5:	48 89 de             	mov    %rbx,%rsi
+ 2c8:	e8 00 00 00 00       	callq  2cd <cb_button_press_event+0x10d>
+./src/view.c:210
+ 2cd:	4c 89 e2             	mov    %r12,%rdx
+ 2d0:	48 89 ee             	mov    %rbp,%rsi
+ 2d3:	4c 89 ef             	mov    %r13,%rdi
+ 2d6:	e8 00 00 00 00       	callq  2db <cb_button_press_event+0x11b>
+./src/view.c:211
+ 2db:	4c 89 e2             	mov    %r12,%rdx
+ 2de:	48 89 ee             	mov    %rbp,%rsi
+ 2e1:	48 89 df             	mov    %rbx,%rdi
+ 2e4:	e8 00 00 00 00       	callq  2e9 <cb_button_press_event+0x129>
+ 2e9:	85 c0                	test   %eax,%eax
+ 2eb:	0f 85 1a ff ff ff    	jne    20b <cb_button_press_event+0x4b>
+./src/view.c:212
+ 2f1:	48 89 de             	mov    %rbx,%rsi
+ 2f4:	4c 89 ef             	mov    %r13,%rdi
+ 2f7:	e8 00 00 00 00       	callq  2fc <cb_button_press_event+0x13c>
+ 2fc:	e9 0a ff ff ff       	jmpq   20b <cb_button_press_event+0x4b>
+./src/view.c:216
+ 301:	e8 00 00 00 00       	callq  306 <cb_button_press_event+0x146>
+ 306:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 30d:	00 00 00 
+
+0000000000000310 <cb_end_user_action>:
+cb_end_user_action():
+./src/view.c:312
+ 310:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 316 <cb_end_user_action+0x6>
+ 316:	85 c0                	test   %eax,%eax
+ 318:	75 06                	jne    320 <cb_end_user_action+0x10>
+./src/view.c:318
+ 31a:	c3                   	retq   
+ 31b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/view.c:311
+ 320:	55                   	push   %rbp
+ 321:	53                   	push   %rbx
+ 322:	48 89 f3             	mov    %rsi,%rbx
+ 325:	48 83 ec 08          	sub    $0x8,%rsp
+./src/view.c:313
+ 329:	e8 00 00 00 00       	callq  32e <cb_end_user_action+0x1e>
+ 32e:	48 89 c5             	mov    %rax,%rbp
+./src/view.c:314
+ 331:	e8 00 00 00 00       	callq  336 <cb_end_user_action+0x26>
+ 336:	48 89 df             	mov    %rbx,%rdi
+ 339:	48 89 c6             	mov    %rax,%rsi
+ 33c:	e8 00 00 00 00       	callq  341 <cb_end_user_action+0x31>
+./src/view.c:313
+ 341:	48 89 ee             	mov    %rbp,%rsi
+ 344:	48 89 c7             	mov    %rax,%rdi
+ 347:	e8 00 00 00 00       	callq  34c <cb_end_user_action+0x3c>
+./src/view.c:316
+ 34c:	c7 05 00 00 00 00 00 	movl   $0x0,0x0(%rip)        # 356 <cb_end_user_action+0x46>
+ 353:	00 00 00 
+./src/view.c:318
+ 356:	48 83 c4 08          	add    $0x8,%rsp
+ 35a:	5b                   	pop    %rbx
+ 35b:	5d                   	pop    %rbp
+ 35c:	c3                   	retq   
+ 35d:	0f 1f 00             	nopl   (%rax)
+
+0000000000000360 <cb_key_press_event.part.1>:
+cb_key_press_event():
+./src/view.c:105
+ 360:	41 57                	push   %r15
+ 362:	41 56                	push   %r14
+ 364:	41 55                	push   %r13
+ 366:	41 54                	push   %r12
+ 368:	49 89 f4             	mov    %rsi,%r12
+ 36b:	55                   	push   %rbp
+ 36c:	53                   	push   %rbx
+ 36d:	48 89 fb             	mov    %rdi,%rbx
+ 370:	48 81 ec 28 01 00 00 	sub    $0x128,%rsp
+ 377:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 37e:	00 00 
+ 380:	48 89 84 24 18 01 00 	mov    %rax,0x118(%rsp)
+ 387:	00 
+ 388:	31 c0                	xor    %eax,%eax
+./src/view.c:115
+ 38a:	e8 00 00 00 00       	callq  38f <cb_key_press_event.part.1+0x2f>
+ 38f:	48 89 df             	mov    %rbx,%rdi
+ 392:	48 89 c6             	mov    %rax,%rsi
+ 395:	48 89 c5             	mov    %rax,%rbp
+./src/view.c:117
+ 398:	4c 8d 6c 24 20       	lea    0x20(%rsp),%r13
+./src/view.c:115
+ 39d:	e8 00 00 00 00       	callq  3a2 <cb_key_press_event.part.1+0x42>
+ 3a2:	48 89 c7             	mov    %rax,%rdi
+ 3a5:	e8 00 00 00 00       	callq  3aa <cb_key_press_event.part.1+0x4a>
+ 3aa:	49 89 c6             	mov    %rax,%r14
+./src/view.c:116
+ 3ad:	48 89 c7             	mov    %rax,%rdi
+ 3b0:	e8 00 00 00 00       	callq  3b5 <cb_key_press_event.part.1+0x55>
+./src/view.c:117
+ 3b5:	4c 89 ee             	mov    %r13,%rsi
+ 3b8:	48 89 c2             	mov    %rax,%rdx
+ 3bb:	4c 89 f7             	mov    %r14,%rdi
+./src/view.c:116
+ 3be:	49 89 c7             	mov    %rax,%r15
+./src/view.c:117
+ 3c1:	e8 00 00 00 00       	callq  3c6 <cb_key_press_event.part.1+0x66>
+./src/view.c:118
+ 3c6:	48 89 ee             	mov    %rbp,%rsi
+ 3c9:	48 89 df             	mov    %rbx,%rdi
+ 3cc:	e8 00 00 00 00       	callq  3d1 <cb_key_press_event.part.1+0x71>
+ 3d1:	48 8d 54 24 10       	lea    0x10(%rsp),%rdx
+ 3d6:	4c 89 ee             	mov    %r13,%rsi
+ 3d9:	48 89 c7             	mov    %rax,%rdi
+ 3dc:	e8 00 00 00 00       	callq  3e1 <cb_key_press_event.part.1+0x81>
+./src/view.c:122
+ 3e1:	41 8b 54 24 1c       	mov    0x1c(%r12),%edx
+./src/view.c:120
+ 3e6:	c7 05 00 00 00 00 00 	movl   $0x0,0x0(%rip)        # 3f0 <cb_key_press_event.part.1+0x90>
+ 3ed:	00 00 00 
+./src/view.c:122
+ 3f0:	81 fa 52 ff 00 00    	cmp    $0xff52,%edx
+ 3f6:	0f 84 a4 01 00 00    	je     5a0 <cb_key_press_event.part.1+0x240>
+ 3fc:	0f 87 7e 00 00 00    	ja     480 <cb_key_press_event.part.1+0x120>
+ 402:	81 fa 09 ff 00 00    	cmp    $0xff09,%edx
+ 408:	0f 84 b2 00 00 00    	je     4c0 <cb_key_press_event.part.1+0x160>
+ 40e:	81 fa 0d ff 00 00    	cmp    $0xff0d,%edx
+ 414:	0f 84 66 01 00 00    	je     580 <cb_key_press_event.part.1+0x220>
+ 41a:	81 fa 20 fe 00 00    	cmp    $0xfe20,%edx
+ 420:	0f 84 2a 01 00 00    	je     550 <cb_key_press_event.part.1+0x1f0>
+./src/view.c:190
+ 426:	41 f6 44 24 18 04    	testb  $0x4,0x18(%r12)
+./src/view.c:187
+ 42c:	89 15 00 00 00 00    	mov    %edx,0x0(%rip)        # 432 <cb_key_press_event.part.1+0xd2>
+./src/view.c:190
+ 432:	75 3c                	jne    470 <cb_key_press_event.part.1+0x110>
+./src/view.c:189
+ 434:	8d 8a 1d 00 ff ff    	lea    -0xffe3(%rdx),%ecx
+./src/view.c:195
+ 43a:	31 c0                	xor    %eax,%eax
+./src/view.c:190
+ 43c:	83 f9 01             	cmp    $0x1,%ecx
+ 43f:	76 2f                	jbe    470 <cb_key_press_event.part.1+0x110>
+./src/view.c:196
+ 441:	48 8b 8c 24 18 01 00 	mov    0x118(%rsp),%rcx
+ 448:	00 
+ 449:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+ 450:	00 00 
+ 452:	0f 85 42 03 00 00    	jne    79a <cb_key_press_event.part.1+0x43a>
+ 458:	48 81 c4 28 01 00 00 	add    $0x128,%rsp
+ 45f:	5b                   	pop    %rbx
+ 460:	5d                   	pop    %rbp
+ 461:	41 5c                	pop    %r12
+ 463:	41 5d                	pop    %r13
+ 465:	41 5e                	pop    %r14
+ 467:	41 5f                	pop    %r15
+ 469:	c3                   	retq   
+ 46a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/view.c:191
+ 470:	81 c2 00 00 01 00    	add    $0x10000,%edx
+./src/view.c:195
+ 476:	31 c0                	xor    %eax,%eax
+./src/view.c:191
+ 478:	89 15 00 00 00 00    	mov    %edx,0x0(%rip)        # 47e <cb_key_press_event.part.1+0x11e>
+ 47e:	eb c1                	jmp    441 <cb_key_press_event.part.1+0xe1>
+./src/view.c:122
+ 480:	81 fa 54 ff 00 00    	cmp    $0xff54,%edx
+ 486:	0f 84 14 01 00 00    	je     5a0 <cb_key_press_event.part.1+0x240>
+ 48c:	72 98                	jb     426 <cb_key_press_event.part.1+0xc6>
+ 48e:	81 fa 56 ff 00 00    	cmp    $0xff56,%edx
+ 494:	77 90                	ja     426 <cb_key_press_event.part.1+0xc6>
+./src/view.c:143
+ 496:	48 89 ee             	mov    %rbp,%rsi
+ 499:	48 89 df             	mov    %rbx,%rdi
+ 49c:	e8 00 00 00 00       	callq  4a1 <cb_key_press_event.part.1+0x141>
+ 4a1:	4c 89 fe             	mov    %r15,%rsi
+ 4a4:	48 89 c7             	mov    %rax,%rdi
+ 4a7:	e8 00 00 00 00       	callq  4ac <cb_key_press_event.part.1+0x14c>
+ 4ac:	85 c0                	test   %eax,%eax
+ 4ae:	0f 85 74 01 00 00    	jne    628 <cb_key_press_event.part.1+0x2c8>
+ 4b4:	41 8b 54 24 1c       	mov    0x1c(%r12),%edx
+ 4b9:	e9 68 ff ff ff       	jmpq   426 <cb_key_press_event.part.1+0xc6>
+ 4be:	66 90                	xchg   %ax,%ax
+./src/view.c:174
+ 4c0:	41 8b 44 24 18       	mov    0x18(%r12),%eax
+ 4c5:	a8 04                	test   $0x4,%al
+ 4c7:	0f 85 63 02 00 00    	jne    730 <cb_key_press_event.part.1+0x3d0>
+./src/view.c:179
+ 4cd:	a8 01                	test   $0x1,%al
+./src/view.c:180
+ 4cf:	48 89 ee             	mov    %rbp,%rsi
+ 4d2:	48 89 df             	mov    %rbx,%rdi
+./src/view.c:179
+ 4d5:	0f 85 88 00 00 00    	jne    563 <cb_key_press_event.part.1+0x203>
+./src/view.c:181
+ 4db:	e8 00 00 00 00       	callq  4e0 <cb_key_press_event.part.1+0x180>
+check_selection_bound():
+./src/view.c:94
+ 4e0:	4c 8d b4 24 c0 00 00 	lea    0xc0(%rsp),%r14
+ 4e7:	00 
+ 4e8:	4c 8d 6c 24 70       	lea    0x70(%rsp),%r13
+ 4ed:	48 8b 78 78          	mov    0x78(%rax),%rdi
+ 4f1:	4c 89 f2             	mov    %r14,%rdx
+ 4f4:	4c 89 ee             	mov    %r13,%rsi
+ 4f7:	e8 00 00 00 00       	callq  4fc <cb_key_press_event.part.1+0x19c>
+ 4fc:	85 c0                	test   %eax,%eax
+ 4fe:	74 b4                	je     4b4 <cb_key_press_event.part.1+0x154>
+./src/view.c:95
+ 500:	4c 89 f6             	mov    %r14,%rsi
+ 503:	4c 89 ef             	mov    %r13,%rdi
+ 506:	e8 00 00 00 00       	callq  50b <cb_key_press_event.part.1+0x1ab>
+./src/view.c:96
+ 50b:	be 0a 00 00 00       	mov    $0xa,%esi
+./src/view.c:95
+ 510:	49 89 c5             	mov    %rax,%r13
+./src/view.c:96
+ 513:	48 89 c7             	mov    %rax,%rdi
+ 516:	e8 00 00 00 00       	callq  51b <cb_key_press_event.part.1+0x1bb>
+./src/view.c:97
+ 51b:	4c 89 ef             	mov    %r13,%rdi
+./src/view.c:96
+ 51e:	49 89 c6             	mov    %rax,%r14
+./src/view.c:97
+ 521:	e8 00 00 00 00       	callq  526 <cb_key_press_event.part.1+0x1c6>
+./src/view.c:98
+ 526:	4d 85 f6             	test   %r14,%r14
+ 529:	74 89                	je     4b4 <cb_key_press_event.part.1+0x154>
+cb_key_press_event():
+./src/view.c:184
+ 52b:	48 89 df             	mov    %rbx,%rdi
+ 52e:	48 89 ee             	mov    %rbp,%rsi
+ 531:	e8 00 00 00 00       	callq  536 <cb_key_press_event.part.1+0x1d6>
+ 536:	48 8b 78 78          	mov    0x78(%rax),%rdi
+ 53a:	e8 00 00 00 00       	callq  53f <cb_key_press_event.part.1+0x1df>
+./src/view.c:185
+ 53f:	b8 01 00 00 00       	mov    $0x1,%eax
+ 544:	e9 f8 fe ff ff       	jmpq   441 <cb_key_press_event.part.1+0xe1>
+ 549:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 550:	41 8b 44 24 18       	mov    0x18(%r12),%eax
+./src/view.c:180
+ 555:	48 89 ee             	mov    %rbp,%rsi
+ 558:	48 89 df             	mov    %rbx,%rdi
+./src/view.c:179
+ 55b:	a8 01                	test   $0x1,%al
+ 55d:	0f 84 78 ff ff ff    	je     4db <cb_key_press_event.part.1+0x17b>
+./src/view.c:180
+ 563:	e8 00 00 00 00       	callq  568 <cb_key_press_event.part.1+0x208>
+ 568:	48 8b 78 78          	mov    0x78(%rax),%rdi
+ 56c:	e8 00 00 00 00       	callq  571 <cb_key_press_event.part.1+0x211>
+./src/view.c:185
+ 571:	b8 01 00 00 00       	mov    $0x1,%eax
+ 576:	e9 c6 fe ff ff       	jmpq   441 <cb_key_press_event.part.1+0xe1>
+ 57b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/view.c:168
+ 580:	e8 00 00 00 00       	callq  585 <cb_key_press_event.part.1+0x225>
+ 585:	85 c0                	test   %eax,%eax
+ 587:	0f 84 27 ff ff ff    	je     4b4 <cb_key_press_event.part.1+0x154>
+./src/view.c:169
+ 58d:	48 89 df             	mov    %rbx,%rdi
+ 590:	e8 00 00 00 00       	callq  595 <cb_key_press_event.part.1+0x235>
+./src/view.c:170
+ 595:	b8 01 00 00 00       	mov    $0x1,%eax
+ 59a:	e9 a2 fe ff ff       	jmpq   441 <cb_key_press_event.part.1+0xe1>
+ 59f:	90                   	nop
+./src/view.c:125
+ 5a0:	48 89 ee             	mov    %rbp,%rsi
+ 5a3:	48 89 df             	mov    %rbx,%rdi
+ 5a6:	e8 00 00 00 00       	callq  5ab <cb_key_press_event.part.1+0x24b>
+ 5ab:	4c 89 fe             	mov    %r15,%rsi
+ 5ae:	48 89 c7             	mov    %rax,%rdi
+ 5b1:	e8 00 00 00 00       	callq  5b6 <cb_key_press_event.part.1+0x256>
+ 5b6:	85 c0                	test   %eax,%eax
+ 5b8:	0f 84 f6 fe ff ff    	je     4b4 <cb_key_press_event.part.1+0x154>
+./src/view.c:127
+ 5be:	4c 89 fa             	mov    %r15,%rdx
+ 5c1:	4c 89 ee             	mov    %r13,%rsi
+ 5c4:	4c 89 f7             	mov    %r14,%rdi
+ 5c7:	e8 00 00 00 00       	callq  5cc <cb_key_press_event.part.1+0x26c>
+./src/view.c:128
+ 5cc:	48 89 ee             	mov    %rbp,%rsi
+ 5cf:	48 89 df             	mov    %rbx,%rdi
+ 5d2:	e8 00 00 00 00       	callq  5d7 <cb_key_press_event.part.1+0x277>
+ 5d7:	48 8d 94 24 c0 00 00 	lea    0xc0(%rsp),%rdx
+ 5de:	00 
+ 5df:	4c 89 ee             	mov    %r13,%rsi
+ 5e2:	48 89 c7             	mov    %rax,%rdi
+ 5e5:	e8 00 00 00 00       	callq  5ea <cb_key_press_event.part.1+0x28a>
+./src/view.c:129
+ 5ea:	8b 94 24 c4 00 00 00 	mov    0xc4(%rsp),%edx
+ 5f1:	3b 54 24 14          	cmp    0x14(%rsp),%edx
+ 5f5:	0f 8c 4d 01 00 00    	jl     748 <cb_key_press_event.part.1+0x3e8>
+./src/view.c:134
+ 5fb:	41 f6 44 24 18 01    	testb  $0x1,0x18(%r12)
+ 601:	0f 85 38 ff ff ff    	jne    53f <cb_key_press_event.part.1+0x1df>
+./src/view.c:135
+ 607:	4c 89 ee             	mov    %r13,%rsi
+ 60a:	4c 89 f7             	mov    %r14,%rdi
+ 60d:	4c 89 fa             	mov    %r15,%rdx
+ 610:	e8 00 00 00 00       	callq  615 <cb_key_press_event.part.1+0x2b5>
+./src/view.c:136
+ 615:	4c 89 ee             	mov    %r13,%rsi
+ 618:	4c 89 f7             	mov    %r14,%rdi
+ 61b:	e8 00 00 00 00       	callq  620 <cb_key_press_event.part.1+0x2c0>
+ 620:	e9 1a ff ff ff       	jmpq   53f <cb_key_press_event.part.1+0x1df>
+ 625:	0f 1f 00             	nopl   (%rax)
+./src/view.c:146
+ 628:	48 89 ee             	mov    %rbp,%rsi
+ 62b:	48 89 df             	mov    %rbx,%rdi
+ 62e:	e8 00 00 00 00       	callq  633 <cb_key_press_event.part.1+0x2d3>
+ 633:	48 8d 74 24 70       	lea    0x70(%rsp),%rsi
+ 638:	48 89 c7             	mov    %rax,%rdi
+ 63b:	e8 00 00 00 00       	callq  640 <cb_key_press_event.part.1+0x2e0>
+./src/view.c:147
+ 640:	4c 89 fa             	mov    %r15,%rdx
+ 643:	4c 89 ee             	mov    %r13,%rsi
+ 646:	4c 89 f7             	mov    %r14,%rdi
+ 649:	e8 00 00 00 00       	callq  64e <cb_key_press_event.part.1+0x2ee>
+./src/view.c:148
+ 64e:	48 89 ee             	mov    %rbp,%rsi
+ 651:	48 89 df             	mov    %rbx,%rdi
+ 654:	e8 00 00 00 00       	callq  659 <cb_key_press_event.part.1+0x2f9>
+ 659:	48 8d 94 24 c0 00 00 	lea    0xc0(%rsp),%rdx
+ 660:	00 
+ 661:	48 89 c7             	mov    %rax,%rdi
+ 664:	4c 89 ee             	mov    %r13,%rsi
+ 667:	e8 00 00 00 00       	callq  66c <cb_key_press_event.part.1+0x30c>
+./src/view.c:149
+ 66c:	31 c9                	xor    %ecx,%ecx
+ 66e:	8b 84 24 c4 00 00 00 	mov    0xc4(%rsp),%eax
+ 675:	3b 44 24 14          	cmp    0x14(%rsp),%eax
+ 679:	0f 9c c1             	setl   %cl
+./src/view.c:151
+ 67c:	41 81 7c 24 1c 55 ff 	cmpl   $0xff55,0x1c(%r12)
+ 683:	00 00 
+./src/view.c:149
+ 685:	89 4c 24 08          	mov    %ecx,0x8(%rsp)
+./src/view.c:151
+ 689:	0f 84 f9 00 00 00    	je     788 <cb_key_press_event.part.1+0x428>
+./src/view.c:156
+ 68f:	03 44 24 7c          	add    0x7c(%rsp),%eax
+ 693:	89 c2                	mov    %eax,%edx
+./src/view.c:155
+ 695:	2b 94 24 cc 00 00 00 	sub    0xcc(%rsp),%edx
+ 69c:	48 89 ee             	mov    %rbp,%rsi
+ 69f:	48 89 df             	mov    %rbx,%rdi
+ 6a2:	89 54 24 0c          	mov    %edx,0xc(%rsp)
+ 6a6:	e8 00 00 00 00       	callq  6ab <cb_key_press_event.part.1+0x34b>
+ 6ab:	8b 54 24 0c          	mov    0xc(%rsp),%edx
+ 6af:	31 c9                	xor    %ecx,%ecx
+ 6b1:	48 89 c7             	mov    %rax,%rdi
+ 6b4:	4c 89 ee             	mov    %r13,%rsi
+ 6b7:	e8 00 00 00 00       	callq  6bc <cb_key_press_event.part.1+0x35c>
+./src/view.c:157
+ 6bc:	4c 89 ea             	mov    %r13,%rdx
+ 6bf:	4c 89 fe             	mov    %r15,%rsi
+ 6c2:	4c 89 f7             	mov    %r14,%rdi
+ 6c5:	e8 00 00 00 00       	callq  6ca <cb_key_press_event.part.1+0x36a>
+./src/view.c:158
+ 6ca:	48 89 ee             	mov    %rbp,%rsi
+ 6cd:	48 89 df             	mov    %rbx,%rdi
+ 6d0:	e8 00 00 00 00       	callq  6d5 <cb_key_press_event.part.1+0x375>
+ 6d5:	66 0f ef c9          	pxor   %xmm1,%xmm1
+ 6d9:	ba 01 00 00 00       	mov    $0x1,%edx
+ 6de:	66 0f ef d2          	pxor   %xmm2,%xmm2
+ 6e2:	4c 89 fe             	mov    %r15,%rsi
+ 6e5:	48 89 c7             	mov    %rax,%rdi
+ 6e8:	66 0f 28 c1          	movapd %xmm1,%xmm0
+ 6ec:	f2 0f 2a 54 24 08    	cvtsi2sdl 0x8(%rsp),%xmm2
+ 6f2:	e8 00 00 00 00       	callq  6f7 <cb_key_press_event.part.1+0x397>
+./src/view.c:160
+ 6f7:	41 f6 44 24 18 01    	testb  $0x1,0x18(%r12)
+ 6fd:	0f 85 3c fe ff ff    	jne    53f <cb_key_press_event.part.1+0x1df>
+./src/view.c:161
+ 703:	4c 89 fa             	mov    %r15,%rdx
+ 706:	4c 89 ee             	mov    %r13,%rsi
+ 709:	4c 89 f7             	mov    %r14,%rdi
+ 70c:	e8 00 00 00 00       	callq  711 <cb_key_press_event.part.1+0x3b1>
+./src/view.c:162
+ 711:	48 89 ee             	mov    %rbp,%rsi
+ 714:	48 89 df             	mov    %rbx,%rdi
+ 717:	e8 00 00 00 00       	callq  71c <cb_key_press_event.part.1+0x3bc>
+ 71c:	48 8b 78 78          	mov    0x78(%rax),%rdi
+ 720:	4c 89 ee             	mov    %r13,%rsi
+ 723:	e8 00 00 00 00       	callq  728 <cb_key_press_event.part.1+0x3c8>
+ 728:	e9 12 fe ff ff       	jmpq   53f <cb_key_press_event.part.1+0x1df>
+ 72d:	0f 1f 00             	nopl   (%rax)
+./src/view.c:175
+ 730:	48 89 df             	mov    %rbx,%rdi
+ 733:	e8 00 00 00 00       	callq  738 <cb_key_press_event.part.1+0x3d8>
+./src/view.c:176
+ 738:	b8 01 00 00 00       	mov    $0x1,%eax
+ 73d:	e9 ff fc ff ff       	jmpq   441 <cb_key_press_event.part.1+0xe1>
+ 742:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/view.c:130
+ 748:	2b 94 24 cc 00 00 00 	sub    0xcc(%rsp),%edx
+ 74f:	48 89 ee             	mov    %rbp,%rsi
+ 752:	48 89 df             	mov    %rbx,%rdi
+ 755:	89 54 24 08          	mov    %edx,0x8(%rsp)
+ 759:	e8 00 00 00 00       	callq  75e <cb_key_press_event.part.1+0x3fe>
+ 75e:	8b 54 24 08          	mov    0x8(%rsp),%edx
+ 762:	4c 89 ee             	mov    %r13,%rsi
+ 765:	48 89 c7             	mov    %rax,%rdi
+ 768:	31 c9                	xor    %ecx,%ecx
+ 76a:	e8 00 00 00 00       	callq  76f <cb_key_press_event.part.1+0x40f>
+./src/view.c:132
+ 76f:	4c 89 ea             	mov    %r13,%rdx
+ 772:	4c 89 fe             	mov    %r15,%rsi
+ 775:	4c 89 f7             	mov    %r14,%rdi
+ 778:	e8 00 00 00 00       	callq  77d <cb_key_press_event.part.1+0x41d>
+ 77d:	e9 79 fe ff ff       	jmpq   5fb <cb_key_press_event.part.1+0x29b>
+ 782:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/view.c:153
+ 788:	2b 44 24 7c          	sub    0x7c(%rsp),%eax
+./src/view.c:152
+ 78c:	03 84 24 cc 00 00 00 	add    0xcc(%rsp),%eax
+ 793:	89 c2                	mov    %eax,%edx
+ 795:	e9 02 ff ff ff       	jmpq   69c <cb_key_press_event.part.1+0x33c>
+./src/view.c:196
+ 79a:	e8 00 00 00 00       	callq  79f <cb_key_press_event.part.1+0x43f>
+cb_key_press_event.part.1():
+ 79f:	90                   	nop
+
+00000000000007a0 <cb_key_press_event>:
+cb_key_press_event():
+./src/view.c:106
+ 7a0:	55                   	push   %rbp
+ 7a1:	53                   	push   %rbx
+ 7a2:	48 89 fb             	mov    %rdi,%rbx
+ 7a5:	48 89 f5             	mov    %rsi,%rbp
+ 7a8:	48 83 ec 18          	sub    $0x18,%rsp
+ 7ac:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 7b3:	00 00 
+ 7b5:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 7ba:	31 c0                	xor    %eax,%eax
+check_preedit():
+./src/view.c:84
+ 7bc:	e8 00 00 00 00       	callq  7c1 <cb_key_press_event+0x21>
+ 7c1:	48 89 df             	mov    %rbx,%rdi
+ 7c4:	48 89 c6             	mov    %rax,%rsi
+ 7c7:	e8 00 00 00 00       	callq  7cc <cb_key_press_event+0x2c>
+./src/view.c:83
+ 7cc:	48 8b b8 30 01 00 00 	mov    0x130(%rax),%rdi
+ 7d3:	48 8d 4c 24 04       	lea    0x4(%rsp),%rcx
+ 7d8:	31 d2                	xor    %edx,%edx
+ 7da:	31 f6                	xor    %esi,%esi
+ 7dc:	e8 00 00 00 00       	callq  7e1 <cb_key_press_event+0x41>
+cb_key_press_event():
+./src/view.c:112
+ 7e1:	8b 44 24 04          	mov    0x4(%rsp),%eax
+ 7e5:	85 c0                	test   %eax,%eax
+ 7e7:	74 1f                	je     808 <cb_key_press_event+0x68>
+ 7e9:	31 c0                	xor    %eax,%eax
+./src/view.c:196
+ 7eb:	48 8b 54 24 08       	mov    0x8(%rsp),%rdx
+ 7f0:	64 48 33 14 25 28 00 	xor    %fs:0x28,%rdx
+ 7f7:	00 00 
+ 7f9:	75 1a                	jne    815 <cb_key_press_event+0x75>
+ 7fb:	48 83 c4 18          	add    $0x18,%rsp
+ 7ff:	5b                   	pop    %rbx
+ 800:	5d                   	pop    %rbp
+ 801:	c3                   	retq   
+ 802:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 808:	48 89 ee             	mov    %rbp,%rsi
+ 80b:	48 89 df             	mov    %rbx,%rdi
+ 80e:	e8 4d fb ff ff       	callq  360 <cb_key_press_event.part.1>
+ 813:	eb d6                	jmp    7eb <cb_key_press_event+0x4b>
+ 815:	e8 00 00 00 00       	callq  81a <cb_key_press_event+0x7a>
+ 81a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000000820 <get_current_keyval>:
+get_current_keyval():
+./src/view.c:30
+ 820:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 826 <get_current_keyval+0x6>
+ 826:	c3                   	retq   
+ 827:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 82e:	00 00 
+
+0000000000000830 <clear_current_keyval>:
+clear_current_keyval():
+./src/view.c:34
+ 830:	c7 05 00 00 00 00 00 	movl   $0x0,0x0(%rip)        # 83a <clear_current_keyval+0xa>
+ 837:	00 00 00 
+ 83a:	c3                   	retq   
+ 83b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000000840 <scroll_to_cursor>:
+scroll_to_cursor():
+./src/view.c:49
+ 840:	53                   	push   %rbx
+ 841:	48 83 ec 10          	sub    $0x10,%rsp
+ 845:	f2 0f 11 44 24 08    	movsd  %xmm0,0x8(%rsp)
+./src/view.c:50
+ 84b:	e8 00 00 00 00       	callq  850 <scroll_to_cursor+0x10>
+ 850:	48 89 c3             	mov    %rax,%rbx
+ 853:	e8 00 00 00 00       	callq  858 <scroll_to_cursor+0x18>
+ 858:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 85f <scroll_to_cursor+0x1f>
+ 85f:	48 89 c6             	mov    %rax,%rsi
+ 862:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+ 866:	48 8b 7a 10          	mov    0x10(%rdx),%rdi
+ 86a:	e8 00 00 00 00       	callq  86f <scroll_to_cursor+0x2f>
+ 86f:	66 0f ef d2          	pxor   %xmm2,%xmm2
+ 873:	48 89 de             	mov    %rbx,%rsi
+ 876:	f2 0f 10 44 24 08    	movsd  0x8(%rsp),%xmm0
+./src/view.c:53
+ 87c:	48 83 c4 10          	add    $0x10,%rsp
+ 880:	5b                   	pop    %rbx
+./src/view.c:50
+ 881:	66 0f 28 ca          	movapd %xmm2,%xmm1
+ 885:	31 d2                	xor    %edx,%edx
+ 887:	48 89 c7             	mov    %rax,%rdi
+ 88a:	e9 00 00 00 00       	jmpq   88f <scroll_to_cursor+0x4f>
+ 88f:	90                   	nop
+
+0000000000000890 <check_text_modification>:
+check_text_modification():
+./src/view.c:60
+ 890:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 897 <check_text_modification+0x7>
+./src/view.c:56
+ 897:	41 54                	push   %r12
+ 899:	55                   	push   %rbp
+ 89a:	53                   	push   %rbx
+./src/view.c:76
+ 89b:	31 db                	xor    %ebx,%ebx
+./src/view.c:60
+ 89d:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 8a1:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 8a5:	e8 00 00 00 00       	callq  8aa <check_text_modification+0x1a>
+ 8aa:	85 c0                	test   %eax,%eax
+ 8ac:	75 0a                	jne    8b8 <check_text_modification+0x28>
+./src/view.c:77
+ 8ae:	89 d8                	mov    %ebx,%eax
+ 8b0:	5b                   	pop    %rbx
+ 8b1:	5d                   	pop    %rbp
+ 8b2:	41 5c                	pop    %r12
+ 8b4:	c3                   	retq   
+ 8b5:	0f 1f 00             	nopl   (%rax)
+./src/view.c:61
+ 8b8:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 8bf <check_text_modification+0x2f>
+ 8bf:	31 f6                	xor    %esi,%esi
+ 8c1:	48 8b 00             	mov    (%rax),%rax
+ 8c4:	48 8b 38             	mov    (%rax),%rdi
+ 8c7:	e8 00 00 00 00       	callq  8cc <check_text_modification+0x3c>
+./src/view.c:62
+ 8cc:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 8d3 <check_text_modification+0x43>
+ 8d3:	ba 05 00 00 00       	mov    $0x5,%edx
+./src/view.c:61
+ 8d8:	49 89 c4             	mov    %rax,%r12
+./src/view.c:62
+ 8db:	31 ff                	xor    %edi,%edi
+ 8dd:	e8 00 00 00 00       	callq  8e2 <check_text_modification+0x52>
+ 8e2:	4c 89 e6             	mov    %r12,%rsi
+ 8e5:	48 89 c7             	mov    %rax,%rdi
+ 8e8:	31 c0                	xor    %eax,%eax
+ 8ea:	e8 00 00 00 00       	callq  8ef <check_text_modification+0x5f>
+./src/view.c:63
+ 8ef:	4c 89 e7             	mov    %r12,%rdi
+./src/view.c:62
+ 8f2:	48 89 c5             	mov    %rax,%rbp
+./src/view.c:63
+ 8f5:	e8 00 00 00 00       	callq  8fa <check_text_modification+0x6a>
+./src/view.c:64
+ 8fa:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 901 <check_text_modification+0x71>
+ 901:	48 89 ee             	mov    %rbp,%rsi
+ 904:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 908:	48 8b 38             	mov    (%rax),%rdi
+ 90b:	31 c0                	xor    %eax,%eax
+ 90d:	e8 00 00 00 00       	callq  912 <check_text_modification+0x82>
+./src/view.c:65
+ 912:	48 89 ef             	mov    %rbp,%rdi
+./src/view.c:64
+ 915:	41 89 c4             	mov    %eax,%r12d
+./src/view.c:65
+ 918:	e8 00 00 00 00       	callq  91d <check_text_modification+0x8d>
+./src/view.c:66
+ 91d:	41 83 fc f7          	cmp    $0xfffffff7,%r12d
+ 921:	74 8b                	je     8ae <check_text_modification+0x1e>
+ 923:	41 83 fc f8          	cmp    $0xfffffff8,%r12d
+./src/view.c:73
+ 927:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+./src/view.c:66
+ 92c:	75 80                	jne    8ae <check_text_modification+0x1e>
+./src/view.c:70
+ 92e:	e8 00 00 00 00       	callq  933 <check_text_modification+0xa3>
+ 933:	31 db                	xor    %ebx,%ebx
+ 935:	85 c0                	test   %eax,%eax
+ 937:	0f 95 c3             	setne  %bl
+ 93a:	f7 db                	neg    %ebx
+./src/view.c:77
+ 93c:	89 d8                	mov    %ebx,%eax
+ 93e:	5b                   	pop    %rbx
+ 93f:	5d                   	pop    %rbp
+ 940:	41 5c                	pop    %r12
+ 942:	c3                   	retq   
+ 943:	0f 1f 00             	nopl   (%rax)
+ 946:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 94d:	00 00 00 
+
+0000000000000950 <force_call_cb_modified_changed>:
+force_call_cb_modified_changed():
+./src/view.c:242
+ 950:	53                   	push   %rbx
+ 951:	48 89 fb             	mov    %rdi,%rbx
+./src/view.c:243
+ 954:	e8 00 00 00 00       	callq  959 <force_call_cb_modified_changed+0x9>
+ 959:	48 89 df             	mov    %rbx,%rdi
+ 95c:	48 89 c6             	mov    %rax,%rsi
+ 95f:	e8 00 00 00 00       	callq  964 <force_call_cb_modified_changed+0x14>
+ 964:	48 89 de             	mov    %rbx,%rsi
+ 967:	48 8b 78 78          	mov    0x78(%rax),%rdi
+./src/view.c:244
+ 96b:	5b                   	pop    %rbx
+./src/view.c:243
+ 96c:	e9 9f f6 ff ff       	jmpq   10 <cb_modified_changed>
+ 971:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 976:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 97d:	00 00 00 
+
+0000000000000980 <force_block_cb_modified_changed>:
+force_block_cb_modified_changed():
+./src/view.c:247
+ 980:	53                   	push   %rbx
+ 981:	48 89 fb             	mov    %rdi,%rbx
+./src/view.c:248
+ 984:	e8 00 00 00 00       	callq  989 <force_block_cb_modified_changed+0x9>
+ 989:	48 89 df             	mov    %rbx,%rdi
+ 98c:	48 89 c6             	mov    %rax,%rsi
+ 98f:	e8 00 00 00 00       	callq  994 <force_block_cb_modified_changed+0x14>
+ 994:	48 8b 78 78          	mov    0x78(%rax),%rdi
+ 998:	be 50 00 00 00       	mov    $0x50,%esi
+ 99d:	e8 00 00 00 00       	callq  9a2 <force_block_cb_modified_changed+0x22>
+ 9a2:	48 83 ec 08          	sub    $0x8,%rsp
+ 9a6:	4c 8d 0d 63 f6 ff ff 	lea    -0x99d(%rip),%r9        # 10 <cb_modified_changed>
+ 9ad:	31 d2                	xor    %edx,%edx
+ 9af:	53                   	push   %rbx
+ 9b0:	45 31 c0             	xor    %r8d,%r8d
+ 9b3:	31 c9                	xor    %ecx,%ecx
+ 9b5:	be 18 00 00 00       	mov    $0x18,%esi
+ 9ba:	48 89 c7             	mov    %rax,%rdi
+ 9bd:	e8 00 00 00 00       	callq  9c2 <force_block_cb_modified_changed+0x42>
+./src/view.c:250
+ 9c2:	58                   	pop    %rax
+ 9c3:	5a                   	pop    %rdx
+ 9c4:	5b                   	pop    %rbx
+ 9c5:	c3                   	retq   
+ 9c6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 9cd:	00 00 00 
+
+00000000000009d0 <force_unblock_cb_modified_changed>:
+force_unblock_cb_modified_changed():
+./src/view.c:253
+ 9d0:	53                   	push   %rbx
+ 9d1:	48 89 fb             	mov    %rdi,%rbx
+./src/view.c:254
+ 9d4:	e8 00 00 00 00       	callq  9d9 <force_unblock_cb_modified_changed+0x9>
+ 9d9:	48 89 df             	mov    %rbx,%rdi
+ 9dc:	48 89 c6             	mov    %rax,%rsi
+ 9df:	e8 00 00 00 00       	callq  9e4 <force_unblock_cb_modified_changed+0x14>
+ 9e4:	48 8b 78 78          	mov    0x78(%rax),%rdi
+ 9e8:	be 50 00 00 00       	mov    $0x50,%esi
+ 9ed:	e8 00 00 00 00       	callq  9f2 <force_unblock_cb_modified_changed+0x22>
+ 9f2:	48 83 ec 08          	sub    $0x8,%rsp
+ 9f6:	4c 8d 0d 13 f6 ff ff 	lea    -0x9ed(%rip),%r9        # 10 <cb_modified_changed>
+ 9fd:	31 d2                	xor    %edx,%edx
+ 9ff:	53                   	push   %rbx
+ a00:	45 31 c0             	xor    %r8d,%r8d
+ a03:	31 c9                	xor    %ecx,%ecx
+ a05:	be 18 00 00 00       	mov    $0x18,%esi
+ a0a:	48 89 c7             	mov    %rax,%rdi
+ a0d:	e8 00 00 00 00       	callq  a12 <force_unblock_cb_modified_changed+0x42>
+./src/view.c:256
+ a12:	58                   	pop    %rax
+ a13:	5a                   	pop    %rdx
+ a14:	5b                   	pop    %rbx
+ a15:	c3                   	retq   
+ a16:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ a1d:	00 00 00 
+
+0000000000000a20 <create_text_view>:
+create_text_view():
+./src/view.c:321
+ a20:	41 54                	push   %r12
+ a22:	55                   	push   %rbp
+ a23:	53                   	push   %rbx
+./src/view.c:325
+ a24:	e8 00 00 00 00       	callq  a29 <create_text_view+0x9>
+ a29:	48 89 c3             	mov    %rax,%rbx
+./src/view.c:326
+ a2c:	e8 00 00 00 00       	callq  a31 <create_text_view+0x11>
+ a31:	48 89 df             	mov    %rbx,%rdi
+ a34:	48 89 c6             	mov    %rax,%rsi
+ a37:	e8 00 00 00 00       	callq  a3c <create_text_view+0x1c>
+ a3c:	48 89 c7             	mov    %rax,%rdi
+ a3f:	e8 00 00 00 00       	callq  a44 <create_text_view+0x24>
+./src/view.c:331
+ a44:	48 89 df             	mov    %rbx,%rdi
+ a47:	be 50 00 00 00       	mov    $0x50,%esi
+./src/view.c:326
+ a4c:	48 89 c5             	mov    %rax,%rbp
+./src/view.c:331
+ a4f:	e8 00 00 00 00       	callq  a54 <create_text_view+0x34>
+ a54:	48 8d 15 45 fd ff ff 	lea    -0x2bb(%rip),%rdx        # 7a0 <cb_key_press_event>
+ a5b:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # a62 <create_text_view+0x42>
+ a62:	45 31 c9             	xor    %r9d,%r9d
+ a65:	45 31 c0             	xor    %r8d,%r8d
+ a68:	31 c9                	xor    %ecx,%ecx
+ a6a:	48 89 c7             	mov    %rax,%rdi
+ a6d:	e8 00 00 00 00       	callq  a72 <create_text_view+0x52>
+./src/view.c:333
+ a72:	48 89 df             	mov    %rbx,%rdi
+ a75:	be 50 00 00 00       	mov    $0x50,%esi
+ a7a:	e8 00 00 00 00       	callq  a7f <create_text_view+0x5f>
+ a7f:	48 8d 15 3a f7 ff ff 	lea    -0x8c6(%rip),%rdx        # 1c0 <cb_button_press_event>
+ a86:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # a8d <create_text_view+0x6d>
+ a8d:	45 31 c9             	xor    %r9d,%r9d
+ a90:	45 31 c0             	xor    %r8d,%r8d
+ a93:	31 c9                	xor    %ecx,%ecx
+ a95:	48 89 c7             	mov    %rax,%rdi
+ a98:	e8 00 00 00 00       	callq  a9d <create_text_view+0x7d>
+./src/view.c:335
+ a9d:	48 89 df             	mov    %rbx,%rdi
+ aa0:	be 50 00 00 00       	mov    $0x50,%esi
+ aa5:	e8 00 00 00 00       	callq  aaa <create_text_view+0x8a>
+ aaa:	4c 8b 25 00 00 00 00 	mov    0x0(%rip),%r12        # ab1 <create_text_view+0x91>
+ ab1:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # ab8 <create_text_view+0x98>
+ ab8:	45 31 c0             	xor    %r8d,%r8d
+ abb:	31 c9                	xor    %ecx,%ecx
+ abd:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ ac3:	48 89 c7             	mov    %rax,%rdi
+ ac6:	4c 89 e2             	mov    %r12,%rdx
+ ac9:	e8 00 00 00 00       	callq  ace <create_text_view+0xae>
+./src/view.c:337
+ ace:	48 89 df             	mov    %rbx,%rdi
+ ad1:	be 50 00 00 00       	mov    $0x50,%esi
+ ad6:	e8 00 00 00 00       	callq  adb <create_text_view+0xbb>
+ adb:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # ae2 <create_text_view+0xc2>
+ ae2:	45 31 c0             	xor    %r8d,%r8d
+ ae5:	31 c9                	xor    %ecx,%ecx
+ ae7:	4c 89 e2             	mov    %r12,%rdx
+ aea:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ af0:	48 89 c7             	mov    %rax,%rdi
+ af3:	e8 00 00 00 00       	callq  af8 <create_text_view+0xd8>
+./src/view.c:339
+ af8:	48 89 ef             	mov    %rbp,%rdi
+ afb:	e8 00 00 00 00       	callq  b00 <create_text_view+0xe0>
+ b00:	48 89 df             	mov    %rbx,%rdi
+ b03:	be 50 00 00 00       	mov    $0x50,%esi
+ b08:	49 89 c4             	mov    %rax,%r12
+ b0b:	e8 00 00 00 00       	callq  b10 <create_text_view+0xf0>
+ b10:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # b17 <create_text_view+0xf7>
+ b17:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # b1e <create_text_view+0xfe>
+ b1e:	45 31 c0             	xor    %r8d,%r8d
+ b21:	4c 89 e1             	mov    %r12,%rcx
+ b24:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ b2a:	48 89 c7             	mov    %rax,%rdi
+ b2d:	e8 00 00 00 00       	callq  b32 <create_text_view+0x112>
+./src/view.c:345
+ b32:	48 89 df             	mov    %rbx,%rdi
+ b35:	be 50 00 00 00       	mov    $0x50,%esi
+ b3a:	e8 00 00 00 00       	callq  b3f <create_text_view+0x11f>
+ b3f:	48 8d 15 ea f5 ff ff 	lea    -0xa16(%rip),%rdx        # 130 <cb_focus_event>
+ b46:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # b4d <create_text_view+0x12d>
+ b4d:	45 31 c0             	xor    %r8d,%r8d
+ b50:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ b56:	31 c9                	xor    %ecx,%ecx
+ b58:	48 89 c7             	mov    %rax,%rdi
+ b5b:	e8 00 00 00 00       	callq  b60 <create_text_view+0x140>
+./src/view.c:347
+ b60:	48 89 df             	mov    %rbx,%rdi
+ b63:	be 50 00 00 00       	mov    $0x50,%esi
+ b68:	e8 00 00 00 00       	callq  b6d <create_text_view+0x14d>
+ b6d:	48 8d 15 bc f5 ff ff 	lea    -0xa44(%rip),%rdx        # 130 <cb_focus_event>
+ b74:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # b7b <create_text_view+0x15b>
+ b7b:	45 31 c0             	xor    %r8d,%r8d
+ b7e:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ b84:	31 c9                	xor    %ecx,%ecx
+ b86:	48 89 c7             	mov    %rax,%rdi
+ b89:	e8 00 00 00 00       	callq  b8e <create_text_view+0x16e>
+./src/view.c:350
+ b8e:	48 89 ef             	mov    %rbp,%rdi
+ b91:	be 50 00 00 00       	mov    $0x50,%esi
+ b96:	e8 00 00 00 00       	callq  b9b <create_text_view+0x17b>
+ b9b:	48 8d 15 6e f5 ff ff 	lea    -0xa92(%rip),%rdx        # 110 <cb_mark_changed>
+ ba2:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # ba9 <create_text_view+0x189>
+ ba9:	45 31 c9             	xor    %r9d,%r9d
+ bac:	45 31 c0             	xor    %r8d,%r8d
+ baf:	31 c9                	xor    %ecx,%ecx
+ bb1:	48 89 c7             	mov    %rax,%rdi
+ bb4:	e8 00 00 00 00       	callq  bb9 <create_text_view+0x199>
+./src/view.c:352
+ bb9:	48 89 ef             	mov    %rbp,%rdi
+ bbc:	be 50 00 00 00       	mov    $0x50,%esi
+ bc1:	e8 00 00 00 00       	callq  bc6 <create_text_view+0x1a6>
+ bc6:	48 8d 15 43 f5 ff ff 	lea    -0xabd(%rip),%rdx        # 110 <cb_mark_changed>
+ bcd:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # bd4 <create_text_view+0x1b4>
+ bd4:	45 31 c9             	xor    %r9d,%r9d
+ bd7:	45 31 c0             	xor    %r8d,%r8d
+ bda:	31 c9                	xor    %ecx,%ecx
+ bdc:	48 89 c7             	mov    %rax,%rdi
+ bdf:	e8 00 00 00 00       	callq  be4 <create_text_view+0x1c4>
+./src/view.c:354
+ be4:	48 89 ef             	mov    %rbp,%rdi
+ be7:	be 50 00 00 00       	mov    $0x50,%esi
+ bec:	e8 00 00 00 00       	callq  bf1 <create_text_view+0x1d1>
+ bf1:	48 8d 15 18 f4 ff ff 	lea    -0xbe8(%rip),%rdx        # 10 <cb_modified_changed>
+ bf8:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # bff <create_text_view+0x1df>
+ bff:	48 89 d9             	mov    %rbx,%rcx
+ c02:	45 31 c9             	xor    %r9d,%r9d
+ c05:	45 31 c0             	xor    %r8d,%r8d
+ c08:	48 89 c7             	mov    %rax,%rdi
+ c0b:	e8 00 00 00 00       	callq  c10 <create_text_view+0x1f0>
+./src/view.c:356
+ c10:	48 89 ef             	mov    %rbp,%rdi
+ c13:	be 50 00 00 00       	mov    $0x50,%esi
+ c18:	e8 00 00 00 00       	callq  c1d <create_text_view+0x1fd>
+ c1d:	48 8d 15 ec f6 ff ff 	lea    -0x914(%rip),%rdx        # 310 <cb_end_user_action>
+ c24:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # c2b <create_text_view+0x20b>
+ c2b:	48 89 d9             	mov    %rbx,%rcx
+ c2e:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ c34:	45 31 c0             	xor    %r8d,%r8d
+ c37:	48 89 c7             	mov    %rax,%rdi
+ c3a:	e8 00 00 00 00       	callq  c3f <create_text_view+0x21f>
+./src/view.c:364
+ c3f:	48 89 df             	mov    %rbx,%rdi
+ c42:	e8 00 00 00 00       	callq  c47 <create_text_view+0x227>
+./src/view.c:367
+ c47:	48 89 d8             	mov    %rbx,%rax
+ c4a:	5b                   	pop    %rbx
+ c4b:	5d                   	pop    %rbp
+ c4c:	41 5c                	pop    %r12
+ c4e:	c3                   	retq   

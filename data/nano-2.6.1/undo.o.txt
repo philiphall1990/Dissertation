@@ -1,0 +1,1045 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-undo.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <undo_clear_info_list>:
+undo_clear_info_list():
+./src/undo.c:56
+   0:	53                   	push   %rbx
+   1:	48 89 fb             	mov    %rdi,%rbx
+./src/undo.c:57
+   4:	eb 2c                	jmp    32 <undo_clear_info_list+0x32>
+   6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+   d:	00 00 00 
+./src/undo.c:58
+  10:	48 8b 03             	mov    (%rbx),%rax
+  13:	48 8b 78 10          	mov    0x10(%rax),%rdi
+  17:	e8 00 00 00 00       	callq  1c <undo_clear_info_list+0x1c>
+./src/undo.c:59
+  1c:	48 8b 3b             	mov    (%rbx),%rdi
+  1f:	e8 00 00 00 00       	callq  24 <undo_clear_info_list+0x24>
+./src/undo.c:60
+  24:	48 89 de             	mov    %rbx,%rsi
+  27:	48 89 df             	mov    %rbx,%rdi
+  2a:	e8 00 00 00 00       	callq  2f <undo_clear_info_list+0x2f>
+  2f:	48 89 c3             	mov    %rax,%rbx
+./src/undo.c:57
+  32:	48 89 df             	mov    %rbx,%rdi
+  35:	e8 00 00 00 00       	callq  3a <undo_clear_info_list+0x3a>
+  3a:	85 c0                	test   %eax,%eax
+  3c:	75 d2                	jne    10 <undo_clear_info_list+0x10>
+./src/undo.c:63
+  3e:	48 89 d8             	mov    %rbx,%rax
+  41:	5b                   	pop    %rbx
+  42:	c3                   	retq   
+  43:	0f 1f 00             	nopl   (%rax)
+  46:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  4d:	00 00 00 
+
+0000000000000050 <cb_begin_user_action>:
+cb_begin_user_action():
+./src/undo.c:226
+  50:	53                   	push   %rbx
+./src/undo.c:227
+  51:	be 50 00 00 00       	mov    $0x50,%esi
+./src/undo.c:226
+  56:	48 89 fb             	mov    %rdi,%rbx
+./src/undo.c:227
+  59:	e8 00 00 00 00       	callq  5e <cb_begin_user_action+0xe>
+  5e:	48 83 ec 08          	sub    $0x8,%rsp
+  62:	4c 8d 0d 67 07 00 00 	lea    0x767(%rip),%r9        # 7d0 <cb_insert_text>
+  69:	45 31 c0             	xor    %r8d,%r8d
+  6c:	6a 00                	pushq  $0x0
+  6e:	31 c9                	xor    %ecx,%ecx
+  70:	31 d2                	xor    %edx,%edx
+  72:	be 18 00 00 00       	mov    $0x18,%esi
+  77:	48 89 c7             	mov    %rax,%rdi
+  7a:	e8 00 00 00 00       	callq  7f <cb_begin_user_action+0x2f>
+./src/undo.c:229
+  7f:	48 89 df             	mov    %rbx,%rdi
+  82:	be 50 00 00 00       	mov    $0x50,%esi
+  87:	e8 00 00 00 00       	callq  8c <cb_begin_user_action+0x3c>
+  8c:	4c 8d 0d ed 06 00 00 	lea    0x6ed(%rip),%r9        # 780 <cb_delete_range>
+  93:	31 d2                	xor    %edx,%edx
+  95:	45 31 c0             	xor    %r8d,%r8d
+  98:	31 c9                	xor    %ecx,%ecx
+  9a:	be 18 00 00 00       	mov    $0x18,%esi
+  9f:	48 89 c7             	mov    %rax,%rdi
+  a2:	48 c7 04 24 00 00 00 	movq   $0x0,(%rsp)
+  a9:	00 
+  aa:	e8 00 00 00 00       	callq  af <cb_begin_user_action+0x5f>
+./src/undo.c:233
+  af:	58                   	pop    %rax
+  b0:	5a                   	pop    %rdx
+  b1:	5b                   	pop    %rbx
+  b2:	c3                   	retq   
+  b3:	0f 1f 00             	nopl   (%rax)
+  b6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  bd:	00 00 00 
+
+00000000000000c0 <cb_end_user_action>:
+cb_end_user_action():
+./src/undo.c:236
+  c0:	53                   	push   %rbx
+./src/undo.c:237
+  c1:	be 50 00 00 00       	mov    $0x50,%esi
+./src/undo.c:236
+  c6:	48 89 fb             	mov    %rdi,%rbx
+./src/undo.c:237
+  c9:	e8 00 00 00 00       	callq  ce <cb_end_user_action+0xe>
+  ce:	48 83 ec 08          	sub    $0x8,%rsp
+  d2:	4c 8d 0d f7 06 00 00 	lea    0x6f7(%rip),%r9        # 7d0 <cb_insert_text>
+  d9:	45 31 c0             	xor    %r8d,%r8d
+  dc:	6a 00                	pushq  $0x0
+  de:	31 c9                	xor    %ecx,%ecx
+  e0:	31 d2                	xor    %edx,%edx
+  e2:	be 18 00 00 00       	mov    $0x18,%esi
+  e7:	48 89 c7             	mov    %rax,%rdi
+  ea:	e8 00 00 00 00       	callq  ef <cb_end_user_action+0x2f>
+./src/undo.c:239
+  ef:	48 89 df             	mov    %rbx,%rdi
+  f2:	be 50 00 00 00       	mov    $0x50,%esi
+  f7:	e8 00 00 00 00       	callq  fc <cb_end_user_action+0x3c>
+  fc:	4c 8d 0d 7d 06 00 00 	lea    0x67d(%rip),%r9        # 780 <cb_delete_range>
+ 103:	31 d2                	xor    %edx,%edx
+ 105:	45 31 c0             	xor    %r8d,%r8d
+ 108:	31 c9                	xor    %ecx,%ecx
+ 10a:	be 18 00 00 00       	mov    $0x18,%esi
+ 10f:	48 89 c7             	mov    %rax,%rdi
+ 112:	48 c7 04 24 00 00 00 	movq   $0x0,(%rsp)
+ 119:	00 
+ 11a:	e8 00 00 00 00       	callq  11f <cb_end_user_action+0x5f>
+./src/undo.c:242
+ 11f:	58                   	pop    %rax
+ 120:	5a                   	pop    %rdx
+ 121:	5b                   	pop    %rbx
+ 122:	c3                   	retq   
+ 123:	0f 1f 00             	nopl   (%rax)
+ 126:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 12d:	00 00 00 
+
+0000000000000130 <undo_check_modified_step>:
+undo_check_modified_step():
+./src/undo.c:200
+ 130:	41 54                	push   %r12
+ 132:	55                   	push   %rbp
+ 133:	53                   	push   %rbx
+ 134:	48 89 fb             	mov    %rdi,%rbx
+./src/undo.c:203
+ 137:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 13e <undo_check_modified_step+0xe>
+ 13e:	e8 00 00 00 00       	callq  143 <undo_check_modified_step+0x13>
+ 143:	8b 2d 00 00 00 00    	mov    0x0(%rip),%ebp        # 149 <undo_check_modified_step+0x19>
+ 149:	41 89 c4             	mov    %eax,%r12d
+./src/undo.c:205
+ 14c:	48 89 df             	mov    %rbx,%rdi
+ 14f:	e8 00 00 00 00       	callq  154 <undo_check_modified_step+0x24>
+./src/undo.c:203
+ 154:	31 d2                	xor    %edx,%edx
+ 156:	41 39 ec             	cmp    %ebp,%r12d
+ 159:	0f 94 c2             	sete   %dl
+./src/undo.c:205
+ 15c:	39 c2                	cmp    %eax,%edx
+ 15e:	74 08                	je     168 <undo_check_modified_step+0x38>
+./src/undo.c:208
+ 160:	5b                   	pop    %rbx
+ 161:	5d                   	pop    %rbp
+ 162:	41 5c                	pop    %r12
+ 164:	c3                   	retq   
+ 165:	0f 1f 00             	nopl   (%rax)
+./src/undo.c:206
+ 168:	31 f6                	xor    %esi,%esi
+ 16a:	48 89 df             	mov    %rbx,%rdi
+ 16d:	41 39 ec             	cmp    %ebp,%r12d
+./src/undo.c:208
+ 170:	5b                   	pop    %rbx
+ 171:	5d                   	pop    %rbp
+ 172:	41 5c                	pop    %r12
+./src/undo.c:206
+ 174:	40 0f 95 c6          	setne  %sil
+ 178:	e9 00 00 00 00       	jmpq   17d <undo_check_modified_step+0x4d>
+ 17d:	0f 1f 00             	nopl   (%rax)
+
+0000000000000180 <undo_append_undo_info.constprop.1>:
+undo_append_undo_info():
+./src/undo.c:65
+ 180:	41 55                	push   %r13
+ 182:	41 54                	push   %r12
+ 184:	41 89 fd             	mov    %edi,%r13d
+ 187:	55                   	push   %rbp
+ 188:	53                   	push   %rbx
+./src/undo.c:67
+ 189:	bf 18 00 00 00       	mov    $0x18,%edi
+./src/undo.c:65
+ 18e:	41 89 f4             	mov    %esi,%r12d
+ 191:	89 d5                	mov    %edx,%ebp
+ 193:	48 89 cb             	mov    %rcx,%rbx
+ 196:	48 83 ec 08          	sub    $0x8,%rsp
+./src/undo.c:67
+ 19a:	e8 00 00 00 00       	callq  19f <undo_append_undo_info.constprop.1+0x1f>
+./src/undo.c:73
+ 19f:	8b 15 00 00 00 00    	mov    0x0(%rip),%edx        # 1a5 <undo_append_undo_info.constprop.1+0x25>
+./src/undo.c:78
+ 1a5:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 1ac <undo_append_undo_info.constprop.1+0x2c>
+ 1ac:	48 89 c6             	mov    %rax,%rsi
+./src/undo.c:69
+ 1af:	44 88 28             	mov    %r13b,(%rax)
+./src/undo.c:70
+ 1b2:	44 89 60 04          	mov    %r12d,0x4(%rax)
+./src/undo.c:71
+ 1b6:	89 68 08             	mov    %ebp,0x8(%rax)
+./src/undo.c:74
+ 1b9:	48 89 58 10          	mov    %rbx,0x10(%rax)
+./src/undo.c:73
+ 1bd:	89 50 0c             	mov    %edx,0xc(%rax)
+./src/undo.c:76
+ 1c0:	c7 05 00 00 00 00 00 	movl   $0x0,0x0(%rip)        # 1ca <undo_append_undo_info.constprop.1+0x4a>
+ 1c7:	00 00 00 
+./src/undo.c:78
+ 1ca:	e8 00 00 00 00       	callq  1cf <undo_append_undo_info.constprop.1+0x4f>
+ 1cf:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 1d6 <undo_append_undo_info.constprop.1+0x56>
+./src/undo.c:80
+ 1d6:	48 83 c4 08          	add    $0x8,%rsp
+ 1da:	5b                   	pop    %rbx
+ 1db:	5d                   	pop    %rbp
+ 1dc:	41 5c                	pop    %r12
+ 1de:	41 5d                	pop    %r13
+ 1e0:	c3                   	retq   
+undo_append_undo_info.constprop.1():
+ 1e1:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 1e6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 1ed:	00 00 00 
+
+00000000000001f0 <undo_flush_temporal_buffer>:
+undo_flush_temporal_buffer():
+./src/undo.c:294
+ 1f0:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 1f7 <undo_flush_temporal_buffer+0x7>
+ 1f7:	48 83 78 08 00       	cmpq   $0x0,0x8(%rax)
+ 1fc:	75 02                	jne    200 <undo_flush_temporal_buffer+0x10>
+./src/undo.c:299
+ 1fe:	c3                   	retq   
+ 1ff:	90                   	nop
+./src/undo.c:293
+ 200:	48 83 ec 08          	sub    $0x8,%rsp
+./src/undo.c:295
+ 204:	48 8b 38             	mov    (%rax),%rdi
+ 207:	e8 00 00 00 00       	callq  20c <undo_flush_temporal_buffer+0x1c>
+./src/undo.c:296
+ 20c:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 213 <undo_flush_temporal_buffer+0x23>
+./src/undo.c:295
+ 213:	48 89 c1             	mov    %rax,%rcx
+ 216:	8b 57 08             	mov    0x8(%rdi),%edx
+ 219:	8b 77 04             	mov    0x4(%rdi),%esi
+ 21c:	0f be 3f             	movsbl (%rdi),%edi
+ 21f:	e8 5c ff ff ff       	callq  180 <undo_append_undo_info.constprop.1>
+./src/undo.c:297
+ 224:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 22b <undo_flush_temporal_buffer+0x3b>
+ 22b:	48 c7 c2 ff ff ff ff 	mov    $0xffffffffffffffff,%rdx
+ 232:	31 f6                	xor    %esi,%esi
+ 234:	e8 00 00 00 00       	callq  239 <undo_flush_temporal_buffer+0x49>
+ 239:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 240 <undo_flush_temporal_buffer+0x50>
+./src/undo.c:299
+ 240:	48 83 c4 08          	add    $0x8,%rsp
+ 244:	c3                   	retq   
+ 245:	90                   	nop
+ 246:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 24d:	00 00 00 
+
+0000000000000250 <undo_reset_modified_step>:
+undo_reset_modified_step():
+./src/undo.c:193
+ 250:	48 83 ec 08          	sub    $0x8,%rsp
+./src/undo.c:194
+ 254:	e8 97 ff ff ff       	callq  1f0 <undo_flush_temporal_buffer>
+./src/undo.c:195
+ 259:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 260 <undo_reset_modified_step+0x10>
+ 260:	e8 00 00 00 00       	callq  265 <undo_reset_modified_step+0x15>
+ 265:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 26b <undo_reset_modified_step+0x1b>
+./src/undo.c:197
+ 26b:	48 83 c4 08          	add    $0x8,%rsp
+ 26f:	c3                   	retq   
+
+0000000000000270 <undo_clear_all>:
+undo_clear_all():
+./src/undo.c:245
+ 270:	53                   	push   %rbx
+ 271:	48 89 fb             	mov    %rdi,%rbx
+./src/undo.c:246
+ 274:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 27b <undo_clear_all+0xb>
+ 27b:	e8 80 fd ff ff       	callq  0 <undo_clear_info_list>
+./src/undo.c:247
+ 280:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 287 <undo_clear_all+0x17>
+./src/undo.c:246
+ 287:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 28e <undo_clear_all+0x1e>
+./src/undo.c:247
+ 28e:	e8 6d fd ff ff       	callq  0 <undo_clear_info_list>
+./src/undo.c:248
+ 293:	48 89 df             	mov    %rbx,%rdi
+./src/undo.c:247
+ 296:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 29d <undo_clear_all+0x2d>
+./src/undo.c:248
+ 29d:	e8 00 00 00 00       	callq  2a2 <undo_clear_all+0x32>
+./src/undo.c:249
+ 2a2:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 2a9 <undo_clear_all+0x39>
+ 2a9:	31 f6                	xor    %esi,%esi
+ 2ab:	e8 00 00 00 00       	callq  2b0 <undo_clear_all+0x40>
+./src/undo.c:250
+ 2b0:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 2b7 <undo_clear_all+0x47>
+ 2b7:	31 f6                	xor    %esi,%esi
+ 2b9:	e8 00 00 00 00       	callq  2be <undo_clear_all+0x4e>
+./src/undo.c:252
+ 2be:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 2c5 <undo_clear_all+0x55>
+./src/undo.c:253
+ 2c5:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 2cc <undo_clear_all+0x5c>
+ 2cc:	48 c7 c2 ff ff ff ff 	mov    $0xffffffffffffffff,%rdx
+ 2d3:	31 f6                	xor    %esi,%esi
+./src/undo.c:252
+ 2d5:	c6 00 00             	movb   $0x0,(%rax)
+./src/undo.c:253
+ 2d8:	e8 00 00 00 00       	callq  2dd <undo_clear_all+0x6d>
+./src/undo.c:254
+ 2dd:	c7 05 00 00 00 00 00 	movl   $0x0,0x0(%rip)        # 2e7 <undo_clear_all+0x77>
+ 2e4:	00 00 00 
+./src/undo.c:253
+ 2e7:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 2ee <undo_clear_all+0x7e>
+./src/undo.c:255
+ 2ee:	5b                   	pop    %rbx
+ 2ef:	c3                   	retq   
+
+00000000000002f0 <undo_init>:
+undo_init():
+./src/undo.c:258
+ 2f0:	41 54                	push   %r12
+ 2f2:	55                   	push   %rbp
+ 2f3:	49 89 f4             	mov    %rsi,%r12
+ 2f6:	53                   	push   %rbx
+ 2f7:	48 89 fb             	mov    %rdi,%rbx
+ 2fa:	48 89 d5             	mov    %rdx,%rbp
+./src/undo.c:259
+ 2fd:	e8 00 00 00 00       	callq  302 <undo_init+0x12>
+ 302:	48 89 df             	mov    %rbx,%rdi
+ 305:	48 89 c6             	mov    %rax,%rsi
+ 308:	e8 00 00 00 00       	callq  30d <undo_init+0x1d>
+ 30d:	48 8b 58 78          	mov    0x78(%rax),%rbx
+./src/undo.c:264
+ 311:	be 50 00 00 00       	mov    $0x50,%esi
+./src/undo.c:261
+ 316:	4c 89 25 00 00 00 00 	mov    %r12,0x0(%rip)        # 31d <undo_init+0x2d>
+./src/undo.c:262
+ 31d:	48 89 2d 00 00 00 00 	mov    %rbp,0x0(%rip)        # 324 <undo_init+0x34>
+./src/undo.c:264
+ 324:	48 89 df             	mov    %rbx,%rdi
+ 327:	e8 00 00 00 00       	callq  32c <undo_init+0x3c>
+ 32c:	48 8d 15 9d 04 00 00 	lea    0x49d(%rip),%rdx        # 7d0 <cb_insert_text>
+ 333:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 33a <undo_init+0x4a>
+ 33a:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ 340:	45 31 c0             	xor    %r8d,%r8d
+ 343:	31 c9                	xor    %ecx,%ecx
+ 345:	48 89 c7             	mov    %rax,%rdi
+ 348:	e8 00 00 00 00       	callq  34d <undo_init+0x5d>
+./src/undo.c:266
+ 34d:	48 89 df             	mov    %rbx,%rdi
+ 350:	be 50 00 00 00       	mov    $0x50,%esi
+ 355:	e8 00 00 00 00       	callq  35a <undo_init+0x6a>
+ 35a:	48 8d 15 1f 04 00 00 	lea    0x41f(%rip),%rdx        # 780 <cb_delete_range>
+ 361:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 368 <undo_init+0x78>
+ 368:	45 31 c9             	xor    %r9d,%r9d
+ 36b:	45 31 c0             	xor    %r8d,%r8d
+ 36e:	31 c9                	xor    %ecx,%ecx
+ 370:	48 89 c7             	mov    %rax,%rdi
+ 373:	e8 00 00 00 00       	callq  378 <undo_init+0x88>
+./src/undo.c:268
+ 378:	48 89 df             	mov    %rbx,%rdi
+ 37b:	be 50 00 00 00       	mov    $0x50,%esi
+ 380:	e8 00 00 00 00       	callq  385 <undo_init+0x95>
+ 385:	48 8d 15 c4 fc ff ff 	lea    -0x33c(%rip),%rdx        # 50 <cb_begin_user_action>
+ 38c:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 393 <undo_init+0xa3>
+ 393:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ 399:	45 31 c0             	xor    %r8d,%r8d
+ 39c:	31 c9                	xor    %ecx,%ecx
+ 39e:	48 89 c7             	mov    %rax,%rdi
+ 3a1:	e8 00 00 00 00       	callq  3a6 <undo_init+0xb6>
+./src/undo.c:270
+ 3a6:	48 89 df             	mov    %rbx,%rdi
+ 3a9:	be 50 00 00 00       	mov    $0x50,%esi
+ 3ae:	e8 00 00 00 00       	callq  3b3 <undo_init+0xc3>
+ 3b3:	48 8d 15 06 fd ff ff 	lea    -0x2fa(%rip),%rdx        # c0 <cb_end_user_action>
+ 3ba:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 3c1 <undo_init+0xd1>
+ 3c1:	45 31 c9             	xor    %r9d,%r9d
+ 3c4:	45 31 c0             	xor    %r8d,%r8d
+ 3c7:	31 c9                	xor    %ecx,%ecx
+ 3c9:	48 89 c7             	mov    %rax,%rdi
+ 3cc:	e8 00 00 00 00       	callq  3d1 <undo_init+0xe1>
+./src/undo.c:272
+ 3d1:	48 89 df             	mov    %rbx,%rdi
+ 3d4:	e8 e7 fc ff ff       	callq  c0 <cb_end_user_action>
+./src/undo.c:274
+ 3d9:	bf 18 00 00 00       	mov    $0x18,%edi
+ 3de:	e8 00 00 00 00       	callq  3e3 <undo_init+0xf3>
+./src/undo.c:275
+ 3e3:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 3ea <undo_init+0xfa>
+./src/undo.c:274
+ 3ea:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 3f1 <undo_init+0x101>
+./src/undo.c:275
+ 3f1:	e8 00 00 00 00       	callq  3f6 <undo_init+0x106>
+./src/undo.c:277
+ 3f6:	48 89 df             	mov    %rbx,%rdi
+./src/undo.c:275
+ 3f9:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 400 <undo_init+0x110>
+./src/undo.c:278
+ 400:	5b                   	pop    %rbx
+ 401:	5d                   	pop    %rbp
+ 402:	41 5c                	pop    %r12
+./src/undo.c:277
+ 404:	e9 67 fe ff ff       	jmpq   270 <undo_clear_all>
+ 409:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000000410 <undo_set_sequency>:
+undo_set_sequency():
+./src/undo.c:281
+ 410:	53                   	push   %rbx
+ 411:	89 fb                	mov    %edi,%ebx
+./src/undo.c:282
+ 413:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 41a <undo_set_sequency+0xa>
+ 41a:	e8 00 00 00 00       	callq  41f <undo_set_sequency+0xf>
+ 41f:	85 c0                	test   %eax,%eax
+ 421:	75 05                	jne    428 <undo_set_sequency+0x18>
+./src/undo.c:285
+ 423:	5b                   	pop    %rbx
+ 424:	c3                   	retq   
+ 425:	0f 1f 00             	nopl   (%rax)
+./src/undo.c:283
+ 428:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 42f <undo_set_sequency+0x1f>
+ 42f:	e8 00 00 00 00       	callq  434 <undo_set_sequency+0x24>
+ 434:	48 8b 00             	mov    (%rax),%rax
+ 437:	89 58 0c             	mov    %ebx,0xc(%rax)
+./src/undo.c:285
+ 43a:	5b                   	pop    %rbx
+ 43b:	c3                   	retq   
+ 43c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000000440 <undo_create_undo_info>:
+undo_create_undo_info():
+./src/undo.c:83
+ 440:	41 57                	push   %r15
+ 442:	41 56                	push   %r14
+ 444:	41 55                	push   %r13
+ 446:	41 54                	push   %r12
+ 448:	41 89 cc             	mov    %ecx,%r12d
+ 44b:	55                   	push   %rbp
+ 44c:	53                   	push   %rbx
+ 44d:	89 d5                	mov    %edx,%ebp
+ 44f:	48 89 fb             	mov    %rdi,%rbx
+ 452:	48 81 ec c8 00 00 00 	sub    $0xc8,%rsp
+./src/undo.c:89
+ 459:	4c 8d 6c 24 10       	lea    0x10(%rsp),%r13
+./src/undo.c:90
+ 45e:	4c 8d 74 24 60       	lea    0x60(%rsp),%r14
+./src/undo.c:83
+ 463:	89 74 24 08          	mov    %esi,0x8(%rsp)
+ 467:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 46e:	00 00 
+ 470:	48 89 84 24 b8 00 00 	mov    %rax,0xb8(%rsp)
+ 477:	00 
+ 478:	31 c0                	xor    %eax,%eax
+./src/undo.c:87
+ 47a:	e8 00 00 00 00       	callq  47f <undo_create_undo_info+0x3f>
+./src/undo.c:89
+ 47f:	48 89 df             	mov    %rbx,%rdi
+ 482:	89 ea                	mov    %ebp,%edx
+ 484:	4c 89 ee             	mov    %r13,%rsi
+./src/undo.c:87
+ 487:	41 89 c7             	mov    %eax,%r15d
+./src/undo.c:89
+ 48a:	e8 00 00 00 00       	callq  48f <undo_create_undo_info+0x4f>
+./src/undo.c:90
+ 48f:	48 89 df             	mov    %rbx,%rdi
+ 492:	44 89 e2             	mov    %r12d,%edx
+ 495:	4c 89 f6             	mov    %r14,%rsi
+ 498:	e8 00 00 00 00       	callq  49d <undo_create_undo_info+0x5d>
+./src/undo.c:91
+ 49d:	48 89 df             	mov    %rbx,%rdi
+ 4a0:	31 c9                	xor    %ecx,%ecx
+ 4a2:	4c 89 f2             	mov    %r14,%rdx
+ 4a5:	4c 89 ee             	mov    %r13,%rsi
+ 4a8:	e8 00 00 00 00       	callq  4ad <undo_create_undo_info+0x6d>
+./src/undo.c:93
+ 4ad:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 4b4 <undo_create_undo_info+0x74>
+./src/undo.c:94
+ 4b4:	45 89 e0             	mov    %r12d,%r8d
+./src/undo.c:91
+ 4b7:	48 89 c3             	mov    %rax,%rbx
+./src/undo.c:94
+ 4ba:	41 29 e8             	sub    %ebp,%r8d
+./src/undo.c:93
+ 4bd:	48 83 7f 08 00       	cmpq   $0x0,0x8(%rdi)
+ 4c2:	74 50                	je     514 <undo_create_undo_info+0xd4>
+./src/undo.c:94
+ 4c4:	41 83 f8 01          	cmp    $0x1,%r8d
+ 4c8:	0f 84 42 01 00 00    	je     610 <undo_create_undo_info+0x1d0>
+./src/undo.c:138
+ 4ce:	48 8b 3f             	mov    (%rdi),%rdi
+ 4d1:	44 89 44 24 0c       	mov    %r8d,0xc(%rsp)
+ 4d6:	e8 00 00 00 00       	callq  4db <undo_create_undo_info+0x9b>
+ 4db:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 4e2 <undo_create_undo_info+0xa2>
+ 4e2:	48 89 c1             	mov    %rax,%rcx
+ 4e5:	8b 57 08             	mov    0x8(%rdi),%edx
+ 4e8:	8b 77 04             	mov    0x4(%rdi),%esi
+ 4eb:	0f be 3f             	movsbl (%rdi),%edi
+ 4ee:	e8 8d fc ff ff       	callq  180 <undo_append_undo_info.constprop.1>
+./src/undo.c:139
+ 4f3:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 4fa <undo_create_undo_info+0xba>
+ 4fa:	48 c7 c2 ff ff ff ff 	mov    $0xffffffffffffffff,%rdx
+ 501:	31 f6                	xor    %esi,%esi
+ 503:	e8 00 00 00 00       	callq  508 <undo_create_undo_info+0xc8>
+ 508:	44 8b 44 24 0c       	mov    0xc(%rsp),%r8d
+ 50d:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 514 <undo_create_undo_info+0xd4>
+./src/undo.c:142
+ 514:	45 85 ff             	test   %r15d,%r15d
+ 517:	0f 85 93 00 00 00    	jne    5b0 <undo_create_undo_info+0x170>
+./src/undo.c:142 (discriminator 1)
+ 51d:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 523 <undo_create_undo_info+0xe3>
+ 523:	85 c0                	test   %eax,%eax
+ 525:	0f 85 75 01 00 00    	jne    6a0 <undo_create_undo_info+0x260>
+ 52b:	45 31 ed             	xor    %r13d,%r13d
+./src/undo.c:154
+ 52e:	48 89 df             	mov    %rbx,%rdi
+ 531:	e8 00 00 00 00       	callq  536 <undo_create_undo_info+0xf6>
+ 536:	0f be 7c 24 08       	movsbl 0x8(%rsp),%edi
+ 53b:	48 89 c1             	mov    %rax,%rcx
+ 53e:	44 89 e2             	mov    %r12d,%edx
+ 541:	89 ee                	mov    %ebp,%esi
+ 543:	e8 38 fc ff ff       	callq  180 <undo_append_undo_info.constprop.1>
+./src/undo.c:156
+ 548:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 54f <undo_create_undo_info+0x10f>
+ 54f:	e8 ac fa ff ff       	callq  0 <undo_clear_info_list>
+./src/undo.c:157
+ 554:	44 89 2d 00 00 00 00 	mov    %r13d,0x0(%rip)        # 55b <undo_create_undo_info+0x11b>
+./src/undo.c:156
+ 55b:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 562 <undo_create_undo_info+0x122>
+./src/undo.c:158
+ 562:	e8 00 00 00 00       	callq  567 <undo_create_undo_info+0x127>
+./src/undo.c:160
+ 567:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 56e <undo_create_undo_info+0x12e>
+ 56e:	be 01 00 00 00       	mov    $0x1,%esi
+ 573:	e8 00 00 00 00       	callq  578 <undo_create_undo_info+0x138>
+./src/undo.c:161
+ 578:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 57f <undo_create_undo_info+0x13f>
+ 57f:	31 f6                	xor    %esi,%esi
+ 581:	e8 00 00 00 00       	callq  586 <undo_create_undo_info+0x146>
+./src/undo.c:162
+ 586:	48 8b 84 24 b8 00 00 	mov    0xb8(%rsp),%rax
+ 58d:	00 
+ 58e:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+ 595:	00 00 
+ 597:	0f 85 d0 01 00 00    	jne    76d <undo_create_undo_info+0x32d>
+ 59d:	48 81 c4 c8 00 00 00 	add    $0xc8,%rsp
+ 5a4:	5b                   	pop    %rbx
+ 5a5:	5d                   	pop    %rbp
+ 5a6:	41 5c                	pop    %r12
+ 5a8:	41 5d                	pop    %r13
+ 5aa:	41 5e                	pop    %r14
+ 5ac:	41 5f                	pop    %r15
+ 5ae:	c3                   	retq   
+ 5af:	90                   	nop
+./src/undo.c:145
+ 5b0:	41 83 f8 01          	cmp    $0x1,%r8d
+ 5b4:	45 89 fd             	mov    %r15d,%r13d
+ 5b7:	0f 85 71 ff ff ff    	jne    52e <undo_create_undo_info+0xee>
+./src/undo.c:145 (discriminator 1)
+ 5bd:	41 81 ff ff ef 00 00 	cmp    $0xefff,%r15d
+ 5c4:	0f 8f e6 00 00 00    	jg     6b0 <undo_create_undo_info+0x270>
+./src/undo.c:148
+ 5ca:	0f b6 4c 24 08       	movzbl 0x8(%rsp),%ecx
+ 5cf:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 5d6 <undo_create_undo_info+0x196>
+./src/undo.c:151
+ 5d6:	31 f6                	xor    %esi,%esi
+ 5d8:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 5df <undo_create_undo_info+0x19f>
+ 5df:	48 c7 c2 ff ff ff ff 	mov    $0xffffffffffffffff,%rdx
+./src/undo.c:149
+ 5e6:	89 68 04             	mov    %ebp,0x4(%rax)
+./src/undo.c:150
+ 5e9:	44 89 60 08          	mov    %r12d,0x8(%rax)
+./src/undo.c:148
+ 5ed:	88 08                	mov    %cl,(%rax)
+./src/undo.c:151
+ 5ef:	e8 00 00 00 00       	callq  5f4 <undo_create_undo_info+0x1b4>
+./src/undo.c:152
+ 5f4:	48 89 de             	mov    %rbx,%rsi
+ 5f7:	48 89 c7             	mov    %rax,%rdi
+./src/undo.c:151
+ 5fa:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 601 <undo_create_undo_info+0x1c1>
+./src/undo.c:152
+ 601:	e8 00 00 00 00       	callq  606 <undo_create_undo_info+0x1c6>
+ 606:	e9 3d ff ff ff       	jmpq   548 <undo_create_undo_info+0x108>
+ 60b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/undo.c:94 (discriminator 1)
+ 610:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 617 <undo_create_undo_info+0x1d7>
+ 617:	0f b6 4c 24 08       	movzbl 0x8(%rsp),%ecx
+ 61c:	38 08                	cmp    %cl,(%rax)
+ 61e:	0f 85 aa fe ff ff    	jne    4ce <undo_create_undo_info+0x8e>
+./src/undo.c:95
+ 624:	41 81 ff 08 ff 00 00 	cmp    $0xff08,%r15d
+ 62b:	0f 84 2d 01 00 00    	je     75e <undo_create_undo_info+0x31e>
+ 631:	0f 8e c0 00 00 00    	jle    6f7 <undo_create_undo_info+0x2b7>
+ 637:	41 81 ff 09 ff 00 00 	cmp    $0xff09,%r15d
+ 63e:	0f 84 0c 01 00 00    	je     750 <undo_create_undo_info+0x310>
+ 644:	41 81 ff ff ff 00 00 	cmp    $0xffff,%r15d
+ 64b:	0f 85 ac 00 00 00    	jne    6fd <undo_create_undo_info+0x2bd>
+./src/undo.c:101
+ 651:	3b 68 04             	cmp    0x4(%rax),%ebp
+ 654:	0f 85 74 fe ff ff    	jne    4ce <undo_create_undo_info+0x8e>
+./src/undo.c:123
+ 65a:	80 7c 24 08 01       	cmpb   $0x1,0x8(%rsp)
+ 65f:	75 77                	jne    6d8 <undo_create_undo_info+0x298>
+./src/undo.c:125
+ 661:	48 89 de             	mov    %rbx,%rsi
+ 664:	e8 00 00 00 00       	callq  669 <undo_create_undo_info+0x229>
+ 669:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 670 <undo_create_undo_info+0x230>
+./src/undo.c:126
+ 670:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 677 <undo_create_undo_info+0x237>
+ 677:	83 68 04 01          	subl   $0x1,0x4(%rax)
+./src/undo.c:132
+ 67b:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 682 <undo_create_undo_info+0x242>
+ 682:	e8 79 f9 ff ff       	callq  0 <undo_clear_info_list>
+./src/undo.c:133
+ 687:	44 89 3d 00 00 00 00 	mov    %r15d,0x0(%rip)        # 68e <undo_create_undo_info+0x24e>
+./src/undo.c:132
+ 68e:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 695 <undo_create_undo_info+0x255>
+ 695:	e9 cd fe ff ff       	jmpq   567 <undo_create_undo_info+0x127>
+ 69a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/undo.c:143
+ 6a0:	bf 01 00 00 00       	mov    $0x1,%edi
+ 6a5:	e8 00 00 00 00       	callq  6aa <undo_create_undo_info+0x26a>
+ 6aa:	e9 7c fe ff ff       	jmpq   52b <undo_create_undo_info+0xeb>
+ 6af:	90                   	nop
+./src/undo.c:147
+ 6b0:	41 8d 87 f8 00 ff ff 	lea    -0xff08(%r15),%eax
+ 6b7:	83 f8 01             	cmp    $0x1,%eax
+ 6ba:	76 0d                	jbe    6c9 <undo_create_undo_info+0x289>
+ 6bc:	41 81 ff ff ff 00 00 	cmp    $0xffff,%r15d
+ 6c3:	0f 85 65 fe ff ff    	jne    52e <undo_create_undo_info+0xee>
+ 6c9:	45 89 fd             	mov    %r15d,%r13d
+ 6cc:	e9 f9 fe ff ff       	jmpq   5ca <undo_create_undo_info+0x18a>
+ 6d1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/undo.c:129
+ 6d8:	48 89 de             	mov    %rbx,%rsi
+ 6db:	e8 00 00 00 00       	callq  6e0 <undo_create_undo_info+0x2a0>
+ 6e0:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 6e7 <undo_create_undo_info+0x2a7>
+./src/undo.c:130
+ 6e7:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 6ee <undo_create_undo_info+0x2ae>
+ 6ee:	83 40 08 01          	addl   $0x1,0x8(%rax)
+ 6f2:	e9 84 ff ff ff       	jmpq   67b <undo_create_undo_info+0x23b>
+./src/undo.c:95
+ 6f7:	41 83 ff 20          	cmp    $0x20,%r15d
+ 6fb:	74 53                	je     750 <undo_create_undo_info+0x310>
+./src/undo.c:110
+ 6fd:	3b 68 08             	cmp    0x8(%rax),%ebp
+ 700:	0f 85 c8 fd ff ff    	jne    4ce <undo_create_undo_info+0x8e>
+./src/undo.c:111
+ 706:	45 85 ff             	test   %r15d,%r15d
+ 709:	0f 84 bf fd ff ff    	je     4ce <undo_create_undo_info+0x8e>
+ 70f:	41 81 ff ff ef 00 00 	cmp    $0xefff,%r15d
+ 716:	0f 8f b2 fd ff ff    	jg     4ce <undo_create_undo_info+0x8e>
+./src/undo.c:112
+ 71c:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 722 <undo_create_undo_info+0x2e2>
+ 722:	3d 09 ff 00 00       	cmp    $0xff09,%eax
+ 727:	0f 84 a1 fd ff ff    	je     4ce <undo_create_undo_info+0x8e>
+ 72d:	3d 0d ff 00 00       	cmp    $0xff0d,%eax
+ 732:	0f 84 96 fd ff ff    	je     4ce <undo_create_undo_info+0x8e>
+ 738:	83 f8 20             	cmp    $0x20,%eax
+ 73b:	0f 85 19 ff ff ff    	jne    65a <undo_create_undo_info+0x21a>
+ 741:	e9 88 fd ff ff       	jmpq   4ce <undo_create_undo_info+0x8e>
+ 746:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 74d:	00 00 00 
+./src/undo.c:106
+ 750:	3b 68 08             	cmp    0x8(%rax),%ebp
+ 753:	0f 85 75 fd ff ff    	jne    4ce <undo_create_undo_info+0x8e>
+ 759:	e9 fc fe ff ff       	jmpq   65a <undo_create_undo_info+0x21a>
+./src/undo.c:97
+ 75e:	44 3b 60 04          	cmp    0x4(%rax),%r12d
+ 762:	0f 85 66 fd ff ff    	jne    4ce <undo_create_undo_info+0x8e>
+ 768:	e9 ed fe ff ff       	jmpq   65a <undo_create_undo_info+0x21a>
+./src/undo.c:162
+ 76d:	e8 00 00 00 00       	callq  772 <undo_create_undo_info+0x332>
+ 772:	0f 1f 40 00          	nopl   0x0(%rax)
+ 776:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 77d:	00 00 00 
+
+0000000000000780 <cb_delete_range>:
+cb_delete_range():
+./src/undo.c:177
+ 780:	41 54                	push   %r12
+ 782:	55                   	push   %rbp
+ 783:	49 89 d4             	mov    %rdx,%r12
+ 786:	53                   	push   %rbx
+ 787:	48 89 fb             	mov    %rdi,%rbx
+./src/undo.c:182
+ 78a:	48 89 f7             	mov    %rsi,%rdi
+ 78d:	e8 00 00 00 00       	callq  792 <cb_delete_range+0x12>
+./src/undo.c:183
+ 792:	4c 89 e7             	mov    %r12,%rdi
+./src/undo.c:182
+ 795:	89 c5                	mov    %eax,%ebp
+./src/undo.c:183
+ 797:	e8 00 00 00 00       	callq  79c <cb_delete_range+0x1c>
+ 79c:	41 89 c4             	mov    %eax,%r12d
+./src/undo.c:185
+ 79f:	e8 00 00 00 00       	callq  7a4 <cb_delete_range+0x24>
+./src/undo.c:189
+ 7a4:	44 89 e1             	mov    %r12d,%ecx
+ 7a7:	89 ea                	mov    %ebp,%edx
+ 7a9:	48 89 df             	mov    %rbx,%rdi
+./src/undo.c:190
+ 7ac:	5b                   	pop    %rbx
+ 7ad:	5d                   	pop    %rbp
+ 7ae:	41 5c                	pop    %r12
+./src/undo.c:185
+ 7b0:	31 f6                	xor    %esi,%esi
+ 7b2:	3d 08 ff 00 00       	cmp    $0xff08,%eax
+ 7b7:	40 0f 95 c6          	setne  %sil
+ 7bb:	83 c6 01             	add    $0x1,%esi
+./src/undo.c:189
+ 7be:	e9 7d fc ff ff       	jmpq   440 <undo_create_undo_info>
+ 7c3:	0f 1f 00             	nopl   (%rax)
+ 7c6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 7cd:	00 00 00 
+
+00000000000007d0 <cb_insert_text>:
+cb_insert_text():
+./src/undo.c:166
+ 7d0:	41 54                	push   %r12
+ 7d2:	55                   	push   %rbp
+ 7d3:	49 89 d4             	mov    %rdx,%r12
+ 7d6:	53                   	push   %rbx
+ 7d7:	48 89 fd             	mov    %rdi,%rbp
+./src/undo.c:170
+ 7da:	48 89 f7             	mov    %rsi,%rdi
+ 7dd:	e8 00 00 00 00       	callq  7e2 <cb_insert_text+0x12>
+./src/undo.c:171
+ 7e2:	4c 89 e7             	mov    %r12,%rdi
+./src/undo.c:170
+ 7e5:	89 c3                	mov    %eax,%ebx
+./src/undo.c:171
+ 7e7:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+ 7ee:	e8 00 00 00 00       	callq  7f3 <cb_insert_text+0x23>
+ 7f3:	89 da                	mov    %ebx,%edx
+./src/undo.c:173
+ 7f5:	89 d9                	mov    %ebx,%ecx
+ 7f7:	48 89 ef             	mov    %rbp,%rdi
+./src/undo.c:174
+ 7fa:	5b                   	pop    %rbx
+ 7fb:	5d                   	pop    %rbp
+ 7fc:	41 5c                	pop    %r12
+./src/undo.c:171
+ 7fe:	29 c2                	sub    %eax,%edx
+./src/undo.c:173
+ 800:	31 f6                	xor    %esi,%esi
+ 802:	e9 39 fc ff ff       	jmpq   440 <undo_create_undo_info>
+ 807:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 80e:	00 00 
+
+0000000000000810 <undo_set_sequency_reserve>:
+undo_set_sequency_reserve():
+./src/undo.c:289
+ 810:	c7 05 00 00 00 00 01 	movl   $0x1,0x0(%rip)        # 81a <undo_set_sequency_reserve+0xa>
+ 817:	00 00 00 
+ 81a:	c3                   	retq   
+ 81b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000000820 <undo_undo_real>:
+undo_undo_real():
+./src/undo.c:302
+ 820:	41 55                	push   %r13
+ 822:	41 54                	push   %r12
+ 824:	55                   	push   %rbp
+ 825:	53                   	push   %rbx
+ 826:	48 89 fb             	mov    %rdi,%rbx
+ 829:	48 81 ec b8 00 00 00 	sub    $0xb8,%rsp
+ 830:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 837:	00 00 
+ 839:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+ 840:	00 
+ 841:	31 c0                	xor    %eax,%eax
+./src/undo.c:306
+ 843:	e8 a8 f9 ff ff       	callq  1f0 <undo_flush_temporal_buffer>
+./src/undo.c:307
+ 848:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 84f <undo_undo_real+0x2f>
+ 84f:	e8 00 00 00 00       	callq  854 <undo_undo_real+0x34>
+ 854:	85 c0                	test   %eax,%eax
+ 856:	0f 84 d7 00 00 00    	je     933 <undo_undo_real+0x113>
+./src/undo.c:309
+ 85c:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 863 <undo_undo_real+0x43>
+./src/undo.c:310
+ 863:	49 89 e4             	mov    %rsp,%r12
+./src/undo.c:309
+ 866:	e8 00 00 00 00       	callq  86b <undo_undo_real+0x4b>
+ 86b:	48 8b 28             	mov    (%rax),%rbp
+./src/undo.c:310
+ 86e:	48 89 e6             	mov    %rsp,%rsi
+ 871:	48 89 df             	mov    %rbx,%rdi
+ 874:	8b 55 04             	mov    0x4(%rbp),%edx
+ 877:	e8 00 00 00 00       	callq  87c <undo_undo_real+0x5c>
+./src/undo.c:311
+ 87c:	80 7d 00 00          	cmpb   $0x0,0x0(%rbp)
+ 880:	0f 84 da 00 00 00    	je     960 <undo_undo_real+0x140>
+./src/undo.c:317
+ 886:	48 8b 55 10          	mov    0x10(%rbp),%rdx
+ 88a:	b9 ff ff ff ff       	mov    $0xffffffff,%ecx
+ 88f:	48 89 e6             	mov    %rsp,%rsi
+ 892:	48 89 df             	mov    %rbx,%rdi
+ 895:	e8 00 00 00 00       	callq  89a <undo_undo_real+0x7a>
+./src/undo.c:319
+ 89a:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 8a1 <undo_undo_real+0x81>
+ 8a1:	48 89 ee             	mov    %rbp,%rsi
+ 8a4:	e8 00 00 00 00       	callq  8a9 <undo_undo_real+0x89>
+./src/undo.c:320
+ 8a9:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 8b0 <undo_undo_real+0x90>
+./src/undo.c:319
+ 8b0:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 8b7 <undo_undo_real+0x97>
+./src/undo.c:320
+ 8b7:	e8 00 00 00 00       	callq  8bc <undo_undo_real+0x9c>
+ 8bc:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 8c3 <undo_undo_real+0xa3>
+ 8c3:	48 89 c6             	mov    %rax,%rsi
+ 8c6:	e8 00 00 00 00       	callq  8cb <undo_undo_real+0xab>
+./src/undo.c:324
+ 8cb:	48 89 c7             	mov    %rax,%rdi
+./src/undo.c:320
+ 8ce:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 8d5 <undo_undo_real+0xb5>
+./src/undo.c:324
+ 8d5:	e8 00 00 00 00       	callq  8da <undo_undo_real+0xba>
+ 8da:	85 c0                	test   %eax,%eax
+ 8dc:	0f 84 ae 00 00 00    	je     990 <undo_undo_real+0x170>
+./src/undo.c:325
+ 8e2:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 8e9 <undo_undo_real+0xc9>
+ 8e9:	e8 00 00 00 00       	callq  8ee <undo_undo_real+0xce>
+ 8ee:	48 8b 10             	mov    (%rax),%rdx
+./src/undo.c:326
+ 8f1:	b8 01 00 00 00       	mov    $0x1,%eax
+./src/undo.c:325
+ 8f6:	8b 52 0c             	mov    0xc(%rdx),%edx
+ 8f9:	85 d2                	test   %edx,%edx
+ 8fb:	75 40                	jne    93d <undo_undo_real+0x11d>
+./src/undo.c:329
+ 8fd:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 904 <undo_undo_real+0xe4>
+ 904:	be 01 00 00 00       	mov    $0x1,%esi
+ 909:	e8 00 00 00 00       	callq  90e <undo_undo_real+0xee>
+./src/undo.c:330
+ 90e:	80 7d 00 02          	cmpb   $0x2,0x0(%rbp)
+ 912:	0f 84 90 00 00 00    	je     9a8 <undo_undo_real+0x188>
+./src/undo.c:332
+ 918:	48 89 df             	mov    %rbx,%rdi
+ 91b:	4c 89 e6             	mov    %r12,%rsi
+ 91e:	e8 00 00 00 00       	callq  923 <undo_undo_real+0x103>
+./src/undo.c:333
+ 923:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # 92b <undo_undo_real+0x10b>
+ 92a:	00 
+ 92b:	48 89 df             	mov    %rbx,%rdi
+ 92e:	e8 00 00 00 00       	callq  933 <undo_undo_real+0x113>
+./src/undo.c:335
+ 933:	48 89 df             	mov    %rbx,%rdi
+ 936:	e8 f5 f7 ff ff       	callq  130 <undo_check_modified_step>
+./src/undo.c:336
+ 93b:	31 c0                	xor    %eax,%eax
+./src/undo.c:337
+ 93d:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+ 944:	00 
+ 945:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+ 94c:	00 00 
+ 94e:	75 6b                	jne    9bb <undo_undo_real+0x19b>
+ 950:	48 81 c4 b8 00 00 00 	add    $0xb8,%rsp
+ 957:	5b                   	pop    %rbx
+ 958:	5d                   	pop    %rbp
+ 959:	41 5c                	pop    %r12
+ 95b:	41 5d                	pop    %r13
+ 95d:	c3                   	retq   
+ 95e:	66 90                	xchg   %ax,%ax
+./src/undo.c:313
+ 960:	8b 55 08             	mov    0x8(%rbp),%edx
+ 963:	4c 8d 6c 24 50       	lea    0x50(%rsp),%r13
+ 968:	48 89 df             	mov    %rbx,%rdi
+ 96b:	4c 89 ee             	mov    %r13,%rsi
+ 96e:	e8 00 00 00 00       	callq  973 <undo_undo_real+0x153>
+./src/undo.c:314
+ 973:	4c 89 ea             	mov    %r13,%rdx
+ 976:	48 89 e6             	mov    %rsp,%rsi
+ 979:	48 89 df             	mov    %rbx,%rdi
+ 97c:	e8 00 00 00 00       	callq  981 <undo_undo_real+0x161>
+./src/undo.c:315
+ 981:	e9 14 ff ff ff       	jmpq   89a <undo_undo_real+0x7a>
+ 986:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 98d:	00 00 00 
+./src/undo.c:328
+ 990:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 997 <undo_undo_real+0x177>
+ 997:	31 f6                	xor    %esi,%esi
+ 999:	e8 00 00 00 00       	callq  99e <undo_undo_real+0x17e>
+ 99e:	e9 5a ff ff ff       	jmpq   8fd <undo_undo_real+0xdd>
+ 9a3:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/undo.c:331
+ 9a8:	8b 55 04             	mov    0x4(%rbp),%edx
+ 9ab:	4c 89 e6             	mov    %r12,%rsi
+ 9ae:	48 89 df             	mov    %rbx,%rdi
+ 9b1:	e8 00 00 00 00       	callq  9b6 <undo_undo_real+0x196>
+ 9b6:	e9 5d ff ff ff       	jmpq   918 <undo_undo_real+0xf8>
+./src/undo.c:337
+ 9bb:	e8 00 00 00 00       	callq  9c0 <undo_redo_real>
+
+00000000000009c0 <undo_redo_real>:
+undo_redo_real():
+./src/undo.c:340
+ 9c0:	41 55                	push   %r13
+ 9c2:	41 54                	push   %r12
+ 9c4:	55                   	push   %rbp
+ 9c5:	53                   	push   %rbx
+ 9c6:	48 89 fb             	mov    %rdi,%rbx
+ 9c9:	48 81 ec b8 00 00 00 	sub    $0xb8,%rsp
+./src/undo.c:344
+ 9d0:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 9d7 <undo_redo_real+0x17>
+./src/undo.c:340
+ 9d7:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 9de:	00 00 
+ 9e0:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+ 9e7:	00 
+ 9e8:	31 c0                	xor    %eax,%eax
+./src/undo.c:344
+ 9ea:	e8 00 00 00 00       	callq  9ef <undo_redo_real+0x2f>
+ 9ef:	85 c0                	test   %eax,%eax
+ 9f1:	0f 84 ca 00 00 00    	je     ac1 <undo_redo_real+0x101>
+./src/undo.c:346
+ 9f7:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 9fe <undo_redo_real+0x3e>
+./src/undo.c:347
+ 9fe:	49 89 e4             	mov    %rsp,%r12
+./src/undo.c:346
+ a01:	e8 00 00 00 00       	callq  a06 <undo_redo_real+0x46>
+ a06:	48 8b 28             	mov    (%rax),%rbp
+./src/undo.c:347
+ a09:	48 89 e6             	mov    %rsp,%rsi
+ a0c:	48 89 df             	mov    %rbx,%rdi
+ a0f:	8b 55 04             	mov    0x4(%rbp),%edx
+ a12:	e8 00 00 00 00       	callq  a17 <undo_redo_real+0x57>
+./src/undo.c:348
+ a17:	80 7d 00 00          	cmpb   $0x0,0x0(%rbp)
+ a1b:	0f 84 cf 00 00 00    	je     af0 <undo_redo_real+0x130>
+./src/undo.c:353
+ a21:	8b 55 08             	mov    0x8(%rbp),%edx
+ a24:	4c 8d 6c 24 50       	lea    0x50(%rsp),%r13
+ a29:	48 89 df             	mov    %rbx,%rdi
+ a2c:	4c 89 ee             	mov    %r13,%rsi
+ a2f:	e8 00 00 00 00       	callq  a34 <undo_redo_real+0x74>
+./src/undo.c:354
+ a34:	4c 89 ea             	mov    %r13,%rdx
+ a37:	48 89 e6             	mov    %rsp,%rsi
+ a3a:	48 89 df             	mov    %rbx,%rdi
+ a3d:	e8 00 00 00 00       	callq  a42 <undo_redo_real+0x82>
+./src/undo.c:356
+ a42:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # a49 <undo_redo_real+0x89>
+ a49:	48 89 ee             	mov    %rbp,%rsi
+ a4c:	e8 00 00 00 00       	callq  a51 <undo_redo_real+0x91>
+./src/undo.c:357
+ a51:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # a58 <undo_redo_real+0x98>
+./src/undo.c:356
+ a58:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # a5f <undo_redo_real+0x9f>
+./src/undo.c:357
+ a5f:	e8 00 00 00 00       	callq  a64 <undo_redo_real+0xa4>
+ a64:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # a6b <undo_redo_real+0xab>
+ a6b:	48 89 c6             	mov    %rax,%rsi
+ a6e:	e8 00 00 00 00       	callq  a73 <undo_redo_real+0xb3>
+./src/undo.c:361
+ a73:	8b 55 0c             	mov    0xc(%rbp),%edx
+./src/undo.c:357
+ a76:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # a7d <undo_redo_real+0xbd>
+./src/undo.c:361
+ a7d:	85 d2                	test   %edx,%edx
+ a7f:	0f 85 8b 00 00 00    	jne    b10 <undo_redo_real+0x150>
+./src/undo.c:365
+ a85:	48 89 c7             	mov    %rax,%rdi
+ a88:	e8 00 00 00 00       	callq  a8d <undo_redo_real+0xcd>
+ a8d:	85 c0                	test   %eax,%eax
+ a8f:	0f 84 93 00 00 00    	je     b28 <undo_redo_real+0x168>
+./src/undo.c:367
+ a95:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # a9c <undo_redo_real+0xdc>
+ a9c:	be 01 00 00 00       	mov    $0x1,%esi
+ aa1:	e8 00 00 00 00       	callq  aa6 <undo_redo_real+0xe6>
+./src/undo.c:368
+ aa6:	48 89 df             	mov    %rbx,%rdi
+ aa9:	4c 89 e6             	mov    %r12,%rsi
+ aac:	e8 00 00 00 00       	callq  ab1 <undo_redo_real+0xf1>
+./src/undo.c:369
+ ab1:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # ab9 <undo_redo_real+0xf9>
+ ab8:	00 
+ ab9:	48 89 df             	mov    %rbx,%rdi
+ abc:	e8 00 00 00 00       	callq  ac1 <undo_redo_real+0x101>
+./src/undo.c:371
+ ac1:	48 89 df             	mov    %rbx,%rdi
+ ac4:	e8 67 f6 ff ff       	callq  130 <undo_check_modified_step>
+./src/undo.c:372
+ ac9:	31 c0                	xor    %eax,%eax
+./src/undo.c:373
+ acb:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+ ad2:	00 
+ ad3:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+ ada:	00 00 
+ adc:	75 5d                	jne    b3b <undo_redo_real+0x17b>
+ ade:	48 81 c4 b8 00 00 00 	add    $0xb8,%rsp
+ ae5:	5b                   	pop    %rbx
+ ae6:	5d                   	pop    %rbp
+ ae7:	41 5c                	pop    %r12
+ ae9:	41 5d                	pop    %r13
+ aeb:	c3                   	retq   
+ aec:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/undo.c:350
+ af0:	48 8b 55 10          	mov    0x10(%rbp),%rdx
+ af4:	b9 ff ff ff ff       	mov    $0xffffffff,%ecx
+ af9:	48 89 e6             	mov    %rsp,%rsi
+ afc:	48 89 df             	mov    %rbx,%rdi
+ aff:	e8 00 00 00 00       	callq  b04 <undo_redo_real+0x144>
+./src/undo.c:351
+ b04:	e9 39 ff ff ff       	jmpq   a42 <undo_redo_real+0x82>
+ b09:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/undo.c:362
+ b10:	bf 01 00 00 00       	mov    $0x1,%edi
+ b15:	e8 00 00 00 00       	callq  b1a <undo_redo_real+0x15a>
+./src/undo.c:363
+ b1a:	b8 01 00 00 00       	mov    $0x1,%eax
+ b1f:	eb aa                	jmp    acb <undo_redo_real+0x10b>
+ b21:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/undo.c:366
+ b28:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # b2f <undo_redo_real+0x16f>
+ b2f:	31 f6                	xor    %esi,%esi
+ b31:	e8 00 00 00 00       	callq  b36 <undo_redo_real+0x176>
+ b36:	e9 5a ff ff ff       	jmpq   a95 <undo_redo_real+0xd5>
+./src/undo.c:373
+ b3b:	e8 00 00 00 00       	callq  b40 <undo_undo>
+
+0000000000000b40 <undo_undo>:
+undo_undo():
+./src/undo.c:376
+ b40:	53                   	push   %rbx
+ b41:	48 89 fb             	mov    %rdi,%rbx
+ b44:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/undo.c:377 (discriminator 1)
+ b48:	48 89 df             	mov    %rbx,%rdi
+ b4b:	e8 00 00 00 00       	callq  b50 <undo_undo+0x10>
+ b50:	85 c0                	test   %eax,%eax
+ b52:	75 f4                	jne    b48 <undo_undo+0x8>
+./src/undo.c:378
+ b54:	5b                   	pop    %rbx
+ b55:	c3                   	retq   
+ b56:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ b5d:	00 00 00 
+
+0000000000000b60 <undo_redo>:
+undo_redo():
+./src/undo.c:381
+ b60:	53                   	push   %rbx
+ b61:	48 89 fb             	mov    %rdi,%rbx
+ b64:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/undo.c:382 (discriminator 1)
+ b68:	48 89 df             	mov    %rbx,%rdi
+ b6b:	e8 00 00 00 00       	callq  b70 <undo_redo+0x10>
+ b70:	85 c0                	test   %eax,%eax
+ b72:	75 f4                	jne    b68 <undo_redo+0x8>
+./src/undo.c:383
+ b74:	5b                   	pop    %rbx
+ b75:	c3                   	retq   

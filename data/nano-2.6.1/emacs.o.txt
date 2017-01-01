@@ -1,0 +1,3 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-emacs.o:     file format elf64-x86-64
+

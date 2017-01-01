@@ -1,0 +1,2205 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-gtksourceiter.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <pointer_from_offset_skipping_decomp>:
+pointer_from_offset_skipping_decomp():
+./src/gtksourceiter.c:41
+       0:	41 55                	push   %r13
+       2:	41 54                	push   %r12
+       4:	55                   	push   %rbp
+       5:	53                   	push   %rbx
+       6:	48 83 ec 18          	sub    $0x18,%rsp
+       a:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+      11:	00 00 
+      13:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+      18:	31 c0                	xor    %eax,%eax
+./src/gtksourceiter.c:47
+      1a:	85 f6                	test   %esi,%esi
+      1c:	7e 5c                	jle    7a <pointer_from_offset_skipping_decomp+0x7a>
+      1e:	4c 8b 25 00 00 00 00 	mov    0x0(%rip),%r12        # 25 <pointer_from_offset_skipping_decomp+0x25>
+      25:	89 f5                	mov    %esi,%ebp
+      27:	48 89 fb             	mov    %rdi,%rbx
+      2a:	49 89 e5             	mov    %rsp,%r13
+      2d:	0f 1f 00             	nopl   (%rax)
+./src/gtksourceiter.c:49
+      30:	48 89 df             	mov    %rbx,%rdi
+      33:	e8 00 00 00 00       	callq  38 <pointer_from_offset_skipping_decomp+0x38>
+      38:	4c 89 ee             	mov    %r13,%rsi
+      3b:	89 c7                	mov    %eax,%edi
+      3d:	e8 00 00 00 00       	callq  42 <pointer_from_offset_skipping_decomp+0x42>
+./src/gtksourceiter.c:50
+      42:	48 89 c7             	mov    %rax,%rdi
+      45:	e8 00 00 00 00       	callq  4a <pointer_from_offset_skipping_decomp+0x4a>
+./src/gtksourceiter.c:51
+      4a:	0f b6 03             	movzbl (%rbx),%eax
+./src/gtksourceiter.c:52
+      4d:	2b 2c 24             	sub    (%rsp),%ebp
+./src/gtksourceiter.c:51
+      50:	49 0f be 04 04       	movsbq (%r12,%rax,1),%rax
+      55:	48 01 c3             	add    %rax,%rbx
+./src/gtksourceiter.c:47
+      58:	85 ed                	test   %ebp,%ebp
+      5a:	7f d4                	jg     30 <pointer_from_offset_skipping_decomp+0x30>
+./src/gtksourceiter.c:55
+      5c:	48 8b 54 24 08       	mov    0x8(%rsp),%rdx
+      61:	64 48 33 14 25 28 00 	xor    %fs:0x28,%rdx
+      68:	00 00 
+      6a:	48 89 d8             	mov    %rbx,%rax
+      6d:	75 10                	jne    7f <pointer_from_offset_skipping_decomp+0x7f>
+      6f:	48 83 c4 18          	add    $0x18,%rsp
+      73:	5b                   	pop    %rbx
+      74:	5d                   	pop    %rbp
+      75:	41 5c                	pop    %r12
+      77:	41 5d                	pop    %r13
+      79:	c3                   	retq   
+./src/gtksourceiter.c:46
+      7a:	48 89 fb             	mov    %rdi,%rbx
+./src/gtksourceiter.c:54
+      7d:	eb dd                	jmp    5c <pointer_from_offset_skipping_decomp+0x5c>
+./src/gtksourceiter.c:55
+      7f:	e8 00 00 00 00       	callq  84 <pointer_from_offset_skipping_decomp+0x84>
+      84:	66 90                	xchg   %ax,%ax
+      86:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+      8d:	00 00 00 
+
+0000000000000090 <g_utf8_caselessnmatch>:
+g_utf8_caselessnmatch():
+./src/gtksourceiter.c:170
+      90:	41 55                	push   %r13
+      92:	41 54                	push   %r12
+      94:	55                   	push   %rbp
+      95:	53                   	push   %rbx
+      96:	48 83 ec 08          	sub    $0x8,%rsp
+./src/gtksourceiter.c:178
+      9a:	48 85 ff             	test   %rdi,%rdi
+      9d:	0f 84 1d 01 00 00    	je     1c0 <g_utf8_caselessnmatch+0x130>
+./src/gtksourceiter.c:179
+      a3:	48 85 f6             	test   %rsi,%rsi
+      a6:	48 89 f3             	mov    %rsi,%rbx
+      a9:	0f 84 39 01 00 00    	je     1e8 <g_utf8_caselessnmatch+0x158>
+./src/gtksourceiter.c:180
+      af:	48 85 d2             	test   %rdx,%rdx
+      b2:	0f 8e b8 00 00 00    	jle    170 <g_utf8_caselessnmatch+0xe0>
+./src/gtksourceiter.c:181
+      b8:	48 85 c9             	test   %rcx,%rcx
+      bb:	48 89 cd             	mov    %rcx,%rbp
+      be:	0f 8e d4 00 00 00    	jle    198 <g_utf8_caselessnmatch+0x108>
+./src/gtksourceiter.c:183
+      c4:	48 89 d6             	mov    %rdx,%rsi
+      c7:	e8 00 00 00 00       	callq  cc <g_utf8_caselessnmatch+0x3c>
+./src/gtksourceiter.c:184
+      cc:	ba 02 00 00 00       	mov    $0x2,%edx
+./src/gtksourceiter.c:183
+      d1:	49 89 c5             	mov    %rax,%r13
+./src/gtksourceiter.c:184
+      d4:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+      db:	48 89 c7             	mov    %rax,%rdi
+      de:	e8 00 00 00 00       	callq  e3 <g_utf8_caselessnmatch+0x53>
+./src/gtksourceiter.c:185
+      e3:	4c 89 ef             	mov    %r13,%rdi
+./src/gtksourceiter.c:184
+      e6:	49 89 c4             	mov    %rax,%r12
+./src/gtksourceiter.c:185
+      e9:	e8 00 00 00 00       	callq  ee <g_utf8_caselessnmatch+0x5e>
+./src/gtksourceiter.c:187
+      ee:	48 89 ee             	mov    %rbp,%rsi
+      f1:	48 89 df             	mov    %rbx,%rdi
+      f4:	e8 00 00 00 00       	callq  f9 <g_utf8_caselessnmatch+0x69>
+./src/gtksourceiter.c:188
+      f9:	ba 02 00 00 00       	mov    $0x2,%edx
+      fe:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+./src/gtksourceiter.c:187
+     105:	48 89 c3             	mov    %rax,%rbx
+./src/gtksourceiter.c:188
+     108:	48 89 c7             	mov    %rax,%rdi
+     10b:	e8 00 00 00 00       	callq  110 <g_utf8_caselessnmatch+0x80>
+./src/gtksourceiter.c:189
+     110:	48 89 df             	mov    %rbx,%rdi
+./src/gtksourceiter.c:188
+     113:	48 89 c5             	mov    %rax,%rbp
+./src/gtksourceiter.c:194
+     116:	31 db                	xor    %ebx,%ebx
+./src/gtksourceiter.c:189
+     118:	e8 00 00 00 00       	callq  11d <g_utf8_caselessnmatch+0x8d>
+./src/gtksourceiter.c:191
+     11d:	4c 89 e7             	mov    %r12,%rdi
+     120:	e8 00 00 00 00       	callq  125 <g_utf8_caselessnmatch+0x95>
+./src/gtksourceiter.c:192
+     125:	48 89 ef             	mov    %rbp,%rdi
+./src/gtksourceiter.c:191
+     128:	49 89 c5             	mov    %rax,%r13
+./src/gtksourceiter.c:192
+     12b:	e8 00 00 00 00       	callq  130 <g_utf8_caselessnmatch+0xa0>
+./src/gtksourceiter.c:194
+     130:	44 39 e8             	cmp    %r13d,%eax
+     133:	7e 23                	jle    158 <g_utf8_caselessnmatch+0xc8>
+./src/gtksourceiter.c:200
+     135:	4c 89 e7             	mov    %r12,%rdi
+     138:	0f b6 db             	movzbl %bl,%ebx
+     13b:	e8 00 00 00 00       	callq  140 <g_utf8_caselessnmatch+0xb0>
+./src/gtksourceiter.c:201
+     140:	48 89 ef             	mov    %rbp,%rdi
+     143:	e8 00 00 00 00       	callq  148 <g_utf8_caselessnmatch+0xb8>
+./src/gtksourceiter.c:204
+     148:	48 83 c4 08          	add    $0x8,%rsp
+     14c:	89 d8                	mov    %ebx,%eax
+     14e:	5b                   	pop    %rbx
+     14f:	5d                   	pop    %rbp
+     150:	41 5c                	pop    %r12
+     152:	41 5d                	pop    %r13
+     154:	c3                   	retq   
+     155:	0f 1f 00             	nopl   (%rax)
+./src/gtksourceiter.c:197
+     158:	48 63 d0             	movslq %eax,%rdx
+     15b:	48 89 ee             	mov    %rbp,%rsi
+     15e:	4c 89 e7             	mov    %r12,%rdi
+     161:	e8 00 00 00 00       	callq  166 <g_utf8_caselessnmatch+0xd6>
+     166:	85 c0                	test   %eax,%eax
+     168:	0f 94 c3             	sete   %bl
+     16b:	eb c8                	jmp    135 <g_utf8_caselessnmatch+0xa5>
+     16d:	0f 1f 00             	nopl   (%rax)
+./src/gtksourceiter.c:180
+     170:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 177 <g_utf8_caselessnmatch+0xe7>
+     177:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 17e <g_utf8_caselessnmatch+0xee>
+     17e:	31 ff                	xor    %edi,%edi
+     180:	31 db                	xor    %ebx,%ebx
+     182:	e8 00 00 00 00       	callq  187 <g_utf8_caselessnmatch+0xf7>
+./src/gtksourceiter.c:204
+     187:	48 83 c4 08          	add    $0x8,%rsp
+     18b:	89 d8                	mov    %ebx,%eax
+     18d:	5b                   	pop    %rbx
+     18e:	5d                   	pop    %rbp
+     18f:	41 5c                	pop    %r12
+     191:	41 5d                	pop    %r13
+     193:	c3                   	retq   
+     194:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/gtksourceiter.c:181
+     198:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 19f <g_utf8_caselessnmatch+0x10f>
+     19f:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1a6 <g_utf8_caselessnmatch+0x116>
+     1a6:	31 ff                	xor    %edi,%edi
+     1a8:	31 db                	xor    %ebx,%ebx
+     1aa:	e8 00 00 00 00       	callq  1af <g_utf8_caselessnmatch+0x11f>
+./src/gtksourceiter.c:204
+     1af:	48 83 c4 08          	add    $0x8,%rsp
+     1b3:	89 d8                	mov    %ebx,%eax
+     1b5:	5b                   	pop    %rbx
+     1b6:	5d                   	pop    %rbp
+     1b7:	41 5c                	pop    %r12
+     1b9:	41 5d                	pop    %r13
+     1bb:	c3                   	retq   
+     1bc:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/gtksourceiter.c:178
+     1c0:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 1c7 <g_utf8_caselessnmatch+0x137>
+     1c7:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1ce <g_utf8_caselessnmatch+0x13e>
+     1ce:	31 ff                	xor    %edi,%edi
+     1d0:	31 db                	xor    %ebx,%ebx
+     1d2:	e8 00 00 00 00       	callq  1d7 <g_utf8_caselessnmatch+0x147>
+./src/gtksourceiter.c:204
+     1d7:	48 83 c4 08          	add    $0x8,%rsp
+     1db:	89 d8                	mov    %ebx,%eax
+     1dd:	5b                   	pop    %rbx
+     1de:	5d                   	pop    %rbp
+     1df:	41 5c                	pop    %r12
+     1e1:	41 5d                	pop    %r13
+     1e3:	c3                   	retq   
+     1e4:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/gtksourceiter.c:179
+     1e8:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 1ef <g_utf8_caselessnmatch+0x15f>
+     1ef:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1f6 <g_utf8_caselessnmatch+0x166>
+     1f6:	31 ff                	xor    %edi,%edi
+     1f8:	e8 00 00 00 00       	callq  1fd <g_utf8_caselessnmatch+0x16d>
+./src/gtksourceiter.c:204
+     1fd:	48 83 c4 08          	add    $0x8,%rsp
+     201:	89 d8                	mov    %ebx,%eax
+     203:	5b                   	pop    %rbx
+     204:	5d                   	pop    %rbp
+     205:	41 5c                	pop    %r12
+     207:	41 5d                	pop    %r13
+     209:	c3                   	retq   
+     20a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000000210 <forward_chars_with_skipping.isra.1>:
+forward_chars_with_skipping():
+./src/gtksourceiter.c:207
+     210:	41 56                	push   %r14
+     212:	41 55                	push   %r13
+     214:	41 54                	push   %r12
+     216:	55                   	push   %rbp
+     217:	53                   	push   %rbx
+     218:	48 83 ec 10          	sub    $0x10,%rsp
+     21c:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+     223:	00 00 
+     225:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+     22a:	31 c0                	xor    %eax,%eax
+./src/gtksourceiter.c:215
+     22c:	85 f6                	test   %esi,%esi
+     22e:	0f 88 a4 00 00 00    	js     2d8 <forward_chars_with_skipping.isra.1+0xc8>
+./src/gtksourceiter.c:219
+     234:	0f 84 7d 00 00 00    	je     2b7 <forward_chars_with_skipping.isra.1+0xa7>
+     23a:	48 89 fd             	mov    %rdi,%rbp
+     23d:	89 f3                	mov    %esi,%ebx
+     23f:	41 89 d4             	mov    %edx,%r12d
+     242:	41 89 cd             	mov    %ecx,%r13d
+./src/gtksourceiter.c:238
+     245:	49 89 e6             	mov    %rsp,%r14
+     248:	eb 1a                	jmp    264 <forward_chars_with_skipping.isra.1+0x54>
+     24a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/gtksourceiter.c:230
+     250:	45 85 ed             	test   %r13d,%r13d
+     253:	75 33                	jne    288 <forward_chars_with_skipping.isra.1+0x78>
+./src/gtksourceiter.c:244
+     255:	48 89 ef             	mov    %rbp,%rdi
+./src/gtksourceiter.c:247
+     258:	83 eb 01             	sub    $0x1,%ebx
+./src/gtksourceiter.c:244
+     25b:	e8 00 00 00 00       	callq  260 <forward_chars_with_skipping.isra.1+0x50>
+./src/gtksourceiter.c:219
+     260:	85 db                	test   %ebx,%ebx
+     262:	7e 53                	jle    2b7 <forward_chars_with_skipping.isra.1+0xa7>
+./src/gtksourceiter.c:223
+     264:	45 85 e4             	test   %r12d,%r12d
+     267:	74 e7                	je     250 <forward_chars_with_skipping.isra.1+0x40>
+     269:	48 89 ef             	mov    %rbp,%rdi
+     26c:	e8 00 00 00 00       	callq  271 <forward_chars_with_skipping.isra.1+0x61>
+     271:	3d fc ff 00 00       	cmp    $0xfffc,%eax
+     276:	75 d8                	jne    250 <forward_chars_with_skipping.isra.1+0x40>
+./src/gtksourceiter.c:244
+     278:	48 89 ef             	mov    %rbp,%rdi
+     27b:	e8 00 00 00 00       	callq  280 <forward_chars_with_skipping.isra.1+0x70>
+     280:	eb e2                	jmp    264 <forward_chars_with_skipping.isra.1+0x54>
+     282:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/gtksourceiter.c:238
+     288:	48 89 ef             	mov    %rbp,%rdi
+     28b:	e8 00 00 00 00       	callq  290 <forward_chars_with_skipping.isra.1+0x80>
+     290:	4c 89 f6             	mov    %r14,%rsi
+     293:	89 c7                	mov    %eax,%edi
+     295:	e8 00 00 00 00       	callq  29a <forward_chars_with_skipping.isra.1+0x8a>
+./src/gtksourceiter.c:240
+     29a:	2b 1c 24             	sub    (%rsp),%ebx
+./src/gtksourceiter.c:241
+     29d:	48 89 c7             	mov    %rax,%rdi
+     2a0:	e8 00 00 00 00       	callq  2a5 <forward_chars_with_skipping.isra.1+0x95>
+./src/gtksourceiter.c:244
+     2a5:	48 89 ef             	mov    %rbp,%rdi
+     2a8:	e8 00 00 00 00       	callq  2ad <forward_chars_with_skipping.isra.1+0x9d>
+./src/gtksourceiter.c:240
+     2ad:	83 c3 01             	add    $0x1,%ebx
+./src/gtksourceiter.c:247
+     2b0:	83 eb 01             	sub    $0x1,%ebx
+./src/gtksourceiter.c:219
+     2b3:	85 db                	test   %ebx,%ebx
+     2b5:	7f ad                	jg     264 <forward_chars_with_skipping.isra.1+0x54>
+./src/gtksourceiter.c:249
+     2b7:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+     2bc:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+     2c3:	00 00 
+     2c5:	75 28                	jne    2ef <forward_chars_with_skipping.isra.1+0xdf>
+     2c7:	48 83 c4 10          	add    $0x10,%rsp
+     2cb:	5b                   	pop    %rbx
+     2cc:	5d                   	pop    %rbp
+     2cd:	41 5c                	pop    %r12
+     2cf:	41 5d                	pop    %r13
+     2d1:	41 5e                	pop    %r14
+     2d3:	c3                   	retq   
+     2d4:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/gtksourceiter.c:215
+     2d8:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 2df <forward_chars_with_skipping.isra.1+0xcf>
+     2df:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 2e6 <forward_chars_with_skipping.isra.1+0xd6>
+     2e6:	31 ff                	xor    %edi,%edi
+     2e8:	e8 00 00 00 00       	callq  2ed <forward_chars_with_skipping.isra.1+0xdd>
+     2ed:	eb c8                	jmp    2b7 <forward_chars_with_skipping.isra.1+0xa7>
+./src/gtksourceiter.c:249
+     2ef:	e8 00 00 00 00       	callq  2f4 <forward_chars_with_skipping.isra.1+0xe4>
+forward_chars_with_skipping.isra.1():
+     2f4:	66 90                	xchg   %ax,%ax
+     2f6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+     2fd:	00 00 00 
+
+0000000000000300 <lines_match.part.3.constprop.6>:
+lines_match():
+./src/gtksourceiter.c:252
+     300:	41 57                	push   %r15
+     302:	41 56                	push   %r14
+     304:	49 89 fe             	mov    %rdi,%r14
+     307:	41 55                	push   %r13
+     309:	41 54                	push   %r12
+     30b:	49 89 f5             	mov    %rsi,%r13
+     30e:	55                   	push   %rbp
+     30f:	53                   	push   %rbx
+     310:	4d 89 c7             	mov    %r8,%r15
+     313:	48 89 cb             	mov    %rcx,%rbx
+./src/gtksourceiter.c:278
+     316:	45 31 e4             	xor    %r12d,%r12d
+./src/gtksourceiter.c:252
+     319:	48 81 ec a8 00 00 00 	sub    $0xa8,%rsp
+./src/gtksourceiter.c:273
+     320:	48 8b 07             	mov    (%rdi),%rax
+./src/gtksourceiter.c:274
+     323:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+./src/gtksourceiter.c:252
+     328:	89 54 24 14          	mov    %edx,0x14(%rsp)
+     32c:	64 48 8b 0c 25 28 00 	mov    %fs:0x28,%rcx
+     333:	00 00 
+     335:	48 89 8c 24 98 00 00 	mov    %rcx,0x98(%rsp)
+     33c:	00 
+     33d:	31 c9                	xor    %ecx,%ecx
+./src/gtksourceiter.c:273
+     33f:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+     344:	48 8b 47 08          	mov    0x8(%rdi),%rax
+     348:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+     34d:	48 8b 47 10          	mov    0x10(%rdi),%rax
+     351:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+     356:	48 8b 47 18          	mov    0x18(%rdi),%rax
+     35a:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+     35f:	48 8b 47 20          	mov    0x20(%rdi),%rax
+     363:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+     368:	48 8b 47 28          	mov    0x28(%rdi),%rax
+     36c:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+     371:	48 8b 47 30          	mov    0x30(%rdi),%rax
+     375:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+     37a:	48 8b 47 38          	mov    0x38(%rdi),%rax
+     37e:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+     383:	48 8b 47 40          	mov    0x40(%rdi),%rax
+     387:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+     38e:	00 
+     38f:	48 8b 47 48          	mov    0x48(%rdi),%rax
+./src/gtksourceiter.c:274
+     393:	48 89 ef             	mov    %rbp,%rdi
+./src/gtksourceiter.c:273
+     396:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+     39d:	00 
+./src/gtksourceiter.c:274
+     39e:	e8 00 00 00 00       	callq  3a3 <lines_match.part.3.constprop.6+0xa3>
+./src/gtksourceiter.c:277
+     3a3:	48 89 ee             	mov    %rbp,%rsi
+     3a6:	4c 89 f7             	mov    %r14,%rdi
+     3a9:	e8 00 00 00 00       	callq  3ae <lines_match.part.3.constprop.6+0xae>
+     3ae:	85 c0                	test   %eax,%eax
+     3b0:	0f 85 4d 03 00 00    	jne    703 <lines_match.part.3.constprop.6+0x403>
+./src/gtksourceiter.c:280
+     3b6:	44 8b 44 24 14       	mov    0x14(%rsp),%r8d
+     3bb:	41 89 c4             	mov    %eax,%r12d
+./src/gtksourceiter.c:285
+     3be:	48 89 ee             	mov    %rbp,%rsi
+     3c1:	4c 89 f7             	mov    %r14,%rdi
+./src/gtksourceiter.c:280
+     3c4:	45 85 c0             	test   %r8d,%r8d
+     3c7:	0f 85 63 03 00 00    	jne    730 <lines_match.part.3.constprop.6+0x430>
+./src/gtksourceiter.c:292
+     3cd:	e8 00 00 00 00       	callq  3d2 <lines_match.part.3.constprop.6+0xd2>
+     3d2:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+./src/gtksourceiter.c:295
+     3d7:	48 85 db             	test   %rbx,%rbx
+     3da:	0f 84 b8 03 00 00    	je     798 <lines_match.part.3.constprop.6+0x498>
+g_utf8_strcasestr():
+./src/gtksourceiter.c:68
+     3e0:	48 83 7c 24 08 00    	cmpq   $0x0,0x8(%rsp)
+lines_match():
+./src/gtksourceiter.c:297
+     3e6:	49 8b 45 00          	mov    0x0(%r13),%rax
+     3ea:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+g_utf8_strcasestr():
+./src/gtksourceiter.c:68
+     3ef:	0f 84 6b 04 00 00    	je     860 <lines_match.part.3.constprop.6+0x560>
+./src/gtksourceiter.c:69
+     3f5:	48 83 7c 24 18 00    	cmpq   $0x0,0x18(%rsp)
+     3fb:	0f 84 7f 04 00 00    	je     880 <lines_match.part.3.constprop.6+0x580>
+./src/gtksourceiter.c:71
+     401:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+     406:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+     40d:	e8 00 00 00 00       	callq  412 <lines_match.part.3.constprop.6+0x112>
+./src/gtksourceiter.c:72
+     412:	31 d2                	xor    %edx,%edx
+     414:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+     41b:	48 89 c7             	mov    %rax,%rdi
+     41e:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+     423:	e8 00 00 00 00       	callq  428 <lines_match.part.3.constprop.6+0x128>
+./src/gtksourceiter.c:73
+     428:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+./src/gtksourceiter.c:72
+     42d:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+./src/gtksourceiter.c:73
+     432:	48 89 cf             	mov    %rcx,%rdi
+     435:	e8 00 00 00 00       	callq  43a <lines_match.part.3.constprop.6+0x13a>
+./src/gtksourceiter.c:75
+     43a:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+     43f:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+     446:	e8 00 00 00 00       	callq  44b <lines_match.part.3.constprop.6+0x14b>
+./src/gtksourceiter.c:76
+     44b:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+     450:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+./src/gtksourceiter.c:75
+     457:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+./src/gtksourceiter.c:76
+     45c:	e8 00 00 00 00       	callq  461 <lines_match.part.3.constprop.6+0x161>
+./src/gtksourceiter.c:78
+     461:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+     466:	48 85 d2             	test   %rdx,%rdx
+     469:	0f 84 d1 00 00 00    	je     540 <lines_match.part.3.constprop.6+0x240>
+./src/gtksourceiter.c:84
+     46f:	48 39 c2             	cmp    %rax,%rdx
+     472:	0f 87 c8 02 00 00    	ja     740 <lines_match.part.3.constprop.6+0x440>
+./src/gtksourceiter.c:91
+     478:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+     47d:	e8 00 00 00 00       	callq  482 <lines_match.part.3.constprop.6+0x182>
+./src/gtksourceiter.c:94
+     482:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+     487:	80 3e 00             	cmpb   $0x0,(%rsi)
+     48a:	0f 84 b0 02 00 00    	je     740 <lines_match.part.3.constprop.6+0x440>
+./src/gtksourceiter.c:102
+     490:	48 89 f1             	mov    %rsi,%rcx
+     493:	31 f6                	xor    %esi,%esi
+     495:	4c 89 74 24 28       	mov    %r14,0x28(%rsp)
+     49a:	4c 89 6c 24 30       	mov    %r13,0x30(%rsp)
+     49f:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+     4a4:	49 89 c6             	mov    %rax,%r14
+     4a7:	4c 8b 6c 24 18       	mov    0x18(%rsp),%r13
+     4ac:	48 89 cd             	mov    %rcx,%rbp
+     4af:	48 89 5c 24 18       	mov    %rbx,0x18(%rsp)
+     4b4:	89 f3                	mov    %esi,%ebx
+     4b6:	eb 28                	jmp    4e0 <lines_match.part.3.constprop.6+0x1e0>
+     4b8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+     4bf:	00 
+     4c0:	0f b6 45 00          	movzbl 0x0(%rbp),%eax
+     4c4:	48 8b 0d 00 00 00 00 	mov    0x0(%rip),%rcx        # 4cb <lines_match.part.3.constprop.6+0x1cb>
+./src/gtksourceiter.c:103
+     4cb:	83 c3 01             	add    $0x1,%ebx
+./src/gtksourceiter.c:102
+     4ce:	48 0f be 04 01       	movsbq (%rcx,%rax,1),%rax
+     4d3:	48 01 c5             	add    %rax,%rbp
+./src/gtksourceiter.c:94
+     4d6:	80 7d 00 00          	cmpb   $0x0,0x0(%rbp)
+     4da:	0f 84 60 02 00 00    	je     740 <lines_match.part.3.constprop.6+0x440>
+./src/gtksourceiter.c:96
+     4e0:	4c 89 f2             	mov    %r14,%rdx
+     4e3:	4c 89 ee             	mov    %r13,%rsi
+     4e6:	48 89 ef             	mov    %rbp,%rdi
+     4e9:	e8 00 00 00 00       	callq  4ee <lines_match.part.3.constprop.6+0x1ee>
+     4ee:	85 c0                	test   %eax,%eax
+     4f0:	75 ce                	jne    4c0 <lines_match.part.3.constprop.6+0x1c0>
+./src/gtksourceiter.c:98
+     4f2:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+     4f7:	89 de                	mov    %ebx,%esi
+     4f9:	4c 8b 74 24 28       	mov    0x28(%rsp),%r14
+     4fe:	4c 8b 6c 24 30       	mov    0x30(%rsp),%r13
+     503:	48 8b 5c 24 18       	mov    0x18(%rsp),%rbx
+     508:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+     50d:	e8 ee fa ff ff       	callq  0 <pointer_from_offset_skipping_decomp>
+./src/gtksourceiter.c:107
+     512:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+./src/gtksourceiter.c:98
+     517:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+./src/gtksourceiter.c:107
+     51c:	e8 00 00 00 00       	callq  521 <lines_match.part.3.constprop.6+0x221>
+lines_match():
+./src/gtksourceiter.c:311
+     521:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+     526:	48 85 c0             	test   %rax,%rax
+     529:	0f 84 1b 02 00 00    	je     74a <lines_match.part.3.constprop.6+0x44a>
+./src/gtksourceiter.c:318
+     52f:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+     534:	48 29 f8             	sub    %rdi,%rax
+     537:	48 89 c6             	mov    %rax,%rsi
+     53a:	eb 15                	jmp    551 <lines_match.part.3.constprop.6+0x251>
+     53c:	0f 1f 40 00          	nopl   0x0(%rax)
+g_utf8_strcasestr():
+./src/gtksourceiter.c:107
+     540:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+     545:	e8 00 00 00 00       	callq  54a <lines_match.part.3.constprop.6+0x24a>
+lines_match():
+./src/gtksourceiter.c:318
+     54a:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+     54f:	31 f6                	xor    %esi,%esi
+     551:	e8 00 00 00 00       	callq  556 <lines_match.part.3.constprop.6+0x256>
+./src/gtksourceiter.c:320
+     556:	49 8b 16             	mov    (%r14),%rdx
+./src/gtksourceiter.c:325
+     559:	8b 4c 24 14          	mov    0x14(%rsp),%ecx
+     55d:	45 31 e4             	xor    %r12d,%r12d
+     560:	89 c6                	mov    %eax,%esi
+     562:	48 89 ef             	mov    %rbp,%rdi
+./src/gtksourceiter.c:320
+     565:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+     56a:	49 8b 56 08          	mov    0x8(%r14),%rdx
+./src/gtksourceiter.c:325
+     56e:	85 c9                	test   %ecx,%ecx
+     570:	41 0f 94 c4          	sete   %r12b
+     574:	31 c9                	xor    %ecx,%ecx
+./src/gtksourceiter.c:320
+     576:	48 89 54 24 48       	mov    %rdx,0x48(%rsp)
+     57b:	49 8b 56 10          	mov    0x10(%r14),%rdx
+     57f:	48 89 54 24 50       	mov    %rdx,0x50(%rsp)
+     584:	49 8b 56 18          	mov    0x18(%r14),%rdx
+     588:	48 89 54 24 58       	mov    %rdx,0x58(%rsp)
+     58d:	49 8b 56 20          	mov    0x20(%r14),%rdx
+     591:	48 89 54 24 60       	mov    %rdx,0x60(%rsp)
+     596:	49 8b 56 28          	mov    0x28(%r14),%rdx
+     59a:	48 89 54 24 68       	mov    %rdx,0x68(%rsp)
+     59f:	49 8b 56 30          	mov    0x30(%r14),%rdx
+     5a3:	48 89 54 24 70       	mov    %rdx,0x70(%rsp)
+     5a8:	49 8b 56 38          	mov    0x38(%r14),%rdx
+     5ac:	48 89 54 24 78       	mov    %rdx,0x78(%rsp)
+     5b1:	49 8b 56 40          	mov    0x40(%r14),%rdx
+     5b5:	48 89 94 24 80 00 00 	mov    %rdx,0x80(%rsp)
+     5bc:	00 
+     5bd:	49 8b 56 48          	mov    0x48(%r14),%rdx
+     5c1:	48 89 94 24 88 00 00 	mov    %rdx,0x88(%rsp)
+     5c8:	00 
+./src/gtksourceiter.c:325
+     5c9:	44 89 e2             	mov    %r12d,%edx
+     5cc:	e8 3f fc ff ff       	callq  210 <forward_chars_with_skipping.isra.1>
+./src/gtksourceiter.c:328
+     5d1:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+     5d6:	48 89 03             	mov    %rax,(%rbx)
+     5d9:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+     5de:	48 89 43 08          	mov    %rax,0x8(%rbx)
+     5e2:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+     5e7:	48 89 43 10          	mov    %rax,0x10(%rbx)
+     5eb:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+     5f0:	48 89 43 18          	mov    %rax,0x18(%rbx)
+     5f4:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+     5f9:	48 89 43 20          	mov    %rax,0x20(%rbx)
+     5fd:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+     602:	48 89 43 28          	mov    %rax,0x28(%rbx)
+     606:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+     60b:	48 89 43 30          	mov    %rax,0x30(%rbx)
+     60f:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+     614:	48 89 43 38          	mov    %rax,0x38(%rbx)
+     618:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+     61f:	00 
+     620:	48 89 43 40          	mov    %rax,0x40(%rbx)
+     624:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+     62b:	00 
+     62c:	48 89 43 48          	mov    %rax,0x48(%rbx)
+./src/gtksourceiter.c:332
+     630:	49 8b 7d 00          	mov    0x0(%r13),%rdi
+     634:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+     63b:	e8 00 00 00 00       	callq  640 <lines_match.part.3.constprop.6+0x340>
+     640:	b9 01 00 00 00       	mov    $0x1,%ecx
+     645:	44 89 e2             	mov    %r12d,%edx
+     648:	89 c6                	mov    %eax,%esi
+     64a:	48 89 ef             	mov    %rbp,%rdi
+     64d:	e8 be fb ff ff       	callq  210 <forward_chars_with_skipping.isra.1>
+./src/gtksourceiter.c:334
+     652:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+     657:	e8 00 00 00 00       	callq  65c <lines_match.part.3.constprop.6+0x35c>
+./src/gtksourceiter.c:338
+     65c:	4d 85 ff             	test   %r15,%r15
+     65f:	0f 84 fb 00 00 00    	je     760 <lines_match.part.3.constprop.6+0x460>
+./src/gtksourceiter.c:339
+     665:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+     66a:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+     66f:	48 8b 74 24 50       	mov    0x50(%rsp),%rsi
+     674:	48 8b 7c 24 58       	mov    0x58(%rsp),%rdi
+     679:	4c 8b 4c 24 60       	mov    0x60(%rsp),%r9
+     67e:	4c 8b 54 24 68       	mov    0x68(%rsp),%r10
+     683:	4c 8b 5c 24 70       	mov    0x70(%rsp),%r11
+     688:	48 8b 5c 24 78       	mov    0x78(%rsp),%rbx
+     68d:	4c 8b a4 24 80 00 00 	mov    0x80(%rsp),%r12
+     694:	00 
+     695:	4c 8b b4 24 88 00 00 	mov    0x88(%rsp),%r14
+     69c:	00 
+     69d:	49 89 17             	mov    %rdx,(%r15)
+     6a0:	49 89 4f 08          	mov    %rcx,0x8(%r15)
+     6a4:	49 89 77 10          	mov    %rsi,0x10(%r15)
+     6a8:	49 89 7f 18          	mov    %rdi,0x18(%r15)
+     6ac:	4d 89 4f 20          	mov    %r9,0x20(%r15)
+     6b0:	4d 89 57 28          	mov    %r10,0x28(%r15)
+     6b4:	4d 89 5f 30          	mov    %r11,0x30(%r15)
+     6b8:	49 89 5f 38          	mov    %rbx,0x38(%r15)
+     6bc:	4d 89 67 40          	mov    %r12,0x40(%r15)
+     6c0:	4d 89 77 48          	mov    %r14,0x48(%r15)
+./src/gtksourceiter.c:264
+     6c4:	49 8b 45 08          	mov    0x8(%r13),%rax
+     6c8:	48 85 c0             	test   %rax,%rax
+     6cb:	74 09                	je     6d6 <lines_match.part.3.constprop.6+0x3d6>
+     6cd:	80 38 00             	cmpb   $0x0,(%rax)
+     6d0:	0f 85 a2 00 00 00    	jne    778 <lines_match.part.3.constprop.6+0x478>
+./src/gtksourceiter.c:269
+     6d6:	4d 89 67 40          	mov    %r12,0x40(%r15)
+     6da:	49 89 17             	mov    %rdx,(%r15)
+./src/gtksourceiter.c:270
+     6dd:	41 bc 01 00 00 00    	mov    $0x1,%r12d
+./src/gtksourceiter.c:269
+     6e3:	49 89 4f 08          	mov    %rcx,0x8(%r15)
+     6e7:	49 89 77 10          	mov    %rsi,0x10(%r15)
+     6eb:	49 89 7f 18          	mov    %rdi,0x18(%r15)
+     6ef:	4d 89 4f 20          	mov    %r9,0x20(%r15)
+     6f3:	4d 89 57 28          	mov    %r10,0x28(%r15)
+     6f7:	4d 89 5f 30          	mov    %r11,0x30(%r15)
+     6fb:	49 89 5f 38          	mov    %rbx,0x38(%r15)
+     6ff:	4d 89 77 48          	mov    %r14,0x48(%r15)
+./src/gtksourceiter.c:345
+     703:	48 8b 8c 24 98 00 00 	mov    0x98(%rsp),%rcx
+     70a:	00 
+     70b:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+     712:	00 00 
+     714:	44 89 e0             	mov    %r12d,%eax
+     717:	0f 85 7d 01 00 00    	jne    89a <lines_match.part.3.constprop.6+0x59a>
+     71d:	48 81 c4 a8 00 00 00 	add    $0xa8,%rsp
+     724:	5b                   	pop    %rbx
+     725:	5d                   	pop    %rbp
+     726:	41 5c                	pop    %r12
+     728:	41 5d                	pop    %r13
+     72a:	41 5e                	pop    %r14
+     72c:	41 5f                	pop    %r15
+     72e:	c3                   	retq   
+     72f:	90                   	nop
+./src/gtksourceiter.c:285
+     730:	e8 00 00 00 00       	callq  735 <lines_match.part.3.constprop.6+0x435>
+     735:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+     73a:	e9 98 fc ff ff       	jmpq   3d7 <lines_match.part.3.constprop.6+0xd7>
+     73f:	90                   	nop
+g_utf8_strcasestr():
+./src/gtksourceiter.c:107
+     740:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+     745:	e8 00 00 00 00       	callq  74a <lines_match.part.3.constprop.6+0x44a>
+lines_match():
+./src/gtksourceiter.c:313
+     74a:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+     74f:	e8 00 00 00 00       	callq  754 <lines_match.part.3.constprop.6+0x454>
+     754:	eb ad                	jmp    703 <lines_match.part.3.constprop.6+0x403>
+     756:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+     75d:	00 00 00 
+./src/gtksourceiter.c:264
+     760:	49 8b 45 08          	mov    0x8(%r13),%rax
+./src/gtksourceiter.c:270
+     764:	41 bc 01 00 00 00    	mov    $0x1,%r12d
+./src/gtksourceiter.c:264
+     76a:	48 85 c0             	test   %rax,%rax
+     76d:	74 94                	je     703 <lines_match.part.3.constprop.6+0x403>
+     76f:	80 38 00             	cmpb   $0x0,(%rax)
+     772:	74 8f                	je     703 <lines_match.part.3.constprop.6+0x403>
+     774:	0f 1f 40 00          	nopl   0x0(%rax)
+     778:	8b 54 24 14          	mov    0x14(%rsp),%edx
+./src/gtksourceiter.c:336
+     77c:	49 8d 75 08          	lea    0x8(%r13),%rsi
+     780:	4d 89 f8             	mov    %r15,%r8
+     783:	31 c9                	xor    %ecx,%ecx
+     785:	48 89 ef             	mov    %rbp,%rdi
+     788:	e8 73 fb ff ff       	callq  300 <lines_match.part.3.constprop.6>
+     78d:	41 89 c4             	mov    %eax,%r12d
+     790:	e9 6e ff ff ff       	jmpq   703 <lines_match.part.3.constprop.6+0x403>
+     795:	0f 1f 00             	nopl   (%rax)
+./src/gtksourceiter.c:305
+     798:	49 8b 75 00          	mov    0x0(%r13),%rsi
+     79c:	48 89 f7             	mov    %rsi,%rdi
+     79f:	48 89 74 24 18       	mov    %rsi,0x18(%rsp)
+     7a4:	e8 00 00 00 00       	callq  7a9 <lines_match.part.3.constprop.6+0x4a9>
+./src/gtksourceiter.c:304
+     7a9:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+./src/gtksourceiter.c:305
+     7ae:	48 89 c3             	mov    %rax,%rbx
+./src/gtksourceiter.c:304
+     7b1:	e8 00 00 00 00       	callq  7b6 <lines_match.part.3.constprop.6+0x4b6>
+     7b6:	48 8b 74 24 18       	mov    0x18(%rsp),%rsi
+     7bb:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+     7c0:	48 89 d9             	mov    %rbx,%rcx
+     7c3:	48 89 c2             	mov    %rax,%rdx
+     7c6:	e8 c5 f8 ff ff       	callq  90 <g_utf8_caselessnmatch>
+     7cb:	85 c0                	test   %eax,%eax
+     7cd:	0f 84 77 ff ff ff    	je     74a <lines_match.part.3.constprop.6+0x44a>
+./src/gtksourceiter.c:318
+     7d3:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+     7d8:	31 f6                	xor    %esi,%esi
+./src/gtksourceiter.c:325
+     7da:	45 31 e4             	xor    %r12d,%r12d
+./src/gtksourceiter.c:318
+     7dd:	e8 00 00 00 00       	callq  7e2 <lines_match.part.3.constprop.6+0x4e2>
+./src/gtksourceiter.c:320
+     7e2:	49 8b 16             	mov    (%r14),%rdx
+./src/gtksourceiter.c:325
+     7e5:	89 c6                	mov    %eax,%esi
+     7e7:	48 89 ef             	mov    %rbp,%rdi
+./src/gtksourceiter.c:320
+     7ea:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+     7ef:	49 8b 56 08          	mov    0x8(%r14),%rdx
+     7f3:	48 89 54 24 48       	mov    %rdx,0x48(%rsp)
+     7f8:	49 8b 56 10          	mov    0x10(%r14),%rdx
+     7fc:	48 89 54 24 50       	mov    %rdx,0x50(%rsp)
+     801:	49 8b 56 18          	mov    0x18(%r14),%rdx
+     805:	48 89 54 24 58       	mov    %rdx,0x58(%rsp)
+     80a:	49 8b 56 20          	mov    0x20(%r14),%rdx
+     80e:	48 89 54 24 60       	mov    %rdx,0x60(%rsp)
+     813:	49 8b 56 28          	mov    0x28(%r14),%rdx
+     817:	48 89 54 24 68       	mov    %rdx,0x68(%rsp)
+     81c:	49 8b 56 30          	mov    0x30(%r14),%rdx
+     820:	48 89 54 24 70       	mov    %rdx,0x70(%rsp)
+     825:	49 8b 56 38          	mov    0x38(%r14),%rdx
+     829:	48 89 54 24 78       	mov    %rdx,0x78(%rsp)
+     82e:	49 8b 56 40          	mov    0x40(%r14),%rdx
+     832:	48 89 94 24 80 00 00 	mov    %rdx,0x80(%rsp)
+     839:	00 
+     83a:	49 8b 56 48          	mov    0x48(%r14),%rdx
+     83e:	48 89 94 24 88 00 00 	mov    %rdx,0x88(%rsp)
+     845:	00 
+./src/gtksourceiter.c:325
+     846:	8b 54 24 14          	mov    0x14(%rsp),%edx
+     84a:	85 d2                	test   %edx,%edx
+     84c:	41 0f 94 c4          	sete   %r12b
+     850:	31 c9                	xor    %ecx,%ecx
+     852:	44 89 e2             	mov    %r12d,%edx
+     855:	e8 b6 f9 ff ff       	callq  210 <forward_chars_with_skipping.isra.1>
+     85a:	e9 d1 fd ff ff       	jmpq   630 <lines_match.part.3.constprop.6+0x330>
+     85f:	90                   	nop
+g_utf8_strcasestr():
+./src/gtksourceiter.c:68
+     860:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 867 <lines_match.part.3.constprop.6+0x567>
+     867:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 86e <lines_match.part.3.constprop.6+0x56e>
+     86e:	31 ff                	xor    %edi,%edi
+     870:	e8 00 00 00 00       	callq  875 <lines_match.part.3.constprop.6+0x575>
+     875:	e9 d0 fe ff ff       	jmpq   74a <lines_match.part.3.constprop.6+0x44a>
+     87a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/gtksourceiter.c:69
+     880:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 887 <lines_match.part.3.constprop.6+0x587>
+     887:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 88e <lines_match.part.3.constprop.6+0x58e>
+     88e:	31 ff                	xor    %edi,%edi
+     890:	e8 00 00 00 00       	callq  895 <lines_match.part.3.constprop.6+0x595>
+     895:	e9 b0 fe ff ff       	jmpq   74a <lines_match.part.3.constprop.6+0x44a>
+lines_match():
+./src/gtksourceiter.c:345
+     89a:	e8 00 00 00 00       	callq  89f <lines_match.part.3.constprop.6+0x59f>
+lines_match.part.3.constprop.6():
+     89f:	90                   	nop
+
+00000000000008a0 <strbreakup.constprop.4>:
+strbreakup():
+./src/gtksourceiter.c:447
+     8a0:	41 57                	push   %r15
+     8a2:	41 56                	push   %r14
+     8a4:	41 55                	push   %r13
+     8a6:	41 54                	push   %r12
+     8a8:	55                   	push   %rbp
+     8a9:	53                   	push   %rbx
+     8aa:	48 83 ec 08          	sub    $0x8,%rsp
+./src/gtksourceiter.c:455
+     8ae:	48 85 ff             	test   %rdi,%rdi
+     8b1:	0f 84 79 01 00 00    	je     a30 <strbreakup.constprop.4+0x190>
+./src/gtksourceiter.c:461
+     8b7:	be 0a 00 00 00       	mov    $0xa,%esi
+     8bc:	48 89 fd             	mov    %rdi,%rbp
+./src/gtksourceiter.c:462
+     8bf:	41 bd 01 00 00 00    	mov    $0x1,%r13d
+./src/gtksourceiter.c:461
+     8c5:	e8 00 00 00 00       	callq  8ca <strbreakup.constprop.4+0x2a>
+./src/gtksourceiter.c:462
+     8ca:	45 31 f6             	xor    %r14d,%r14d
+./src/gtksourceiter.c:461
+     8cd:	49 89 c4             	mov    %rax,%r12
+     8d0:	e9 95 00 00 00       	jmpq   96a <strbreakup.constprop.4+0xca>
+     8d5:	0f 1f 00             	nopl   (%rax)
+./src/gtksourceiter.c:470
+     8d8:	4d 89 e7             	mov    %r12,%r15
+./src/gtksourceiter.c:479
+     8db:	41 83 c5 01          	add    $0x1,%r13d
+./src/gtksourceiter.c:470
+     8df:	49 29 ef             	sub    %rbp,%r15
+./src/gtksourceiter.c:471
+     8e2:	41 8d 7f 02          	lea    0x2(%r15),%edi
+./src/gtksourceiter.c:472
+     8e6:	41 83 c7 01          	add    $0x1,%r15d
+./src/gtksourceiter.c:471
+     8ea:	e8 00 00 00 00       	callq  8ef <strbreakup.constprop.4+0x4f>
+strncpy():
+/usr/include/x86_64-linux-gnu/bits/string3.h:126
+     8ef:	4c 89 fa             	mov    %r15,%rdx
+strbreakup():
+./src/gtksourceiter.c:471
+     8f2:	48 89 c3             	mov    %rax,%rbx
+strncpy():
+/usr/include/x86_64-linux-gnu/bits/string3.h:126
+     8f5:	48 89 ee             	mov    %rbp,%rsi
+     8f8:	48 89 c7             	mov    %rax,%rdi
+     8fb:	e8 00 00 00 00       	callq  900 <strbreakup.constprop.4+0x60>
+strbreakup():
+./src/gtksourceiter.c:474
+     900:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+     907:	48 89 df             	mov    %rbx,%rdi
+./src/gtksourceiter.c:473
+     90a:	42 c6 04 3b 00       	movb   $0x0,(%rbx,%r15,1)
+./src/gtksourceiter.c:474
+     90f:	e8 00 00 00 00       	callq  914 <strbreakup.constprop.4+0x74>
+./src/gtksourceiter.c:475
+     914:	48 89 df             	mov    %rbx,%rdi
+./src/gtksourceiter.c:474
+     917:	48 89 c5             	mov    %rax,%rbp
+./src/gtksourceiter.c:475
+     91a:	e8 00 00 00 00       	callq  91f <strbreakup.constprop.4+0x7f>
+./src/gtksourceiter.c:476
+     91f:	ba 02 00 00 00       	mov    $0x2,%edx
+     924:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+     92b:	48 89 ef             	mov    %rbp,%rdi
+     92e:	e8 00 00 00 00       	callq  933 <strbreakup.constprop.4+0x93>
+./src/gtksourceiter.c:477
+     933:	48 89 ef             	mov    %rbp,%rdi
+./src/gtksourceiter.c:476
+     936:	48 89 c3             	mov    %rax,%rbx
+./src/gtksourceiter.c:480
+     939:	49 8d 6c 24 01       	lea    0x1(%r12),%rbp
+./src/gtksourceiter.c:477
+     93e:	e8 00 00 00 00       	callq  943 <strbreakup.constprop.4+0xa3>
+./src/gtksourceiter.c:478
+     943:	4c 89 f7             	mov    %r14,%rdi
+     946:	48 89 de             	mov    %rbx,%rsi
+     949:	e8 00 00 00 00       	callq  94e <strbreakup.constprop.4+0xae>
+./src/gtksourceiter.c:481
+     94e:	be 0a 00 00 00       	mov    $0xa,%esi
+     953:	48 89 ef             	mov    %rbp,%rdi
+./src/gtksourceiter.c:478
+     956:	49 89 c6             	mov    %rax,%r14
+./src/gtksourceiter.c:481
+     959:	e8 00 00 00 00       	callq  95e <strbreakup.constprop.4+0xbe>
+./src/gtksourceiter.c:482
+     95e:	41 81 fd 00 00 00 80 	cmp    $0x80000000,%r13d
+./src/gtksourceiter.c:481
+     965:	49 89 c4             	mov    %rax,%r12
+./src/gtksourceiter.c:482
+     968:	74 09                	je     973 <strbreakup.constprop.4+0xd3>
+./src/gtksourceiter.c:462
+     96a:	4d 85 e4             	test   %r12,%r12
+     96d:	0f 85 65 ff ff ff    	jne    8d8 <strbreakup.constprop.4+0x38>
+./src/gtksourceiter.c:485
+     973:	80 7d 00 00          	cmpb   $0x0,0x0(%rbp)
+     977:	75 67                	jne    9e0 <strbreakup.constprop.4+0x140>
+./src/gtksourceiter.c:494
+     979:	44 89 ef             	mov    %r13d,%edi
+     97c:	be 08 00 00 00       	mov    $0x8,%esi
+     981:	e8 00 00 00 00       	callq  986 <strbreakup.constprop.4+0xe6>
+     986:	48 89 c3             	mov    %rax,%rbx
+./src/gtksourceiter.c:498
+     989:	41 8d 45 ff          	lea    -0x1(%r13),%eax
+./src/gtksourceiter.c:499
+     98d:	4d 85 f6             	test   %r14,%r14
+./src/gtksourceiter.c:498
+     990:	41 8d 4d fe          	lea    -0x2(%r13),%ecx
+./src/gtksourceiter.c:499
+     994:	4c 89 f2             	mov    %r14,%rdx
+./src/gtksourceiter.c:498
+     997:	48 c7 04 c3 00 00 00 	movq   $0x0,(%rbx,%rax,8)
+     99e:	00 
+./src/gtksourceiter.c:499
+     99f:	74 1c                	je     9bd <strbreakup.constprop.4+0x11d>
+     9a1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/gtksourceiter.c:500
+     9a8:	48 8b 3a             	mov    (%rdx),%rdi
+./src/gtksourceiter.c:499
+     9ab:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+./src/gtksourceiter.c:500
+     9af:	89 ce                	mov    %ecx,%esi
+     9b1:	83 e9 01             	sub    $0x1,%ecx
+./src/gtksourceiter.c:499
+     9b4:	48 85 d2             	test   %rdx,%rdx
+./src/gtksourceiter.c:500
+     9b7:	48 89 3c f3          	mov    %rdi,(%rbx,%rsi,8)
+./src/gtksourceiter.c:499
+     9bb:	75 eb                	jne    9a8 <strbreakup.constprop.4+0x108>
+./src/gtksourceiter.c:502
+     9bd:	4c 89 f7             	mov    %r14,%rdi
+     9c0:	e8 00 00 00 00       	callq  9c5 <strbreakup.constprop.4+0x125>
+./src/gtksourceiter.c:505
+     9c5:	48 83 c4 08          	add    $0x8,%rsp
+./src/gtksourceiter.c:504
+     9c9:	48 89 d8             	mov    %rbx,%rax
+./src/gtksourceiter.c:505
+     9cc:	5b                   	pop    %rbx
+     9cd:	5d                   	pop    %rbp
+     9ce:	41 5c                	pop    %r12
+     9d0:	41 5d                	pop    %r13
+     9d2:	41 5e                	pop    %r14
+     9d4:	41 5f                	pop    %r15
+     9d6:	c3                   	retq   
+     9d7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+     9de:	00 00 
+./src/gtksourceiter.c:488
+     9e0:	48 89 ef             	mov    %rbp,%rdi
+     9e3:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+./src/gtksourceiter.c:487
+     9ea:	41 83 c5 01          	add    $0x1,%r13d
+./src/gtksourceiter.c:488
+     9ee:	e8 00 00 00 00       	callq  9f3 <strbreakup.constprop.4+0x153>
+./src/gtksourceiter.c:489
+     9f3:	ba 02 00 00 00       	mov    $0x2,%edx
+     9f8:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+./src/gtksourceiter.c:488
+     9ff:	48 89 c3             	mov    %rax,%rbx
+./src/gtksourceiter.c:489
+     a02:	48 89 c7             	mov    %rax,%rdi
+     a05:	e8 00 00 00 00       	callq  a0a <strbreakup.constprop.4+0x16a>
+./src/gtksourceiter.c:490
+     a0a:	48 89 df             	mov    %rbx,%rdi
+./src/gtksourceiter.c:489
+     a0d:	48 89 c5             	mov    %rax,%rbp
+./src/gtksourceiter.c:490
+     a10:	e8 00 00 00 00       	callq  a15 <strbreakup.constprop.4+0x175>
+./src/gtksourceiter.c:491
+     a15:	4c 89 f7             	mov    %r14,%rdi
+     a18:	48 89 ee             	mov    %rbp,%rsi
+     a1b:	e8 00 00 00 00       	callq  a20 <strbreakup.constprop.4+0x180>
+     a20:	49 89 c6             	mov    %rax,%r14
+     a23:	e9 51 ff ff ff       	jmpq   979 <strbreakup.constprop.4+0xd9>
+     a28:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+     a2f:	00 
+./src/gtksourceiter.c:455
+     a30:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # a37 <strbreakup.constprop.4+0x197>
+     a37:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # a3e <strbreakup.constprop.4+0x19e>
+     a3e:	31 ff                	xor    %edi,%edi
+     a40:	e8 00 00 00 00       	callq  a45 <strbreakup.constprop.4+0x1a5>
+./src/gtksourceiter.c:505
+     a45:	48 83 c4 08          	add    $0x8,%rsp
+./src/gtksourceiter.c:455
+     a49:	31 c0                	xor    %eax,%eax
+./src/gtksourceiter.c:505
+     a4b:	5b                   	pop    %rbx
+     a4c:	5d                   	pop    %rbp
+     a4d:	41 5c                	pop    %r12
+     a4f:	41 5d                	pop    %r13
+     a51:	41 5e                	pop    %r14
+     a53:	41 5f                	pop    %r15
+     a55:	c3                   	retq   
+strbreakup.constprop.4():
+     a56:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+     a5d:	00 00 00 
+
+0000000000000a60 <gtk_source_iter_forward_search>:
+gtk_source_iter_forward_search():
+./src/gtksourceiter.c:545
+     a60:	41 57                	push   %r15
+     a62:	41 56                	push   %r14
+     a64:	41 55                	push   %r13
+     a66:	41 54                	push   %r12
+     a68:	55                   	push   %rbp
+     a69:	53                   	push   %rbx
+     a6a:	48 81 ec 18 01 00 00 	sub    $0x118,%rsp
+     a71:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+     a78:	00 00 
+     a7a:	48 89 84 24 08 01 00 	mov    %rax,0x108(%rsp)
+     a81:	00 
+     a82:	31 c0                	xor    %eax,%eax
+./src/gtksourceiter.c:553
+     a84:	48 85 ff             	test   %rdi,%rdi
+     a87:	0f 84 cb 04 00 00    	je     f58 <gtk_source_iter_forward_search+0x4f8>
+./src/gtksourceiter.c:554
+     a8d:	48 85 f6             	test   %rsi,%rsi
+     a90:	49 89 f4             	mov    %rsi,%r12
+     a93:	0f 84 df 04 00 00    	je     f78 <gtk_source_iter_forward_search+0x518>
+./src/gtksourceiter.c:556
+     a99:	f6 c2 02             	test   $0x2,%dl
+     a9c:	48 89 fd             	mov    %rdi,%rbp
+     a9f:	41 89 d7             	mov    %edx,%r15d
+     aa2:	49 89 cd             	mov    %rcx,%r13
+     aa5:	4d 89 c6             	mov    %r8,%r14
+     aa8:	4c 89 cb             	mov    %r9,%rbx
+     aab:	0f 84 87 04 00 00    	je     f38 <gtk_source_iter_forward_search+0x4d8>
+./src/gtksourceiter.c:561
+     ab1:	48 85 db             	test   %rbx,%rbx
+     ab4:	74 3a                	je     af0 <gtk_source_iter_forward_search+0x90>
+./src/gtksourceiter.c:561 (discriminator 1)
+     ab6:	48 89 de             	mov    %rbx,%rsi
+     ab9:	48 89 ef             	mov    %rbp,%rdi
+     abc:	e8 00 00 00 00       	callq  ac1 <gtk_source_iter_forward_search+0x61>
+     ac1:	85 c0                	test   %eax,%eax
+     ac3:	78 2b                	js     af0 <gtk_source_iter_forward_search+0x90>
+./src/gtksourceiter.c:553
+     ac5:	31 c0                	xor    %eax,%eax
+./src/gtksourceiter.c:625
+     ac7:	48 8b 8c 24 08 01 00 	mov    0x108(%rsp),%rcx
+     ace:	00 
+     acf:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+     ad6:	00 00 
+     ad8:	0f 85 d5 04 00 00    	jne    fb3 <gtk_source_iter_forward_search+0x553>
+     ade:	48 81 c4 18 01 00 00 	add    $0x118,%rsp
+     ae5:	5b                   	pop    %rbx
+     ae6:	5d                   	pop    %rbp
+     ae7:	41 5c                	pop    %r12
+     ae9:	41 5d                	pop    %r13
+     aeb:	41 5e                	pop    %r14
+     aed:	41 5f                	pop    %r15
+     aef:	c3                   	retq   
+./src/gtksourceiter.c:564
+     af0:	41 80 3c 24 00       	cmpb   $0x0,(%r12)
+     af5:	0f 84 ad 02 00 00    	je     da8 <gtk_source_iter_forward_search+0x348>
+./src/gtksourceiter.c:590
+     afb:	4c 89 e7             	mov    %r12,%rdi
+./src/gtksourceiter.c:587
+     afe:	41 f7 d7             	not    %r15d
+./src/gtksourceiter.c:590
+     b01:	e8 9a fd ff ff       	callq  8a0 <strbreakup.constprop.4>
+     b06:	49 89 c4             	mov    %rax,%r12
+./src/gtksourceiter.c:592
+     b09:	48 8b 45 00          	mov    0x0(%rbp),%rax
+./src/gtksourceiter.c:587
+     b0d:	41 83 e7 01          	and    $0x1,%r15d
+./src/gtksourceiter.c:592
+     b11:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+     b16:	48 8b 45 08          	mov    0x8(%rbp),%rax
+     b1a:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+     b1f:	48 8b 45 10          	mov    0x10(%rbp),%rax
+     b23:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+     b28:	48 8b 45 18          	mov    0x18(%rbp),%rax
+     b2c:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+     b31:	48 8b 45 20          	mov    0x20(%rbp),%rax
+     b35:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+     b3c:	00 
+     b3d:	48 8b 45 28          	mov    0x28(%rbp),%rax
+     b41:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+     b48:	00 
+     b49:	48 8b 45 30          	mov    0x30(%rbp),%rax
+     b4d:	48 89 84 24 90 00 00 	mov    %rax,0x90(%rsp)
+     b54:	00 
+     b55:	48 8b 45 38          	mov    0x38(%rbp),%rax
+     b59:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+     b60:	00 
+     b61:	48 8b 45 40          	mov    0x40(%rbp),%rax
+     b65:	48 89 84 24 a0 00 00 	mov    %rax,0xa0(%rsp)
+     b6c:	00 
+     b6d:	48 8b 45 48          	mov    0x48(%rbp),%rax
+./src/gtksourceiter.c:602
+     b71:	48 8d 6c 24 60       	lea    0x60(%rsp),%rbp
+./src/gtksourceiter.c:592
+     b76:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+     b7d:	00 
+lines_match():
+     b7e:	48 8d 84 24 b0 00 00 	lea    0xb0(%rsp),%rax
+     b85:	00 
+     b86:	48 89 04 24          	mov    %rax,(%rsp)
+     b8a:	48 8d 44 24 10       	lea    0x10(%rsp),%rax
+     b8f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+     b94:	0f 1f 40 00          	nopl   0x0(%rax)
+gtk_source_iter_forward_search():
+./src/gtksourceiter.c:602
+     b98:	48 85 db             	test   %rbx,%rbx
+     b9b:	74 13                	je     bb0 <gtk_source_iter_forward_search+0x150>
+./src/gtksourceiter.c:602 (discriminator 1)
+     b9d:	48 89 de             	mov    %rbx,%rsi
+     ba0:	48 89 ef             	mov    %rbp,%rdi
+     ba3:	e8 00 00 00 00       	callq  ba8 <gtk_source_iter_forward_search+0x148>
+     ba8:	85 c0                	test   %eax,%eax
+     baa:	0f 89 e8 03 00 00    	jns    f98 <gtk_source_iter_forward_search+0x538>
+lines_match():
+./src/gtksourceiter.c:264
+     bb0:	49 8b 04 24          	mov    (%r12),%rax
+     bb4:	48 85 c0             	test   %rax,%rax
+     bb7:	74 09                	je     bc2 <gtk_source_iter_forward_search+0x162>
+     bb9:	80 38 00             	cmpb   $0x0,(%rax)
+     bbc:	0f 85 3e 03 00 00    	jne    f00 <gtk_source_iter_forward_search+0x4a0>
+./src/gtksourceiter.c:267
+     bc2:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+     bc7:	4c 8b 5c 24 68       	mov    0x68(%rsp),%r11
+     bcc:	4c 8b 54 24 70       	mov    0x70(%rsp),%r10
+     bd1:	4c 8b 4c 24 78       	mov    0x78(%rsp),%r9
+     bd6:	4c 8b 84 24 80 00 00 	mov    0x80(%rsp),%r8
+     bdd:	00 
+     bde:	48 8b bc 24 88 00 00 	mov    0x88(%rsp),%rdi
+     be5:	00 
+     be6:	48 8b b4 24 90 00 00 	mov    0x90(%rsp),%rsi
+     bed:	00 
+     bee:	48 8b 8c 24 98 00 00 	mov    0x98(%rsp),%rcx
+     bf5:	00 
+     bf6:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+     bfd:	00 
+     bfe:	48 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%rax
+     c05:	00 
+     c06:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+     c0b:	4c 89 5c 24 18       	mov    %r11,0x18(%rsp)
+     c10:	4c 89 54 24 20       	mov    %r10,0x20(%rsp)
+     c15:	4c 89 4c 24 28       	mov    %r9,0x28(%rsp)
+     c1a:	4c 89 44 24 30       	mov    %r8,0x30(%rsp)
+     c1f:	48 89 7c 24 38       	mov    %rdi,0x38(%rsp)
+     c24:	48 89 74 24 40       	mov    %rsi,0x40(%rsp)
+     c29:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+     c2e:	48 89 54 24 50       	mov    %rdx,0x50(%rsp)
+     c33:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+./src/gtksourceiter.c:269
+     c38:	48 89 ac 24 b0 00 00 	mov    %rbp,0xb0(%rsp)
+     c3f:	00 
+     c40:	4c 89 9c 24 b8 00 00 	mov    %r11,0xb8(%rsp)
+     c47:	00 
+     c48:	4c 89 94 24 c0 00 00 	mov    %r10,0xc0(%rsp)
+     c4f:	00 
+     c50:	4c 89 8c 24 c8 00 00 	mov    %r9,0xc8(%rsp)
+     c57:	00 
+     c58:	4c 89 84 24 d0 00 00 	mov    %r8,0xd0(%rsp)
+     c5f:	00 
+     c60:	48 89 bc 24 d8 00 00 	mov    %rdi,0xd8(%rsp)
+     c67:	00 
+     c68:	48 89 b4 24 e0 00 00 	mov    %rsi,0xe0(%rsp)
+     c6f:	00 
+     c70:	48 89 8c 24 e8 00 00 	mov    %rcx,0xe8(%rsp)
+     c77:	00 
+     c78:	48 89 94 24 f0 00 00 	mov    %rdx,0xf0(%rsp)
+     c7f:	00 
+     c80:	48 89 84 24 f8 00 00 	mov    %rax,0xf8(%rsp)
+     c87:	00 
+gtk_source_iter_forward_search():
+./src/gtksourceiter.c:608
+     c88:	48 85 db             	test   %rbx,%rbx
+     c8b:	74 18                	je     ca5 <gtk_source_iter_forward_search+0x245>
+./src/gtksourceiter.c:609 (discriminator 2)
+     c8d:	48 8d bc 24 b0 00 00 	lea    0xb0(%rsp),%rdi
+     c94:	00 
+     c95:	48 89 de             	mov    %rbx,%rsi
+     c98:	e8 00 00 00 00       	callq  c9d <gtk_source_iter_forward_search+0x23d>
+./src/gtksourceiter.c:608 (discriminator 2)
+     c9d:	85 c0                	test   %eax,%eax
+     c9f:	0f 89 f3 02 00 00    	jns    f98 <gtk_source_iter_forward_search+0x538>
+./src/gtksourceiter.c:613
+     ca5:	4d 85 ed             	test   %r13,%r13
+     ca8:	74 5a                	je     d04 <gtk_source_iter_forward_search+0x2a4>
+./src/gtksourceiter.c:614
+     caa:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+     caf:	49 89 45 00          	mov    %rax,0x0(%r13)
+     cb3:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+     cb8:	49 89 45 08          	mov    %rax,0x8(%r13)
+     cbc:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+     cc1:	49 89 45 10          	mov    %rax,0x10(%r13)
+     cc5:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+     cca:	49 89 45 18          	mov    %rax,0x18(%r13)
+     cce:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+     cd3:	49 89 45 20          	mov    %rax,0x20(%r13)
+     cd7:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+     cdc:	49 89 45 28          	mov    %rax,0x28(%r13)
+     ce0:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+     ce5:	49 89 45 30          	mov    %rax,0x30(%r13)
+     ce9:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+     cee:	49 89 45 38          	mov    %rax,0x38(%r13)
+     cf2:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+     cf7:	49 89 45 40          	mov    %rax,0x40(%r13)
+     cfb:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+     d00:	49 89 45 48          	mov    %rax,0x48(%r13)
+./src/gtksourceiter.c:615
+     d04:	4d 85 f6             	test   %r14,%r14
+     d07:	0f 84 9c 02 00 00    	je     fa9 <gtk_source_iter_forward_search+0x549>
+./src/gtksourceiter.c:616
+     d0d:	48 8b 84 24 b0 00 00 	mov    0xb0(%rsp),%rax
+     d14:	00 
+     d15:	49 89 06             	mov    %rax,(%r14)
+     d18:	48 8b 84 24 b8 00 00 	mov    0xb8(%rsp),%rax
+     d1f:	00 
+     d20:	49 89 46 08          	mov    %rax,0x8(%r14)
+     d24:	48 8b 84 24 c0 00 00 	mov    0xc0(%rsp),%rax
+     d2b:	00 
+     d2c:	49 89 46 10          	mov    %rax,0x10(%r14)
+     d30:	48 8b 84 24 c8 00 00 	mov    0xc8(%rsp),%rax
+     d37:	00 
+     d38:	49 89 46 18          	mov    %rax,0x18(%r14)
+     d3c:	48 8b 84 24 d0 00 00 	mov    0xd0(%rsp),%rax
+     d43:	00 
+     d44:	49 89 46 20          	mov    %rax,0x20(%r14)
+     d48:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+     d4f:	00 
+     d50:	49 89 46 28          	mov    %rax,0x28(%r14)
+     d54:	48 8b 84 24 e0 00 00 	mov    0xe0(%rsp),%rax
+     d5b:	00 
+     d5c:	49 89 46 30          	mov    %rax,0x30(%r14)
+     d60:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+     d67:	00 
+     d68:	49 89 46 38          	mov    %rax,0x38(%r14)
+     d6c:	48 8b 84 24 f0 00 00 	mov    0xf0(%rsp),%rax
+     d73:	00 
+     d74:	49 89 46 40          	mov    %rax,0x40(%r14)
+     d78:	48 8b 84 24 f8 00 00 	mov    0xf8(%rsp),%rax
+     d7f:	00 
+     d80:	49 89 46 48          	mov    %rax,0x48(%r14)
+./src/gtksourceiter.c:611
+     d84:	b8 01 00 00 00       	mov    $0x1,%eax
+     d89:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/gtksourceiter.c:622
+     d90:	4c 89 e7             	mov    %r12,%rdi
+     d93:	89 04 24             	mov    %eax,(%rsp)
+     d96:	e8 00 00 00 00       	callq  d9b <gtk_source_iter_forward_search+0x33b>
+./src/gtksourceiter.c:624
+     d9b:	8b 04 24             	mov    (%rsp),%eax
+     d9e:	e9 24 fd ff ff       	jmpq   ac7 <gtk_source_iter_forward_search+0x67>
+     da3:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/gtksourceiter.c:567
+     da8:	48 8b 45 00          	mov    0x0(%rbp),%rax
+     dac:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+     db1:	48 8b 45 08          	mov    0x8(%rbp),%rax
+     db5:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+     dba:	48 8b 45 10          	mov    0x10(%rbp),%rax
+     dbe:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+     dc3:	48 8b 45 18          	mov    0x18(%rbp),%rax
+     dc7:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+     dcc:	48 8b 45 20          	mov    0x20(%rbp),%rax
+     dd0:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+     dd5:	48 8b 45 28          	mov    0x28(%rbp),%rax
+     dd9:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+     dde:	48 8b 45 30          	mov    0x30(%rbp),%rax
+     de2:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+     de7:	48 8b 45 38          	mov    0x38(%rbp),%rax
+     deb:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+     df0:	48 8b 45 40          	mov    0x40(%rbp),%rax
+     df4:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+     df9:	48 8b 45 48          	mov    0x48(%rbp),%rax
+./src/gtksourceiter.c:569
+     dfd:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+     e02:	48 89 ef             	mov    %rbp,%rdi
+./src/gtksourceiter.c:567
+     e05:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+./src/gtksourceiter.c:569
+     e0a:	e8 00 00 00 00       	callq  e0f <gtk_source_iter_forward_search+0x3af>
+     e0f:	85 c0                	test   %eax,%eax
+     e11:	0f 84 ae fc ff ff    	je     ac5 <gtk_source_iter_forward_search+0x65>
+./src/gtksourceiter.c:571
+     e17:	48 85 db             	test   %rbx,%rbx
+     e1a:	74 13                	je     e2f <gtk_source_iter_forward_search+0x3cf>
+./src/gtksourceiter.c:571 (discriminator 1)
+     e1c:	48 89 de             	mov    %rbx,%rsi
+     e1f:	48 89 ef             	mov    %rbp,%rdi
+     e22:	e8 00 00 00 00       	callq  e27 <gtk_source_iter_forward_search+0x3c7>
+     e27:	85 c0                	test   %eax,%eax
+     e29:	0f 85 96 fc ff ff    	jne    ac5 <gtk_source_iter_forward_search+0x65>
+./src/gtksourceiter.c:574
+     e2f:	4d 85 ed             	test   %r13,%r13
+     e32:	74 5a                	je     e8e <gtk_source_iter_forward_search+0x42e>
+./src/gtksourceiter.c:575
+     e34:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+     e39:	49 89 45 00          	mov    %rax,0x0(%r13)
+     e3d:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+     e42:	49 89 45 08          	mov    %rax,0x8(%r13)
+     e46:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+     e4b:	49 89 45 10          	mov    %rax,0x10(%r13)
+     e4f:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+     e54:	49 89 45 18          	mov    %rax,0x18(%r13)
+     e58:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+     e5d:	49 89 45 20          	mov    %rax,0x20(%r13)
+     e61:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+     e66:	49 89 45 28          	mov    %rax,0x28(%r13)
+     e6a:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+     e6f:	49 89 45 30          	mov    %rax,0x30(%r13)
+     e73:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+     e78:	49 89 45 38          	mov    %rax,0x38(%r13)
+     e7c:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+     e81:	49 89 45 40          	mov    %rax,0x40(%r13)
+     e85:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+     e8a:	49 89 45 48          	mov    %rax,0x48(%r13)
+./src/gtksourceiter.c:576
+     e8e:	4d 85 f6             	test   %r14,%r14
+     e91:	0f 84 08 01 00 00    	je     f9f <gtk_source_iter_forward_search+0x53f>
+./src/gtksourceiter.c:577
+     e97:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+     e9c:	49 89 06             	mov    %rax,(%r14)
+     e9f:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+     ea4:	49 89 46 08          	mov    %rax,0x8(%r14)
+     ea8:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+     ead:	49 89 46 10          	mov    %rax,0x10(%r14)
+     eb1:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+     eb6:	49 89 46 18          	mov    %rax,0x18(%r14)
+     eba:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+     ebf:	49 89 46 20          	mov    %rax,0x20(%r14)
+     ec3:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+     ec8:	49 89 46 28          	mov    %rax,0x28(%r14)
+     ecc:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+     ed1:	49 89 46 30          	mov    %rax,0x30(%r14)
+     ed5:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+     eda:	49 89 46 38          	mov    %rax,0x38(%r14)
+     ede:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+     ee3:	49 89 46 40          	mov    %rax,0x40(%r14)
+     ee7:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+     eec:	49 89 46 48          	mov    %rax,0x48(%r14)
+./src/gtksourceiter.c:578
+     ef0:	b8 01 00 00 00       	mov    $0x1,%eax
+     ef5:	e9 cd fb ff ff       	jmpq   ac7 <gtk_source_iter_forward_search+0x67>
+     efa:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+lines_match():
+     f00:	4c 8b 04 24          	mov    (%rsp),%r8
+     f04:	48 8b 4c 24 08       	mov    0x8(%rsp),%rcx
+     f09:	44 89 fa             	mov    %r15d,%edx
+     f0c:	4c 89 e6             	mov    %r12,%rsi
+     f0f:	48 89 ef             	mov    %rbp,%rdi
+     f12:	e8 e9 f3 ff ff       	callq  300 <lines_match.part.3.constprop.6>
+gtk_source_iter_forward_search():
+./src/gtksourceiter.c:605
+     f17:	85 c0                	test   %eax,%eax
+     f19:	0f 85 69 fd ff ff    	jne    c88 <gtk_source_iter_forward_search+0x228>
+./src/gtksourceiter.c:620
+     f1f:	48 89 ef             	mov    %rbp,%rdi
+     f22:	e8 00 00 00 00       	callq  f27 <gtk_source_iter_forward_search+0x4c7>
+     f27:	85 c0                	test   %eax,%eax
+     f29:	0f 85 69 fc ff ff    	jne    b98 <gtk_source_iter_forward_search+0x138>
+     f2f:	e9 5c fe ff ff       	jmpq   d90 <gtk_source_iter_forward_search+0x330>
+     f34:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/gtksourceiter.c:557
+     f38:	49 89 d9             	mov    %rbx,%r9
+     f3b:	4d 89 f0             	mov    %r14,%r8
+     f3e:	4c 89 e9             	mov    %r13,%rcx
+     f41:	44 89 fa             	mov    %r15d,%edx
+     f44:	4c 89 e6             	mov    %r12,%rsi
+     f47:	48 89 ef             	mov    %rbp,%rdi
+     f4a:	e8 00 00 00 00       	callq  f4f <gtk_source_iter_forward_search+0x4ef>
+     f4f:	e9 73 fb ff ff       	jmpq   ac7 <gtk_source_iter_forward_search+0x67>
+     f54:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/gtksourceiter.c:553
+     f58:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # f5f <gtk_source_iter_forward_search+0x4ff>
+     f5f:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # f66 <gtk_source_iter_forward_search+0x506>
+     f66:	31 ff                	xor    %edi,%edi
+     f68:	e8 00 00 00 00       	callq  f6d <gtk_source_iter_forward_search+0x50d>
+     f6d:	e9 53 fb ff ff       	jmpq   ac5 <gtk_source_iter_forward_search+0x65>
+     f72:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/gtksourceiter.c:554
+     f78:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # f7f <gtk_source_iter_forward_search+0x51f>
+     f7f:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # f86 <gtk_source_iter_forward_search+0x526>
+     f86:	31 ff                	xor    %edi,%edi
+     f88:	e8 00 00 00 00       	callq  f8d <gtk_source_iter_forward_search+0x52d>
+     f8d:	31 c0                	xor    %eax,%eax
+     f8f:	e9 33 fb ff ff       	jmpq   ac7 <gtk_source_iter_forward_search+0x67>
+     f94:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/gtksourceiter.c:548
+     f98:	31 c0                	xor    %eax,%eax
+     f9a:	e9 f1 fd ff ff       	jmpq   d90 <gtk_source_iter_forward_search+0x330>
+./src/gtksourceiter.c:578
+     f9f:	b8 01 00 00 00       	mov    $0x1,%eax
+     fa4:	e9 1e fb ff ff       	jmpq   ac7 <gtk_source_iter_forward_search+0x67>
+./src/gtksourceiter.c:611
+     fa9:	b8 01 00 00 00       	mov    $0x1,%eax
+     fae:	e9 dd fd ff ff       	jmpq   d90 <gtk_source_iter_forward_search+0x330>
+./src/gtksourceiter.c:625
+     fb3:	e8 00 00 00 00       	callq  fb8 <gtk_source_iter_forward_search+0x558>
+     fb8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+     fbf:	00 
+
+0000000000000fc0 <gtk_source_iter_backward_search>:
+gtk_source_iter_backward_search():
+./src/gtksourceiter.c:648
+     fc0:	41 57                	push   %r15
+     fc2:	41 56                	push   %r14
+     fc4:	41 55                	push   %r13
+     fc6:	41 54                	push   %r12
+     fc8:	55                   	push   %rbp
+     fc9:	53                   	push   %rbx
+     fca:	48 81 ec f8 01 00 00 	sub    $0x1f8,%rsp
+     fd1:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+     fd8:	00 00 
+     fda:	48 89 84 24 e8 01 00 	mov    %rax,0x1e8(%rsp)
+     fe1:	00 
+     fe2:	31 c0                	xor    %eax,%eax
+./src/gtksourceiter.c:656
+     fe4:	48 85 ff             	test   %rdi,%rdi
+./src/gtksourceiter.c:648
+     fe7:	48 89 4c 24 10       	mov    %rcx,0x10(%rsp)
+     fec:	4c 89 44 24 18       	mov    %r8,0x18(%rsp)
+./src/gtksourceiter.c:656
+     ff1:	0f 84 c9 04 00 00    	je     14c0 <gtk_source_iter_backward_search+0x500>
+./src/gtksourceiter.c:657
+     ff7:	48 85 f6             	test   %rsi,%rsi
+     ffa:	49 89 f5             	mov    %rsi,%r13
+     ffd:	0f 84 5d 0a 00 00    	je     1a60 <gtk_source_iter_backward_search+0xaa0>
+./src/gtksourceiter.c:659
+    1003:	f6 c2 02             	test   $0x2,%dl
+    1006:	48 89 fd             	mov    %rdi,%rbp
+    1009:	41 89 d4             	mov    %edx,%r12d
+    100c:	4c 89 cb             	mov    %r9,%rbx
+    100f:	0f 84 23 0a 00 00    	je     1a38 <gtk_source_iter_backward_search+0xa78>
+./src/gtksourceiter.c:664
+    1015:	48 85 db             	test   %rbx,%rbx
+    1018:	74 13                	je     102d <gtk_source_iter_backward_search+0x6d>
+./src/gtksourceiter.c:664 (discriminator 1)
+    101a:	48 89 de             	mov    %rbx,%rsi
+    101d:	48 89 ef             	mov    %rbp,%rdi
+    1020:	e8 00 00 00 00       	callq  1025 <gtk_source_iter_backward_search+0x65>
+    1025:	85 c0                	test   %eax,%eax
+    1027:	0f 8e a8 04 00 00    	jle    14d5 <gtk_source_iter_backward_search+0x515>
+./src/gtksourceiter.c:667
+    102d:	41 80 7d 00 00       	cmpb   $0x0,0x0(%r13)
+    1032:	0f 84 00 03 00 00    	je     1338 <gtk_source_iter_backward_search+0x378>
+./src/gtksourceiter.c:690
+    1038:	44 89 e0             	mov    %r12d,%eax
+    103b:	41 f7 d4             	not    %r12d
+./src/gtksourceiter.c:693
+    103e:	4c 89 ef             	mov    %r13,%rdi
+./src/gtksourceiter.c:690
+    1041:	83 e0 01             	and    $0x1,%eax
+    1044:	41 83 e4 01          	and    $0x1,%r12d
+./src/gtksourceiter.c:705
+    1048:	4c 8d b4 24 a0 00 00 	lea    0xa0(%rsp),%r14
+    104f:	00 
+./src/gtksourceiter.c:690
+    1050:	89 44 24 30          	mov    %eax,0x30(%rsp)
+    1054:	44 89 64 24 34       	mov    %r12d,0x34(%rsp)
+backward_lines_match():
+./src/gtksourceiter.c:370
+    1059:	4c 8d bc 24 90 01 00 	lea    0x190(%rsp),%r15
+    1060:	00 
+gtk_source_iter_backward_search():
+./src/gtksourceiter.c:693
+    1061:	e8 3a f8 ff ff       	callq  8a0 <strbreakup.constprop.4>
+    1066:	49 89 c5             	mov    %rax,%r13
+./src/gtksourceiter.c:695
+    1069:	48 8b 45 00          	mov    0x0(%rbp),%rax
+    106d:	48 89 84 24 a0 00 00 	mov    %rax,0xa0(%rsp)
+    1074:	00 
+    1075:	48 8b 45 08          	mov    0x8(%rbp),%rax
+    1079:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+    1080:	00 
+    1081:	48 8b 45 10          	mov    0x10(%rbp),%rax
+    1085:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+    108c:	00 
+    108d:	48 8b 45 18          	mov    0x18(%rbp),%rax
+    1091:	48 89 84 24 b8 00 00 	mov    %rax,0xb8(%rsp)
+    1098:	00 
+    1099:	48 8b 45 20          	mov    0x20(%rbp),%rax
+    109d:	48 89 84 24 c0 00 00 	mov    %rax,0xc0(%rsp)
+    10a4:	00 
+    10a5:	48 8b 45 28          	mov    0x28(%rbp),%rax
+    10a9:	48 89 84 24 c8 00 00 	mov    %rax,0xc8(%rsp)
+    10b0:	00 
+    10b1:	48 8b 45 30          	mov    0x30(%rbp),%rax
+    10b5:	48 89 84 24 d0 00 00 	mov    %rax,0xd0(%rsp)
+    10bc:	00 
+    10bd:	48 8b 45 38          	mov    0x38(%rbp),%rax
+    10c1:	48 89 84 24 d8 00 00 	mov    %rax,0xd8(%rsp)
+    10c8:	00 
+    10c9:	48 8b 45 40          	mov    0x40(%rbp),%rax
+    10cd:	48 89 84 24 e0 00 00 	mov    %rax,0xe0(%rsp)
+    10d4:	00 
+    10d5:	48 8b 45 48          	mov    0x48(%rbp),%rax
+    10d9:	48 89 84 24 e8 00 00 	mov    %rax,0xe8(%rsp)
+    10e0:	00 
+lines_match():
+    10e1:	48 8d 84 24 f0 00 00 	lea    0xf0(%rsp),%rax
+    10e8:	00 
+    10e9:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+backward_lines_match():
+./src/gtksourceiter.c:390
+    10ee:	48 8d 84 24 40 01 00 	lea    0x140(%rsp),%rax
+    10f5:	00 
+    10f6:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+    10fb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+gtk_source_iter_backward_search():
+./src/gtksourceiter.c:705
+    1100:	48 85 db             	test   %rbx,%rbx
+    1103:	74 13                	je     1118 <gtk_source_iter_backward_search+0x158>
+./src/gtksourceiter.c:705 (discriminator 1)
+    1105:	48 89 de             	mov    %rbx,%rsi
+    1108:	4c 89 f7             	mov    %r14,%rdi
+    110b:	e8 00 00 00 00       	callq  1110 <gtk_source_iter_backward_search+0x150>
+    1110:	85 c0                	test   %eax,%eax
+    1112:	0f 8e cc 07 00 00    	jle    18e4 <gtk_source_iter_backward_search+0x924>
+backward_lines_match():
+./src/gtksourceiter.c:360
+    1118:	49 8b 45 00          	mov    0x0(%r13),%rax
+    111c:	48 85 c0             	test   %rax,%rax
+    111f:	74 09                	je     112a <gtk_source_iter_backward_search+0x16a>
+    1121:	80 38 00             	cmpb   $0x0,(%rax)
+    1124:	0f 85 d6 03 00 00    	jne    1500 <gtk_source_iter_backward_search+0x540>
+./src/gtksourceiter.c:363
+    112a:	48 8b ac 24 a0 00 00 	mov    0xa0(%rsp),%rbp
+    1131:	00 
+    1132:	4c 8b 9c 24 a8 00 00 	mov    0xa8(%rsp),%r11
+    1139:	00 
+    113a:	4c 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%r10
+    1141:	00 
+    1142:	4c 8b 8c 24 b8 00 00 	mov    0xb8(%rsp),%r9
+    1149:	00 
+    114a:	4c 8b 84 24 c0 00 00 	mov    0xc0(%rsp),%r8
+    1151:	00 
+    1152:	48 8b bc 24 c8 00 00 	mov    0xc8(%rsp),%rdi
+    1159:	00 
+    115a:	48 8b b4 24 d0 00 00 	mov    0xd0(%rsp),%rsi
+    1161:	00 
+    1162:	48 8b 8c 24 d8 00 00 	mov    0xd8(%rsp),%rcx
+    1169:	00 
+    116a:	48 8b 94 24 e0 00 00 	mov    0xe0(%rsp),%rdx
+    1171:	00 
+    1172:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+    1179:	00 
+    117a:	48 89 6c 24 50       	mov    %rbp,0x50(%rsp)
+    117f:	4c 89 5c 24 58       	mov    %r11,0x58(%rsp)
+    1184:	4c 89 54 24 60       	mov    %r10,0x60(%rsp)
+    1189:	4c 89 4c 24 68       	mov    %r9,0x68(%rsp)
+    118e:	4c 89 44 24 70       	mov    %r8,0x70(%rsp)
+    1193:	48 89 7c 24 78       	mov    %rdi,0x78(%rsp)
+    1198:	48 89 b4 24 80 00 00 	mov    %rsi,0x80(%rsp)
+    119f:	00 
+    11a0:	48 89 8c 24 88 00 00 	mov    %rcx,0x88(%rsp)
+    11a7:	00 
+    11a8:	48 89 94 24 90 00 00 	mov    %rdx,0x90(%rsp)
+    11af:	00 
+    11b0:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+    11b7:	00 
+./src/gtksourceiter.c:365
+    11b8:	48 89 ac 24 f0 00 00 	mov    %rbp,0xf0(%rsp)
+    11bf:	00 
+    11c0:	4c 89 9c 24 f8 00 00 	mov    %r11,0xf8(%rsp)
+    11c7:	00 
+    11c8:	4c 89 94 24 00 01 00 	mov    %r10,0x100(%rsp)
+    11cf:	00 
+    11d0:	4c 89 8c 24 08 01 00 	mov    %r9,0x108(%rsp)
+    11d7:	00 
+    11d8:	4c 89 84 24 10 01 00 	mov    %r8,0x110(%rsp)
+    11df:	00 
+    11e0:	48 89 bc 24 18 01 00 	mov    %rdi,0x118(%rsp)
+    11e7:	00 
+    11e8:	48 89 b4 24 20 01 00 	mov    %rsi,0x120(%rsp)
+    11ef:	00 
+    11f0:	48 89 8c 24 28 01 00 	mov    %rcx,0x128(%rsp)
+    11f7:	00 
+    11f8:	48 89 94 24 30 01 00 	mov    %rdx,0x130(%rsp)
+    11ff:	00 
+    1200:	48 89 84 24 38 01 00 	mov    %rax,0x138(%rsp)
+    1207:	00 
+gtk_source_iter_backward_search():
+./src/gtksourceiter.c:711
+    1208:	48 85 db             	test   %rbx,%rbx
+    120b:	74 18                	je     1225 <gtk_source_iter_backward_search+0x265>
+./src/gtksourceiter.c:712 (discriminator 2)
+    120d:	48 8d bc 24 f0 00 00 	lea    0xf0(%rsp),%rdi
+    1214:	00 
+    1215:	48 89 de             	mov    %rbx,%rsi
+    1218:	e8 00 00 00 00       	callq  121d <gtk_source_iter_backward_search+0x25d>
+./src/gtksourceiter.c:711 (discriminator 2)
+    121d:	85 c0                	test   %eax,%eax
+    121f:	0f 8e bf 06 00 00    	jle    18e4 <gtk_source_iter_backward_search+0x924>
+./src/gtksourceiter.c:716
+    1225:	48 83 7c 24 10 00    	cmpq   $0x0,0x10(%rsp)
+    122b:	74 6a                	je     1297 <gtk_source_iter_backward_search+0x2d7>
+./src/gtksourceiter.c:717
+    122d:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+    1232:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+    1237:	48 89 03             	mov    %rax,(%rbx)
+    123a:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+    123f:	48 89 43 08          	mov    %rax,0x8(%rbx)
+    1243:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+    1248:	48 89 43 10          	mov    %rax,0x10(%rbx)
+    124c:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+    1251:	48 89 43 18          	mov    %rax,0x18(%rbx)
+    1255:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+    125a:	48 89 43 20          	mov    %rax,0x20(%rbx)
+    125e:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+    1263:	48 89 43 28          	mov    %rax,0x28(%rbx)
+    1267:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+    126e:	00 
+    126f:	48 89 43 30          	mov    %rax,0x30(%rbx)
+    1273:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+    127a:	00 
+    127b:	48 89 43 38          	mov    %rax,0x38(%rbx)
+    127f:	48 8b 84 24 90 00 00 	mov    0x90(%rsp),%rax
+    1286:	00 
+    1287:	48 89 43 40          	mov    %rax,0x40(%rbx)
+    128b:	48 8b 84 24 98 00 00 	mov    0x98(%rsp),%rax
+    1292:	00 
+    1293:	48 89 43 48          	mov    %rax,0x48(%rbx)
+./src/gtksourceiter.c:718
+    1297:	48 8b 54 24 18       	mov    0x18(%rsp),%rdx
+    129c:	48 85 d2             	test   %rdx,%rdx
+    129f:	0f 84 ff 07 00 00    	je     1aa4 <gtk_source_iter_backward_search+0xae4>
+./src/gtksourceiter.c:719
+    12a5:	48 8b 84 24 f0 00 00 	mov    0xf0(%rsp),%rax
+    12ac:	00 
+    12ad:	48 89 02             	mov    %rax,(%rdx)
+    12b0:	48 8b 84 24 f8 00 00 	mov    0xf8(%rsp),%rax
+    12b7:	00 
+    12b8:	48 89 42 08          	mov    %rax,0x8(%rdx)
+    12bc:	48 8b 84 24 00 01 00 	mov    0x100(%rsp),%rax
+    12c3:	00 
+    12c4:	48 89 42 10          	mov    %rax,0x10(%rdx)
+    12c8:	48 8b 84 24 08 01 00 	mov    0x108(%rsp),%rax
+    12cf:	00 
+    12d0:	48 89 42 18          	mov    %rax,0x18(%rdx)
+    12d4:	48 8b 84 24 10 01 00 	mov    0x110(%rsp),%rax
+    12db:	00 
+    12dc:	48 89 42 20          	mov    %rax,0x20(%rdx)
+    12e0:	48 8b 84 24 18 01 00 	mov    0x118(%rsp),%rax
+    12e7:	00 
+    12e8:	48 89 42 28          	mov    %rax,0x28(%rdx)
+    12ec:	48 8b 84 24 20 01 00 	mov    0x120(%rsp),%rax
+    12f3:	00 
+    12f4:	48 89 42 30          	mov    %rax,0x30(%rdx)
+    12f8:	48 8b 84 24 28 01 00 	mov    0x128(%rsp),%rax
+    12ff:	00 
+    1300:	48 89 42 38          	mov    %rax,0x38(%rdx)
+    1304:	48 8b 84 24 30 01 00 	mov    0x130(%rsp),%rax
+    130b:	00 
+    130c:	48 89 42 40          	mov    %rax,0x40(%rdx)
+    1310:	48 8b 84 24 38 01 00 	mov    0x138(%rsp),%rax
+    1317:	00 
+    1318:	48 89 42 48          	mov    %rax,0x48(%rdx)
+./src/gtksourceiter.c:714
+    131c:	b8 01 00 00 00       	mov    $0x1,%eax
+./src/gtksourceiter.c:735 (discriminator 1)
+    1321:	4c 89 ef             	mov    %r13,%rdi
+    1324:	89 04 24             	mov    %eax,(%rsp)
+    1327:	e8 00 00 00 00       	callq  132c <gtk_source_iter_backward_search+0x36c>
+./src/gtksourceiter.c:737 (discriminator 1)
+    132c:	8b 04 24             	mov    (%rsp),%eax
+    132f:	e9 a3 01 00 00       	jmpq   14d7 <gtk_source_iter_backward_search+0x517>
+    1334:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/gtksourceiter.c:670
+    1338:	48 8b 45 00          	mov    0x0(%rbp),%rax
+    133c:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+    1341:	48 8b 45 08          	mov    0x8(%rbp),%rax
+    1345:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+    134a:	48 8b 45 10          	mov    0x10(%rbp),%rax
+    134e:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+    1353:	48 8b 45 18          	mov    0x18(%rbp),%rax
+    1357:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+    135c:	48 8b 45 20          	mov    0x20(%rbp),%rax
+    1360:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+    1365:	48 8b 45 28          	mov    0x28(%rbp),%rax
+    1369:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+    136e:	48 8b 45 30          	mov    0x30(%rbp),%rax
+    1372:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+    1379:	00 
+    137a:	48 8b 45 38          	mov    0x38(%rbp),%rax
+    137e:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+    1385:	00 
+    1386:	48 8b 45 40          	mov    0x40(%rbp),%rax
+    138a:	48 89 84 24 90 00 00 	mov    %rax,0x90(%rsp)
+    1391:	00 
+    1392:	48 8b 45 48          	mov    0x48(%rbp),%rax
+./src/gtksourceiter.c:672
+    1396:	48 8d 6c 24 50       	lea    0x50(%rsp),%rbp
+    139b:	48 89 ef             	mov    %rbp,%rdi
+./src/gtksourceiter.c:670
+    139e:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+    13a5:	00 
+./src/gtksourceiter.c:672
+    13a6:	e8 00 00 00 00       	callq  13ab <gtk_source_iter_backward_search+0x3eb>
+    13ab:	85 c0                	test   %eax,%eax
+    13ad:	0f 84 22 01 00 00    	je     14d5 <gtk_source_iter_backward_search+0x515>
+./src/gtksourceiter.c:674
+    13b3:	48 85 db             	test   %rbx,%rbx
+    13b6:	74 13                	je     13cb <gtk_source_iter_backward_search+0x40b>
+./src/gtksourceiter.c:674 (discriminator 1)
+    13b8:	48 89 de             	mov    %rbx,%rsi
+    13bb:	48 89 ef             	mov    %rbp,%rdi
+    13be:	e8 00 00 00 00       	callq  13c3 <gtk_source_iter_backward_search+0x403>
+    13c3:	85 c0                	test   %eax,%eax
+    13c5:	0f 85 0a 01 00 00    	jne    14d5 <gtk_source_iter_backward_search+0x515>
+./src/gtksourceiter.c:677
+    13cb:	48 83 7c 24 10 00    	cmpq   $0x0,0x10(%rsp)
+    13d1:	74 6a                	je     143d <gtk_source_iter_backward_search+0x47d>
+./src/gtksourceiter.c:678
+    13d3:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+    13d8:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+    13dd:	48 89 01             	mov    %rax,(%rcx)
+    13e0:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+    13e5:	48 89 41 08          	mov    %rax,0x8(%rcx)
+    13e9:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+    13ee:	48 89 41 10          	mov    %rax,0x10(%rcx)
+    13f2:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+    13f7:	48 89 41 18          	mov    %rax,0x18(%rcx)
+    13fb:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+    1400:	48 89 41 20          	mov    %rax,0x20(%rcx)
+    1404:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+    1409:	48 89 41 28          	mov    %rax,0x28(%rcx)
+    140d:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+    1414:	00 
+    1415:	48 89 41 30          	mov    %rax,0x30(%rcx)
+    1419:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+    1420:	00 
+    1421:	48 89 41 38          	mov    %rax,0x38(%rcx)
+    1425:	48 8b 84 24 90 00 00 	mov    0x90(%rsp),%rax
+    142c:	00 
+    142d:	48 89 41 40          	mov    %rax,0x40(%rcx)
+    1431:	48 8b 84 24 98 00 00 	mov    0x98(%rsp),%rax
+    1438:	00 
+    1439:	48 89 41 48          	mov    %rax,0x48(%rcx)
+./src/gtksourceiter.c:679
+    143d:	48 8b 5c 24 18       	mov    0x18(%rsp),%rbx
+    1442:	48 85 db             	test   %rbx,%rbx
+    1445:	0f 84 4f 06 00 00    	je     1a9a <gtk_source_iter_backward_search+0xada>
+./src/gtksourceiter.c:680
+    144b:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+    1450:	48 89 03             	mov    %rax,(%rbx)
+    1453:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+    1458:	48 89 43 08          	mov    %rax,0x8(%rbx)
+    145c:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+    1461:	48 89 43 10          	mov    %rax,0x10(%rbx)
+    1465:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+    146a:	48 89 43 18          	mov    %rax,0x18(%rbx)
+    146e:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+    1473:	48 89 43 20          	mov    %rax,0x20(%rbx)
+    1477:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+    147c:	48 89 43 28          	mov    %rax,0x28(%rbx)
+    1480:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+    1487:	00 
+    1488:	48 89 43 30          	mov    %rax,0x30(%rbx)
+    148c:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+    1493:	00 
+    1494:	48 89 43 38          	mov    %rax,0x38(%rbx)
+    1498:	48 8b 84 24 90 00 00 	mov    0x90(%rsp),%rax
+    149f:	00 
+    14a0:	48 89 43 40          	mov    %rax,0x40(%rbx)
+    14a4:	48 8b 84 24 98 00 00 	mov    0x98(%rsp),%rax
+    14ab:	00 
+    14ac:	48 89 43 48          	mov    %rax,0x48(%rbx)
+./src/gtksourceiter.c:681
+    14b0:	b8 01 00 00 00       	mov    $0x1,%eax
+    14b5:	eb 20                	jmp    14d7 <gtk_source_iter_backward_search+0x517>
+    14b7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    14be:	00 00 
+./src/gtksourceiter.c:656
+    14c0:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 14c7 <gtk_source_iter_backward_search+0x507>
+    14c7:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 14ce <gtk_source_iter_backward_search+0x50e>
+    14ce:	31 ff                	xor    %edi,%edi
+    14d0:	e8 00 00 00 00       	callq  14d5 <gtk_source_iter_backward_search+0x515>
+    14d5:	31 c0                	xor    %eax,%eax
+./src/gtksourceiter.c:738
+    14d7:	48 8b 94 24 e8 01 00 	mov    0x1e8(%rsp),%rdx
+    14de:	00 
+    14df:	64 48 33 14 25 28 00 	xor    %fs:0x28,%rdx
+    14e6:	00 00 
+    14e8:	0f 85 c0 05 00 00    	jne    1aae <gtk_source_iter_backward_search+0xaee>
+    14ee:	48 81 c4 f8 01 00 00 	add    $0x1f8,%rsp
+    14f5:	5b                   	pop    %rbx
+    14f6:	5d                   	pop    %rbp
+    14f7:	41 5c                	pop    %r12
+    14f9:	41 5d                	pop    %r13
+    14fb:	41 5e                	pop    %r14
+    14fd:	41 5f                	pop    %r15
+    14ff:	c3                   	retq   
+backward_lines_match():
+./src/gtksourceiter.c:369
+    1500:	48 8b bc 24 c8 00 00 	mov    0xc8(%rsp),%rdi
+    1507:	00 
+    1508:	48 8b ac 24 a0 00 00 	mov    0xa0(%rsp),%rbp
+    150f:	00 
+    1510:	4c 8b 9c 24 a8 00 00 	mov    0xa8(%rsp),%r11
+    1517:	00 
+    1518:	4c 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%r10
+    151f:	00 
+    1520:	4c 8b 8c 24 b8 00 00 	mov    0xb8(%rsp),%r9
+    1527:	00 
+    1528:	4c 8b 84 24 c0 00 00 	mov    0xc0(%rsp),%r8
+    152f:	00 
+    1530:	48 8b b4 24 d0 00 00 	mov    0xd0(%rsp),%rsi
+    1537:	00 
+    1538:	48 8b 8c 24 d8 00 00 	mov    0xd8(%rsp),%rcx
+    153f:	00 
+    1540:	48 8b 94 24 e0 00 00 	mov    0xe0(%rsp),%rdx
+    1547:	00 
+    1548:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+    154f:	00 
+    1550:	48 89 bc 24 b8 01 00 	mov    %rdi,0x1b8(%rsp)
+    1557:	00 
+    1558:	48 89 bc 24 68 01 00 	mov    %rdi,0x168(%rsp)
+    155f:	00 
+./src/gtksourceiter.c:370
+    1560:	4c 89 ff             	mov    %r15,%rdi
+./src/gtksourceiter.c:369
+    1563:	48 89 ac 24 90 01 00 	mov    %rbp,0x190(%rsp)
+    156a:	00 
+    156b:	4c 89 9c 24 98 01 00 	mov    %r11,0x198(%rsp)
+    1572:	00 
+    1573:	4c 89 94 24 a0 01 00 	mov    %r10,0x1a0(%rsp)
+    157a:	00 
+    157b:	4c 89 8c 24 a8 01 00 	mov    %r9,0x1a8(%rsp)
+    1582:	00 
+    1583:	4c 89 84 24 b0 01 00 	mov    %r8,0x1b0(%rsp)
+    158a:	00 
+    158b:	48 89 b4 24 c0 01 00 	mov    %rsi,0x1c0(%rsp)
+    1592:	00 
+    1593:	48 89 8c 24 c8 01 00 	mov    %rcx,0x1c8(%rsp)
+    159a:	00 
+    159b:	48 89 94 24 d0 01 00 	mov    %rdx,0x1d0(%rsp)
+    15a2:	00 
+    15a3:	48 89 84 24 d8 01 00 	mov    %rax,0x1d8(%rsp)
+    15aa:	00 
+    15ab:	48 89 ac 24 40 01 00 	mov    %rbp,0x140(%rsp)
+    15b2:	00 
+    15b3:	4c 89 9c 24 48 01 00 	mov    %r11,0x148(%rsp)
+    15ba:	00 
+    15bb:	4c 89 94 24 50 01 00 	mov    %r10,0x150(%rsp)
+    15c2:	00 
+    15c3:	4c 89 8c 24 58 01 00 	mov    %r9,0x158(%rsp)
+    15ca:	00 
+    15cb:	4c 89 84 24 60 01 00 	mov    %r8,0x160(%rsp)
+    15d2:	00 
+    15d3:	48 89 b4 24 70 01 00 	mov    %rsi,0x170(%rsp)
+    15da:	00 
+    15db:	48 89 8c 24 78 01 00 	mov    %rcx,0x178(%rsp)
+    15e2:	00 
+    15e3:	48 89 94 24 80 01 00 	mov    %rdx,0x180(%rsp)
+    15ea:	00 
+    15eb:	48 89 84 24 88 01 00 	mov    %rax,0x188(%rsp)
+    15f2:	00 
+./src/gtksourceiter.c:370
+    15f3:	e8 00 00 00 00       	callq  15f8 <gtk_source_iter_backward_search+0x638>
+    15f8:	85 c0                	test   %eax,%eax
+    15fa:	0f 85 00 03 00 00    	jne    1900 <gtk_source_iter_backward_search+0x940>
+./src/gtksourceiter.c:372
+    1600:	4c 89 ff             	mov    %r15,%rdi
+    1603:	e8 00 00 00 00       	callq  1608 <gtk_source_iter_backward_search+0x648>
+    1608:	85 c0                	test   %eax,%eax
+    160a:	0f 84 b8 02 00 00    	je     18c8 <gtk_source_iter_backward_search+0x908>
+./src/gtksourceiter.c:378
+    1610:	8b 44 24 30          	mov    0x30(%rsp),%eax
+./src/gtksourceiter.c:383
+    1614:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+    1619:	4c 89 ff             	mov    %r15,%rdi
+./src/gtksourceiter.c:378
+    161c:	85 c0                	test   %eax,%eax
+    161e:	0f 85 fa 02 00 00    	jne    191e <gtk_source_iter_backward_search+0x95e>
+./src/gtksourceiter.c:383
+    1624:	e8 00 00 00 00       	callq  1629 <gtk_source_iter_backward_search+0x669>
+    1629:	48 89 04 24          	mov    %rax,(%rsp)
+g_utf8_strrcasestr():
+./src/gtksourceiter.c:123
+    162d:	48 83 3c 24 00       	cmpq   $0x0,(%rsp)
+backward_lines_match():
+./src/gtksourceiter.c:395
+    1632:	49 8b 6d 00          	mov    0x0(%r13),%rbp
+g_utf8_strrcasestr():
+./src/gtksourceiter.c:123
+    1636:	0f 84 fa 02 00 00    	je     1936 <gtk_source_iter_backward_search+0x976>
+./src/gtksourceiter.c:124
+    163c:	48 85 ed             	test   %rbp,%rbp
+    163f:	0f 84 3b 04 00 00    	je     1a80 <gtk_source_iter_backward_search+0xac0>
+./src/gtksourceiter.c:126
+    1645:	48 8b 3c 24          	mov    (%rsp),%rdi
+    1649:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+    1650:	e8 00 00 00 00       	callq  1655 <gtk_source_iter_backward_search+0x695>
+./src/gtksourceiter.c:127
+    1655:	ba 02 00 00 00       	mov    $0x2,%edx
+    165a:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+    1661:	48 89 c7             	mov    %rax,%rdi
+    1664:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+    1669:	e8 00 00 00 00       	callq  166e <gtk_source_iter_backward_search+0x6ae>
+./src/gtksourceiter.c:128
+    166e:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+./src/gtksourceiter.c:127
+    1673:	49 89 c4             	mov    %rax,%r12
+    1676:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+./src/gtksourceiter.c:128
+    167b:	48 89 cf             	mov    %rcx,%rdi
+    167e:	e8 00 00 00 00       	callq  1683 <gtk_source_iter_backward_search+0x6c3>
+./src/gtksourceiter.c:130
+    1683:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+    168a:	48 89 ef             	mov    %rbp,%rdi
+    168d:	e8 00 00 00 00       	callq  1692 <gtk_source_iter_backward_search+0x6d2>
+./src/gtksourceiter.c:131
+    1692:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+    1699:	4c 89 e7             	mov    %r12,%rdi
+./src/gtksourceiter.c:130
+    169c:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+./src/gtksourceiter.c:131
+    16a1:	e8 00 00 00 00       	callq  16a6 <gtk_source_iter_backward_search+0x6e6>
+./src/gtksourceiter.c:133
+    16a6:	48 8b 54 24 20       	mov    0x20(%rsp),%rdx
+    16ab:	48 85 d2             	test   %rdx,%rdx
+    16ae:	0f 85 9c 02 00 00    	jne    1950 <gtk_source_iter_backward_search+0x990>
+./src/gtksourceiter.c:162
+    16b4:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+    16b9:	e8 00 00 00 00       	callq  16be <gtk_source_iter_backward_search+0x6fe>
+    16be:	31 f6                	xor    %esi,%esi
+backward_lines_match():
+./src/gtksourceiter.c:416
+    16c0:	4c 8b 24 24          	mov    (%rsp),%r12
+    16c4:	4c 89 e7             	mov    %r12,%rdi
+    16c7:	e8 00 00 00 00       	callq  16cc <gtk_source_iter_backward_search+0x70c>
+./src/gtksourceiter.c:418
+    16cc:	8b 6c 24 30          	mov    0x30(%rsp),%ebp
+    16d0:	31 c9                	xor    %ecx,%ecx
+    16d2:	89 c6                	mov    %eax,%esi
+    16d4:	4c 89 ff             	mov    %r15,%rdi
+    16d7:	89 ea                	mov    %ebp,%edx
+    16d9:	e8 32 eb ff ff       	callq  210 <forward_chars_with_skipping.isra.1>
+./src/gtksourceiter.c:425
+    16de:	48 8b 84 24 90 01 00 	mov    0x190(%rsp),%rax
+    16e5:	00 
+./src/gtksourceiter.c:429
+    16e6:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+./src/gtksourceiter.c:425
+    16ed:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+    16f2:	48 8b 84 24 98 01 00 	mov    0x198(%rsp),%rax
+    16f9:	00 
+    16fa:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+    16ff:	48 8b 84 24 a0 01 00 	mov    0x1a0(%rsp),%rax
+    1706:	00 
+    1707:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+    170c:	48 8b 84 24 a8 01 00 	mov    0x1a8(%rsp),%rax
+    1713:	00 
+    1714:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+    1719:	48 8b 84 24 b0 01 00 	mov    0x1b0(%rsp),%rax
+    1720:	00 
+    1721:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+    1726:	48 8b 84 24 b8 01 00 	mov    0x1b8(%rsp),%rax
+    172d:	00 
+    172e:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+    1733:	48 8b 84 24 c0 01 00 	mov    0x1c0(%rsp),%rax
+    173a:	00 
+    173b:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+    1742:	00 
+    1743:	48 8b 84 24 c8 01 00 	mov    0x1c8(%rsp),%rax
+    174a:	00 
+    174b:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+    1752:	00 
+    1753:	48 8b 84 24 d0 01 00 	mov    0x1d0(%rsp),%rax
+    175a:	00 
+    175b:	48 89 84 24 90 00 00 	mov    %rax,0x90(%rsp)
+    1762:	00 
+    1763:	48 8b 84 24 d8 01 00 	mov    0x1d8(%rsp),%rax
+    176a:	00 
+    176b:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+    1772:	00 
+./src/gtksourceiter.c:429
+    1773:	49 8b 7d 00          	mov    0x0(%r13),%rdi
+    1777:	e8 00 00 00 00       	callq  177c <gtk_source_iter_backward_search+0x7bc>
+    177c:	89 ea                	mov    %ebp,%edx
+    177e:	89 c6                	mov    %eax,%esi
+    1780:	b9 01 00 00 00       	mov    $0x1,%ecx
+    1785:	4c 89 ff             	mov    %r15,%rdi
+    1788:	e8 83 ea ff ff       	callq  210 <forward_chars_with_skipping.isra.1>
+./src/gtksourceiter.c:431
+    178d:	4c 89 e7             	mov    %r12,%rdi
+    1790:	e8 00 00 00 00       	callq  1795 <gtk_source_iter_backward_search+0x7d5>
+./src/gtksourceiter.c:436
+    1795:	4c 8b a4 24 90 01 00 	mov    0x190(%rsp),%r12
+    179c:	00 
+    179d:	48 8b ac 24 98 01 00 	mov    0x198(%rsp),%rbp
+    17a4:	00 
+    17a5:	4c 8b 9c 24 a0 01 00 	mov    0x1a0(%rsp),%r11
+    17ac:	00 
+    17ad:	4c 8b 94 24 a8 01 00 	mov    0x1a8(%rsp),%r10
+    17b4:	00 
+    17b5:	4c 8b 8c 24 b0 01 00 	mov    0x1b0(%rsp),%r9
+    17bc:	00 
+    17bd:	4c 8b 84 24 b8 01 00 	mov    0x1b8(%rsp),%r8
+    17c4:	00 
+    17c5:	48 8b bc 24 c0 01 00 	mov    0x1c0(%rsp),%rdi
+    17cc:	00 
+    17cd:	48 8b b4 24 c8 01 00 	mov    0x1c8(%rsp),%rsi
+    17d4:	00 
+    17d5:	48 8b 8c 24 d0 01 00 	mov    0x1d0(%rsp),%rcx
+    17dc:	00 
+    17dd:	48 8b 94 24 d8 01 00 	mov    0x1d8(%rsp),%rdx
+    17e4:	00 
+    17e5:	4c 89 a4 24 f0 00 00 	mov    %r12,0xf0(%rsp)
+    17ec:	00 
+    17ed:	48 89 ac 24 f8 00 00 	mov    %rbp,0xf8(%rsp)
+    17f4:	00 
+    17f5:	4c 89 9c 24 00 01 00 	mov    %r11,0x100(%rsp)
+    17fc:	00 
+    17fd:	4c 89 94 24 08 01 00 	mov    %r10,0x108(%rsp)
+    1804:	00 
+    1805:	4c 89 8c 24 10 01 00 	mov    %r9,0x110(%rsp)
+    180c:	00 
+    180d:	4c 89 84 24 18 01 00 	mov    %r8,0x118(%rsp)
+    1814:	00 
+    1815:	48 89 bc 24 20 01 00 	mov    %rdi,0x120(%rsp)
+    181c:	00 
+    181d:	48 89 b4 24 28 01 00 	mov    %rsi,0x128(%rsp)
+    1824:	00 
+    1825:	48 89 8c 24 30 01 00 	mov    %rcx,0x130(%rsp)
+    182c:	00 
+    182d:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+    1834:	00 
+lines_match():
+./src/gtksourceiter.c:264
+    1835:	49 8b 45 08          	mov    0x8(%r13),%rax
+    1839:	48 85 c0             	test   %rax,%rax
+    183c:	74 09                	je     1847 <gtk_source_iter_backward_search+0x887>
+    183e:	80 38 00             	cmpb   $0x0,(%rax)
+    1841:	0f 85 c9 01 00 00    	jne    1a10 <gtk_source_iter_backward_search+0xa50>
+./src/gtksourceiter.c:269
+    1847:	4c 89 a4 24 f0 00 00 	mov    %r12,0xf0(%rsp)
+    184e:	00 
+    184f:	48 89 ac 24 f8 00 00 	mov    %rbp,0xf8(%rsp)
+    1856:	00 
+    1857:	4c 89 9c 24 00 01 00 	mov    %r11,0x100(%rsp)
+    185e:	00 
+    185f:	4c 89 94 24 08 01 00 	mov    %r10,0x108(%rsp)
+    1866:	00 
+    1867:	4c 89 8c 24 10 01 00 	mov    %r9,0x110(%rsp)
+    186e:	00 
+    186f:	4c 89 84 24 18 01 00 	mov    %r8,0x118(%rsp)
+    1876:	00 
+    1877:	48 89 bc 24 20 01 00 	mov    %rdi,0x120(%rsp)
+    187e:	00 
+    187f:	48 89 b4 24 28 01 00 	mov    %rsi,0x128(%rsp)
+    1886:	00 
+    1887:	48 89 8c 24 30 01 00 	mov    %rcx,0x130(%rsp)
+    188e:	00 
+    188f:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+    1896:	00 
+    1897:	e9 6c f9 ff ff       	jmpq   1208 <gtk_source_iter_backward_search+0x248>
+    189c:	0f 1f 40 00          	nopl   0x0(%rax)
+    18a0:	4c 8b 6c 24 40       	mov    0x40(%rsp),%r13
+    18a5:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+    18aa:	4c 8b 74 24 20       	mov    0x20(%rsp),%r14
+g_utf8_strrcasestr():
+./src/gtksourceiter.c:162
+    18af:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+    18b4:	e8 00 00 00 00       	callq  18b9 <gtk_source_iter_backward_search+0x8f9>
+backward_lines_match():
+./src/gtksourceiter.c:411
+    18b9:	48 8b 3c 24          	mov    (%rsp),%rdi
+    18bd:	e8 00 00 00 00       	callq  18c2 <gtk_source_iter_backward_search+0x902>
+    18c2:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+gtk_source_iter_backward_search():
+./src/gtksourceiter.c:724
+    18c8:	4c 89 f7             	mov    %r14,%rdi
+    18cb:	e8 00 00 00 00       	callq  18d0 <gtk_source_iter_backward_search+0x910>
+    18d0:	85 c0                	test   %eax,%eax
+    18d2:	75 1c                	jne    18f0 <gtk_source_iter_backward_search+0x930>
+./src/gtksourceiter.c:726
+    18d4:	4c 89 f7             	mov    %r14,%rdi
+    18d7:	e8 00 00 00 00       	callq  18dc <gtk_source_iter_backward_search+0x91c>
+    18dc:	85 c0                	test   %eax,%eax
+    18de:	0f 85 1c f8 ff ff    	jne    1100 <gtk_source_iter_backward_search+0x140>
+./src/gtksourceiter.c:651
+    18e4:	31 c0                	xor    %eax,%eax
+    18e6:	e9 36 fa ff ff       	jmpq   1321 <gtk_source_iter_backward_search+0x361>
+    18eb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/gtksourceiter.c:731
+    18f0:	31 f6                	xor    %esi,%esi
+    18f2:	4c 89 f7             	mov    %r14,%rdi
+    18f5:	e8 00 00 00 00       	callq  18fa <gtk_source_iter_backward_search+0x93a>
+./src/gtksourceiter.c:698
+    18fa:	e9 01 f8 ff ff       	jmpq   1100 <gtk_source_iter_backward_search+0x140>
+    18ff:	90                   	nop
+backward_lines_match():
+./src/gtksourceiter.c:376
+    1900:	31 f6                	xor    %esi,%esi
+    1902:	4c 89 ff             	mov    %r15,%rdi
+    1905:	e8 00 00 00 00       	callq  190a <gtk_source_iter_backward_search+0x94a>
+./src/gtksourceiter.c:378
+    190a:	8b 44 24 30          	mov    0x30(%rsp),%eax
+./src/gtksourceiter.c:383
+    190e:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+    1913:	4c 89 ff             	mov    %r15,%rdi
+./src/gtksourceiter.c:378
+    1916:	85 c0                	test   %eax,%eax
+    1918:	0f 84 06 fd ff ff    	je     1624 <gtk_source_iter_backward_search+0x664>
+./src/gtksourceiter.c:390
+    191e:	e8 00 00 00 00       	callq  1923 <gtk_source_iter_backward_search+0x963>
+    1923:	48 89 04 24          	mov    %rax,(%rsp)
+g_utf8_strrcasestr():
+./src/gtksourceiter.c:123
+    1927:	48 83 3c 24 00       	cmpq   $0x0,(%rsp)
+backward_lines_match():
+./src/gtksourceiter.c:395
+    192c:	49 8b 6d 00          	mov    0x0(%r13),%rbp
+g_utf8_strrcasestr():
+./src/gtksourceiter.c:123
+    1930:	0f 85 06 fd ff ff    	jne    163c <gtk_source_iter_backward_search+0x67c>
+    1936:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 193d <gtk_source_iter_backward_search+0x97d>
+    193d:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1944 <gtk_source_iter_backward_search+0x984>
+    1944:	31 ff                	xor    %edi,%edi
+    1946:	e8 00 00 00 00       	callq  194b <gtk_source_iter_backward_search+0x98b>
+    194b:	e9 69 ff ff ff       	jmpq   18b9 <gtk_source_iter_backward_search+0x8f9>
+./src/gtksourceiter.c:139
+    1950:	48 39 c2             	cmp    %rax,%rdx
+    1953:	0f 87 56 ff ff ff    	ja     18af <gtk_source_iter_backward_search+0x8ef>
+./src/gtksourceiter.c:146
+    1959:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+./src/gtksourceiter.c:145
+    195e:	29 d0                	sub    %edx,%eax
+./src/gtksourceiter.c:146
+    1960:	48 63 f0             	movslq %eax,%rsi
+    1963:	89 44 24 20          	mov    %eax,0x20(%rsp)
+    1967:	e8 00 00 00 00       	callq  196c <gtk_source_iter_backward_search+0x9ac>
+./src/gtksourceiter.c:147
+    196c:	48 89 ef             	mov    %rbp,%rdi
+./src/gtksourceiter.c:146
+    196f:	49 89 c4             	mov    %rax,%r12
+./src/gtksourceiter.c:147
+    1972:	e8 00 00 00 00       	callq  1977 <gtk_source_iter_backward_search+0x9b7>
+./src/gtksourceiter.c:149
+    1977:	48 8b 4c 24 08       	mov    0x8(%rsp),%rcx
+    197c:	4c 39 e1             	cmp    %r12,%rcx
+    197f:	0f 87 2a ff ff ff    	ja     18af <gtk_source_iter_backward_search+0x8ef>
+    1985:	4c 89 6c 24 40       	mov    %r13,0x40(%rsp)
+    198a:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+    198f:	49 89 c5             	mov    %rax,%r13
+    1992:	8b 5c 24 20          	mov    0x20(%rsp),%ebx
+    1996:	4c 89 74 24 20       	mov    %r14,0x20(%rsp)
+    199b:	4d 89 e6             	mov    %r12,%r14
+    199e:	49 89 cc             	mov    %rcx,%r12
+    19a1:	eb 1c                	jmp    19bf <gtk_source_iter_backward_search+0x9ff>
+    19a3:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/gtksourceiter.c:157
+    19a8:	4c 89 f7             	mov    %r14,%rdi
+./src/gtksourceiter.c:158
+    19ab:	83 eb 01             	sub    $0x1,%ebx
+./src/gtksourceiter.c:157
+    19ae:	e8 00 00 00 00       	callq  19b3 <gtk_source_iter_backward_search+0x9f3>
+./src/gtksourceiter.c:149
+    19b3:	49 39 c4             	cmp    %rax,%r12
+./src/gtksourceiter.c:157
+    19b6:	49 89 c6             	mov    %rax,%r14
+./src/gtksourceiter.c:149
+    19b9:	0f 87 e1 fe ff ff    	ja     18a0 <gtk_source_iter_backward_search+0x8e0>
+./src/gtksourceiter.c:151
+    19bf:	4c 89 ea             	mov    %r13,%rdx
+    19c2:	48 89 ee             	mov    %rbp,%rsi
+    19c5:	4c 89 f7             	mov    %r14,%rdi
+    19c8:	e8 00 00 00 00       	callq  19cd <gtk_source_iter_backward_search+0xa0d>
+    19cd:	85 c0                	test   %eax,%eax
+    19cf:	75 d7                	jne    19a8 <gtk_source_iter_backward_search+0x9e8>
+./src/gtksourceiter.c:153
+    19d1:	48 8b 3c 24          	mov    (%rsp),%rdi
+    19d5:	89 de                	mov    %ebx,%esi
+    19d7:	4c 8b 6c 24 40       	mov    0x40(%rsp),%r13
+    19dc:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+    19e1:	4c 8b 74 24 20       	mov    0x20(%rsp),%r14
+    19e6:	e8 15 e6 ff ff       	callq  0 <pointer_from_offset_skipping_decomp>
+./src/gtksourceiter.c:162
+    19eb:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+./src/gtksourceiter.c:153
+    19f0:	48 89 c5             	mov    %rax,%rbp
+./src/gtksourceiter.c:162
+    19f3:	e8 00 00 00 00       	callq  19f8 <gtk_source_iter_backward_search+0xa38>
+backward_lines_match():
+./src/gtksourceiter.c:409
+    19f8:	48 85 ed             	test   %rbp,%rbp
+    19fb:	0f 84 b8 fe ff ff    	je     18b9 <gtk_source_iter_backward_search+0x8f9>
+    1a01:	48 89 ee             	mov    %rbp,%rsi
+    1a04:	48 2b 34 24          	sub    (%rsp),%rsi
+    1a08:	e9 b3 fc ff ff       	jmpq   16c0 <gtk_source_iter_backward_search+0x700>
+    1a0d:	0f 1f 00             	nopl   (%rax)
+lines_match():
+    1a10:	4c 8b 44 24 38       	mov    0x38(%rsp),%r8
+    1a15:	8b 54 24 34          	mov    0x34(%rsp),%edx
+backward_lines_match():
+./src/gtksourceiter.c:433
+    1a19:	49 8d 75 08          	lea    0x8(%r13),%rsi
+lines_match():
+    1a1d:	31 c9                	xor    %ecx,%ecx
+    1a1f:	4c 89 ff             	mov    %r15,%rdi
+    1a22:	e8 d9 e8 ff ff       	callq  300 <lines_match.part.3.constprop.6>
+gtk_source_iter_backward_search():
+./src/gtksourceiter.c:708
+    1a27:	85 c0                	test   %eax,%eax
+    1a29:	0f 84 99 fe ff ff    	je     18c8 <gtk_source_iter_backward_search+0x908>
+    1a2f:	e9 d4 f7 ff ff       	jmpq   1208 <gtk_source_iter_backward_search+0x248>
+    1a34:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/gtksourceiter.c:660
+    1a38:	4c 8b 44 24 18       	mov    0x18(%rsp),%r8
+    1a3d:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+    1a42:	49 89 d9             	mov    %rbx,%r9
+    1a45:	44 89 e2             	mov    %r12d,%edx
+    1a48:	4c 89 ee             	mov    %r13,%rsi
+    1a4b:	48 89 ef             	mov    %rbp,%rdi
+    1a4e:	e8 00 00 00 00       	callq  1a53 <gtk_source_iter_backward_search+0xa93>
+    1a53:	e9 7f fa ff ff       	jmpq   14d7 <gtk_source_iter_backward_search+0x517>
+    1a58:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    1a5f:	00 
+./src/gtksourceiter.c:657
+    1a60:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 1a67 <gtk_source_iter_backward_search+0xaa7>
+    1a67:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1a6e <gtk_source_iter_backward_search+0xaae>
+    1a6e:	31 ff                	xor    %edi,%edi
+    1a70:	e8 00 00 00 00       	callq  1a75 <gtk_source_iter_backward_search+0xab5>
+    1a75:	31 c0                	xor    %eax,%eax
+    1a77:	e9 5b fa ff ff       	jmpq   14d7 <gtk_source_iter_backward_search+0x517>
+    1a7c:	0f 1f 40 00          	nopl   0x0(%rax)
+g_utf8_strrcasestr():
+./src/gtksourceiter.c:124
+    1a80:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 1a87 <gtk_source_iter_backward_search+0xac7>
+    1a87:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1a8e <gtk_source_iter_backward_search+0xace>
+    1a8e:	31 ff                	xor    %edi,%edi
+    1a90:	e8 00 00 00 00       	callq  1a95 <gtk_source_iter_backward_search+0xad5>
+    1a95:	e9 1f fe ff ff       	jmpq   18b9 <gtk_source_iter_backward_search+0x8f9>
+gtk_source_iter_backward_search():
+./src/gtksourceiter.c:681
+    1a9a:	b8 01 00 00 00       	mov    $0x1,%eax
+    1a9f:	e9 33 fa ff ff       	jmpq   14d7 <gtk_source_iter_backward_search+0x517>
+./src/gtksourceiter.c:714
+    1aa4:	b8 01 00 00 00       	mov    $0x1,%eax
+    1aa9:	e9 73 f8 ff ff       	jmpq   1321 <gtk_source_iter_backward_search+0x361>
+./src/gtksourceiter.c:738
+    1aae:	e8 00 00 00 00       	callq  1ab3 <gtk_source_iter_backward_search+0xaf3>

@@ -1,0 +1,165 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-font.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <set_text_font_by_name>:
+set_text_font_by_name():
+./src/font.c:23
+   0:	55                   	push   %rbp
+   1:	53                   	push   %rbx
+   2:	48 89 fd             	mov    %rdi,%rbp
+./src/font.c:26
+   5:	48 89 f7             	mov    %rsi,%rdi
+./src/font.c:23
+   8:	48 83 ec 08          	sub    $0x8,%rsp
+./src/font.c:26
+   c:	e8 00 00 00 00       	callq  11 <set_text_font_by_name+0x11>
+./src/font.c:27
+  11:	48 89 ef             	mov    %rbp,%rdi
+  14:	48 89 c6             	mov    %rax,%rsi
+./src/font.c:26
+  17:	48 89 c3             	mov    %rax,%rbx
+./src/font.c:27
+  1a:	e8 00 00 00 00       	callq  1f <set_text_font_by_name+0x1f>
+./src/font.c:29
+  1f:	48 83 c4 08          	add    $0x8,%rsp
+./src/font.c:28
+  23:	48 89 df             	mov    %rbx,%rdi
+./src/font.c:29
+  26:	5b                   	pop    %rbx
+  27:	5d                   	pop    %rbp
+./src/font.c:28
+  28:	e9 00 00 00 00       	jmpq   2d <set_text_font_by_name+0x2d>
+  2d:	0f 1f 00             	nopl   (%rax)
+
+0000000000000030 <get_font_name_from_widget>:
+get_font_name_from_widget():
+./src/font.c:32
+  30:	48 83 ec 08          	sub    $0x8,%rsp
+./src/font.c:35
+  34:	e8 00 00 00 00       	callq  39 <get_font_name_from_widget+0x9>
+./src/font.c:36
+  39:	48 8b b8 10 02 00 00 	mov    0x210(%rax),%rdi
+./src/font.c:37
+  40:	48 83 c4 08          	add    $0x8,%rsp
+./src/font.c:36
+  44:	e9 00 00 00 00       	jmpq   49 <get_font_name_from_widget+0x19>
+  49:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000000050 <change_text_font_by_selector>:
+change_text_font_by_selector():
+./src/font.c:57
+  50:	41 56                	push   %r14
+  52:	41 55                	push   %r13
+  54:	41 54                	push   %r12
+  56:	55                   	push   %rbp
+  57:	48 89 fd             	mov    %rdi,%rbp
+  5a:	53                   	push   %rbx
+get_font_name_from_widget():
+./src/font.c:35
+  5b:	e8 00 00 00 00       	callq  60 <change_text_font_by_selector+0x10>
+./src/font.c:36
+  60:	48 8b b8 10 02 00 00 	mov    0x210(%rax),%rdi
+  67:	e8 00 00 00 00       	callq  6c <change_text_font_by_selector+0x1c>
+change_text_font_by_selector():
+./src/font.c:61
+  6c:	48 89 ef             	mov    %rbp,%rdi
+get_font_name_from_widget():
+./src/font.c:36
+  6f:	49 89 c5             	mov    %rax,%r13
+change_text_font_by_selector():
+./src/font.c:61
+  72:	e8 00 00 00 00       	callq  77 <change_text_font_by_selector+0x27>
+get_font_name_by_selector():
+./src/font.c:44
+  77:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 7e <change_text_font_by_selector+0x2e>
+  7e:	ba 05 00 00 00       	mov    $0x5,%edx
+  83:	31 ff                	xor    %edi,%edi
+change_text_font_by_selector():
+./src/font.c:61
+  85:	49 89 c6             	mov    %rax,%r14
+get_font_name_by_selector():
+./src/font.c:44
+  88:	e8 00 00 00 00       	callq  8d <change_text_font_by_selector+0x3d>
+  8d:	48 89 c7             	mov    %rax,%rdi
+  90:	e8 00 00 00 00       	callq  95 <change_text_font_by_selector+0x45>
+  95:	48 89 c3             	mov    %rax,%rbx
+./src/font.c:45
+  98:	e8 00 00 00 00       	callq  9d <change_text_font_by_selector+0x4d>
+  9d:	4c 89 f7             	mov    %r14,%rdi
+  a0:	49 89 c4             	mov    %rax,%r12
+  a3:	48 89 c6             	mov    %rax,%rsi
+  a6:	e8 00 00 00 00       	callq  ab <change_text_font_by_selector+0x5b>
+  ab:	4c 89 e6             	mov    %r12,%rsi
+  ae:	49 89 c6             	mov    %rax,%r14
+  b1:	48 89 df             	mov    %rbx,%rdi
+  b4:	e8 00 00 00 00       	callq  b9 <change_text_font_by_selector+0x69>
+  b9:	4c 89 f6             	mov    %r14,%rsi
+  bc:	48 89 c7             	mov    %rax,%rdi
+  bf:	e8 00 00 00 00       	callq  c4 <change_text_font_by_selector+0x74>
+./src/font.c:46
+  c4:	e8 00 00 00 00       	callq  c9 <change_text_font_by_selector+0x79>
+  c9:	48 89 df             	mov    %rbx,%rdi
+  cc:	48 89 c6             	mov    %rax,%rsi
+  cf:	49 89 c4             	mov    %rax,%r12
+  d2:	e8 00 00 00 00       	callq  d7 <change_text_font_by_selector+0x87>
+  d7:	4c 89 ee             	mov    %r13,%rsi
+  da:	48 89 c7             	mov    %rax,%rdi
+  dd:	e8 00 00 00 00       	callq  e2 <change_text_font_by_selector+0x92>
+./src/font.c:47
+  e2:	e8 00 00 00 00       	callq  e7 <change_text_font_by_selector+0x97>
+  e7:	48 89 df             	mov    %rbx,%rdi
+  ea:	48 89 c6             	mov    %rax,%rsi
+  ed:	e8 00 00 00 00       	callq  f2 <change_text_font_by_selector+0xa2>
+  f2:	48 89 c7             	mov    %rax,%rdi
+  f5:	e8 00 00 00 00       	callq  fa <change_text_font_by_selector+0xaa>
+  fa:	83 f8 fb             	cmp    $0xfffffffb,%eax
+  fd:	75 51                	jne    150 <change_text_font_by_selector+0x100>
+./src/font.c:48
+  ff:	4c 89 e6             	mov    %r12,%rsi
+ 102:	48 89 df             	mov    %rbx,%rdi
+ 105:	e8 00 00 00 00       	callq  10a <change_text_font_by_selector+0xba>
+ 10a:	48 89 c7             	mov    %rax,%rdi
+ 10d:	e8 00 00 00 00       	callq  112 <change_text_font_by_selector+0xc2>
+./src/font.c:51
+ 112:	48 89 df             	mov    %rbx,%rdi
+./src/font.c:48
+ 115:	49 89 c4             	mov    %rax,%r12
+./src/font.c:51
+ 118:	e8 00 00 00 00       	callq  11d <change_text_font_by_selector+0xcd>
+change_text_font_by_selector():
+./src/font.c:63
+ 11d:	4d 85 e4             	test   %r12,%r12
+ 120:	74 13                	je     135 <change_text_font_by_selector+0xe5>
+./src/font.c:64
+ 122:	48 89 ef             	mov    %rbp,%rdi
+ 125:	4c 89 e6             	mov    %r12,%rsi
+ 128:	e8 00 00 00 00       	callq  12d <change_text_font_by_selector+0xdd>
+./src/font.c:65
+ 12d:	48 89 ef             	mov    %rbp,%rdi
+ 130:	e8 00 00 00 00       	callq  135 <change_text_font_by_selector+0xe5>
+./src/font.c:68
+ 135:	4c 89 e7             	mov    %r12,%rdi
+ 138:	e8 00 00 00 00       	callq  13d <change_text_font_by_selector+0xed>
+./src/font.c:70
+ 13d:	5b                   	pop    %rbx
+./src/font.c:69
+ 13e:	4c 89 ef             	mov    %r13,%rdi
+./src/font.c:70
+ 141:	5d                   	pop    %rbp
+ 142:	41 5c                	pop    %r12
+ 144:	41 5d                	pop    %r13
+ 146:	41 5e                	pop    %r14
+./src/font.c:69
+ 148:	e9 00 00 00 00       	jmpq   14d <change_text_font_by_selector+0xfd>
+ 14d:	0f 1f 00             	nopl   (%rax)
+get_font_name_by_selector():
+./src/font.c:51
+ 150:	48 89 df             	mov    %rbx,%rdi
+./src/font.c:50
+ 153:	45 31 e4             	xor    %r12d,%r12d
+./src/font.c:51
+ 156:	e8 00 00 00 00       	callq  15b <change_text_font_by_selector+0x10b>
+ 15b:	eb d8                	jmp    135 <change_text_font_by_selector+0xe5>

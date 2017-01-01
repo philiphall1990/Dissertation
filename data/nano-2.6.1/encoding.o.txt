@@ -1,0 +1,945 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-encoding.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <get_encoding_code>:
+get_encoding_code():
+./src/encoding.c:97
+   0:	41 56                	push   %r14
+./src/encoding.c:102
+   2:	44 8b 35 00 00 00 00 	mov    0x0(%rip),%r14d        # 9 <get_encoding_code+0x9>
+./src/encoding.c:97
+   9:	41 55                	push   %r13
+   b:	41 54                	push   %r12
+   d:	55                   	push   %rbp
+   e:	53                   	push   %rbx
+./src/encoding.c:102
+   f:	41 83 fe 13          	cmp    $0x13,%r14d
+  13:	74 13                	je     28 <get_encoding_code+0x28>
+./src/encoding.c:123
+  15:	5b                   	pop    %rbx
+  16:	44 89 f0             	mov    %r14d,%eax
+  19:	5d                   	pop    %rbp
+  1a:	41 5c                	pop    %r12
+  1c:	41 5d                	pop    %r13
+  1e:	41 5e                	pop    %r14
+  20:	c3                   	retq   
+  21:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/encoding.c:103
+  28:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 2f <get_encoding_code+0x2f>
+  2f:	e8 00 00 00 00       	callq  34 <get_encoding_code+0x34>
+./src/encoding.c:104
+  34:	48 85 c0             	test   %rax,%rax
+./src/encoding.c:103
+  37:	49 89 c5             	mov    %rax,%r13
+./src/encoding.c:104
+  3a:	0f 84 a3 00 00 00    	je     e3 <get_encoding_code+0xe3>
+./src/encoding.c:106 (discriminator 1)
+  40:	4c 89 ef             	mov    %r13,%rdi
+  43:	e8 00 00 00 00       	callq  48 <get_encoding_code+0x48>
+  48:	48 83 f8 01          	cmp    $0x1,%rax
+  4c:	0f 86 a9 00 00 00    	jbe    fb <get_encoding_code+0xfb>
+./src/encoding.c:107
+  52:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 58 <get_encoding_code+0x58>
+  58:	83 f8 13             	cmp    $0x13,%eax
+  5b:	41 89 c6             	mov    %eax,%r14d
+  5e:	75 b5                	jne    15 <get_encoding_code+0x15>
+  60:	4c 8d 25 00 00 00 00 	lea    0x0(%rip),%r12        # 67 <get_encoding_code+0x67>
+  67:	48 8d 1d 00 00 00 00 	lea    0x0(%rip),%rbx        # 6e <get_encoding_code+0x6e>
+  6e:	41 be 01 00 00 00    	mov    $0x1,%r14d
+  74:	0f 1f 40 00          	nopl   0x0(%rax)
+  78:	49 8d 6c 24 b8       	lea    -0x48(%r12),%rbp
+  7d:	eb 09                	jmp    88 <get_encoding_code+0x88>
+  7f:	90                   	nop
+  80:	48 8b 5d 00          	mov    0x0(%rbp),%rbx
+  84:	48 83 c5 08          	add    $0x8,%rbp
+./src/encoding.c:109
+  88:	48 85 db             	test   %rbx,%rbx
+  8b:	74 1f                	je     ac <get_encoding_code+0xac>
+./src/encoding.c:111
+  8d:	48 89 df             	mov    %rbx,%rdi
+  90:	e8 00 00 00 00       	callq  95 <get_encoding_code+0x95>
+  95:	48 89 de             	mov    %rbx,%rsi
+  98:	48 89 c2             	mov    %rax,%rdx
+  9b:	4c 89 ef             	mov    %r13,%rdi
+  9e:	e8 00 00 00 00       	callq  a3 <get_encoding_code+0xa3>
+  a3:	85 c0                	test   %eax,%eax
+  a5:	74 19                	je     c0 <get_encoding_code+0xc0>
+./src/encoding.c:108 (discriminator 2)
+  a7:	4c 39 e5             	cmp    %r12,%rbp
+  aa:	75 d4                	jne    80 <get_encoding_code+0x80>
+./src/encoding.c:116
+  ac:	41 83 c6 01          	add    $0x1,%r14d
+./src/encoding.c:107
+  b0:	41 83 fe 13          	cmp    $0x13,%r14d
+  b4:	74 1b                	je     d1 <get_encoding_code+0xd1>
+  b6:	49 8b 1c 24          	mov    (%r12),%rbx
+  ba:	49 83 c4 50          	add    $0x50,%r12
+  be:	eb b8                	jmp    78 <get_encoding_code+0x78>
+./src/encoding.c:112
+  c0:	44 89 35 00 00 00 00 	mov    %r14d,0x0(%rip)        # c7 <get_encoding_code+0xc7>
+./src/encoding.c:118
+  c7:	41 83 fe 13          	cmp    $0x13,%r14d
+  cb:	0f 85 44 ff ff ff    	jne    15 <get_encoding_code+0x15>
+./src/encoding.c:119
+  d1:	c7 05 00 00 00 00 00 	movl   $0x0,0x0(%rip)        # db <get_encoding_code+0xdb>
+  d8:	00 00 00 
+  db:	45 31 f6             	xor    %r14d,%r14d
+./src/encoding.c:122
+  de:	e9 32 ff ff ff       	jmpq   15 <get_encoding_code+0x15>
+./src/encoding.c:105
+  e3:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # ea <get_encoding_code+0xea>
+  ea:	e8 00 00 00 00       	callq  ef <get_encoding_code+0xef>
+./src/encoding.c:106
+  ef:	48 85 c0             	test   %rax,%rax
+./src/encoding.c:105
+  f2:	49 89 c5             	mov    %rax,%r13
+./src/encoding.c:106
+  f5:	0f 85 45 ff ff ff    	jne    40 <get_encoding_code+0x40>
+  fb:	44 8b 35 00 00 00 00 	mov    0x0(%rip),%r14d        # 102 <get_encoding_code+0x102>
+ 102:	eb c3                	jmp    c7 <get_encoding_code+0xc7>
+ 104:	66 90                	xchg   %ax,%ax
+ 106:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 10d:	00 00 00 
+
+0000000000000110 <get_encoding_items>:
+get_encoding_items():
+./src/encoding.c:130
+ 110:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 117 <get_encoding_items+0x7>
+ 117:	48 85 c0             	test   %rax,%rax
+ 11a:	74 04                	je     120 <get_encoding_items+0x10>
+./src/encoding.c:138
+ 11c:	c3                   	retq   
+ 11d:	0f 1f 00             	nopl   (%rax)
+./src/encoding.c:126
+ 120:	53                   	push   %rbx
+ 121:	89 fb                	mov    %edi,%ebx
+./src/encoding.c:131
+ 123:	bf 18 00 00 00       	mov    $0x18,%edi
+ 128:	e8 00 00 00 00       	callq  12d <get_encoding_items+0x1d>
+./src/encoding.c:134
+ 12d:	89 df                	mov    %ebx,%edi
+ 12f:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 136 <get_encoding_items+0x26>
+./src/encoding.c:131
+ 136:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 13d <get_encoding_items+0x2d>
+./src/encoding.c:134
+ 13d:	48 8d 0c 7f          	lea    (%rdi,%rdi,2),%rcx
+ 141:	48 8d 14 ca          	lea    (%rdx,%rcx,8),%rdx
+./src/encoding.c:133
+ 145:	48 8b 0a             	mov    (%rdx),%rcx
+ 148:	48 89 08             	mov    %rcx,(%rax)
+ 14b:	48 8b 4a 08          	mov    0x8(%rdx),%rcx
+ 14f:	48 8b 52 10          	mov    0x10(%rdx),%rdx
+ 153:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 157:	48 89 50 10          	mov    %rdx,0x10(%rax)
+./src/encoding.c:138
+ 15b:	5b                   	pop    %rbx
+ 15c:	c3                   	retq   
+ 15d:	0f 1f 00             	nopl   (%rax)
+
+0000000000000160 <get_default_charset>:
+get_default_charset():
+./src/encoding.c:141
+ 160:	48 83 ec 18          	sub    $0x18,%rsp
+./src/encoding.c:144
+ 164:	48 89 e7             	mov    %rsp,%rdi
+./src/encoding.c:141
+ 167:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 16e:	00 00 
+ 170:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 175:	31 c0                	xor    %eax,%eax
+./src/encoding.c:144
+ 177:	e8 00 00 00 00       	callq  17c <get_default_charset+0x1c>
+./src/encoding.c:147
+ 17c:	48 8b 54 24 08       	mov    0x8(%rsp),%rdx
+ 181:	64 48 33 14 25 28 00 	xor    %fs:0x28,%rdx
+ 188:	00 00 
+ 18a:	48 8b 04 24          	mov    (%rsp),%rax
+ 18e:	75 05                	jne    195 <get_default_charset+0x35>
+ 190:	48 83 c4 18          	add    $0x18,%rsp
+ 194:	c3                   	retq   
+ 195:	e8 00 00 00 00       	callq  19a <get_default_charset+0x3a>
+ 19a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+00000000000001a0 <convert_line_ending_to_lf>:
+convert_line_ending_to_lf():
+./src/encoding.c:155
+ 1a0:	48 89 f9             	mov    %rdi,%rcx
+./src/encoding.c:158
+ 1a3:	31 c0                	xor    %eax,%eax
+ 1a5:	eb 16                	jmp    1bd <convert_line_ending_to_lf+0x1d>
+ 1a7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 1ae:	00 00 
+./src/encoding.c:165
+ 1b0:	84 d2                	test   %dl,%dl
+./src/encoding.c:164
+ 1b2:	88 11                	mov    %dl,(%rcx)
+./src/encoding.c:165
+ 1b4:	74 2a                	je     1e0 <convert_line_ending_to_lf+0x40>
+./src/encoding.c:158
+ 1b6:	83 c0 01             	add    $0x1,%eax
+ 1b9:	48 83 c1 01          	add    $0x1,%rcx
+./src/encoding.c:159
+ 1bd:	48 63 f0             	movslq %eax,%rsi
+ 1c0:	0f b6 14 37          	movzbl (%rdi,%rsi,1),%edx
+ 1c4:	80 fa 0d             	cmp    $0xd,%dl
+ 1c7:	75 e7                	jne    1b0 <convert_line_ending_to_lf+0x10>
+./src/encoding.c:162
+ 1c9:	31 d2                	xor    %edx,%edx
+./src/encoding.c:160
+ 1cb:	c6 01 0a             	movb   $0xa,(%rcx)
+./src/encoding.c:162
+ 1ce:	80 7c 37 01 0a       	cmpb   $0xa,0x1(%rdi,%rsi,1)
+ 1d3:	0f 94 c2             	sete   %dl
+ 1d6:	01 d0                	add    %edx,%eax
+ 1d8:	eb dc                	jmp    1b6 <convert_line_ending_to_lf+0x16>
+ 1da:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 1e0:	f3 c3                	repz retq 
+ 1e2:	0f 1f 40 00          	nopl   0x0(%rax)
+ 1e6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 1ed:	00 00 00 
+
+00000000000001f0 <convert_line_ending>:
+convert_line_ending():
+./src/encoding.c:172
+ 1f0:	41 54                	push   %r12
+ 1f2:	55                   	push   %rbp
+ 1f3:	41 89 f4             	mov    %esi,%r12d
+ 1f6:	53                   	push   %rbx
+./src/encoding.c:173
+ 1f7:	48 8b 1f             	mov    (%rdi),%rbx
+./src/encoding.c:172
+ 1fa:	48 89 fd             	mov    %rdi,%rbp
+./src/encoding.c:174
+ 1fd:	48 89 df             	mov    %rbx,%rdi
+ 200:	e8 00 00 00 00       	callq  205 <convert_line_ending+0x15>
+./src/encoding.c:177
+ 205:	41 83 fc 0d          	cmp    $0xd,%r12d
+ 209:	0f 84 a1 00 00 00    	je     2b0 <convert_line_ending+0xc0>
+ 20f:	41 83 fc 17          	cmp    $0x17,%r12d
+ 213:	0f 85 8a 00 00 00    	jne    2a3 <convert_line_ending+0xb3>
+./src/encoding.c:186 (discriminator 1)
+ 219:	0f b6 13             	movzbl (%rbx),%edx
+ 21c:	31 f6                	xor    %esi,%esi
+ 21e:	48 8d 4b 01          	lea    0x1(%rbx),%rcx
+ 222:	84 d2                	test   %dl,%dl
+ 224:	74 21                	je     247 <convert_line_ending+0x57>
+ 226:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 22d:	00 00 00 
+./src/encoding.c:188
+ 230:	80 fa 0a             	cmp    $0xa,%dl
+ 233:	0f 94 c2             	sete   %dl
+ 236:	48 83 c1 01          	add    $0x1,%rcx
+ 23a:	0f b6 d2             	movzbl %dl,%edx
+ 23d:	01 d6                	add    %edx,%esi
+./src/encoding.c:186
+ 23f:	0f b6 51 ff          	movzbl -0x1(%rcx),%edx
+ 243:	84 d2                	test   %dl,%dl
+ 245:	75 e9                	jne    230 <convert_line_ending+0x40>
+./src/encoding.c:190
+ 247:	8d 7c 06 01          	lea    0x1(%rsi,%rax,1),%edi
+ 24b:	48 63 ff             	movslq %edi,%rdi
+ 24e:	e8 00 00 00 00       	callq  253 <convert_line_ending+0x63>
+ 253:	48 89 df             	mov    %rbx,%rdi
+ 256:	49 89 c4             	mov    %rax,%r12
+./src/encoding.c:191
+ 259:	31 d2                	xor    %edx,%edx
+ 25b:	eb 14                	jmp    271 <convert_line_ending+0x81>
+ 25d:	0f 1f 00             	nopl   (%rax)
+ 260:	48 83 c7 01          	add    $0x1,%rdi
+./src/encoding.c:196
+ 264:	41 88 0c 04          	mov    %cl,(%r12,%rax,1)
+./src/encoding.c:197
+ 268:	80 7f ff 00          	cmpb   $0x0,-0x1(%rdi)
+ 26c:	74 28                	je     296 <convert_line_ending+0xa6>
+./src/encoding.c:191
+ 26e:	83 c2 01             	add    $0x1,%edx
+./src/encoding.c:192
+ 271:	0f b6 0f             	movzbl (%rdi),%ecx
+./src/encoding.c:193
+ 274:	48 63 c2             	movslq %edx,%rax
+./src/encoding.c:192
+ 277:	80 f9 0a             	cmp    $0xa,%cl
+ 27a:	75 e4                	jne    260 <convert_line_ending+0x70>
+./src/encoding.c:194
+ 27c:	83 c2 01             	add    $0x1,%edx
+./src/encoding.c:193
+ 27f:	41 c6 04 04 0d       	movb   $0xd,(%r12,%rax,1)
+ 284:	48 83 c7 01          	add    $0x1,%rdi
+./src/encoding.c:194
+ 288:	48 63 c2             	movslq %edx,%rax
+ 28b:	41 c6 04 04 0a       	movb   $0xa,(%r12,%rax,1)
+./src/encoding.c:197
+ 290:	80 7f ff 00          	cmpb   $0x0,-0x1(%rdi)
+ 294:	75 d8                	jne    26e <convert_line_ending+0x7e>
+./src/encoding.c:200
+ 296:	48 8b 7d 00          	mov    0x0(%rbp),%rdi
+ 29a:	e8 00 00 00 00       	callq  29f <convert_line_ending+0xaf>
+./src/encoding.c:201
+ 29f:	4c 89 65 00          	mov    %r12,0x0(%rbp)
+./src/encoding.c:203
+ 2a3:	5b                   	pop    %rbx
+ 2a4:	5d                   	pop    %rbp
+ 2a5:	41 5c                	pop    %r12
+ 2a7:	c3                   	retq   
+ 2a8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 2af:	00 
+./src/encoding.c:179
+ 2b0:	0f b6 03             	movzbl (%rbx),%eax
+ 2b3:	84 c0                	test   %al,%al
+ 2b5:	75 14                	jne    2cb <convert_line_ending+0xdb>
+ 2b7:	eb ea                	jmp    2a3 <convert_line_ending+0xb3>
+ 2b9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/encoding.c:182
+ 2c0:	48 83 c3 01          	add    $0x1,%rbx
+./src/encoding.c:179
+ 2c4:	0f b6 03             	movzbl (%rbx),%eax
+ 2c7:	84 c0                	test   %al,%al
+ 2c9:	74 d8                	je     2a3 <convert_line_ending+0xb3>
+./src/encoding.c:180
+ 2cb:	3c 0a                	cmp    $0xa,%al
+ 2cd:	75 f1                	jne    2c0 <convert_line_ending+0xd0>
+./src/encoding.c:181
+ 2cf:	c6 03 0d             	movb   $0xd,(%rbx)
+ 2d2:	eb ec                	jmp    2c0 <convert_line_ending+0xd0>
+ 2d4:	66 90                	xchg   %ax,%ax
+ 2d6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 2dd:	00 00 00 
+
+00000000000002e0 <detect_line_ending>:
+detect_line_ending():
+./src/encoding.c:206
+ 2e0:	0f b6 07             	movzbl (%rdi),%eax
+./src/encoding.c:207
+ 2e3:	eb 0e                	jmp    2f3 <detect_line_ending+0x13>
+ 2e5:	0f 1f 00             	nopl   (%rax)
+./src/encoding.c:208
+ 2e8:	0f b6 07             	movzbl (%rdi),%eax
+ 2eb:	3c 0a                	cmp    $0xa,%al
+ 2ed:	74 0c                	je     2fb <detect_line_ending+0x1b>
+./src/encoding.c:210
+ 2ef:	3c 0d                	cmp    $0xd,%al
+ 2f1:	74 15                	je     308 <detect_line_ending+0x28>
+./src/encoding.c:207
+ 2f3:	48 83 c7 01          	add    $0x1,%rdi
+ 2f7:	84 c0                	test   %al,%al
+ 2f9:	75 ed                	jne    2e8 <detect_line_ending+0x8>
+./src/encoding.c:217
+ 2fb:	b8 0a 00 00 00       	mov    $0xa,%eax
+./src/encoding.c:218
+ 300:	c3                   	retq   
+ 301:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/encoding.c:212
+ 308:	80 7f 01 0a          	cmpb   $0xa,0x1(%rdi)
+ 30c:	ba 17 00 00 00       	mov    $0x17,%edx
+ 311:	b8 0d 00 00 00       	mov    $0xd,%eax
+ 316:	0f 44 c2             	cmove  %edx,%eax
+ 319:	c3                   	retq   
+ 31a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000000320 <detect_charset>:
+detect_charset():
+./src/encoding.c:406
+ 320:	55                   	push   %rbp
+ 321:	53                   	push   %rbx
+./src/encoding.c:410
+ 322:	31 d2                	xor    %edx,%edx
+ 324:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+./src/encoding.c:406
+ 32b:	48 89 fd             	mov    %rdi,%rbp
+ 32e:	48 83 ec 18          	sub    $0x18,%rsp
+ 332:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 339:	00 00 
+ 33b:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 340:	31 c0                	xor    %eax,%eax
+./src/encoding.c:410
+ 342:	e8 00 00 00 00       	callq  347 <detect_charset+0x27>
+ 347:	85 c0                	test   %eax,%eax
+ 349:	75 25                	jne    370 <detect_charset+0x50>
+./src/encoding.c:450
+ 34b:	e8 00 00 00 00       	callq  350 <detect_charset+0x30>
+ 350:	83 e8 04             	sub    $0x4,%eax
+ 353:	83 f8 0e             	cmp    $0xe,%eax
+ 356:	0f 87 db 02 00 00    	ja     637 <detect_charset+0x317>
+ 35c:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 363 <detect_charset+0x43>
+ 363:	48 63 04 82          	movslq (%rdx,%rax,4),%rax
+ 367:	48 01 d0             	add    %rdx,%rax
+ 36a:	ff e0                	jmpq   *%rax
+ 36c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 370:	31 c0                	xor    %eax,%eax
+./src/encoding.c:420
+ 372:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 379 <detect_charset+0x59>
+./src/encoding.c:423
+ 379:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 380 <detect_charset+0x60>
+ 380:	eb 10                	jmp    392 <detect_charset+0x72>
+ 382:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/encoding.c:412
+ 388:	78 3e                	js     3c8 <detect_charset+0xa8>
+./src/encoding.c:416
+ 38a:	80 fa 1b             	cmp    $0x1b,%dl
+ 38d:	74 49                	je     3d8 <detect_charset+0xb8>
+ 38f:	48 89 dd             	mov    %rbx,%rbp
+./src/encoding.c:411
+ 392:	48 8d 5d 01          	lea    0x1(%rbp),%rbx
+ 396:	0f b6 53 ff          	movzbl -0x1(%rbx),%edx
+ 39a:	84 d2                	test   %dl,%dl
+ 39c:	75 ea                	jne    388 <detect_charset+0x68>
+./src/encoding.c:445
+ 39e:	48 85 c0             	test   %rax,%rax
+ 3a1:	0f 84 49 04 00 00    	je     7f0 <detect_charset+0x4d0>
+./src/encoding.c:485
+ 3a7:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+ 3ac:	64 48 33 34 25 28 00 	xor    %fs:0x28,%rsi
+ 3b3:	00 00 
+ 3b5:	0f 85 a3 05 00 00    	jne    95e <detect_charset+0x63e>
+ 3bb:	48 83 c4 18          	add    $0x18,%rsp
+ 3bf:	5b                   	pop    %rbx
+ 3c0:	5d                   	pop    %rbp
+ 3c1:	c3                   	retq   
+ 3c2:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/encoding.c:413
+ 3c8:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 3cf <detect_charset+0xaf>
+ 3cf:	eb d6                	jmp    3a7 <detect_charset+0x87>
+ 3d1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/encoding.c:417
+ 3d8:	48 83 c5 02          	add    $0x2,%rbp
+./src/encoding.c:418
+ 3dc:	80 3b 24             	cmpb   $0x24,(%rbx)
+ 3df:	75 b1                	jne    392 <detect_charset+0x72>
+./src/encoding.c:420
+ 3e1:	0f b6 7b 01          	movzbl 0x1(%rbx),%edi
+./src/encoding.c:419
+ 3e5:	48 8d 6b 02          	lea    0x2(%rbx),%rbp
+./src/encoding.c:420
+ 3e9:	8d 57 d8             	lea    -0x28(%rdi),%edx
+ 3ec:	80 fa 1a             	cmp    $0x1a,%dl
+ 3ef:	0f 87 e2 02 00 00    	ja     6d7 <detect_charset+0x3b7>
+ 3f5:	0f b6 d2             	movzbl %dl,%edx
+ 3f8:	48 63 14 91          	movslq (%rcx,%rdx,4),%rdx
+ 3fc:	48 01 ca             	add    %rcx,%rdx
+ 3ff:	ff e2                	jmpq   *%rdx
+ 401:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+detect_charset_japanese():
+./src/encoding.c:315
+ 408:	8d 50 20             	lea    0x20(%rax),%edx
+ 40b:	80 fa 0f             	cmp    $0xf,%dl
+ 40e:	76 5e                	jbe    46e <detect_charset+0x14e>
+./src/encoding.c:322
+ 410:	3c ef                	cmp    $0xef,%al
+ 412:	0f 87 bb 04 00 00    	ja     8d3 <detect_charset+0x5b3>
+./src/encoding.c:291
+ 418:	48 83 c5 01          	add    $0x1,%rbp
+ 41c:	0f b6 45 00          	movzbl 0x0(%rbp),%eax
+ 420:	84 c0                	test   %al,%al
+ 422:	0f 84 ab 04 00 00    	je     8d3 <detect_charset+0x5b3>
+./src/encoding.c:292
+ 428:	8d 50 7f             	lea    0x7f(%rax),%edx
+ 42b:	80 fa 1e             	cmp    $0x1e,%dl
+ 42e:	77 20                	ja     450 <detect_charset+0x130>
+./src/encoding.c:293
+ 430:	3c 8e                	cmp    $0x8e,%al
+ 432:	0f 84 2a 03 00 00    	je     762 <detect_charset+0x442>
+./src/encoding.c:298
+ 438:	3c 8f                	cmp    $0x8f,%al
+ 43a:	74 32                	je     46e <detect_charset+0x14e>
+./src/encoding.c:317
+ 43c:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 443 <detect_charset+0x123>
+ 443:	e9 5f ff ff ff       	jmpq   3a7 <detect_charset+0x87>
+ 448:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 44f:	00 
+./src/encoding.c:308
+ 450:	8d 50 5f             	lea    0x5f(%rax),%edx
+ 453:	80 fa 3e             	cmp    $0x3e,%dl
+ 456:	77 b0                	ja     408 <detect_charset+0xe8>
+./src/encoding.c:309
+ 458:	0f b6 45 01          	movzbl 0x1(%rbp),%eax
+./src/encoding.c:310
+ 45c:	3c 9f                	cmp    $0x9f,%al
+ 45e:	76 dc                	jbe    43c <detect_charset+0x11c>
+./src/encoding.c:319
+ 460:	3c fc                	cmp    $0xfc,%al
+ 462:	0f 87 6b 04 00 00    	ja     8d3 <detect_charset+0x5b3>
+./src/encoding.c:316
+ 468:	48 83 c5 02          	add    $0x2,%rbp
+ 46c:	eb ae                	jmp    41c <detect_charset+0xfc>
+ 46e:	0f b6 45 01          	movzbl 0x1(%rbp),%eax
+./src/encoding.c:317
+ 472:	8d 50 c0             	lea    -0x40(%rax),%edx
+ 475:	80 fa 60             	cmp    $0x60,%dl
+ 478:	76 c2                	jbe    43c <detect_charset+0x11c>
+ 47a:	eb e4                	jmp    460 <detect_charset+0x140>
+detect_charset():
+./src/encoding.c:470
+ 47c:	e8 00 00 00 00       	callq  481 <detect_charset+0x161>
+ 481:	89 c7                	mov    %eax,%edi
+ 483:	e8 00 00 00 00       	callq  488 <detect_charset+0x168>
+ 488:	48 8b 40 08          	mov    0x8(%rax),%rax
+./src/encoding.c:471
+ 48c:	e9 16 ff ff ff       	jmpq   3a7 <detect_charset+0x87>
+./src/encoding.c:450
+ 491:	31 f6                	xor    %esi,%esi
+ 493:	31 d2                	xor    %edx,%edx
+detect_charset_korean():
+./src/encoding.c:339
+ 495:	0f b6 45 00          	movzbl 0x0(%rbp),%eax
+ 499:	84 c0                	test   %al,%al
+ 49b:	0f 84 3e 04 00 00    	je     8df <detect_charset+0x5bf>
+./src/encoding.c:340
+ 4a1:	8d 48 7f             	lea    0x7f(%rax),%ecx
+ 4a4:	80 f9 02             	cmp    $0x2,%cl
+ 4a7:	0f 86 5b 02 00 00    	jbe    708 <detect_charset+0x3e8>
+./src/encoding.c:343
+ 4ad:	8d 48 7c             	lea    0x7c(%rax),%ecx
+ 4b0:	80 f9 1c             	cmp    $0x1c,%cl
+ 4b3:	0f 87 c9 02 00 00    	ja     782 <detect_charset+0x462>
+./src/encoding.c:345
+ 4b9:	0f b6 45 01          	movzbl 0x1(%rbp),%eax
+ 4bd:	48 8d 7d 02          	lea    0x2(%rbp),%rdi
+./src/encoding.c:346
+ 4c1:	8d 50 a5             	lea    -0x5b(%rax),%edx
+ 4c4:	8d 48 85             	lea    -0x7b(%rax),%ecx
+ 4c7:	80 fa 05             	cmp    $0x5,%dl
+ 4ca:	0f 96 c2             	setbe  %dl
+ 4cd:	80 f9 05             	cmp    $0x5,%cl
+ 4d0:	0f 96 c1             	setbe  %cl
+ 4d3:	08 ca                	or     %cl,%dl
+ 4d5:	0f 85 35 03 00 00    	jne    810 <detect_charset+0x4f0>
+./src/encoding.c:348
+ 4db:	89 c2                	mov    %eax,%edx
+ 4dd:	89 c1                	mov    %eax,%ecx
+ 4df:	83 e2 df             	and    $0xffffffdf,%edx
+ 4e2:	80 fa 52             	cmp    $0x52,%dl
+ 4e5:	0f 94 c2             	sete   %dl
+ 4e8:	83 e1 9f             	and    $0xffffff9f,%ecx
+ 4eb:	80 f9 92             	cmp    $0x92,%cl
+ 4ee:	0f 94 c1             	sete   %cl
+ 4f1:	08 ca                	or     %cl,%dl
+ 4f3:	0f 85 66 03 00 00    	jne    85f <detect_charset+0x53f>
+ 4f9:	89 c2                	mov    %eax,%edx
+ 4fb:	83 e2 bf             	and    $0xffffffbf,%edx
+ 4fe:	83 c2 62             	add    $0x62,%edx
+./src/encoding.c:349
+ 501:	80 fa 02             	cmp    $0x2,%dl
+ 504:	0f 86 50 03 00 00    	jbe    85a <detect_charset+0x53a>
+ 50a:	8d 50 42             	lea    0x42(%rax),%edx
+ 50d:	80 fa 02             	cmp    $0x2,%dl
+ 510:	0f 86 44 03 00 00    	jbe    85a <detect_charset+0x53a>
+./src/encoding.c:350
+ 516:	3c fe                	cmp    $0xfe,%al
+ 518:	0f 84 3c 03 00 00    	je     85a <detect_charset+0x53a>
+./src/encoding.c:345
+ 51e:	48 89 fd             	mov    %rdi,%rbp
+./src/encoding.c:350
+ 521:	b8 01 00 00 00       	mov    $0x1,%eax
+./src/encoding.c:344
+ 526:	ba 01 00 00 00       	mov    $0x1,%edx
+./src/encoding.c:380
+ 52b:	85 f6                	test   %esi,%esi
+ 52d:	0f 84 62 ff ff ff    	je     495 <detect_charset+0x175>
+ 533:	84 c0                	test   %al,%al
+ 535:	0f 84 5a ff ff ff    	je     495 <detect_charset+0x175>
+./src/encoding.c:381
+ 53b:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 542 <detect_charset+0x222>
+ 542:	e9 60 fe ff ff       	jmpq   3a7 <detect_charset+0x87>
+detect_charset_chinese():
+./src/encoding.c:251
+ 547:	e8 00 00 00 00       	callq  54c <detect_charset+0x22c>
+ 54c:	89 c7                	mov    %eax,%edi
+ 54e:	e8 00 00 00 00       	callq  553 <detect_charset+0x233>
+ 553:	48 8b 00             	mov    (%rax),%rax
+./src/encoding.c:268
+ 556:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 55d <detect_charset+0x23d>
+ 55d:	0f 1f 00             	nopl   (%rax)
+./src/encoding.c:253
+ 560:	0f b6 55 00          	movzbl 0x0(%rbp),%edx
+ 564:	84 d2                	test   %dl,%dl
+ 566:	0f 84 3b fe ff ff    	je     3a7 <detect_charset+0x87>
+./src/encoding.c:254
+ 56c:	8d 4a 7f             	lea    0x7f(%rdx),%ecx
+ 56f:	80 f9 06             	cmp    $0x6,%cl
+ 572:	0f 86 de 01 00 00    	jbe    756 <detect_charset+0x436>
+./src/encoding.c:258
+ 578:	8d 4a 78             	lea    0x78(%rdx),%ecx
+ 57b:	80 f9 18             	cmp    $0x18,%cl
+ 57e:	0f 87 5c 01 00 00    	ja     6e0 <detect_charset+0x3c0>
+./src/encoding.c:259
+ 584:	0f b6 55 01          	movzbl 0x1(%rbp),%edx
+ 588:	48 8d 75 02          	lea    0x2(%rbp),%rsi
+./src/encoding.c:260
+ 58c:	8d 4a d0             	lea    -0x30(%rdx),%ecx
+ 58f:	80 f9 09             	cmp    $0x9,%cl
+ 592:	0f 86 be 01 00 00    	jbe    756 <detect_charset+0x436>
+./src/encoding.c:269
+ 598:	83 c2 80             	add    $0xffffff80,%edx
+ 59b:	80 fa 20             	cmp    $0x20,%dl
+ 59e:	0f 86 b2 01 00 00    	jbe    756 <detect_charset+0x436>
+./src/encoding.c:266
+ 5a4:	48 89 f5             	mov    %rsi,%rbp
+./src/encoding.c:253
+ 5a7:	0f b6 55 00          	movzbl 0x0(%rbp),%edx
+ 5ab:	84 d2                	test   %dl,%dl
+ 5ad:	75 bd                	jne    56c <detect_charset+0x24c>
+ 5af:	e9 f3 fd ff ff       	jmpq   3a7 <detect_charset+0x87>
+detect_charset_cylillic():
+./src/encoding.c:226
+ 5b4:	e8 00 00 00 00       	callq  5b9 <detect_charset+0x299>
+ 5b9:	89 c7                	mov    %eax,%edi
+ 5bb:	e8 00 00 00 00       	callq  5c0 <detect_charset+0x2a0>
+./src/encoding.c:224
+ 5c0:	45 31 c0             	xor    %r8d,%r8d
+./src/encoding.c:226
+ 5c3:	49 89 c2             	mov    %rax,%r10
+./src/encoding.c:224
+ 5c6:	45 31 c9             	xor    %r9d,%r9d
+ 5c9:	31 f6                	xor    %esi,%esi
+./src/encoding.c:223
+ 5cb:	31 ff                	xor    %edi,%edi
+ 5cd:	0f 1f 00             	nopl   (%rax)
+./src/encoding.c:228
+ 5d0:	48 83 c5 01          	add    $0x1,%rbp
+ 5d4:	0f b6 55 ff          	movzbl -0x1(%rbp),%edx
+ 5d8:	84 d2                	test   %dl,%dl
+ 5da:	74 27                	je     603 <detect_charset+0x2e3>
+./src/encoding.c:229
+ 5dc:	8d 4a 80             	lea    -0x80(%rdx),%ecx
+ 5df:	80 f9 1f             	cmp    $0x1f,%cl
+ 5e2:	0f 86 48 01 00 00    	jbe    730 <detect_charset+0x410>
+./src/encoding.c:231
+ 5e8:	8d 4a 40             	lea    0x40(%rdx),%ecx
+ 5eb:	80 f9 0f             	cmp    $0xf,%cl
+ 5ee:	0f 87 b7 01 00 00    	ja     7ab <detect_charset+0x48b>
+./src/encoding.c:228
+ 5f4:	48 83 c5 01          	add    $0x1,%rbp
+ 5f8:	0f b6 55 ff          	movzbl -0x1(%rbp),%edx
+./src/encoding.c:232
+ 5fc:	83 c6 01             	add    $0x1,%esi
+./src/encoding.c:228
+ 5ff:	84 d2                	test   %dl,%dl
+ 601:	75 d9                	jne    5dc <detect_charset+0x2bc>
+./src/encoding.c:239
+ 603:	85 ff                	test   %edi,%edi
+ 605:	75 14                	jne    61b <detect_charset+0x2fb>
+ 607:	42 8d 14 06          	lea    (%rsi,%r8,1),%edx
+./src/encoding.c:240
+ 60b:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 612 <detect_charset+0x2f2>
+./src/encoding.c:239
+ 612:	41 39 d1             	cmp    %edx,%r9d
+ 615:	0f 87 8c fd ff ff    	ja     3a7 <detect_charset+0x87>
+./src/encoding.c:241
+ 61b:	44 01 ce             	add    %r9d,%esi
+./src/encoding.c:242
+ 61e:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 625 <detect_charset+0x305>
+./src/encoding.c:241
+ 625:	41 39 f0             	cmp    %esi,%r8d
+ 628:	0f 87 79 fd ff ff    	ja     3a7 <detect_charset+0x87>
+./src/encoding.c:226
+ 62e:	49 8b 42 08          	mov    0x8(%r10),%rax
+ 632:	e9 70 fd ff ff       	jmpq   3a7 <detect_charset+0x87>
+get_default_charset():
+./src/encoding.c:144
+ 637:	48 89 e7             	mov    %rsp,%rdi
+ 63a:	e8 00 00 00 00       	callq  63f <detect_charset+0x31f>
+detect_charset():
+./src/encoding.c:473
+ 63f:	48 8b 34 24          	mov    (%rsp),%rsi
+ 643:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 64a <detect_charset+0x32a>
+ 64a:	b9 06 00 00 00       	mov    $0x6,%ecx
+ 64f:	f3 a6                	repz cmpsb %es:(%rdi),%ds:(%rsi)
+ 651:	74 18                	je     66b <detect_charset+0x34b>
+ 653:	e9 d2 02 00 00       	jmpq   92a <detect_charset+0x60a>
+ 658:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 65f:	00 
+detect_noniso():
+./src/encoding.c:399
+ 660:	83 c0 80             	add    $0xffffff80,%eax
+ 663:	3c 1f                	cmp    $0x1f,%al
+ 665:	0f 86 8d 02 00 00    	jbe    8f8 <detect_charset+0x5d8>
+./src/encoding.c:398
+ 66b:	48 83 c5 01          	add    $0x1,%rbp
+ 66f:	0f b6 45 ff          	movzbl -0x1(%rbp),%eax
+ 673:	84 c0                	test   %al,%al
+ 675:	75 e9                	jne    660 <detect_charset+0x340>
+detect_charset():
+./src/encoding.c:478
+ 677:	e8 00 00 00 00       	callq  67c <detect_charset+0x35c>
+ 67c:	89 c7                	mov    %eax,%edi
+ 67e:	e8 00 00 00 00       	callq  683 <detect_charset+0x363>
+ 683:	48 8b 40 08          	mov    0x8(%rax),%rax
+./src/encoding.c:479
+ 687:	48 85 c0             	test   %rax,%rax
+ 68a:	0f 85 17 fd ff ff    	jne    3a7 <detect_charset+0x87>
+./src/encoding.c:480
+ 690:	e8 00 00 00 00       	callq  695 <detect_charset+0x375>
+ 695:	89 c7                	mov    %eax,%edi
+ 697:	e8 00 00 00 00       	callq  69c <detect_charset+0x37c>
+ 69c:	48 8b 00             	mov    (%rax),%rax
+ 69f:	e9 03 fd ff ff       	jmpq   3a7 <detect_charset+0x87>
+./src/encoding.c:430
+ 6a4:	0f b6 7b 02          	movzbl 0x2(%rbx),%edi
+ 6a8:	8d 57 bd             	lea    -0x43(%rdi),%edx
+ 6ab:	80 fa 01             	cmp    $0x1,%dl
+ 6ae:	77 1e                	ja     6ce <detect_charset+0x3ae>
+./src/encoding.c:433
+ 6b0:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 6b7 <detect_charset+0x397>
+ 6b7:	e9 eb fc ff ff       	jmpq   3a7 <detect_charset+0x87>
+./src/encoding.c:423
+ 6bc:	48 89 f0             	mov    %rsi,%rax
+ 6bf:	e9 ce fc ff ff       	jmpq   392 <detect_charset+0x72>
+./src/encoding.c:438
+ 6c4:	80 7b 02 43          	cmpb   $0x43,0x2(%rbx)
+ 6c8:	0f 84 84 02 00 00    	je     952 <detect_charset+0x632>
+./src/encoding.c:437
+ 6ce:	48 83 c3 03          	add    $0x3,%rbx
+ 6d2:	e9 c7 fc ff ff       	jmpq   39e <detect_charset+0x7e>
+./src/encoding.c:419
+ 6d7:	48 89 eb             	mov    %rbp,%rbx
+ 6da:	e9 bf fc ff ff       	jmpq   39e <detect_charset+0x7e>
+ 6df:	90                   	nop
+detect_charset_chinese():
+./src/encoding.c:265
+ 6e0:	8d 4a 5f             	lea    0x5f(%rdx),%ecx
+ 6e3:	80 f9 25             	cmp    $0x25,%cl
+ 6e6:	76 52                	jbe    73a <detect_charset+0x41a>
+ 6e8:	8d 4a 37             	lea    0x37(%rdx),%ecx
+ 6eb:	80 f9 30             	cmp    $0x30,%cl
+ 6ee:	76 4a                	jbe    73a <detect_charset+0x41a>
+./src/encoding.c:274
+ 6f0:	80 fa c6             	cmp    $0xc6,%dl
+ 6f3:	0f 87 ce 00 00 00    	ja     7c7 <detect_charset+0x4a7>
+./src/encoding.c:253
+ 6f9:	48 83 c5 01          	add    $0x1,%rbp
+ 6fd:	e9 5e fe ff ff       	jmpq   560 <detect_charset+0x240>
+ 702:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+detect_charset_korean():
+./src/encoding.c:341
+ 708:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 70f <detect_charset+0x3ef>
+./src/encoding.c:380
+ 70f:	85 f6                	test   %esi,%esi
+ 711:	74 0f                	je     722 <detect_charset+0x402>
+ 713:	85 d2                	test   %edx,%edx
+./src/encoding.c:381
+ 715:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 71c <detect_charset+0x3fc>
+./src/encoding.c:380
+ 71c:	0f 85 85 fc ff ff    	jne    3a7 <detect_charset+0x87>
+ 722:	48 89 c8             	mov    %rcx,%rax
+ 725:	e9 7d fc ff ff       	jmpq   3a7 <detect_charset+0x87>
+ 72a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+detect_charset_cylillic():
+./src/encoding.c:230
+ 730:	bf 01 00 00 00       	mov    $0x1,%edi
+ 735:	e9 96 fe ff ff       	jmpq   5d0 <detect_charset+0x2b0>
+detect_charset_chinese():
+./src/encoding.c:266
+ 73a:	0f b6 55 01          	movzbl 0x1(%rbp),%edx
+ 73e:	48 8d 75 02          	lea    0x2(%rbp),%rsi
+./src/encoding.c:267
+ 742:	8d 4a c0             	lea    -0x40(%rdx),%ecx
+ 745:	80 f9 3e             	cmp    $0x3e,%cl
+ 748:	76 72                	jbe    7bc <detect_charset+0x49c>
+./src/encoding.c:269
+ 74a:	8d 4a d0             	lea    -0x30(%rdx),%ecx
+ 74d:	80 f9 09             	cmp    $0x9,%cl
+ 750:	0f 87 42 fe ff ff    	ja     598 <detect_charset+0x278>
+./src/encoding.c:255
+ 756:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 75d <detect_charset+0x43d>
+ 75d:	e9 45 fc ff ff       	jmpq   3a7 <detect_charset+0x87>
+detect_charset_japanese():
+./src/encoding.c:294
+ 762:	0f b6 45 01          	movzbl 0x1(%rbp),%eax
+./src/encoding.c:295
+ 766:	8d 50 c0             	lea    -0x40(%rax),%edx
+ 769:	80 fa 60             	cmp    $0x60,%dl
+ 76c:	0f 86 ca fc ff ff    	jbe    43c <detect_charset+0x11c>
+ 772:	83 c0 20             	add    $0x20,%eax
+ 775:	3c 1c                	cmp    $0x1c,%al
+ 777:	0f 87 eb fc ff ff    	ja     468 <detect_charset+0x148>
+ 77d:	e9 ba fc ff ff       	jmpq   43c <detect_charset+0x11c>
+detect_charset_korean():
+./src/encoding.c:353
+ 782:	8d 48 5f             	lea    0x5f(%rax),%ecx
+ 785:	80 f9 25             	cmp    $0x25,%cl
+ 788:	0f 87 ae 00 00 00    	ja     83c <detect_charset+0x51c>
+./src/encoding.c:354
+ 78e:	0f b6 45 01          	movzbl 0x1(%rbp),%eax
+ 792:	48 8d 4d 02          	lea    0x2(%rbp),%rcx
+./src/encoding.c:355
+ 796:	3c a0                	cmp    $0xa0,%al
+ 798:	0f 86 ca 00 00 00    	jbe    868 <detect_charset+0x548>
+ 79e:	89 d0                	mov    %edx,%eax
+./src/encoding.c:354
+ 7a0:	48 89 cd             	mov    %rcx,%rbp
+ 7a3:	83 e0 01             	and    $0x1,%eax
+ 7a6:	e9 80 fd ff ff       	jmpq   52b <detect_charset+0x20b>
+detect_charset_cylillic():
+./src/encoding.c:233
+ 7ab:	8d 4a 30             	lea    0x30(%rdx),%ecx
+ 7ae:	80 f9 0f             	cmp    $0xf,%cl
+ 7b1:	77 7d                	ja     830 <detect_charset+0x510>
+./src/encoding.c:234
+ 7b3:	41 83 c1 01          	add    $0x1,%r9d
+ 7b7:	e9 14 fe ff ff       	jmpq   5d0 <detect_charset+0x2b0>
+detect_charset_chinese():
+./src/encoding.c:266
+ 7bc:	48 89 f5             	mov    %rsi,%rbp
+./src/encoding.c:268
+ 7bf:	48 89 f8             	mov    %rdi,%rax
+ 7c2:	e9 99 fd ff ff       	jmpq   560 <detect_charset+0x240>
+./src/encoding.c:275
+ 7c7:	0f b6 55 01          	movzbl 0x1(%rbp),%edx
+ 7cb:	48 8d 4d 02          	lea    0x2(%rbp),%rcx
+./src/encoding.c:276
+ 7cf:	8d 72 d0             	lea    -0x30(%rdx),%esi
+ 7d2:	40 80 fe 09          	cmp    $0x9,%sil
+ 7d6:	0f 86 7a ff ff ff    	jbe    756 <detect_charset+0x436>
+ 7dc:	83 c2 80             	add    $0xffffff80,%edx
+ 7df:	80 fa 20             	cmp    $0x20,%dl
+ 7e2:	0f 86 6e ff ff ff    	jbe    756 <detect_charset+0x436>
+./src/encoding.c:275
+ 7e8:	48 89 cd             	mov    %rcx,%rbp
+ 7eb:	e9 70 fd ff ff       	jmpq   560 <detect_charset+0x240>
+get_default_charset():
+./src/encoding.c:144
+ 7f0:	48 89 e7             	mov    %rsp,%rdi
+ 7f3:	e8 00 00 00 00       	callq  7f8 <detect_charset+0x4d8>
+./src/encoding.c:146
+ 7f8:	48 8b 04 24          	mov    (%rsp),%rax
+detect_charset():
+./src/encoding.c:449
+ 7fc:	48 85 c0             	test   %rax,%rax
+ 7ff:	0f 85 a2 fb ff ff    	jne    3a7 <detect_charset+0x87>
+ 805:	48 89 dd             	mov    %rbx,%rbp
+ 808:	e9 3e fb ff ff       	jmpq   34b <detect_charset+0x2b>
+ 80d:	0f 1f 00             	nopl   (%rax)
+detect_charset_korean():
+./src/encoding.c:358
+ 810:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 817 <detect_charset+0x4f7>
+./src/encoding.c:380
+ 817:	85 f6                	test   %esi,%esi
+ 819:	0f 84 88 fb ff ff    	je     3a7 <detect_charset+0x87>
+ 81f:	84 d2                	test   %dl,%dl
+ 821:	0f 85 14 fd ff ff    	jne    53b <detect_charset+0x21b>
+ 827:	e9 7b fb ff ff       	jmpq   3a7 <detect_charset+0x87>
+ 82c:	0f 1f 40 00          	nopl   0x0(%rax)
+detect_charset_cylillic():
+./src/encoding.c:236
+ 830:	80 fa e0             	cmp    $0xe0,%dl
+ 833:	41 83 d8 ff          	sbb    $0xffffffff,%r8d
+ 837:	e9 94 fd ff ff       	jmpq   5d0 <detect_charset+0x2b0>
+detect_charset_korean():
+./src/encoding.c:366
+ 83c:	8d 48 39             	lea    0x39(%rax),%ecx
+ 83f:	80 f9 0c             	cmp    $0xc,%cl
+ 842:	77 6c                	ja     8b0 <detect_charset+0x590>
+./src/encoding.c:368
+ 844:	80 7d 01 a0          	cmpb   $0xa0,0x1(%rbp)
+ 848:	0f 87 d4 00 00 00    	ja     922 <detect_charset+0x602>
+./src/encoding.c:369
+ 84e:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 855 <detect_charset+0x535>
+ 855:	e9 b5 fe ff ff       	jmpq   70f <detect_charset+0x3ef>
+./src/encoding.c:359
+ 85a:	ba 01 00 00 00       	mov    $0x1,%edx
+./src/encoding.c:360
+ 85f:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 866 <detect_charset+0x546>
+ 866:	eb af                	jmp    817 <detect_charset+0x4f7>
+./src/encoding.c:357
+ 868:	8d 50 a5             	lea    -0x5b(%rax),%edx
+ 86b:	8d 78 85             	lea    -0x7b(%rax),%edi
+ 86e:	80 fa 05             	cmp    $0x5,%dl
+ 871:	0f 96 c2             	setbe  %dl
+ 874:	40 80 ff 05          	cmp    $0x5,%dil
+ 878:	40 0f 96 c7          	setbe  %dil
+ 87c:	40 08 fa             	or     %dil,%dl
+ 87f:	75 8f                	jne    810 <detect_charset+0x4f0>
+./src/encoding.c:359
+ 881:	89 c2                	mov    %eax,%edx
+ 883:	83 e2 df             	and    $0xffffffdf,%edx
+ 886:	80 fa 52             	cmp    $0x52,%dl
+ 889:	0f 94 c2             	sete   %dl
+ 88c:	3c 92                	cmp    $0x92,%al
+ 88e:	40 0f 94 c7          	sete   %dil
+ 892:	40 08 fa             	or     %dil,%dl
+ 895:	75 c8                	jne    85f <detect_charset+0x53f>
+ 897:	83 c0 62             	add    $0x62,%eax
+ 89a:	3c 02                	cmp    $0x2,%al
+ 89c:	76 bc                	jbe    85a <detect_charset+0x53a>
+./src/encoding.c:354
+ 89e:	48 89 cd             	mov    %rcx,%rbp
+./src/encoding.c:359
+ 8a1:	b8 01 00 00 00       	mov    $0x1,%eax
+./src/encoding.c:356
+ 8a6:	ba 01 00 00 00       	mov    $0x1,%edx
+ 8ab:	e9 7b fc ff ff       	jmpq   52b <detect_charset+0x20b>
+./src/encoding.c:371
+ 8b0:	8d 48 2c             	lea    0x2c(%rax),%ecx
+ 8b3:	80 f9 03             	cmp    $0x3,%cl
+ 8b6:	77 55                	ja     90d <detect_charset+0x5ed>
+./src/encoding.c:373
+ 8b8:	48 83 c5 02          	add    $0x2,%rbp
+ 8bc:	b8 01 00 00 00       	mov    $0x1,%eax
+./src/encoding.c:372
+ 8c1:	be 01 00 00 00       	mov    $0x1,%esi
+./src/encoding.c:380
+ 8c6:	85 d2                	test   %edx,%edx
+ 8c8:	0f 84 c7 fb ff ff    	je     495 <detect_charset+0x175>
+ 8ce:	e9 60 fc ff ff       	jmpq   533 <detect_charset+0x213>
+detect_charset_japanese():
+./src/encoding.c:327
+ 8d3:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 8da <detect_charset+0x5ba>
+ 8da:	e9 c8 fa ff ff       	jmpq   3a7 <detect_charset+0x87>
+detect_charset_korean():
+./src/encoding.c:386
+ 8df:	85 d2                	test   %edx,%edx
+ 8e1:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 8e8 <detect_charset+0x5c8>
+ 8e8:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 8ef <detect_charset+0x5cf>
+ 8ef:	48 0f 44 c2          	cmove  %rdx,%rax
+ 8f3:	e9 af fa ff ff       	jmpq   3a7 <detect_charset+0x87>
+detect_charset():
+./src/encoding.c:476
+ 8f8:	e8 00 00 00 00       	callq  8fd <detect_charset+0x5dd>
+ 8fd:	89 c7                	mov    %eax,%edi
+ 8ff:	e8 00 00 00 00       	callq  904 <detect_charset+0x5e4>
+ 904:	48 8b 40 10          	mov    0x10(%rax),%rax
+ 908:	e9 7a fd ff ff       	jmpq   687 <detect_charset+0x367>
+detect_charset_korean():
+./src/encoding.c:375
+ 90d:	3c d7                	cmp    $0xd7,%al
+ 90f:	76 2a                	jbe    93b <detect_charset+0x61b>
+./src/encoding.c:377
+ 911:	80 7d 01 a0          	cmpb   $0xa0,0x1(%rbp)
+./src/encoding.c:376
+ 915:	48 8d 4d 02          	lea    0x2(%rbp),%rcx
+./src/encoding.c:377
+ 919:	76 28                	jbe    943 <detect_charset+0x623>
+ 91b:	89 f0                	mov    %esi,%eax
+./src/encoding.c:376
+ 91d:	48 89 cd             	mov    %rcx,%rbp
+ 920:	eb a4                	jmp    8c6 <detect_charset+0x5a6>
+./src/encoding.c:367
+ 922:	48 83 c5 02          	add    $0x2,%rbp
+ 926:	89 f0                	mov    %esi,%eax
+ 928:	eb 9c                	jmp    8c6 <detect_charset+0x5a6>
+get_default_charset():
+./src/encoding.c:144
+ 92a:	48 89 e7             	mov    %rsp,%rdi
+ 92d:	e8 00 00 00 00       	callq  932 <detect_charset+0x612>
+./src/encoding.c:146
+ 932:	48 8b 04 24          	mov    (%rsp),%rax
+detect_charset():
+ 936:	e9 4c fd ff ff       	jmpq   687 <detect_charset+0x367>
+detect_charset_korean():
+./src/encoding.c:339
+ 93b:	48 83 c5 01          	add    $0x1,%rbp
+ 93f:	89 f0                	mov    %esi,%eax
+ 941:	eb 83                	jmp    8c6 <detect_charset+0x5a6>
+ 943:	83 e2 01             	and    $0x1,%edx
+./src/encoding.c:378
+ 946:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 94d <detect_charset+0x62d>
+ 94d:	e9 c5 fe ff ff       	jmpq   817 <detect_charset+0x4f7>
+detect_charset():
+./src/encoding.c:439
+ 952:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 959 <detect_charset+0x639>
+ 959:	e9 49 fa ff ff       	jmpq   3a7 <detect_charset+0x87>
+./src/encoding.c:485
+ 95e:	e8 00 00 00 00       	callq  963 <detect_charset+0x643>

@@ -1,0 +1,783 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-indent.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <compute_indentation>:
+compute_indentation():
+./src/indent.c:45
+   0:	41 55                	push   %r13
+   2:	41 54                	push   %r12
+   4:	49 89 f5             	mov    %rsi,%r13
+   7:	55                   	push   %rbp
+   8:	53                   	push   %rbx
+   9:	48 81 ec b8 00 00 00 	sub    $0xb8,%rsp
+./src/indent.c:49
+  10:	48 89 e6             	mov    %rsp,%rsi
+./src/indent.c:51
+  13:	48 8d 6c 24 50       	lea    0x50(%rsp),%rbp
+./src/indent.c:49
+  18:	49 89 e4             	mov    %rsp,%r12
+./src/indent.c:45
+  1b:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  22:	00 00 
+  24:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+  2b:	00 
+  2c:	31 c0                	xor    %eax,%eax
+./src/indent.c:49
+  2e:	e8 00 00 00 00       	callq  33 <compute_indentation+0x33>
+./src/indent.c:50
+  33:	48 8b 04 24          	mov    (%rsp),%rax
+./src/indent.c:51
+  37:	48 89 ef             	mov    %rbp,%rdi
+./src/indent.c:50
+  3a:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+  3f:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+  44:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+  49:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+  4e:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+  53:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+  58:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+  5d:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+  62:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+  67:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+  6c:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+  71:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+  76:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+  7d:	00 
+  7e:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+  83:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+  8a:	00 
+  8b:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+  90:	48 89 84 24 90 00 00 	mov    %rax,0x90(%rsp)
+  97:	00 
+  98:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+  9d:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+  a4:	00 
+./src/indent.c:51
+  a5:	e8 00 00 00 00       	callq  aa <compute_indentation+0xaa>
+  aa:	89 c3                	mov    %eax,%ebx
+./src/indent.c:52
+  ac:	eb 0c                	jmp    ba <compute_indentation+0xba>
+  ae:	66 90                	xchg   %ax,%ax
+./src/indent.c:55
+  b0:	48 89 ef             	mov    %rbp,%rdi
+  b3:	e8 00 00 00 00       	callq  b8 <compute_indentation+0xb8>
+  b8:	89 c3                	mov    %eax,%ebx
+./src/indent.c:52
+  ba:	89 df                	mov    %ebx,%edi
+  bc:	e8 00 00 00 00       	callq  c1 <compute_indentation+0xc1>
+  c1:	83 fb 0a             	cmp    $0xa,%ebx
+  c4:	74 10                	je     d6 <compute_indentation+0xd6>
+  c6:	85 c0                	test   %eax,%eax
+  c8:	74 0c                	je     d6 <compute_indentation+0xd6>
+./src/indent.c:53
+  ca:	48 89 ef             	mov    %rbp,%rdi
+  cd:	e8 00 00 00 00       	callq  d2 <compute_indentation+0xd2>
+  d2:	85 c0                	test   %eax,%eax
+  d4:	75 da                	jne    b0 <compute_indentation+0xb0>
+./src/indent.c:57
+  d6:	48 89 ee             	mov    %rbp,%rsi
+  d9:	4c 89 e7             	mov    %r12,%rdi
+  dc:	e8 00 00 00 00       	callq  e1 <compute_indentation+0xe1>
+  e1:	85 c0                	test   %eax,%eax
+  e3:	75 40                	jne    125 <compute_indentation+0x125>
+./src/indent.c:60
+  e5:	4d 85 ed             	test   %r13,%r13
+  e8:	74 0f                	je     f9 <compute_indentation+0xf9>
+./src/indent.c:60 (discriminator 1)
+  ea:	48 89 ee             	mov    %rbp,%rsi
+  ed:	4c 89 ef             	mov    %r13,%rdi
+  f0:	e8 00 00 00 00       	callq  f5 <compute_indentation+0xf5>
+  f5:	85 c0                	test   %eax,%eax
+  f7:	78 30                	js     129 <compute_indentation+0x129>
+./src/indent.c:62
+  f9:	48 89 ee             	mov    %rbp,%rsi
+  fc:	4c 89 e7             	mov    %r12,%rdi
+  ff:	e8 00 00 00 00       	callq  104 <compute_indentation+0x104>
+./src/indent.c:63
+ 104:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+ 10b:	00 
+ 10c:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+ 113:	00 00 
+ 115:	75 1f                	jne    136 <compute_indentation+0x136>
+ 117:	48 81 c4 b8 00 00 00 	add    $0xb8,%rsp
+ 11e:	5b                   	pop    %rbx
+ 11f:	5d                   	pop    %rbp
+ 120:	41 5c                	pop    %r12
+ 122:	41 5d                	pop    %r13
+ 124:	c3                   	retq   
+./src/indent.c:58
+ 125:	31 c0                	xor    %eax,%eax
+ 127:	eb db                	jmp    104 <compute_indentation+0x104>
+./src/indent.c:61
+ 129:	4c 89 ee             	mov    %r13,%rsi
+ 12c:	4c 89 e7             	mov    %r12,%rdi
+ 12f:	e8 00 00 00 00       	callq  134 <compute_indentation+0x134>
+ 134:	eb ce                	jmp    104 <compute_indentation+0x104>
+./src/indent.c:63
+ 136:	e8 00 00 00 00       	callq  13b <compute_indentation+0x13b>
+ 13b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000000140 <get_current_tab_width>:
+get_current_tab_width():
+./src/indent.c:32
+ 140:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 146 <get_current_tab_width+0x6>
+ 146:	c3                   	retq   
+ 147:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 14e:	00 00 
+
+0000000000000150 <indent_set_state>:
+indent_set_state():
+./src/indent.c:36
+ 150:	89 3d 00 00 00 00    	mov    %edi,0x0(%rip)        # 156 <indent_set_state+0x6>
+ 156:	c3                   	retq   
+ 157:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 15e:	00 00 
+
+0000000000000160 <indent_get_state>:
+indent_get_state():
+./src/indent.c:42
+ 160:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 166 <indent_get_state+0x6>
+ 166:	c3                   	retq   
+ 167:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 16e:	00 00 
+
+0000000000000170 <indent_real>:
+indent_real():
+./src/indent.c:66
+ 170:	41 57                	push   %r15
+ 172:	41 56                	push   %r14
+ 174:	41 55                	push   %r13
+ 176:	41 54                	push   %r12
+ 178:	49 89 fc             	mov    %rdi,%r12
+ 17b:	55                   	push   %rbp
+ 17c:	53                   	push   %rbx
+ 17d:	48 83 ec 68          	sub    $0x68,%rsp
+ 181:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 188:	00 00 
+ 18a:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 18f:	31 c0                	xor    %eax,%eax
+./src/indent.c:70
+ 191:	e8 00 00 00 00       	callq  196 <indent_real+0x26>
+ 196:	4c 89 e7             	mov    %r12,%rdi
+ 199:	48 89 c6             	mov    %rax,%rsi
+ 19c:	49 89 c5             	mov    %rax,%r13
+ 19f:	e8 00 00 00 00       	callq  1a4 <indent_real+0x34>
+ 1a4:	48 89 c7             	mov    %rax,%rdi
+ 1a7:	e8 00 00 00 00       	callq  1ac <indent_real+0x3c>
+./src/indent.c:72
+ 1ac:	be 50 00 00 00       	mov    $0x50,%esi
+ 1b1:	48 89 c7             	mov    %rax,%rdi
+./src/indent.c:70
+ 1b4:	48 89 c3             	mov    %rax,%rbx
+./src/indent.c:72
+ 1b7:	e8 00 00 00 00       	callq  1bc <indent_real+0x4c>
+ 1bc:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1c3 <indent_real+0x53>
+ 1c3:	48 89 c7             	mov    %rax,%rdi
+ 1c6:	31 c0                	xor    %eax,%eax
+ 1c8:	e8 00 00 00 00       	callq  1cd <indent_real+0x5d>
+./src/indent.c:73
+ 1cd:	ba 01 00 00 00       	mov    $0x1,%edx
+ 1d2:	be 01 00 00 00       	mov    $0x1,%esi
+ 1d7:	48 89 df             	mov    %rbx,%rdi
+ 1da:	e8 00 00 00 00       	callq  1df <indent_real+0x6f>
+./src/indent.c:74
+ 1df:	48 89 df             	mov    %rbx,%rdi
+ 1e2:	e8 00 00 00 00       	callq  1e7 <indent_real+0x77>
+ 1e7:	48 89 e6             	mov    %rsp,%rsi
+ 1ea:	48 89 c2             	mov    %rax,%rdx
+ 1ed:	48 89 df             	mov    %rbx,%rdi
+ 1f0:	e8 00 00 00 00       	callq  1f5 <indent_real+0x85>
+./src/indent.c:75
+ 1f5:	48 89 e7             	mov    %rsp,%rdi
+ 1f8:	e8 00 00 00 00       	callq  1fd <indent_real+0x8d>
+ 1fd:	48 89 df             	mov    %rbx,%rdi
+ 200:	89 c2                	mov    %eax,%edx
+ 202:	48 89 e6             	mov    %rsp,%rsi
+ 205:	e8 f6 fd ff ff       	callq  0 <compute_indentation>
+./src/indent.c:76
+ 20a:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 211 <indent_real+0xa1>
+ 211:	31 d2                	xor    %edx,%edx
+ 213:	48 89 c6             	mov    %rax,%rsi
+./src/indent.c:75
+ 216:	49 89 c6             	mov    %rax,%r14
+./src/indent.c:76
+ 219:	31 c0                	xor    %eax,%eax
+ 21b:	e8 00 00 00 00       	callq  220 <indent_real+0xb0>
+./src/indent.c:77
+ 220:	b9 ff ff ff ff       	mov    $0xffffffff,%ecx
+ 225:	48 89 c2             	mov    %rax,%rdx
+ 228:	48 89 df             	mov    %rbx,%rdi
+ 22b:	48 89 e6             	mov    %rsp,%rsi
+./src/indent.c:76
+ 22e:	49 89 c7             	mov    %rax,%r15
+./src/indent.c:77
+ 231:	e8 00 00 00 00       	callq  236 <indent_real+0xc6>
+./src/indent.c:78
+ 236:	48 89 df             	mov    %rbx,%rdi
+ 239:	be 50 00 00 00       	mov    $0x50,%esi
+ 23e:	e8 00 00 00 00       	callq  243 <indent_real+0xd3>
+ 243:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 24a <indent_real+0xda>
+ 24a:	48 89 c7             	mov    %rax,%rdi
+ 24d:	31 c0                	xor    %eax,%eax
+ 24f:	e8 00 00 00 00       	callq  254 <indent_real+0xe4>
+./src/indent.c:79
+ 254:	4c 89 ff             	mov    %r15,%rdi
+ 257:	e8 00 00 00 00       	callq  25c <indent_real+0xec>
+./src/indent.c:80
+ 25c:	4c 89 f7             	mov    %r14,%rdi
+ 25f:	e8 00 00 00 00       	callq  264 <indent_real+0xf4>
+./src/indent.c:82
+ 264:	48 89 df             	mov    %rbx,%rdi
+ 267:	e8 00 00 00 00       	callq  26c <indent_real+0xfc>
+./src/indent.c:83
+ 26c:	4c 89 ee             	mov    %r13,%rsi
+./src/indent.c:82
+ 26f:	48 89 c3             	mov    %rax,%rbx
+./src/indent.c:83
+ 272:	4c 89 e7             	mov    %r12,%rdi
+ 275:	e8 00 00 00 00       	callq  27a <indent_real+0x10a>
+./src/indent.c:82
+ 27a:	48 89 de             	mov    %rbx,%rsi
+ 27d:	48 89 c7             	mov    %rax,%rdi
+ 280:	e8 00 00 00 00       	callq  285 <indent_real+0x115>
+./src/indent.c:85
+ 285:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 28a:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+ 291:	00 00 
+ 293:	75 0f                	jne    2a4 <indent_real+0x134>
+ 295:	48 83 c4 68          	add    $0x68,%rsp
+ 299:	5b                   	pop    %rbx
+ 29a:	5d                   	pop    %rbp
+ 29b:	41 5c                	pop    %r12
+ 29d:	41 5d                	pop    %r13
+ 29f:	41 5e                	pop    %r14
+ 2a1:	41 5f                	pop    %r15
+ 2a3:	c3                   	retq   
+ 2a4:	e8 00 00 00 00       	callq  2a9 <indent_real+0x139>
+ 2a9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000002b0 <indent_refresh_tab_width>:
+indent_refresh_tab_width():
+./src/indent.c:110
+ 2b0:	41 56                	push   %r14
+ 2b2:	41 55                	push   %r13
+./src/indent.c:113
+ 2b4:	be 01 00 00 00       	mov    $0x1,%esi
+./src/indent.c:110
+ 2b9:	41 54                	push   %r12
+ 2bb:	55                   	push   %rbp
+ 2bc:	49 89 fc             	mov    %rdi,%r12
+ 2bf:	53                   	push   %rbx
+./src/indent.c:113
+ 2c0:	bf 01 00 00 00       	mov    $0x1,%edi
+calculate_real_tab_width():
+./src/indent.c:94
+ 2c5:	41 be ff ff ff ff    	mov    $0xffffffff,%r14d
+indent_refresh_tab_width():
+./src/indent.c:110
+ 2cb:	48 83 ec 10          	sub    $0x10,%rsp
+ 2cf:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 2d6:	00 00 
+ 2d8:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 2dd:	31 c0                	xor    %eax,%eax
+./src/indent.c:113
+ 2df:	e8 00 00 00 00       	callq  2e4 <indent_refresh_tab_width+0x34>
+./src/indent.c:114
+ 2e4:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # 2ea <indent_refresh_tab_width+0x3a>
+./src/indent.c:113
+ 2ea:	48 89 c3             	mov    %rax,%rbx
+calculate_real_tab_width():
+./src/indent.c:91
+ 2ed:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%rsp)
+ 2f4:	00 
+./src/indent.c:93
+ 2f5:	85 ff                	test   %edi,%edi
+ 2f7:	74 51                	je     34a <indent_refresh_tab_width+0x9a>
+./src/indent.c:96
+ 2f9:	be 20 00 00 00       	mov    $0x20,%esi
+ 2fe:	e8 00 00 00 00       	callq  303 <indent_refresh_tab_width+0x53>
+./src/indent.c:97
+ 303:	4c 89 e7             	mov    %r12,%rdi
+./src/indent.c:96
+ 306:	49 89 c5             	mov    %rax,%r13
+./src/indent.c:97
+ 309:	48 89 c6             	mov    %rax,%rsi
+ 30c:	e8 00 00 00 00       	callq  311 <indent_refresh_tab_width+0x61>
+./src/indent.c:98
+ 311:	4c 89 ef             	mov    %r13,%rdi
+./src/indent.c:97
+ 314:	48 89 c5             	mov    %rax,%rbp
+./src/indent.c:98
+ 317:	e8 00 00 00 00       	callq  31c <indent_refresh_tab_width+0x6c>
+./src/indent.c:100
+ 31c:	48 85 ed             	test   %rbp,%rbp
+ 31f:	74 29                	je     34a <indent_refresh_tab_width+0x9a>
+./src/indent.c:101
+ 321:	48 8d 74 24 04       	lea    0x4(%rsp),%rsi
+ 326:	31 d2                	xor    %edx,%edx
+ 328:	48 89 ef             	mov    %rbp,%rdi
+ 32b:	e8 00 00 00 00       	callq  330 <indent_refresh_tab_width+0x80>
+./src/indent.c:102
+ 330:	be 50 00 00 00       	mov    $0x50,%esi
+ 335:	48 89 ef             	mov    %rbp,%rdi
+ 338:	e8 00 00 00 00       	callq  33d <indent_refresh_tab_width+0x8d>
+ 33d:	48 89 c7             	mov    %rax,%rdi
+ 340:	e8 00 00 00 00       	callq  345 <indent_refresh_tab_width+0x95>
+ 345:	44 8b 74 24 04       	mov    0x4(%rsp),%r14d
+indent_refresh_tab_width():
+./src/indent.c:114
+ 34a:	31 d2                	xor    %edx,%edx
+ 34c:	44 89 f1             	mov    %r14d,%ecx
+ 34f:	31 f6                	xor    %esi,%esi
+ 351:	48 89 df             	mov    %rbx,%rdi
+ 354:	e8 00 00 00 00       	callq  359 <indent_refresh_tab_width+0xa9>
+./src/indent.c:116
+ 359:	e8 00 00 00 00       	callq  35e <indent_refresh_tab_width+0xae>
+ 35e:	4c 89 e7             	mov    %r12,%rdi
+ 361:	48 89 c6             	mov    %rax,%rsi
+ 364:	e8 00 00 00 00       	callq  369 <indent_refresh_tab_width+0xb9>
+ 369:	48 89 de             	mov    %rbx,%rsi
+ 36c:	48 89 c7             	mov    %rax,%rdi
+ 36f:	e8 00 00 00 00       	callq  374 <indent_refresh_tab_width+0xc4>
+./src/indent.c:117
+ 374:	48 89 df             	mov    %rbx,%rdi
+ 377:	e8 00 00 00 00       	callq  37c <indent_refresh_tab_width+0xcc>
+./src/indent.c:118
+ 37c:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 381:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+ 388:	00 00 
+ 38a:	75 0d                	jne    399 <indent_refresh_tab_width+0xe9>
+ 38c:	48 83 c4 10          	add    $0x10,%rsp
+ 390:	5b                   	pop    %rbx
+ 391:	5d                   	pop    %rbp
+ 392:	41 5c                	pop    %r12
+ 394:	41 5d                	pop    %r13
+ 396:	41 5e                	pop    %r14
+ 398:	c3                   	retq   
+ 399:	e8 00 00 00 00       	callq  39e <indent_refresh_tab_width+0xee>
+ 39e:	66 90                	xchg   %ax,%ax
+
+00000000000003a0 <indent_toggle_tab_width>:
+indent_toggle_tab_width():
+./src/indent.c:122
+ 3a0:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 3a6 <indent_toggle_tab_width+0x6>
+ 3a6:	39 05 00 00 00 00    	cmp    %eax,0x0(%rip)        # 3ac <indent_toggle_tab_width+0xc>
+ 3ac:	74 12                	je     3c0 <indent_toggle_tab_width+0x20>
+./src/indent.c:128
+ 3ae:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 3b4 <indent_toggle_tab_width+0x14>
+./src/indent.c:129
+ 3b4:	e9 f7 fe ff ff       	jmpq   2b0 <indent_refresh_tab_width>
+ 3b9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/indent.c:124
+ 3c0:	83 f8 08             	cmp    $0x8,%eax
+ 3c3:	0f 95 c0             	setne  %al
+ 3c6:	0f b6 c0             	movzbl %al,%eax
+ 3c9:	8d 04 85 04 00 00 00 	lea    0x4(,%rax,4),%eax
+ 3d0:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 3d6 <indent_toggle_tab_width+0x36>
+./src/indent.c:129
+ 3d6:	e9 d5 fe ff ff       	jmpq   2b0 <indent_refresh_tab_width>
+ 3db:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+00000000000003e0 <indent_set_default_tab_width>:
+indent_set_default_tab_width():
+./src/indent.c:134
+ 3e0:	89 3d 00 00 00 00    	mov    %edi,0x0(%rip)        # 3e6 <indent_set_default_tab_width+0x6>
+./src/indent.c:135
+ 3e6:	89 3d 00 00 00 00    	mov    %edi,0x0(%rip)        # 3ec <indent_set_default_tab_width+0xc>
+ 3ec:	c3                   	retq   
+ 3ed:	0f 1f 00             	nopl   (%rax)
+
+00000000000003f0 <indent_multi_line_indent>:
+indent_multi_line_indent():
+./src/indent.c:139
+ 3f0:	41 57                	push   %r15
+ 3f2:	41 56                	push   %r14
+ 3f4:	41 55                	push   %r13
+ 3f6:	41 54                	push   %r12
+ 3f8:	55                   	push   %rbp
+ 3f9:	53                   	push   %rbx
+ 3fa:	48 89 fb             	mov    %rdi,%rbx
+ 3fd:	48 81 ec 18 01 00 00 	sub    $0x118,%rsp
+ 404:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 40b:	00 00 
+ 40d:	48 89 84 24 08 01 00 	mov    %rax,0x108(%rsp)
+ 414:	00 
+ 415:	31 c0                	xor    %eax,%eax
+./src/indent.c:144
+ 417:	4c 8d 74 24 10       	lea    0x10(%rsp),%r14
+ 41c:	48 8d 44 24 60       	lea    0x60(%rsp),%rax
+./src/indent.c:147
+ 421:	48 8d ac 24 b0 00 00 	lea    0xb0(%rsp),%rbp
+ 428:	00 
+./src/indent.c:144
+ 429:	48 89 c2             	mov    %rax,%rdx
+ 42c:	4c 89 f6             	mov    %r14,%rsi
+ 42f:	49 89 c7             	mov    %rax,%r15
+ 432:	48 89 04 24          	mov    %rax,(%rsp)
+ 436:	e8 00 00 00 00       	callq  43b <indent_multi_line_indent+0x4b>
+./src/indent.c:145
+ 43b:	4c 89 f7             	mov    %r14,%rdi
+ 43e:	e8 00 00 00 00       	callq  443 <indent_multi_line_indent+0x53>
+./src/indent.c:146
+ 443:	4c 89 ff             	mov    %r15,%rdi
+./src/indent.c:145
+ 446:	41 89 c5             	mov    %eax,%r13d
+ 449:	89 44 24 08          	mov    %eax,0x8(%rsp)
+./src/indent.c:146
+ 44d:	e8 00 00 00 00       	callq  452 <indent_multi_line_indent+0x62>
+./src/indent.c:147
+ 452:	48 89 df             	mov    %rbx,%rdi
+./src/indent.c:146
+ 455:	41 89 c4             	mov    %eax,%r12d
+ 458:	45 89 ef             	mov    %r13d,%r15d
+./src/indent.c:147
+ 45b:	e8 00 00 00 00       	callq  460 <indent_multi_line_indent+0x70>
+ 460:	48 89 ee             	mov    %rbp,%rsi
+ 463:	48 89 c2             	mov    %rax,%rdx
+ 466:	48 89 df             	mov    %rbx,%rdi
+ 469:	e8 00 00 00 00       	callq  46e <indent_multi_line_indent+0x7e>
+./src/indent.c:148
+ 46e:	4c 89 f6             	mov    %r14,%rsi
+ 471:	48 89 ef             	mov    %rbp,%rdi
+ 474:	e8 00 00 00 00       	callq  479 <indent_multi_line_indent+0x89>
+ 479:	89 44 24 0c          	mov    %eax,0xc(%rsp)
+./src/indent.c:149
+ 47d:	44 89 e8             	mov    %r13d,%eax
+ 480:	4c 8d 2d 00 00 00 00 	lea    0x0(%rip),%r13        # 487 <indent_multi_line_indent+0x97>
+ 487:	44 39 e0             	cmp    %r12d,%eax
+ 48a:	7d 7f                	jge    50b <indent_multi_line_indent+0x11b>
+ 48c:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/indent.c:150 (discriminator 3)
+ 490:	44 89 fa             	mov    %r15d,%edx
+ 493:	48 89 ee             	mov    %rbp,%rsi
+ 496:	48 89 df             	mov    %rbx,%rdi
+ 499:	e8 00 00 00 00       	callq  49e <indent_multi_line_indent+0xae>
+./src/indent.c:151 (discriminator 3)
+ 49e:	48 89 ee             	mov    %rbp,%rsi
+ 4a1:	48 89 df             	mov    %rbx,%rdi
+./src/indent.c:149 (discriminator 3)
+ 4a4:	41 83 c7 01          	add    $0x1,%r15d
+./src/indent.c:151 (discriminator 3)
+ 4a8:	e8 00 00 00 00       	callq  4ad <indent_multi_line_indent+0xbd>
+./src/indent.c:152 (discriminator 3)
+ 4ad:	be 50 00 00 00       	mov    $0x50,%esi
+ 4b2:	48 89 df             	mov    %rbx,%rdi
+ 4b5:	e8 00 00 00 00       	callq  4ba <indent_multi_line_indent+0xca>
+ 4ba:	4c 89 ee             	mov    %r13,%rsi
+ 4bd:	48 89 c7             	mov    %rax,%rdi
+ 4c0:	31 c0                	xor    %eax,%eax
+ 4c2:	e8 00 00 00 00       	callq  4c7 <indent_multi_line_indent+0xd7>
+./src/indent.c:153 (discriminator 3)
+ 4c7:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 4ce <indent_multi_line_indent+0xde>
+ 4ce:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 4d3:	48 89 ee             	mov    %rbp,%rsi
+ 4d6:	48 89 df             	mov    %rbx,%rdi
+ 4d9:	e8 00 00 00 00       	callq  4de <indent_multi_line_indent+0xee>
+./src/indent.c:154 (discriminator 3)
+ 4de:	be 50 00 00 00       	mov    $0x50,%esi
+ 4e3:	48 89 df             	mov    %rbx,%rdi
+ 4e6:	e8 00 00 00 00       	callq  4eb <indent_multi_line_indent+0xfb>
+ 4eb:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 4f2 <indent_multi_line_indent+0x102>
+ 4f2:	48 89 c7             	mov    %rax,%rdi
+ 4f5:	31 c0                	xor    %eax,%eax
+ 4f7:	e8 00 00 00 00       	callq  4fc <indent_multi_line_indent+0x10c>
+./src/indent.c:155 (discriminator 3)
+ 4fc:	bf 01 00 00 00       	mov    $0x1,%edi
+ 501:	e8 00 00 00 00       	callq  506 <indent_multi_line_indent+0x116>
+./src/indent.c:149 (discriminator 3)
+ 506:	45 39 fc             	cmp    %r15d,%r12d
+ 509:	75 85                	jne    490 <indent_multi_line_indent+0xa0>
+./src/indent.c:157
+ 50b:	31 ff                	xor    %edi,%edi
+ 50d:	e8 00 00 00 00       	callq  512 <indent_multi_line_indent+0x122>
+./src/indent.c:159
+ 512:	8b 54 24 08          	mov    0x8(%rsp),%edx
+ 516:	4c 89 f6             	mov    %r14,%rsi
+ 519:	48 89 df             	mov    %rbx,%rdi
+ 51c:	e8 00 00 00 00       	callq  521 <indent_multi_line_indent+0x131>
+./src/indent.c:160
+ 521:	48 8b 34 24          	mov    (%rsp),%rsi
+ 525:	44 89 e2             	mov    %r12d,%edx
+ 528:	48 89 df             	mov    %rbx,%rdi
+ 52b:	e8 00 00 00 00       	callq  530 <indent_multi_line_indent+0x140>
+./src/indent.c:161
+ 530:	8b 44 24 0c          	mov    0xc(%rsp),%eax
+ 534:	85 c0                	test   %eax,%eax
+ 536:	75 48                	jne    580 <indent_multi_line_indent+0x190>
+./src/indent.c:165
+ 538:	4c 89 f6             	mov    %r14,%rsi
+ 53b:	48 89 df             	mov    %rbx,%rdi
+ 53e:	e8 00 00 00 00       	callq  543 <indent_multi_line_indent+0x153>
+./src/indent.c:166
+ 543:	48 8b 14 24          	mov    (%rsp),%rdx
+ 547:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 54e <indent_multi_line_indent+0x15e>
+ 54e:	48 89 df             	mov    %rbx,%rdi
+ 551:	e8 00 00 00 00       	callq  556 <indent_multi_line_indent+0x166>
+./src/indent.c:168
+ 556:	48 8b 84 24 08 01 00 	mov    0x108(%rsp),%rax
+ 55d:	00 
+ 55e:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+ 565:	00 00 
+ 567:	75 37                	jne    5a0 <indent_multi_line_indent+0x1b0>
+ 569:	48 81 c4 18 01 00 00 	add    $0x118,%rsp
+ 570:	5b                   	pop    %rbx
+ 571:	5d                   	pop    %rbp
+ 572:	41 5c                	pop    %r12
+ 574:	41 5d                	pop    %r13
+ 576:	41 5e                	pop    %r14
+ 578:	41 5f                	pop    %r15
+ 57a:	c3                   	retq   
+ 57b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/indent.c:162
+ 580:	48 8b 34 24          	mov    (%rsp),%rsi
+ 584:	48 89 df             	mov    %rbx,%rdi
+ 587:	e8 00 00 00 00       	callq  58c <indent_multi_line_indent+0x19c>
+./src/indent.c:163
+ 58c:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 593 <indent_multi_line_indent+0x1a3>
+ 593:	4c 89 f2             	mov    %r14,%rdx
+ 596:	48 89 df             	mov    %rbx,%rdi
+ 599:	e8 00 00 00 00       	callq  59e <indent_multi_line_indent+0x1ae>
+ 59e:	eb b6                	jmp    556 <indent_multi_line_indent+0x166>
+./src/indent.c:168
+ 5a0:	e8 00 00 00 00       	callq  5a5 <indent_multi_line_indent+0x1b5>
+ 5a5:	90                   	nop
+ 5a6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 5ad:	00 00 00 
+
+00000000000005b0 <indent_multi_line_unindent>:
+indent_multi_line_unindent():
+./src/indent.c:183
+ 5b0:	41 57                	push   %r15
+ 5b2:	41 56                	push   %r14
+ 5b4:	41 55                	push   %r13
+ 5b6:	41 54                	push   %r12
+ 5b8:	55                   	push   %rbp
+ 5b9:	53                   	push   %rbx
+ 5ba:	48 89 fb             	mov    %rdi,%rbx
+ 5bd:	48 81 ec 18 01 00 00 	sub    $0x118,%rsp
+./src/indent.c:189
+ 5c4:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 5c9:	4c 8d 64 24 60       	lea    0x60(%rsp),%r12
+./src/indent.c:192
+ 5ce:	4c 8d b4 24 b0 00 00 	lea    0xb0(%rsp),%r14
+ 5d5:	00 
+./src/indent.c:183
+ 5d6:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 5dd:	00 00 
+ 5df:	48 89 84 24 08 01 00 	mov    %rax,0x108(%rsp)
+ 5e6:	00 
+ 5e7:	31 c0                	xor    %eax,%eax
+./src/indent.c:189
+ 5e9:	4c 89 e2             	mov    %r12,%rdx
+ 5ec:	48 89 ee             	mov    %rbp,%rsi
+ 5ef:	e8 00 00 00 00       	callq  5f4 <indent_multi_line_unindent+0x44>
+./src/indent.c:190
+ 5f4:	48 89 ef             	mov    %rbp,%rdi
+ 5f7:	e8 00 00 00 00       	callq  5fc <indent_multi_line_unindent+0x4c>
+./src/indent.c:191
+ 5fc:	4c 89 e7             	mov    %r12,%rdi
+./src/indent.c:190
+ 5ff:	41 89 c7             	mov    %eax,%r15d
+ 602:	89 44 24 08          	mov    %eax,0x8(%rsp)
+./src/indent.c:191
+ 606:	e8 00 00 00 00       	callq  60b <indent_multi_line_unindent+0x5b>
+./src/indent.c:192
+ 60b:	48 89 df             	mov    %rbx,%rdi
+./src/indent.c:191
+ 60e:	41 89 c5             	mov    %eax,%r13d
+./src/indent.c:192
+ 611:	e8 00 00 00 00       	callq  616 <indent_multi_line_unindent+0x66>
+ 616:	4c 89 f6             	mov    %r14,%rsi
+ 619:	48 89 c2             	mov    %rax,%rdx
+ 61c:	48 89 df             	mov    %rbx,%rdi
+ 61f:	e8 00 00 00 00       	callq  624 <indent_multi_line_unindent+0x74>
+./src/indent.c:193
+ 624:	48 89 ee             	mov    %rbp,%rsi
+ 627:	4c 89 f7             	mov    %r14,%rdi
+ 62a:	e8 00 00 00 00       	callq  62f <indent_multi_line_unindent+0x7f>
+ 62f:	89 44 24 0c          	mov    %eax,0xc(%rsp)
+ 633:	e9 20 01 00 00       	jmpq   758 <indent_multi_line_unindent+0x1a8>
+ 638:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 63f:	00 
+./src/indent.c:199
+ 640:	44 89 fa             	mov    %r15d,%edx
+ 643:	48 89 ee             	mov    %rbp,%rsi
+ 646:	48 89 df             	mov    %rbx,%rdi
+ 649:	89 44 24 04          	mov    %eax,0x4(%rsp)
+ 64d:	e8 00 00 00 00       	callq  652 <indent_multi_line_unindent+0xa2>
+./src/indent.c:200
+ 652:	48 89 ee             	mov    %rbp,%rsi
+ 655:	48 89 df             	mov    %rbx,%rdi
+ 658:	e8 00 00 00 00       	callq  65d <indent_multi_line_unindent+0xad>
+./src/indent.c:201
+ 65d:	48 8b 54 24 10       	mov    0x10(%rsp),%rdx
+./src/indent.c:202
+ 662:	8b 44 24 04          	mov    0x4(%rsp),%eax
+ 666:	4c 89 e7             	mov    %r12,%rdi
+./src/indent.c:201
+ 669:	48 89 54 24 60       	mov    %rdx,0x60(%rsp)
+ 66e:	48 8b 54 24 18       	mov    0x18(%rsp),%rdx
+./src/indent.c:202
+ 673:	89 c6                	mov    %eax,%esi
+./src/indent.c:201
+ 675:	48 89 54 24 68       	mov    %rdx,0x68(%rsp)
+ 67a:	48 8b 54 24 20       	mov    0x20(%rsp),%rdx
+ 67f:	48 89 54 24 70       	mov    %rdx,0x70(%rsp)
+ 684:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 689:	48 89 54 24 78       	mov    %rdx,0x78(%rsp)
+ 68e:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 693:	48 89 94 24 80 00 00 	mov    %rdx,0x80(%rsp)
+ 69a:	00 
+ 69b:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 6a0:	48 89 94 24 88 00 00 	mov    %rdx,0x88(%rsp)
+ 6a7:	00 
+ 6a8:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 6ad:	48 89 94 24 90 00 00 	mov    %rdx,0x90(%rsp)
+ 6b4:	00 
+ 6b5:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 6ba:	48 89 94 24 98 00 00 	mov    %rdx,0x98(%rsp)
+ 6c1:	00 
+ 6c2:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 6c7:	48 89 94 24 a0 00 00 	mov    %rdx,0xa0(%rsp)
+ 6ce:	00 
+ 6cf:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 6d4:	48 89 94 24 a8 00 00 	mov    %rdx,0xa8(%rsp)
+ 6db:	00 
+./src/indent.c:202
+ 6dc:	e8 00 00 00 00       	callq  6e1 <indent_multi_line_unindent+0x131>
+./src/indent.c:203
+ 6e1:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 6e8 <indent_multi_line_unindent+0x138>
+ 6e8:	4c 89 e2             	mov    %r12,%rdx
+ 6eb:	48 89 df             	mov    %rbx,%rdi
+ 6ee:	e8 00 00 00 00       	callq  6f3 <indent_multi_line_unindent+0x143>
+./src/indent.c:204
+ 6f3:	be 50 00 00 00       	mov    $0x50,%esi
+ 6f8:	48 89 df             	mov    %rbx,%rdi
+ 6fb:	e8 00 00 00 00       	callq  700 <indent_multi_line_unindent+0x150>
+ 700:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 707 <indent_multi_line_unindent+0x157>
+ 707:	48 89 c7             	mov    %rax,%rdi
+ 70a:	31 c0                	xor    %eax,%eax
+ 70c:	e8 00 00 00 00       	callq  711 <indent_multi_line_unindent+0x161>
+./src/indent.c:205
+ 711:	4c 89 e2             	mov    %r12,%rdx
+ 714:	48 89 ee             	mov    %rbp,%rsi
+ 717:	48 89 df             	mov    %rbx,%rdi
+ 71a:	e8 00 00 00 00       	callq  71f <indent_multi_line_unindent+0x16f>
+./src/indent.c:206
+ 71f:	be 50 00 00 00       	mov    $0x50,%esi
+ 724:	48 89 df             	mov    %rbx,%rdi
+ 727:	e8 00 00 00 00       	callq  72c <indent_multi_line_unindent+0x17c>
+ 72c:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 733 <indent_multi_line_unindent+0x183>
+ 733:	48 89 c7             	mov    %rax,%rdi
+ 736:	31 c0                	xor    %eax,%eax
+ 738:	e8 00 00 00 00       	callq  73d <indent_multi_line_unindent+0x18d>
+./src/indent.c:207
+ 73d:	bf 01 00 00 00       	mov    $0x1,%edi
+ 742:	e8 00 00 00 00       	callq  747 <indent_multi_line_unindent+0x197>
+./src/indent.c:208
+ 747:	4c 89 f7             	mov    %r14,%rdi
+ 74a:	e8 00 00 00 00       	callq  74f <indent_multi_line_unindent+0x19f>
+./src/indent.c:210
+ 74f:	41 83 c7 01          	add    $0x1,%r15d
+./src/indent.c:211
+ 753:	45 39 fd             	cmp    %r15d,%r13d
+ 756:	7e 70                	jle    7c8 <indent_multi_line_unindent+0x218>
+./src/indent.c:196
+ 758:	31 f6                	xor    %esi,%esi
+ 75a:	44 89 fa             	mov    %r15d,%edx
+ 75d:	48 89 df             	mov    %rbx,%rdi
+ 760:	e8 9b f8 ff ff       	callq  0 <compute_indentation>
+./src/indent.c:197
+ 765:	48 85 c0             	test   %rax,%rax
+./src/indent.c:196
+ 768:	49 89 c6             	mov    %rax,%r14
+./src/indent.c:197
+ 76b:	74 e2                	je     74f <indent_multi_line_unindent+0x19f>
+./src/indent.c:197 (discriminator 1)
+ 76d:	0f b6 10             	movzbl (%rax),%edx
+ 770:	84 d2                	test   %dl,%dl
+ 772:	74 db                	je     74f <indent_multi_line_unindent+0x19f>
+compute_indent_offset_length():
+./src/indent.c:175
+ 774:	80 fa 20             	cmp    $0x20,%dl
+./src/indent.c:173
+ 777:	b8 01 00 00 00       	mov    $0x1,%eax
+./src/indent.c:175
+ 77c:	0f 85 be fe ff ff    	jne    640 <indent_multi_line_unindent+0x90>
+./src/indent.c:176
+ 782:	8b 35 00 00 00 00    	mov    0x0(%rip),%esi        # 788 <indent_multi_line_unindent+0x1d8>
+ 788:	83 fe 01             	cmp    $0x1,%esi
+ 78b:	0f 8e af fe ff ff    	jle    640 <indent_multi_line_unindent+0x90>
+ 791:	41 80 7e 01 20       	cmpb   $0x20,0x1(%r14)
+ 796:	49 8d 56 01          	lea    0x1(%r14),%rdx
+ 79a:	74 19                	je     7b5 <indent_multi_line_unindent+0x205>
+ 79c:	e9 9f fe ff ff       	jmpq   640 <indent_multi_line_unindent+0x90>
+ 7a1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 7a8:	48 83 c2 01          	add    $0x1,%rdx
+ 7ac:	80 3a 20             	cmpb   $0x20,(%rdx)
+ 7af:	0f 85 8b fe ff ff    	jne    640 <indent_multi_line_unindent+0x90>
+./src/indent.c:177
+ 7b5:	83 c0 01             	add    $0x1,%eax
+./src/indent.c:176
+ 7b8:	39 f0                	cmp    %esi,%eax
+ 7ba:	75 ec                	jne    7a8 <indent_multi_line_unindent+0x1f8>
+ 7bc:	e9 7f fe ff ff       	jmpq   640 <indent_multi_line_unindent+0x90>
+ 7c1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+indent_multi_line_unindent():
+./src/indent.c:212
+ 7c8:	31 ff                	xor    %edi,%edi
+ 7ca:	e8 00 00 00 00       	callq  7cf <indent_multi_line_unindent+0x21f>
+./src/indent.c:214
+ 7cf:	8b 54 24 08          	mov    0x8(%rsp),%edx
+ 7d3:	48 89 ee             	mov    %rbp,%rsi
+ 7d6:	48 89 df             	mov    %rbx,%rdi
+ 7d9:	e8 00 00 00 00       	callq  7de <indent_multi_line_unindent+0x22e>
+./src/indent.c:215
+ 7de:	44 89 ea             	mov    %r13d,%edx
+ 7e1:	4c 89 e6             	mov    %r12,%rsi
+ 7e4:	48 89 df             	mov    %rbx,%rdi
+ 7e7:	e8 00 00 00 00       	callq  7ec <indent_multi_line_unindent+0x23c>
+./src/indent.c:216
+ 7ec:	8b 44 24 0c          	mov    0xc(%rsp),%eax
+ 7f0:	85 c0                	test   %eax,%eax
+ 7f2:	75 4c                	jne    840 <indent_multi_line_unindent+0x290>
+./src/indent.c:220
+ 7f4:	48 89 ee             	mov    %rbp,%rsi
+ 7f7:	48 89 df             	mov    %rbx,%rdi
+ 7fa:	e8 00 00 00 00       	callq  7ff <indent_multi_line_unindent+0x24f>
+./src/indent.c:221
+ 7ff:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 806 <indent_multi_line_unindent+0x256>
+ 806:	4c 89 e2             	mov    %r12,%rdx
+ 809:	48 89 df             	mov    %rbx,%rdi
+ 80c:	e8 00 00 00 00       	callq  811 <indent_multi_line_unindent+0x261>
+./src/indent.c:223
+ 811:	48 8b 84 24 08 01 00 	mov    0x108(%rsp),%rax
+ 818:	00 
+ 819:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+ 820:	00 00 
+ 822:	75 3b                	jne    85f <indent_multi_line_unindent+0x2af>
+ 824:	48 81 c4 18 01 00 00 	add    $0x118,%rsp
+ 82b:	5b                   	pop    %rbx
+ 82c:	5d                   	pop    %rbp
+ 82d:	41 5c                	pop    %r12
+ 82f:	41 5d                	pop    %r13
+ 831:	41 5e                	pop    %r14
+ 833:	41 5f                	pop    %r15
+ 835:	c3                   	retq   
+ 836:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 83d:	00 00 00 
+./src/indent.c:217
+ 840:	4c 89 e6             	mov    %r12,%rsi
+ 843:	48 89 df             	mov    %rbx,%rdi
+ 846:	e8 00 00 00 00       	callq  84b <indent_multi_line_unindent+0x29b>
+./src/indent.c:218
+ 84b:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 852 <indent_multi_line_unindent+0x2a2>
+ 852:	48 89 ea             	mov    %rbp,%rdx
+ 855:	48 89 df             	mov    %rbx,%rdi
+ 858:	e8 00 00 00 00       	callq  85d <indent_multi_line_unindent+0x2ad>
+ 85d:	eb b2                	jmp    811 <indent_multi_line_unindent+0x261>
+./src/indent.c:223
+ 85f:	e8 00 00 00 00       	callq  864 <indent_multi_line_unindent+0x2b4>

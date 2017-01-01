@@ -1,0 +1,1288 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-selector.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <cb_select_lineend>:
+cb_select_lineend():
+./src/selector.c:38
+   0:	53                   	push   %rbx
+   1:	48 89 f3             	mov    %rsi,%rbx
+./src/selector.c:39
+   4:	e8 00 00 00 00       	callq  9 <cb_select_lineend+0x9>
+   9:	83 f8 01             	cmp    $0x1,%eax
+   c:	74 12                	je     20 <cb_select_lineend+0x20>
+./src/selector.c:47
+   e:	83 f8 02             	cmp    $0x2,%eax
+  11:	0f 94 c0             	sete   %al
+  14:	8d 44 40 0a          	lea    0xa(%rax,%rax,2),%eax
+  18:	88 43 14             	mov    %al,0x14(%rbx)
+./src/selector.c:49
+  1b:	5b                   	pop    %rbx
+  1c:	c3                   	retq   
+  1d:	0f 1f 00             	nopl   (%rax)
+./src/selector.c:41
+  20:	c6 43 14 17          	movb   $0x17,0x14(%rbx)
+./src/selector.c:49
+  24:	5b                   	pop    %rbx
+  25:	c3                   	retq   
+  26:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  2d:	00 00 00 
+
+0000000000000030 <toggle_sensitivity>:
+toggle_sensitivity():
+./src/selector.c:117
+  30:	41 54                	push   %r12
+  32:	55                   	push   %rbp
+./src/selector.c:118
+  33:	31 ed                	xor    %ebp,%ebp
+./src/selector.c:117
+  35:	53                   	push   %rbx
+  36:	48 89 fb             	mov    %rdi,%rbx
+./src/selector.c:120
+  39:	e8 00 00 00 00       	callq  3e <toggle_sensitivity+0xe>
+  3e:	48 89 df             	mov    %rbx,%rdi
+  41:	48 89 c6             	mov    %rax,%rsi
+  44:	e8 00 00 00 00       	callq  49 <toggle_sensitivity+0x19>
+  49:	48 89 c7             	mov    %rax,%rdi
+  4c:	e8 00 00 00 00       	callq  51 <toggle_sensitivity+0x21>
+./src/selector.c:118
+  51:	80 38 00             	cmpb   $0x0,(%rax)
+  54:	40 0f 95 c5          	setne  %bpl
+./src/selector.c:119
+  58:	e8 00 00 00 00       	callq  5d <toggle_sensitivity+0x2d>
+  5d:	48 89 df             	mov    %rbx,%rdi
+  60:	49 89 c4             	mov    %rax,%r12
+  63:	e8 00 00 00 00       	callq  68 <toggle_sensitivity+0x38>
+  68:	4c 89 e6             	mov    %r12,%rsi
+  6b:	48 89 c7             	mov    %rax,%rdi
+  6e:	e8 00 00 00 00       	callq  73 <toggle_sensitivity+0x43>
+./src/selector.c:121
+  73:	5b                   	pop    %rbx
+./src/selector.c:118
+  74:	89 ea                	mov    %ebp,%edx
+  76:	be fb ff ff ff       	mov    $0xfffffffb,%esi
+  7b:	48 89 c7             	mov    %rax,%rdi
+./src/selector.c:121
+  7e:	5d                   	pop    %rbp
+  7f:	41 5c                	pop    %r12
+./src/selector.c:118
+  81:	e9 00 00 00 00       	jmpq   86 <toggle_sensitivity+0x56>
+  86:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  8d:	00 00 00 
+
+0000000000000090 <get_charset_table>:
+get_charset_table():
+./src/selector.c:95
+  90:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 97 <get_charset_table+0x7>
+  97:	48 85 c0             	test   %rax,%rax
+  9a:	74 04                	je     a0 <get_charset_table+0x10>
+./src/selector.c:114
+  9c:	c3                   	retq   
+  9d:	0f 1f 00             	nopl   (%rax)
+./src/selector.c:90
+  a0:	41 54                	push   %r12
+  a2:	55                   	push   %rbp
+./src/selector.c:96
+  a3:	bf 58 00 00 00       	mov    $0x58,%edi
+./src/selector.c:90
+  a8:	53                   	push   %rbx
+./src/selector.c:96
+  a9:	e8 00 00 00 00       	callq  ae <get_charset_table+0x1e>
+./src/selector.c:97
+  ae:	c7 40 50 00 00 00 00 	movl   $0x0,0x50(%rax)
+./src/selector.c:96
+  b5:	48 89 c3             	mov    %rax,%rbx
+  b8:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # bf <get_charset_table+0x2f>
+./src/selector.c:98
+  bf:	e8 00 00 00 00       	callq  c4 <get_charset_table+0x34>
+./src/selector.c:99
+  c4:	48 8b 2d 00 00 00 00 	mov    0x0(%rip),%rbp        # cb <get_charset_table+0x3b>
+./src/selector.c:98
+  cb:	48 89 03             	mov    %rax,(%rbx)
+./src/selector.c:99
+  ce:	48 63 5d 50          	movslq 0x50(%rbp),%rbx
+  d2:	e8 00 00 00 00       	callq  d7 <get_charset_table+0x47>
+  d7:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # de <get_charset_table+0x4e>
+  de:	ba 05 00 00 00       	mov    $0x5,%edx
+  e3:	49 89 c4             	mov    %rax,%r12
+  e6:	31 ff                	xor    %edi,%edi
+  e8:	e8 00 00 00 00       	callq  ed <get_charset_table+0x5d>
+  ed:	4c 89 e6             	mov    %r12,%rsi
+  f0:	48 89 c7             	mov    %rax,%rdi
+  f3:	31 c0                	xor    %eax,%eax
+  f5:	e8 00 00 00 00       	callq  fa <get_charset_table+0x6a>
+./src/selector.c:100
+  fa:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 101 <get_charset_table+0x71>
+./src/selector.c:99
+ 101:	48 89 44 dd 28       	mov    %rax,0x28(%rbp,%rbx,8)
+./src/selector.c:101
+ 106:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 10d <get_charset_table+0x7d>
+./src/selector.c:100
+ 10d:	48 63 4a 50          	movslq 0x50(%rdx),%rcx
+ 111:	48 89 c8             	mov    %rcx,%rax
+ 114:	48 8d 0c ca          	lea    (%rdx,%rcx,8),%rcx
+./src/selector.c:103
+ 118:	83 c0 02             	add    $0x2,%eax
+./src/selector.c:101
+ 11b:	48 89 71 08          	mov    %rsi,0x8(%rcx)
+./src/selector.c:102
+ 11f:	48 89 71 30          	mov    %rsi,0x30(%rcx)
+./src/selector.c:103
+ 123:	89 42 50             	mov    %eax,0x50(%rdx)
+./src/selector.c:104
+ 126:	e8 00 00 00 00       	callq  12b <get_charset_table+0x9b>
+ 12b:	89 c7                	mov    %eax,%edi
+ 12d:	e8 00 00 00 00       	callq  132 <get_charset_table+0xa2>
+ 132:	48 89 c2             	mov    %rax,%rdx
+ 135:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 13c <get_charset_table+0xac>
+ 13c:	4c 8d 42 18          	lea    0x18(%rdx),%r8
+./src/selector.c:106
+ 140:	48 8b 32             	mov    (%rdx),%rsi
+ 143:	48 85 f6             	test   %rsi,%rsi
+ 146:	74 18                	je     160 <get_charset_table+0xd0>
+./src/selector.c:107
+ 148:	48 63 78 50          	movslq 0x50(%rax),%rdi
+ 14c:	48 89 f9             	mov    %rdi,%rcx
+ 14f:	48 8d 3c f8          	lea    (%rax,%rdi,8),%rdi
+./src/selector.c:109
+ 153:	83 c1 01             	add    $0x1,%ecx
+./src/selector.c:107
+ 156:	48 89 37             	mov    %rsi,(%rdi)
+./src/selector.c:108
+ 159:	48 89 77 28          	mov    %rsi,0x28(%rdi)
+./src/selector.c:109
+ 15d:	89 48 50             	mov    %ecx,0x50(%rax)
+ 160:	48 83 c2 08          	add    $0x8,%rdx
+./src/selector.c:105 (discriminator 2)
+ 164:	4c 39 c2             	cmp    %r8,%rdx
+ 167:	75 d7                	jne    140 <get_charset_table+0xb0>
+./src/selector.c:114
+ 169:	5b                   	pop    %rbx
+ 16a:	5d                   	pop    %rbp
+ 16b:	41 5c                	pop    %r12
+ 16d:	c3                   	retq   
+ 16e:	66 90                	xchg   %ax,%ax
+
+0000000000000170 <init_menu_item_manual_charset>:
+init_menu_item_manual_charset():
+./src/selector.c:129
+ 170:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 177 <init_menu_item_manual_charset+0x7>
+./src/selector.c:125
+ 177:	41 54                	push   %r12
+ 179:	55                   	push   %rbp
+ 17a:	53                   	push   %rbx
+ 17b:	48 89 fb             	mov    %rdi,%rbx
+./src/selector.c:129
+ 17e:	48 85 f6             	test   %rsi,%rsi
+ 181:	0f 84 a9 00 00 00    	je     230 <init_menu_item_manual_charset+0xc0>
+./src/selector.c:134
+ 187:	48 85 db             	test   %rbx,%rbx
+ 18a:	74 44                	je     1d0 <init_menu_item_manual_charset+0x60>
+./src/selector.c:134 (discriminator 1)
+ 18c:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 193 <init_menu_item_manual_charset+0x23>
+ 193:	48 89 da             	mov    %rbx,%rdx
+ 196:	31 c0                	xor    %eax,%eax
+ 198:	e8 00 00 00 00       	callq  19d <init_menu_item_manual_charset+0x2d>
+./src/selector.c:136 (discriminator 1)
+ 19d:	48 83 3d 00 00 00 00 	cmpq   $0x0,0x0(%rip)        # 1a5 <init_menu_item_manual_charset+0x35>
+ 1a4:	00 
+./src/selector.c:134 (discriminator 1)
+ 1a5:	48 89 c3             	mov    %rax,%rbx
+./src/selector.c:136 (discriminator 1)
+ 1a8:	74 46                	je     1f0 <init_menu_item_manual_charset+0x80>
+./src/selector.c:141
+ 1aa:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 1b1 <init_menu_item_manual_charset+0x41>
+ 1b1:	48 89 de             	mov    %rbx,%rsi
+ 1b4:	e8 00 00 00 00       	callq  1b9 <init_menu_item_manual_charset+0x49>
+./src/selector.c:142
+ 1b9:	48 89 df             	mov    %rbx,%rdi
+ 1bc:	e8 00 00 00 00       	callq  1c1 <init_menu_item_manual_charset+0x51>
+./src/selector.c:145
+ 1c1:	5b                   	pop    %rbx
+ 1c2:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 1c9 <init_menu_item_manual_charset+0x59>
+ 1c9:	5d                   	pop    %rbp
+ 1ca:	41 5c                	pop    %r12
+ 1cc:	c3                   	retq   
+ 1cd:	0f 1f 00             	nopl   (%rax)
+./src/selector.c:134 (discriminator 2)
+ 1d0:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 1d7 <init_menu_item_manual_charset+0x67>
+ 1d7:	31 c0                	xor    %eax,%eax
+ 1d9:	e8 00 00 00 00       	callq  1de <init_menu_item_manual_charset+0x6e>
+./src/selector.c:136 (discriminator 2)
+ 1de:	48 83 3d 00 00 00 00 	cmpq   $0x0,0x0(%rip)        # 1e6 <init_menu_item_manual_charset+0x76>
+ 1e5:	00 
+./src/selector.c:134 (discriminator 2)
+ 1e6:	48 89 c3             	mov    %rax,%rbx
+./src/selector.c:136 (discriminator 2)
+ 1e9:	75 bf                	jne    1aa <init_menu_item_manual_charset+0x3a>
+ 1eb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/selector.c:137
+ 1f0:	48 89 df             	mov    %rbx,%rdi
+ 1f3:	e8 00 00 00 00       	callq  1f8 <init_menu_item_manual_charset+0x88>
+ 1f8:	48 89 c5             	mov    %rax,%rbp
+ 1fb:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 202 <init_menu_item_manual_charset+0x92>
+./src/selector.c:138
+ 202:	e8 00 00 00 00       	callq  207 <init_menu_item_manual_charset+0x97>
+ 207:	49 89 c4             	mov    %rax,%r12
+ 20a:	e8 00 00 00 00       	callq  20f <init_menu_item_manual_charset+0x9f>
+ 20f:	48 89 ef             	mov    %rbp,%rdi
+ 212:	48 89 c6             	mov    %rax,%rsi
+ 215:	e8 00 00 00 00       	callq  21a <init_menu_item_manual_charset+0xaa>
+ 21a:	48 8b 78 70          	mov    0x70(%rax),%rdi
+ 21e:	4c 89 e6             	mov    %r12,%rsi
+ 221:	e8 00 00 00 00       	callq  226 <init_menu_item_manual_charset+0xb6>
+ 226:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 22d <init_menu_item_manual_charset+0xbd>
+ 22d:	eb 8a                	jmp    1b9 <init_menu_item_manual_charset+0x49>
+ 22f:	90                   	nop
+./src/selector.c:130
+ 230:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 237 <init_menu_item_manual_charset+0xc7>
+ 237:	ba 05 00 00 00       	mov    $0x5,%edx
+ 23c:	31 ff                	xor    %edi,%edi
+ 23e:	e8 00 00 00 00       	callq  243 <init_menu_item_manual_charset+0xd3>
+ 243:	48 89 c6             	mov    %rax,%rsi
+ 246:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 24d <init_menu_item_manual_charset+0xdd>
+ 24d:	e9 35 ff ff ff       	jmpq   187 <init_menu_item_manual_charset+0x17>
+ 252:	0f 1f 40 00          	nopl   0x0(%rax)
+ 256:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 25d:	00 00 00 
+
+0000000000000260 <cb_select_charset>:
+cb_select_charset():
+./src/selector.c:216
+ 260:	41 57                	push   %r15
+ 262:	41 56                	push   %r14
+ 264:	41 55                	push   %r13
+ 266:	41 54                	push   %r12
+ 268:	55                   	push   %rbp
+ 269:	53                   	push   %rbx
+ 26a:	48 89 f5             	mov    %rsi,%rbp
+ 26d:	48 89 fb             	mov    %rdi,%rbx
+ 270:	48 83 ec 38          	sub    $0x38,%rsp
+ 274:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 27b:	00 00 
+ 27d:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 282:	31 c0                	xor    %eax,%eax
+./src/selector.c:220
+ 284:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 28a <cb_select_charset+0x2a>
+ 28a:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 290 <cb_select_charset+0x30>
+./src/selector.c:221
+ 290:	e8 00 00 00 00       	callq  295 <cb_select_charset+0x35>
+./src/selector.c:222
+ 295:	44 8b 0d 00 00 00 00 	mov    0x0(%rip),%r9d        # 29c <cb_select_charset+0x3c>
+./src/selector.c:221
+ 29c:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 2a2 <cb_select_charset+0x42>
+./src/selector.c:222
+ 2a2:	45 85 c9             	test   %r9d,%r9d
+ 2a5:	74 29                	je     2d0 <cb_select_charset+0x70>
+./src/selector.c:239
+ 2a7:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 2ac:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+ 2b3:	00 00 
+ 2b5:	0f 85 28 04 00 00    	jne    6e3 <cb_select_charset+0x483>
+ 2bb:	48 83 c4 38          	add    $0x38,%rsp
+ 2bf:	5b                   	pop    %rbx
+ 2c0:	5d                   	pop    %rbp
+ 2c1:	41 5c                	pop    %r12
+ 2c3:	41 5d                	pop    %r13
+ 2c5:	41 5e                	pop    %r14
+ 2c7:	41 5f                	pop    %r15
+ 2c9:	c3                   	retq   
+ 2ca:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/selector.c:223
+ 2d0:	e8 bb fd ff ff       	callq  90 <get_charset_table>
+./src/selector.c:224
+ 2d5:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 2db <cb_select_charset+0x7b>
+./src/selector.c:223
+ 2db:	49 89 c4             	mov    %rax,%r12
+./src/selector.c:224
+ 2de:	8b 40 50             	mov    0x50(%rax),%eax
+ 2e1:	8b 15 00 00 00 00    	mov    0x0(%rip),%edx        # 2e7 <cb_select_charset+0x87>
+ 2e7:	01 c8                	add    %ecx,%eax
+ 2e9:	39 d0                	cmp    %edx,%eax
+ 2eb:	76 4b                	jbe    338 <cb_select_charset+0xd8>
+./src/selector.c:225
+ 2ed:	48 8b 7d 08          	mov    0x8(%rbp),%rdi
+ 2f1:	48 85 ff             	test   %rdi,%rdi
+ 2f4:	74 11                	je     307 <cb_select_charset+0xa7>
+./src/selector.c:226
+ 2f6:	e8 00 00 00 00       	callq  2fb <cb_select_charset+0x9b>
+ 2fb:	8b 15 00 00 00 00    	mov    0x0(%rip),%edx        # 301 <cb_select_charset+0xa1>
+ 301:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 307 <cb_select_charset+0xa7>
+./src/selector.c:227
+ 307:	85 d2                	test   %edx,%edx
+ 309:	75 05                	jne    310 <cb_select_charset+0xb0>
+ 30b:	83 f9 01             	cmp    $0x1,%ecx
+ 30e:	74 18                	je     328 <cb_select_charset+0xc8>
+./src/selector.c:231
+ 310:	29 ca                	sub    %ecx,%edx
+ 312:	49 8b 3c d4          	mov    (%r12,%rdx,8),%rdi
+ 316:	e8 00 00 00 00       	callq  31b <cb_select_charset+0xbb>
+./src/selector.c:230
+ 31b:	48 89 45 08          	mov    %rax,0x8(%rbp)
+ 31f:	eb 86                	jmp    2a7 <cb_select_charset+0x47>
+ 321:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/selector.c:228
+ 328:	48 c7 45 08 00 00 00 	movq   $0x0,0x8(%rbp)
+ 32f:	00 
+ 330:	e9 72 ff ff ff       	jmpq   2a7 <cb_select_charset+0x47>
+ 335:	0f 1f 00             	nopl   (%rax)
+get_manual_charset():
+./src/selector.c:153
+ 338:	48 c7 44 24 20 00 00 	movq   $0x0,0x20(%rsp)
+ 33f:	00 00 
+./src/selector.c:157
+ 341:	e8 00 00 00 00       	callq  346 <cb_select_charset+0xe6>
+ 346:	49 89 c5             	mov    %rax,%r13
+ 349:	e8 00 00 00 00       	callq  34e <cb_select_charset+0xee>
+ 34e:	48 89 df             	mov    %rbx,%rdi
+ 351:	48 89 c6             	mov    %rax,%rsi
+ 354:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 359:	e8 00 00 00 00       	callq  35e <cb_select_charset+0xfe>
+ 35e:	48 89 c7             	mov    %rax,%rdi
+ 361:	e8 00 00 00 00       	callq  366 <cb_select_charset+0x106>
+ 366:	4c 89 ee             	mov    %r13,%rsi
+ 369:	48 89 c7             	mov    %rax,%rdi
+ 36c:	e8 00 00 00 00       	callq  371 <cb_select_charset+0x111>
+./src/selector.c:156
+ 371:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 378 <cb_select_charset+0x118>
+ 378:	6a 00                	pushq  $0x0
+ 37a:	4c 8d 0d 00 00 00 00 	lea    0x0(%rip),%r9        # 381 <cb_select_charset+0x121>
+ 381:	6a fb                	pushq  $0xfffffffffffffffb
+ 383:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 38a <cb_select_charset+0x12a>
+ 38a:	41 b8 fa ff ff ff    	mov    $0xfffffffa,%r8d
+ 390:	ba 02 00 00 00       	mov    $0x2,%edx
+ 395:	48 89 c6             	mov    %rax,%rsi
+ 398:	31 c0                	xor    %eax,%eax
+ 39a:	e8 00 00 00 00       	callq  39f <cb_select_charset+0x13f>
+ 39f:	49 89 c4             	mov    %rax,%r12
+./src/selector.c:163
+ 3a2:	e8 00 00 00 00       	callq  3a7 <cb_select_charset+0x147>
+ 3a7:	4c 89 e7             	mov    %r12,%rdi
+ 3aa:	48 89 c6             	mov    %rax,%rsi
+ 3ad:	49 89 c7             	mov    %rax,%r15
+ 3b0:	e8 00 00 00 00       	callq  3b5 <cb_select_charset+0x155>
+ 3b5:	be fb ff ff ff       	mov    $0xfffffffb,%esi
+ 3ba:	48 89 c7             	mov    %rax,%rdi
+ 3bd:	e8 00 00 00 00       	callq  3c2 <cb_select_charset+0x162>
+./src/selector.c:164
+ 3c2:	4c 89 ee             	mov    %r13,%rsi
+ 3c5:	4c 89 e7             	mov    %r12,%rdi
+ 3c8:	e8 00 00 00 00       	callq  3cd <cb_select_charset+0x16d>
+ 3cd:	be 02 00 00 00       	mov    $0x2,%esi
+ 3d2:	48 89 c7             	mov    %rax,%rdi
+ 3d5:	e8 00 00 00 00       	callq  3da <cb_select_charset+0x17a>
+./src/selector.c:166
+ 3da:	31 f6                	xor    %esi,%esi
+ 3dc:	31 ff                	xor    %edi,%edi
+ 3de:	e8 00 00 00 00       	callq  3e3 <cb_select_charset+0x183>
+ 3e3:	49 89 c5             	mov    %rax,%r13
+./src/selector.c:167
+ 3e6:	e8 00 00 00 00       	callq  3eb <cb_select_charset+0x18b>
+ 3eb:	4c 89 ef             	mov    %r13,%rdi
+ 3ee:	48 89 c6             	mov    %rax,%rsi
+ 3f1:	e8 00 00 00 00       	callq  3f6 <cb_select_charset+0x196>
+ 3f6:	be 08 00 00 00       	mov    $0x8,%esi
+ 3fb:	48 89 c7             	mov    %rax,%rdi
+ 3fe:	e8 00 00 00 00       	callq  403 <cb_select_charset+0x1a3>
+./src/selector.c:168
+ 403:	e8 00 00 00 00       	callq  408 <cb_select_charset+0x1a8>
+ 408:	4c 89 fe             	mov    %r15,%rsi
+ 40b:	4c 89 e7             	mov    %r12,%rdi
+ 40e:	49 89 c6             	mov    %rax,%r14
+ 411:	e8 00 00 00 00       	callq  416 <cb_select_charset+0x1b6>
+ 416:	48 8b b8 f0 00 00 00 	mov    0xf0(%rax),%rdi
+ 41d:	4c 89 f6             	mov    %r14,%rsi
+ 420:	4c 89 74 24 10       	mov    %r14,0x10(%rsp)
+ 425:	e8 00 00 00 00       	callq  42a <cb_select_charset+0x1ca>
+ 42a:	45 31 c0             	xor    %r8d,%r8d
+ 42d:	31 c9                	xor    %ecx,%ecx
+ 42f:	31 d2                	xor    %edx,%edx
+ 431:	48 89 c7             	mov    %rax,%rdi
+ 434:	4c 89 ee             	mov    %r13,%rsi
+ 437:	e8 00 00 00 00       	callq  43c <cb_select_charset+0x1dc>
+./src/selector.c:170
+ 43c:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 443 <cb_select_charset+0x1e3>
+ 443:	ba 05 00 00 00       	mov    $0x5,%edx
+ 448:	31 ff                	xor    %edi,%edi
+ 44a:	e8 00 00 00 00       	callq  44f <cb_select_charset+0x1ef>
+ 44f:	48 89 c7             	mov    %rax,%rdi
+ 452:	e8 00 00 00 00       	callq  457 <cb_select_charset+0x1f7>
+ 457:	49 89 c6             	mov    %rax,%r14
+./src/selector.c:171
+ 45a:	e8 00 00 00 00       	callq  45f <cb_select_charset+0x1ff>
+ 45f:	4c 89 f7             	mov    %r14,%rdi
+ 462:	48 89 c6             	mov    %rax,%rsi
+ 465:	e8 00 00 00 00       	callq  46a <cb_select_charset+0x20a>
+ 46a:	66 0f ef c9          	pxor   %xmm1,%xmm1
+ 46e:	48 89 c7             	mov    %rax,%rdi
+ 471:	0f 28 c1             	movaps %xmm1,%xmm0
+ 474:	e8 00 00 00 00       	callq  479 <cb_select_charset+0x219>
+./src/selector.c:172
+ 479:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+ 47e:	4c 89 ef             	mov    %r13,%rdi
+ 481:	e8 00 00 00 00       	callq  486 <cb_select_charset+0x226>
+ 486:	31 c9                	xor    %ecx,%ecx
+ 488:	41 b8 05 00 00 00    	mov    $0x5,%r8d
+ 48e:	31 d2                	xor    %edx,%edx
+ 490:	4c 89 f6             	mov    %r14,%rsi
+ 493:	48 89 c7             	mov    %rax,%rdi
+ 496:	4c 89 74 24 18       	mov    %r14,0x18(%rsp)
+ 49b:	e8 00 00 00 00       	callq  4a0 <cb_select_charset+0x240>
+./src/selector.c:174
+ 4a0:	e8 00 00 00 00       	callq  4a5 <cb_select_charset+0x245>
+ 4a5:	49 89 c6             	mov    %rax,%r14
+./src/selector.c:175
+ 4a8:	e8 00 00 00 00       	callq  4ad <cb_select_charset+0x24d>
+ 4ad:	4c 89 f7             	mov    %r14,%rdi
+ 4b0:	48 89 c6             	mov    %rax,%rsi
+ 4b3:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 4b8:	e8 00 00 00 00       	callq  4bd <cb_select_charset+0x25d>
+ 4bd:	be 01 00 00 00       	mov    $0x1,%esi
+ 4c2:	48 89 c7             	mov    %rax,%rdi
+ 4c5:	e8 00 00 00 00       	callq  4ca <cb_select_charset+0x26a>
+./src/selector.c:176
+ 4ca:	e8 00 00 00 00       	callq  4cf <cb_select_charset+0x26f>
+ 4cf:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+ 4d4:	48 89 c6             	mov    %rax,%rsi
+ 4d7:	e8 00 00 00 00       	callq  4dc <cb_select_charset+0x27c>
+ 4dc:	4c 89 f6             	mov    %r14,%rsi
+ 4df:	48 89 c7             	mov    %rax,%rdi
+ 4e2:	e8 00 00 00 00       	callq  4e7 <cb_select_charset+0x287>
+./src/selector.c:177
+ 4e7:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+ 4ec:	4c 89 ef             	mov    %r13,%rdi
+ 4ef:	e8 00 00 00 00       	callq  4f4 <cb_select_charset+0x294>
+ 4f4:	31 c9                	xor    %ecx,%ecx
+ 4f6:	41 b8 05 00 00 00    	mov    $0x5,%r8d
+ 4fc:	31 d2                	xor    %edx,%edx
+ 4fe:	48 89 c7             	mov    %rax,%rdi
+ 501:	4c 89 f6             	mov    %r14,%rsi
+ 504:	e8 00 00 00 00       	callq  509 <cb_select_charset+0x2a9>
+./src/selector.c:179
+ 509:	4c 89 fe             	mov    %r15,%rsi
+ 50c:	4c 89 e7             	mov    %r12,%rdi
+ 50f:	e8 00 00 00 00       	callq  514 <cb_select_charset+0x2b4>
+ 514:	31 d2                	xor    %edx,%edx
+ 516:	48 89 c7             	mov    %rax,%rdi
+ 519:	be fb ff ff ff       	mov    $0xfffffffb,%esi
+ 51e:	e8 00 00 00 00       	callq  523 <cb_select_charset+0x2c3>
+./src/selector.c:180
+ 523:	be 50 00 00 00       	mov    $0x50,%esi
+ 528:	4c 89 f7             	mov    %r14,%rdi
+ 52b:	e8 00 00 00 00       	callq  530 <cb_select_charset+0x2d0>
+ 530:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 537 <cb_select_charset+0x2d7>
+ 537:	48 8d 15 f2 fa ff ff 	lea    -0x50e(%rip),%rdx        # 30 <toggle_sensitivity>
+ 53e:	45 31 c0             	xor    %r8d,%r8d
+ 541:	31 c9                	xor    %ecx,%ecx
+ 543:	48 89 c7             	mov    %rax,%rdi
+ 546:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ 54c:	e8 00 00 00 00       	callq  551 <cb_select_charset+0x2f1>
+./src/selector.c:182
+ 551:	44 8b 45 10          	mov    0x10(%rbp),%r8d
+ 555:	5e                   	pop    %rsi
+ 556:	5f                   	pop    %rdi
+ 557:	45 85 c0             	test   %r8d,%r8d
+ 55a:	75 44                	jne    5a0 <cb_select_charset+0x340>
+./src/selector.c:185
+ 55c:	4c 89 ef             	mov    %r13,%rdi
+ 55f:	e8 00 00 00 00       	callq  564 <cb_select_charset+0x304>
+./src/selector.c:187
+ 564:	4c 89 fe             	mov    %r15,%rsi
+ 567:	4c 89 e7             	mov    %r12,%rdi
+ 56a:	e8 00 00 00 00       	callq  56f <cb_select_charset+0x30f>
+ 56f:	48 89 c7             	mov    %rax,%rdi
+ 572:	e8 00 00 00 00       	callq  577 <cb_select_charset+0x317>
+ 577:	83 f8 fb             	cmp    $0xfffffffb,%eax
+ 57a:	74 4c                	je     5c8 <cb_select_charset+0x368>
+./src/selector.c:208
+ 57c:	4c 89 e7             	mov    %r12,%rdi
+ 57f:	e8 00 00 00 00       	callq  584 <cb_select_charset+0x324>
+cb_select_charset():
+./src/selector.c:235
+ 584:	8b 35 00 00 00 00    	mov    0x0(%rip),%esi        # 58a <cb_select_charset+0x32a>
+./src/selector.c:236
+ 58a:	48 89 df             	mov    %rbx,%rdi
+./src/selector.c:235
+ 58d:	89 35 00 00 00 00    	mov    %esi,0x0(%rip)        # 593 <cb_select_charset+0x333>
+./src/selector.c:236
+ 593:	e8 00 00 00 00       	callq  598 <cb_select_charset+0x338>
+./src/selector.c:239
+ 598:	e9 0a fd ff ff       	jmpq   2a7 <cb_select_charset+0x47>
+ 59d:	0f 1f 00             	nopl   (%rax)
+get_manual_charset():
+./src/selector.c:183
+ 5a0:	48 8b 45 08          	mov    0x8(%rbp),%rax
+ 5a4:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+ 5a9:	4c 89 f7             	mov    %r14,%rdi
+ 5ac:	48 89 04 24          	mov    %rax,(%rsp)
+ 5b0:	e8 00 00 00 00       	callq  5b5 <cb_select_charset+0x355>
+ 5b5:	48 8b 34 24          	mov    (%rsp),%rsi
+ 5b9:	48 89 c7             	mov    %rax,%rdi
+ 5bc:	e8 00 00 00 00       	callq  5c1 <cb_select_charset+0x361>
+ 5c1:	eb 99                	jmp    55c <cb_select_charset+0x2fc>
+ 5c3:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/selector.c:188
+ 5c8:	4c 8b 7c 24 10       	mov    0x10(%rsp),%r15
+ 5cd:	4c 89 f7             	mov    %r14,%rdi
+ 5d0:	4c 89 fe             	mov    %r15,%rsi
+ 5d3:	e8 00 00 00 00       	callq  5d8 <cb_select_charset+0x378>
+ 5d8:	48 89 c7             	mov    %rax,%rdi
+ 5db:	e8 00 00 00 00       	callq  5e0 <cb_select_charset+0x380>
+ 5e0:	48 83 ec 08          	sub    $0x8,%rsp
+ 5e4:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 5eb <cb_select_charset+0x38b>
+ 5eb:	45 31 c9             	xor    %r9d,%r9d
+ 5ee:	48 8d 54 24 28       	lea    0x28(%rsp),%rdx
+ 5f3:	45 31 c0             	xor    %r8d,%r8d
+ 5f6:	48 89 c1             	mov    %rax,%rcx
+ 5f9:	48 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%rsi
+ 600:	52                   	push   %rdx
+ 601:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 608 <cb_select_charset+0x3a8>
+ 608:	e8 00 00 00 00       	callq  60d <cb_select_charset+0x3ad>
+./src/selector.c:189
+ 60d:	48 8b 7c 24 30       	mov    0x30(%rsp),%rdi
+ 612:	5a                   	pop    %rdx
+ 613:	59                   	pop    %rcx
+ 614:	48 85 ff             	test   %rdi,%rdi
+ 617:	74 7a                	je     693 <cb_select_charset+0x433>
+./src/selector.c:190
+ 619:	e8 00 00 00 00       	callq  61e <cb_select_charset+0x3be>
+./src/selector.c:191
+ 61e:	4c 89 e7             	mov    %r12,%rdi
+ 621:	e8 00 00 00 00       	callq  626 <cb_select_charset+0x3c6>
+./src/selector.c:192
+ 626:	4c 89 fe             	mov    %r15,%rsi
+ 629:	4c 89 f7             	mov    %r14,%rdi
+ 62c:	e8 00 00 00 00       	callq  631 <cb_select_charset+0x3d1>
+ 631:	48 89 c7             	mov    %rax,%rdi
+ 634:	e8 00 00 00 00       	callq  639 <cb_select_charset+0x3d9>
+ 639:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 640 <cb_select_charset+0x3e0>
+ 640:	ba 05 00 00 00       	mov    $0x5,%edx
+ 645:	48 89 c5             	mov    %rax,%rbp
+ 648:	31 ff                	xor    %edi,%edi
+ 64a:	e8 00 00 00 00       	callq  64f <cb_select_charset+0x3ef>
+ 64f:	48 89 ee             	mov    %rbp,%rsi
+ 652:	48 89 c7             	mov    %rax,%rdi
+ 655:	31 c0                	xor    %eax,%eax
+ 657:	e8 00 00 00 00       	callq  65c <cb_select_charset+0x3fc>
+./src/selector.c:193
+ 65c:	48 8b 74 24 18       	mov    0x18(%rsp),%rsi
+ 661:	48 89 df             	mov    %rbx,%rdi
+./src/selector.c:192
+ 664:	48 89 c5             	mov    %rax,%rbp
+./src/selector.c:193
+ 667:	e8 00 00 00 00       	callq  66c <cb_select_charset+0x40c>
+ 66c:	48 89 c7             	mov    %rax,%rdi
+ 66f:	e8 00 00 00 00       	callq  674 <cb_select_charset+0x414>
+ 674:	48 89 ea             	mov    %rbp,%rdx
+ 677:	48 89 c7             	mov    %rax,%rdi
+ 67a:	be 03 00 00 00       	mov    $0x3,%esi
+ 67f:	31 c0                	xor    %eax,%eax
+ 681:	e8 00 00 00 00       	callq  686 <cb_select_charset+0x426>
+./src/selector.c:195
+ 686:	48 89 ef             	mov    %rbp,%rdi
+ 689:	e8 00 00 00 00       	callq  68e <cb_select_charset+0x42e>
+ 68e:	e9 e9 fe ff ff       	jmpq   57c <cb_select_charset+0x31c>
+./src/selector.c:197
+ 693:	48 8b 7d 08          	mov    0x8(%rbp),%rdi
+ 697:	e8 00 00 00 00       	callq  69c <cb_select_charset+0x43c>
+./src/selector.c:198
+ 69c:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+ 6a1:	4c 89 f7             	mov    %r14,%rdi
+ 6a4:	e8 00 00 00 00       	callq  6a9 <cb_select_charset+0x449>
+ 6a9:	48 89 c7             	mov    %rax,%rdi
+ 6ac:	e8 00 00 00 00       	callq  6b1 <cb_select_charset+0x451>
+ 6b1:	48 89 c7             	mov    %rax,%rdi
+ 6b4:	e8 00 00 00 00       	callq  6b9 <cb_select_charset+0x459>
+./src/selector.c:200
+ 6b9:	4c 89 e7             	mov    %r12,%rdi
+./src/selector.c:198
+ 6bc:	48 89 45 08          	mov    %rax,0x8(%rbp)
+./src/selector.c:199
+ 6c0:	c7 45 10 01 00 00 00 	movl   $0x1,0x10(%rbp)
+./src/selector.c:200
+ 6c7:	e8 00 00 00 00       	callq  6cc <cb_select_charset+0x46c>
+./src/selector.c:202
+ 6cc:	8b 45 10             	mov    0x10(%rbp),%eax
+ 6cf:	31 ff                	xor    %edi,%edi
+ 6d1:	85 c0                	test   %eax,%eax
+ 6d3:	74 04                	je     6d9 <cb_select_charset+0x479>
+ 6d5:	48 8b 7d 08          	mov    0x8(%rbp),%rdi
+ 6d9:	e8 92 fa ff ff       	callq  170 <init_menu_item_manual_charset>
+ 6de:	e9 c4 fb ff ff       	jmpq   2a7 <cb_select_charset+0x47>
+cb_select_charset():
+./src/selector.c:239
+ 6e3:	e8 00 00 00 00       	callq  6e8 <cb_select_charset+0x488>
+ 6e8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 6ef:	00 
+
+00000000000006f0 <get_fileinfo_from_selector>:
+get_fileinfo_from_selector():
+./src/selector.c:352
+ 6f0:	41 57                	push   %r15
+ 6f2:	41 56                	push   %r14
+ 6f4:	41 55                	push   %r13
+ 6f6:	41 54                	push   %r12
+ 6f8:	55                   	push   %rbp
+ 6f9:	53                   	push   %rbx
+ 6fa:	48 89 fb             	mov    %rdi,%rbx
+./src/selector.c:360
+ 6fd:	bf 18 00 00 00       	mov    $0x18,%edi
+./src/selector.c:352
+ 702:	48 83 ec 48          	sub    $0x48,%rsp
+./src/selector.c:359
+ 706:	89 35 00 00 00 00    	mov    %esi,0x0(%rip)        # 70c <get_fileinfo_from_selector+0x1c>
+./src/selector.c:360
+ 70c:	e8 00 00 00 00       	callq  711 <get_fileinfo_from_selector+0x21>
+ 711:	48 89 c5             	mov    %rax,%rbp
+./src/selector.c:362
+ 714:	48 8b 03             	mov    (%rbx),%rax
+ 717:	48 85 c0             	test   %rax,%rax
+ 71a:	74 08                	je     724 <get_fileinfo_from_selector+0x34>
+./src/selector.c:362 (discriminator 1)
+ 71c:	48 89 c7             	mov    %rax,%rdi
+ 71f:	e8 00 00 00 00       	callq  724 <get_fileinfo_from_selector+0x34>
+./src/selector.c:361
+ 724:	48 89 45 00          	mov    %rax,0x0(%rbp)
+./src/selector.c:364
+ 728:	48 8b 43 08          	mov    0x8(%rbx),%rax
+ 72c:	48 85 c0             	test   %rax,%rax
+ 72f:	74 08                	je     739 <get_fileinfo_from_selector+0x49>
+./src/selector.c:364 (discriminator 1)
+ 731:	48 89 c7             	mov    %rax,%rdi
+ 734:	e8 00 00 00 00       	callq  739 <get_fileinfo_from_selector+0x49>
+./src/selector.c:363
+ 739:	48 89 45 08          	mov    %rax,0x8(%rbp)
+./src/selector.c:365
+ 73d:	8b 43 10             	mov    0x10(%rbx),%eax
+create_file_selector():
+./src/selector.c:305
+ 740:	ba 05 00 00 00       	mov    $0x5,%edx
+get_fileinfo_from_selector():
+./src/selector.c:365
+ 745:	89 45 10             	mov    %eax,0x10(%rbp)
+./src/selector.c:366
+ 748:	0f b6 43 14          	movzbl 0x14(%rbx),%eax
+create_file_selector():
+./src/selector.c:305
+ 74c:	8b 1d 00 00 00 00    	mov    0x0(%rip),%ebx        # 752 <get_fileinfo_from_selector+0x62>
+ 752:	85 db                	test   %ebx,%ebx
+get_fileinfo_from_selector():
+./src/selector.c:366
+ 754:	88 45 14             	mov    %al,0x14(%rbp)
+create_file_selector():
+./src/selector.c:305
+ 757:	0f 84 5b 05 00 00    	je     cb8 <get_fileinfo_from_selector+0x5c8>
+ 75d:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 764 <get_fileinfo_from_selector+0x74>
+ 764:	31 ff                	xor    %edi,%edi
+ 766:	e8 00 00 00 00       	callq  76b <get_fileinfo_from_selector+0x7b>
+./src/selector.c:308
+ 76b:	4c 8d 0d 00 00 00 00 	lea    0x0(%rip),%r9        # 772 <get_fileinfo_from_selector+0x82>
+ 772:	6a 00                	pushq  $0x0
+ 774:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 77b <get_fileinfo_from_selector+0x8b>
+ 77b:	6a fb                	pushq  $0xfffffffffffffffb
+ 77d:	31 d2                	xor    %edx,%edx
+ 77f:	85 db                	test   %ebx,%ebx
+ 781:	41 b8 fa ff ff ff    	mov    $0xfffffffa,%r8d
+ 787:	0f 94 c2             	sete   %dl
+ 78a:	48 89 c7             	mov    %rax,%rdi
+ 78d:	31 f6                	xor    %esi,%esi
+ 78f:	31 c0                	xor    %eax,%eax
+ 791:	e8 00 00 00 00       	callq  796 <get_fileinfo_from_selector+0xa6>
+ 796:	48 89 c3             	mov    %rax,%rbx
+./src/selector.c:313
+ 799:	e8 00 00 00 00       	callq  79e <get_fileinfo_from_selector+0xae>
+ 79e:	48 89 df             	mov    %rbx,%rdi
+ 7a1:	48 89 c6             	mov    %rax,%rsi
+ 7a4:	49 89 c7             	mov    %rax,%r15
+ 7a7:	e8 00 00 00 00       	callq  7ac <get_fileinfo_from_selector+0xbc>
+ 7ac:	be fb ff ff ff       	mov    $0xfffffffb,%esi
+ 7b1:	48 89 c7             	mov    %rax,%rdi
+ 7b4:	e8 00 00 00 00       	callq  7b9 <get_fileinfo_from_selector+0xc9>
+./src/selector.c:319
+ 7b9:	66 0f ef db          	pxor   %xmm3,%xmm3
+ 7bd:	f3 0f 10 05 00 00 00 	movss  0x0(%rip),%xmm0        # 7c5 <get_fileinfo_from_selector+0xd5>
+ 7c4:	00 
+ 7c5:	0f 28 d3             	movaps %xmm3,%xmm2
+ 7c8:	0f 28 cb             	movaps %xmm3,%xmm1
+ 7cb:	e8 00 00 00 00       	callq  7d0 <get_fileinfo_from_selector+0xe0>
+ 7d0:	49 89 c6             	mov    %rax,%r14
+ 7d3:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+./src/selector.c:321
+ 7d8:	e8 00 00 00 00       	callq  7dd <get_fileinfo_from_selector+0xed>
+ 7dd:	48 89 df             	mov    %rbx,%rdi
+ 7e0:	48 89 c6             	mov    %rax,%rsi
+ 7e3:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 7e8:	e8 00 00 00 00       	callq  7ed <get_fileinfo_from_selector+0xfd>
+ 7ed:	4c 89 f6             	mov    %r14,%rsi
+ 7f0:	48 89 c7             	mov    %rax,%rdi
+ 7f3:	e8 00 00 00 00       	callq  7f8 <get_fileinfo_from_selector+0x108>
+./src/selector.c:326
+ 7f8:	31 d2                	xor    %edx,%edx
+ 7fa:	be 02 00 00 00       	mov    $0x2,%esi
+ 7ff:	bf 02 00 00 00       	mov    $0x2,%edi
+ 804:	e8 00 00 00 00       	callq  809 <get_fileinfo_from_selector+0x119>
+ 809:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 80e:	49 89 c5             	mov    %rax,%r13
+./src/selector.c:327
+ 811:	e8 00 00 00 00       	callq  816 <get_fileinfo_from_selector+0x126>
+ 816:	4c 89 f7             	mov    %r14,%rdi
+ 819:	48 89 c6             	mov    %rax,%rsi
+ 81c:	e8 00 00 00 00       	callq  821 <get_fileinfo_from_selector+0x131>
+ 821:	4c 89 ee             	mov    %r13,%rsi
+ 824:	48 89 c7             	mov    %rax,%rdi
+ 827:	e8 00 00 00 00       	callq  82c <get_fileinfo_from_selector+0x13c>
+create_charset_menu():
+./src/selector.c:249
+ 82c:	e8 00 00 00 00       	callq  831 <get_fileinfo_from_selector+0x141>
+ 831:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+./src/selector.c:250
+ 836:	e8 00 00 00 00       	callq  83b <get_fileinfo_from_selector+0x14b>
+./src/selector.c:252
+ 83b:	83 3d 00 00 00 00 01 	cmpl   $0x1,0x0(%rip)        # 842 <get_fileinfo_from_selector+0x152>
+./src/selector.c:250
+ 842:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+./src/selector.c:252
+ 847:	41 5a                	pop    %r10
+ 849:	41 5b                	pop    %r11
+ 84b:	0f 84 3f 06 00 00    	je     e90 <get_fileinfo_from_selector+0x7a0>
+ 851:	e8 00 00 00 00       	callq  856 <get_fileinfo_from_selector+0x166>
+ 856:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+./src/selector.c:257
+ 85b:	e8 30 f8 ff ff       	callq  90 <get_charset_table>
+./src/selector.c:258
+ 860:	44 8b 48 50          	mov    0x50(%rax),%r9d
+./src/selector.c:257
+ 864:	49 89 c4             	mov    %rax,%r12
+./src/selector.c:258
+ 867:	41 be 01 00 00 00    	mov    $0x1,%r14d
+ 86d:	45 85 c9             	test   %r9d,%r9d
+ 870:	7e 62                	jle    8d4 <get_fileinfo_from_selector+0x1e4>
+ 872:	48 89 5c 24 20       	mov    %rbx,0x20(%rsp)
+ 877:	4d 89 f4             	mov    %r14,%r12
+ 87a:	48 8b 5c 24 18       	mov    0x18(%rsp),%rbx
+ 87f:	4c 8b 74 24 10       	mov    0x10(%rsp),%r14
+ 884:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 889:	48 89 c5             	mov    %rax,%rbp
+ 88c:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/selector.c:259
+ 890:	4a 8b 7c e5 20       	mov    0x20(%rbp,%r12,8),%rdi
+ 895:	e8 00 00 00 00       	callq  89a <get_fileinfo_from_selector+0x1aa>
+./src/selector.c:260
+ 89a:	48 89 de             	mov    %rbx,%rsi
+./src/selector.c:259
+ 89d:	49 89 c5             	mov    %rax,%r13
+./src/selector.c:260
+ 8a0:	4c 89 f7             	mov    %r14,%rdi
+ 8a3:	e8 00 00 00 00       	callq  8a8 <get_fileinfo_from_selector+0x1b8>
+ 8a8:	4c 89 ee             	mov    %r13,%rsi
+ 8ab:	48 89 c7             	mov    %rax,%rdi
+ 8ae:	e8 00 00 00 00       	callq  8b3 <get_fileinfo_from_selector+0x1c3>
+./src/selector.c:261
+ 8b3:	4c 89 ef             	mov    %r13,%rdi
+ 8b6:	e8 00 00 00 00       	callq  8bb <get_fileinfo_from_selector+0x1cb>
+./src/selector.c:258
+ 8bb:	44 89 e0             	mov    %r12d,%eax
+ 8be:	49 83 c4 01          	add    $0x1,%r12
+ 8c2:	3b 45 50             	cmp    0x50(%rbp),%eax
+ 8c5:	7c c9                	jl     890 <get_fileinfo_from_selector+0x1a0>
+ 8c7:	49 89 ec             	mov    %rbp,%r12
+ 8ca:	48 8b 5c 24 20       	mov    0x20(%rsp),%rbx
+ 8cf:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+./src/selector.c:264
+ 8d4:	44 8b 45 10          	mov    0x10(%rbp),%r8d
+ 8d8:	31 ff                	xor    %edi,%edi
+./src/selector.c:263
+ 8da:	48 c7 05 00 00 00 00 	movq   $0x0,0x0(%rip)        # 8e5 <get_fileinfo_from_selector+0x1f5>
+ 8e1:	00 00 00 00 
+./src/selector.c:264
+ 8e5:	45 85 c0             	test   %r8d,%r8d
+ 8e8:	74 04                	je     8ee <get_fileinfo_from_selector+0x1fe>
+ 8ea:	48 8b 7d 08          	mov    0x8(%rbp),%rdi
+ 8ee:	e8 7d f8 ff ff       	callq  170 <init_menu_item_manual_charset>
+ 8f3:	48 8b 74 24 18       	mov    0x18(%rsp),%rsi
+ 8f8:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+ 8fd:	49 89 c5             	mov    %rax,%r13
+ 900:	e8 00 00 00 00       	callq  905 <get_fileinfo_from_selector+0x215>
+ 905:	4c 89 ee             	mov    %r13,%rsi
+ 908:	48 89 c7             	mov    %rax,%rdi
+ 90b:	e8 00 00 00 00       	callq  910 <get_fileinfo_from_selector+0x220>
+./src/selector.c:267
+ 910:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 917 <get_fileinfo_from_selector+0x227>
+ 917:	e8 00 00 00 00       	callq  91c <get_fileinfo_from_selector+0x22c>
+./src/selector.c:270
+ 91c:	4c 8b 74 24 08       	mov    0x8(%rsp),%r14
+ 921:	be 50 00 00 00       	mov    $0x50,%esi
+./src/selector.c:269
+ 926:	c7 05 00 00 00 00 01 	movl   $0x1,0x0(%rip)        # 930 <get_fileinfo_from_selector+0x240>
+ 92d:	00 00 00 
+./src/selector.c:270
+ 930:	4c 89 f7             	mov    %r14,%rdi
+ 933:	e8 00 00 00 00       	callq  938 <get_fileinfo_from_selector+0x248>
+ 938:	48 8d 15 21 f9 ff ff 	lea    -0x6df(%rip),%rdx        # 260 <cb_select_charset>
+ 93f:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 946 <get_fileinfo_from_selector+0x256>
+ 946:	45 31 c9             	xor    %r9d,%r9d
+ 949:	45 31 c0             	xor    %r8d,%r8d
+ 94c:	48 89 e9             	mov    %rbp,%rcx
+ 94f:	48 89 c7             	mov    %rax,%rdi
+ 952:	e8 00 00 00 00       	callq  957 <get_fileinfo_from_selector+0x267>
+./src/selector.c:272
+ 957:	e8 00 00 00 00       	callq  95c <get_fileinfo_from_selector+0x26c>
+ 95c:	4c 89 f7             	mov    %r14,%rdi
+ 95f:	48 89 c6             	mov    %rax,%rsi
+ 962:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 967:	e8 00 00 00 00       	callq  96c <get_fileinfo_from_selector+0x27c>
+ 96c:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+ 971:	48 89 c7             	mov    %rax,%rdi
+ 974:	e8 00 00 00 00       	callq  979 <get_fileinfo_from_selector+0x289>
+./src/selector.c:274
+ 979:	48 8b 7d 08          	mov    0x8(%rbp),%rdi
+ 97d:	48 85 ff             	test   %rdi,%rdi
+ 980:	0f 84 fa 04 00 00    	je     e80 <get_fileinfo_from_selector+0x790>
+ 986:	4d 89 e6             	mov    %r12,%r14
+ 989:	45 31 ed             	xor    %r13d,%r13d
+ 98c:	eb 15                	jmp    9a3 <get_fileinfo_from_selector+0x2b3>
+ 98e:	66 90                	xchg   %ax,%ax
+./src/selector.c:278
+ 990:	41 83 c5 01          	add    $0x1,%r13d
+ 994:	49 83 c6 08          	add    $0x8,%r14
+./src/selector.c:279
+ 998:	45 3b 6c 24 50       	cmp    0x50(%r12),%r13d
+ 99d:	7d 10                	jge    9af <get_fileinfo_from_selector+0x2bf>
+ 99f:	48 8b 7d 08          	mov    0x8(%rbp),%rdi
+./src/selector.c:276
+ 9a3:	49 8b 36             	mov    (%r14),%rsi
+ 9a6:	e8 00 00 00 00       	callq  9ab <get_fileinfo_from_selector+0x2bb>
+ 9ab:	85 c0                	test   %eax,%eax
+ 9ad:	75 e1                	jne    990 <get_fileinfo_from_selector+0x2a0>
+./src/selector.c:280
+ 9af:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 9b5 <get_fileinfo_from_selector+0x2c5>
+ 9b5:	83 f8 01             	cmp    $0x1,%eax
+ 9b8:	0f 84 52 04 00 00    	je     e10 <get_fileinfo_from_selector+0x720>
+./src/selector.c:283
+ 9be:	45 39 6c 24 50       	cmp    %r13d,0x50(%r12)
+ 9c3:	0f 84 97 04 00 00    	je     e60 <get_fileinfo_from_selector+0x770>
+./src/selector.c:286
+ 9c9:	41 01 c5             	add    %eax,%r13d
+./src/selector.c:288
+ 9cc:	85 c0                	test   %eax,%eax
+ 9ce:	74 07                	je     9d7 <get_fileinfo_from_selector+0x2e7>
+ 9d0:	8b 4d 10             	mov    0x10(%rbp),%ecx
+ 9d3:	85 c9                	test   %ecx,%ecx
+ 9d5:	74 1a                	je     9f1 <get_fileinfo_from_selector+0x301>
+./src/selector.c:289
+ 9d7:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 9dc:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+ 9e1:	e8 00 00 00 00       	callq  9e6 <get_fileinfo_from_selector+0x2f6>
+ 9e6:	44 89 ee             	mov    %r13d,%esi
+ 9e9:	48 89 c7             	mov    %rax,%rdi
+ 9ec:	e8 00 00 00 00       	callq  9f1 <get_fileinfo_from_selector+0x301>
+create_file_selector():
+./src/selector.c:329
+ 9f1:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 9f8 <get_fileinfo_from_selector+0x308>
+ 9f8:	ba 05 00 00 00       	mov    $0x5,%edx
+ 9fd:	31 ff                	xor    %edi,%edi
+create_charset_menu():
+./src/selector.c:290
+ 9ff:	c7 05 00 00 00 00 00 	movl   $0x0,0x0(%rip)        # a09 <get_fileinfo_from_selector+0x319>
+ a06:	00 00 00 
+create_file_selector():
+./src/selector.c:329
+ a09:	e8 00 00 00 00       	callq  a0e <get_fileinfo_from_selector+0x31e>
+ a0e:	48 89 c7             	mov    %rax,%rdi
+ a11:	e8 00 00 00 00       	callq  a16 <get_fileinfo_from_selector+0x326>
+ a16:	49 89 c4             	mov    %rax,%r12
+./src/selector.c:330
+ a19:	e8 00 00 00 00       	callq  a1e <get_fileinfo_from_selector+0x32e>
+ a1e:	4c 89 e7             	mov    %r12,%rdi
+ a21:	48 89 c6             	mov    %rax,%rsi
+ a24:	e8 00 00 00 00       	callq  a29 <get_fileinfo_from_selector+0x339>
+ a29:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+ a2e:	48 89 c7             	mov    %rax,%rdi
+ a31:	e8 00 00 00 00       	callq  a36 <get_fileinfo_from_selector+0x346>
+./src/selector.c:331
+ a36:	e8 00 00 00 00       	callq  a3b <get_fileinfo_from_selector+0x34b>
+ a3b:	4c 8b 74 24 28       	mov    0x28(%rsp),%r14
+ a40:	48 89 c6             	mov    %rax,%rsi
+ a43:	49 89 c5             	mov    %rax,%r13
+ a46:	4c 89 f7             	mov    %r14,%rdi
+ a49:	e8 00 00 00 00       	callq  a4e <get_fileinfo_from_selector+0x35e>
+ a4e:	45 31 c0             	xor    %r8d,%r8d
+ a51:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ a57:	b9 01 00 00 00       	mov    $0x1,%ecx
+ a5c:	31 d2                	xor    %edx,%edx
+ a5e:	48 89 c7             	mov    %rax,%rdi
+ a61:	4c 89 e6             	mov    %r12,%rsi
+ a64:	e8 00 00 00 00       	callq  a69 <get_fileinfo_from_selector+0x379>
+./src/selector.c:333
+ a69:	4c 89 ee             	mov    %r13,%rsi
+ a6c:	4c 89 f7             	mov    %r14,%rdi
+ a6f:	e8 00 00 00 00       	callq  a74 <get_fileinfo_from_selector+0x384>
+ a74:	ba 08 00 00 00       	mov    $0x8,%edx
+ a79:	31 f6                	xor    %esi,%esi
+ a7b:	48 89 c7             	mov    %rax,%rdi
+ a7e:	e8 00 00 00 00       	callq  a83 <get_fileinfo_from_selector+0x393>
+./src/selector.c:334
+ a83:	4c 89 ee             	mov    %r13,%rsi
+ a86:	4c 89 f7             	mov    %r14,%rdi
+ a89:	e8 00 00 00 00       	callq  a8e <get_fileinfo_from_selector+0x39e>
+ a8e:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+ a93:	45 31 c0             	xor    %r8d,%r8d
+ a96:	ba 01 00 00 00       	mov    $0x1,%edx
+ a9b:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ aa1:	b9 02 00 00 00       	mov    $0x2,%ecx
+ aa6:	48 89 c7             	mov    %rax,%rdi
+ aa9:	e8 00 00 00 00       	callq  aae <get_fileinfo_from_selector+0x3be>
+./src/selector.c:335
+ aae:	8b 15 00 00 00 00    	mov    0x0(%rip),%edx        # ab4 <get_fileinfo_from_selector+0x3c4>
+ ab4:	85 d2                	test   %edx,%edx
+ ab6:	0f 84 34 02 00 00    	je     cf0 <get_fileinfo_from_selector+0x600>
+./src/selector.c:339
+ abc:	48 8b 7c 24 30       	mov    0x30(%rsp),%rdi
+ ac1:	e8 00 00 00 00       	callq  ac6 <get_fileinfo_from_selector+0x3d6>
+./src/selector.c:341
+ ac6:	4c 8b 65 00          	mov    0x0(%rbp),%r12
+ aca:	4d 85 e4             	test   %r12,%r12
+ acd:	74 17                	je     ae6 <get_fileinfo_from_selector+0x3f6>
+./src/selector.c:343
+ acf:	48 8b 34 24          	mov    (%rsp),%rsi
+ ad3:	48 89 df             	mov    %rbx,%rdi
+ ad6:	e8 00 00 00 00       	callq  adb <get_fileinfo_from_selector+0x3eb>
+ adb:	4c 89 e6             	mov    %r12,%rsi
+ ade:	48 89 c7             	mov    %rax,%rdi
+ ae1:	e8 00 00 00 00       	callq  ae6 <get_fileinfo_from_selector+0x3f6>
+get_fileinfo_from_selector():
+./src/selector.c:370
+ ae6:	e8 00 00 00 00       	callq  aeb <get_fileinfo_from_selector+0x3fb>
+ aeb:	49 89 c4             	mov    %rax,%r12
+ aee:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # af5 <get_fileinfo_from_selector+0x405>
+ af5:	4c 89 e6             	mov    %r12,%rsi
+ af8:	48 8b 40 08          	mov    0x8(%rax),%rax
+ afc:	48 8b 38             	mov    (%rax),%rdi
+ aff:	e8 00 00 00 00       	callq  b04 <get_fileinfo_from_selector+0x414>
+./src/selector.c:369
+ b04:	4c 89 e6             	mov    %r12,%rsi
+./src/selector.c:370
+ b07:	49 89 c5             	mov    %rax,%r13
+./src/selector.c:369
+ b0a:	48 89 df             	mov    %rbx,%rdi
+ b0d:	e8 00 00 00 00       	callq  b12 <get_fileinfo_from_selector+0x422>
+ b12:	4c 89 ee             	mov    %r13,%rsi
+ b15:	48 89 c7             	mov    %rax,%rdi
+ b18:	e8 00 00 00 00       	callq  b1d <get_fileinfo_from_selector+0x42d>
+ b1d:	e8 00 00 00 00       	callq  b22 <get_fileinfo_from_selector+0x432>
+ b22:	49 89 c5             	mov    %rax,%r13
+ b25:	e9 a9 00 00 00       	jmpq   bd3 <get_fileinfo_from_selector+0x4e3>
+ b2a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/selector.c:375
+ b30:	48 8b 7d 00          	mov    0x0(%rbp),%rdi
+ b34:	48 85 ff             	test   %rdi,%rdi
+ b37:	74 05                	je     b3e <get_fileinfo_from_selector+0x44e>
+./src/selector.c:376
+ b39:	e8 00 00 00 00       	callq  b3e <get_fileinfo_from_selector+0x44e>
+./src/selector.c:379
+ b3e:	48 8b 34 24          	mov    (%rsp),%rsi
+ b42:	48 89 df             	mov    %rbx,%rdi
+ b45:	e8 00 00 00 00       	callq  b4a <get_fileinfo_from_selector+0x45a>
+ b4a:	48 89 c7             	mov    %rax,%rdi
+ b4d:	e8 00 00 00 00       	callq  b52 <get_fileinfo_from_selector+0x462>
+./src/selector.c:384
+ b52:	be 04 00 00 00       	mov    $0x4,%esi
+./src/selector.c:378
+ b57:	48 89 45 00          	mov    %rax,0x0(%rbp)
+./src/selector.c:384
+ b5b:	48 89 c7             	mov    %rax,%rdi
+ b5e:	e8 00 00 00 00       	callq  b63 <get_fileinfo_from_selector+0x473>
+ b63:	85 c0                	test   %eax,%eax
+ b65:	0f 84 95 00 00 00    	je     c00 <get_fileinfo_from_selector+0x510>
+./src/selector.c:385
+ b6b:	4c 8b 75 00          	mov    0x0(%rbp),%r14
+ b6f:	4c 89 f7             	mov    %r14,%rdi
+ b72:	e8 00 00 00 00       	callq  b77 <get_fileinfo_from_selector+0x487>
+./src/selector.c:386
+ b77:	85 c0                	test   %eax,%eax
+ b79:	7e 0e                	jle    b89 <get_fileinfo_from_selector+0x499>
+./src/selector.c:386 (discriminator 1)
+ b7b:	48 98                	cltq   
+ b7d:	41 80 7c 06 ff 2f    	cmpb   $0x2f,-0x1(%r14,%rax,1)
+ b83:	0f 84 4f 01 00 00    	je     cd8 <get_fileinfo_from_selector+0x5e8>
+./src/selector.c:387
+ b89:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # b90 <get_fileinfo_from_selector+0x4a0>
+ b90:	4c 89 f7             	mov    %r14,%rdi
+ b93:	31 d2                	xor    %edx,%edx
+ b95:	31 c0                	xor    %eax,%eax
+ b97:	e8 00 00 00 00       	callq  b9c <get_fileinfo_from_selector+0x4ac>
+ b9c:	49 89 c6             	mov    %rax,%r14
+./src/selector.c:391
+ b9f:	48 8b 34 24          	mov    (%rsp),%rsi
+ ba3:	48 89 df             	mov    %rbx,%rdi
+ ba6:	e8 00 00 00 00       	callq  bab <get_fileinfo_from_selector+0x4bb>
+ bab:	4c 89 f6             	mov    %r14,%rsi
+ bae:	48 89 c7             	mov    %rax,%rdi
+ bb1:	e8 00 00 00 00       	callq  bb6 <get_fileinfo_from_selector+0x4c6>
+./src/selector.c:395
+ bb6:	4c 89 f7             	mov    %r14,%rdi
+ bb9:	e8 00 00 00 00       	callq  bbe <get_fileinfo_from_selector+0x4ce>
+./src/selector.c:413
+ bbe:	4c 89 ee             	mov    %r13,%rsi
+ bc1:	48 89 df             	mov    %rbx,%rdi
+ bc4:	e8 00 00 00 00       	callq  bc9 <get_fileinfo_from_selector+0x4d9>
+ bc9:	f6 40 19 01          	testb  $0x1,0x19(%rax)
+ bcd:	0f 84 bd 00 00 00    	je     c90 <get_fileinfo_from_selector+0x5a0>
+./src/selector.c:373
+ bd3:	4c 89 fe             	mov    %r15,%rsi
+ bd6:	48 89 df             	mov    %rbx,%rdi
+ bd9:	e8 00 00 00 00       	callq  bde <get_fileinfo_from_selector+0x4ee>
+ bde:	48 89 c7             	mov    %rax,%rdi
+ be1:	e8 00 00 00 00       	callq  be6 <get_fileinfo_from_selector+0x4f6>
+./src/selector.c:374
+ be6:	83 f8 fb             	cmp    $0xfffffffb,%eax
+./src/selector.c:373
+ be9:	41 89 c4             	mov    %eax,%r12d
+./src/selector.c:374
+ bec:	0f 84 3e ff ff ff    	je     b30 <get_fileinfo_from_selector+0x440>
+./src/selector.c:412
+ bf2:	48 89 df             	mov    %rbx,%rdi
+ bf5:	e8 00 00 00 00       	callq  bfa <get_fileinfo_from_selector+0x50a>
+ bfa:	eb c2                	jmp    bbe <get_fileinfo_from_selector+0x4ce>
+ bfc:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/selector.c:398
+ c00:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # c06 <get_fileinfo_from_selector+0x516>
+ c06:	85 c0                	test   %eax,%eax
+ c08:	75 e8                	jne    bf2 <get_fileinfo_from_selector+0x502>
+./src/selector.c:398 (discriminator 1)
+ c0a:	48 8b 7d 00          	mov    0x0(%rbp),%rdi
+ c0e:	be 10 00 00 00       	mov    $0x10,%esi
+ c13:	e8 00 00 00 00       	callq  c18 <get_fileinfo_from_selector+0x528>
+ c18:	85 c0                	test   %eax,%eax
+ c1a:	74 d6                	je     bf2 <get_fileinfo_from_selector+0x502>
+./src/selector.c:399
+ c1c:	48 8b 7d 00          	mov    0x0(%rbp),%rdi
+ c20:	e8 00 00 00 00       	callq  c25 <get_fileinfo_from_selector+0x535>
+./src/selector.c:400
+ c25:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # c2c <get_fileinfo_from_selector+0x53c>
+ c2c:	ba 05 00 00 00       	mov    $0x5,%edx
+./src/selector.c:399
+ c31:	49 89 c4             	mov    %rax,%r12
+./src/selector.c:400
+ c34:	31 ff                	xor    %edi,%edi
+ c36:	e8 00 00 00 00       	callq  c3b <get_fileinfo_from_selector+0x54b>
+ c3b:	4c 89 e6             	mov    %r12,%rsi
+ c3e:	48 89 c7             	mov    %rax,%rdi
+ c41:	31 c0                	xor    %eax,%eax
+ c43:	e8 00 00 00 00       	callq  c48 <get_fileinfo_from_selector+0x558>
+./src/selector.c:401
+ c48:	4c 89 e7             	mov    %r12,%rdi
+./src/selector.c:400
+ c4b:	49 89 c6             	mov    %rax,%r14
+./src/selector.c:401
+ c4e:	e8 00 00 00 00       	callq  c53 <get_fileinfo_from_selector+0x563>
+./src/selector.c:402
+ c53:	4c 89 f6             	mov    %r14,%rsi
+ c56:	48 89 df             	mov    %rbx,%rdi
+ c59:	31 c0                	xor    %eax,%eax
+ c5b:	e8 00 00 00 00       	callq  c60 <get_fileinfo_from_selector+0x570>
+./src/selector.c:403
+ c60:	4c 89 f7             	mov    %r14,%rdi
+./src/selector.c:402
+ c63:	41 89 c4             	mov    %eax,%r12d
+./src/selector.c:403
+ c66:	e8 00 00 00 00       	callq  c6b <get_fileinfo_from_selector+0x57b>
+./src/selector.c:404
+ c6b:	41 83 fc f7          	cmp    $0xfffffff7,%r12d
+ c6f:	0f 84 49 ff ff ff    	je     bbe <get_fileinfo_from_selector+0x4ce>
+./src/selector.c:408
+ c75:	41 83 fc f8          	cmp    $0xfffffff8,%r12d
+ c79:	b8 fb ff ff ff       	mov    $0xfffffffb,%eax
+./src/selector.c:412
+ c7e:	48 89 df             	mov    %rbx,%rdi
+./src/selector.c:408
+ c81:	44 0f 44 e0          	cmove  %eax,%r12d
+./src/selector.c:412
+ c85:	e8 00 00 00 00       	callq  c8a <get_fileinfo_from_selector+0x59a>
+ c8a:	e9 2f ff ff ff       	jmpq   bbe <get_fileinfo_from_selector+0x4ce>
+ c8f:	90                   	nop
+./src/selector.c:415
+ c90:	41 83 fc fb          	cmp    $0xfffffffb,%r12d
+ c94:	0f 85 a6 01 00 00    	jne    e40 <get_fileinfo_from_selector+0x750>
+./src/selector.c:422
+ c9a:	48 89 df             	mov    %rbx,%rdi
+ c9d:	e8 00 00 00 00       	callq  ca2 <get_fileinfo_from_selector+0x5b2>
+./src/selector.c:425
+ ca2:	48 83 c4 48          	add    $0x48,%rsp
+ ca6:	48 89 e8             	mov    %rbp,%rax
+ ca9:	5b                   	pop    %rbx
+ caa:	5d                   	pop    %rbp
+ cab:	41 5c                	pop    %r12
+ cad:	41 5d                	pop    %r13
+ caf:	41 5e                	pop    %r14
+ cb1:	41 5f                	pop    %r15
+ cb3:	c3                   	retq   
+ cb4:	0f 1f 40 00          	nopl   0x0(%rax)
+create_file_selector():
+./src/selector.c:305
+ cb8:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # cbf <get_fileinfo_from_selector+0x5cf>
+ cbf:	31 ff                	xor    %edi,%edi
+ cc1:	e8 00 00 00 00       	callq  cc6 <get_fileinfo_from_selector+0x5d6>
+./src/selector.c:308
+ cc6:	4c 8d 0d 00 00 00 00 	lea    0x0(%rip),%r9        # ccd <get_fileinfo_from_selector+0x5dd>
+ ccd:	e9 a0 fa ff ff       	jmpq   772 <get_fileinfo_from_selector+0x82>
+ cd2:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+get_fileinfo_from_selector():
+./src/selector.c:389
+ cd8:	4c 89 f7             	mov    %r14,%rdi
+ cdb:	e8 00 00 00 00       	callq  ce0 <get_fileinfo_from_selector+0x5f0>
+ ce0:	49 89 c6             	mov    %rax,%r14
+ ce3:	e9 b7 fe ff ff       	jmpq   b9f <get_fileinfo_from_selector+0x4af>
+ ce8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ cef:	00 
+create_lineend_menu():
+./src/selector.c:58
+ cf0:	e8 00 00 00 00       	callq  cf5 <get_fileinfo_from_selector+0x605>
+ cf5:	4c 8d 35 00 00 00 00 	lea    0x0(%rip),%r14        # cfc <get_fileinfo_from_selector+0x60c>
+ cfc:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+./src/selector.c:59
+ d01:	e8 00 00 00 00       	callq  d06 <get_fileinfo_from_selector+0x616>
+ d06:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # d0d <get_fileinfo_from_selector+0x61d>
+ d0d:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+./src/selector.c:61
+ d12:	e8 00 00 00 00       	callq  d17 <get_fileinfo_from_selector+0x627>
+./src/selector.c:62
+ d17:	48 8b 74 24 18       	mov    0x18(%rsp),%rsi
+ d1c:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+./src/selector.c:61
+ d21:	49 89 c4             	mov    %rax,%r12
+ d24:	49 83 c6 08          	add    $0x8,%r14
+./src/selector.c:62
+ d28:	e8 00 00 00 00       	callq  d2d <get_fileinfo_from_selector+0x63d>
+ d2d:	4c 89 e6             	mov    %r12,%rsi
+ d30:	48 89 c7             	mov    %rax,%rdi
+ d33:	e8 00 00 00 00       	callq  d38 <get_fileinfo_from_selector+0x648>
+./src/selector.c:63
+ d38:	4c 89 e7             	mov    %r12,%rdi
+ d3b:	e8 00 00 00 00       	callq  d40 <get_fileinfo_from_selector+0x650>
+./src/selector.c:60
+ d40:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # d47 <get_fileinfo_from_selector+0x657>
+ d47:	49 39 c6             	cmp    %rax,%r14
+ d4a:	74 0c                	je     d58 <get_fileinfo_from_selector+0x668>
+ d4c:	49 8b 3e             	mov    (%r14),%rdi
+ d4f:	eb c1                	jmp    d12 <get_fileinfo_from_selector+0x622>
+ d51:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/selector.c:65
+ d58:	4c 8b 74 24 10       	mov    0x10(%rsp),%r14
+ d5d:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ d62:	41 bc 02 00 00 00    	mov    $0x2,%r12d
+ d68:	4c 89 f7             	mov    %r14,%rdi
+ d6b:	e8 00 00 00 00       	callq  d70 <get_fileinfo_from_selector+0x680>
+ d70:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+ d75:	48 89 c7             	mov    %rax,%rdi
+ d78:	e8 00 00 00 00       	callq  d7d <get_fileinfo_from_selector+0x68d>
+./src/selector.c:67
+ d7d:	be 50 00 00 00       	mov    $0x50,%esi
+ d82:	4c 89 f7             	mov    %r14,%rdi
+ d85:	e8 00 00 00 00       	callq  d8a <get_fileinfo_from_selector+0x69a>
+ d8a:	48 8d 15 6f f2 ff ff 	lea    -0xd91(%rip),%rdx        # 0 <cb_select_lineend>
+ d91:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # d98 <get_fileinfo_from_selector+0x6a8>
+ d98:	45 31 c9             	xor    %r9d,%r9d
+ d9b:	45 31 c0             	xor    %r8d,%r8d
+ d9e:	48 89 e9             	mov    %rbp,%rcx
+ da1:	48 89 c7             	mov    %rax,%rdi
+ da4:	e8 00 00 00 00       	callq  da9 <get_fileinfo_from_selector+0x6b9>
+./src/selector.c:71
+ da9:	0f b6 45 14          	movzbl 0x14(%rbp),%eax
+ dad:	3c 0d                	cmp    $0xd,%al
+ daf:	74 09                	je     dba <get_fileinfo_from_selector+0x6ca>
+ db1:	45 31 e4             	xor    %r12d,%r12d
+ db4:	3c 17                	cmp    $0x17,%al
+ db6:	41 0f 94 c4          	sete   %r12b
+./src/selector.c:78
+ dba:	4c 8b 74 24 10       	mov    0x10(%rsp),%r14
+ dbf:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ dc4:	4c 89 f7             	mov    %r14,%rdi
+ dc7:	e8 00 00 00 00       	callq  dcc <get_fileinfo_from_selector+0x6dc>
+ dcc:	44 89 e6             	mov    %r12d,%esi
+ dcf:	48 89 c7             	mov    %rax,%rdi
+ dd2:	e8 00 00 00 00       	callq  dd7 <get_fileinfo_from_selector+0x6e7>
+create_file_selector():
+./src/selector.c:337
+ dd7:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ ddc:	4c 89 ee             	mov    %r13,%rsi
+ ddf:	e8 00 00 00 00       	callq  de4 <get_fileinfo_from_selector+0x6f4>
+ de4:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ dea:	45 31 c0             	xor    %r8d,%r8d
+ ded:	b9 03 00 00 00       	mov    $0x3,%ecx
+ df2:	ba 02 00 00 00       	mov    $0x2,%edx
+ df7:	4c 89 f6             	mov    %r14,%rsi
+ dfa:	48 89 c7             	mov    %rax,%rdi
+ dfd:	e8 00 00 00 00       	callq  e02 <get_fileinfo_from_selector+0x712>
+ e02:	e9 b5 fc ff ff       	jmpq   abc <get_fileinfo_from_selector+0x3cc>
+ e07:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ e0e:	00 00 
+create_charset_menu():
+./src/selector.c:280
+ e10:	8b 7d 10             	mov    0x10(%rbp),%edi
+ e13:	85 ff                	test   %edi,%edi
+ e15:	0f 85 ae fb ff ff    	jne    9c9 <get_fileinfo_from_selector+0x2d9>
+./src/selector.c:281
+ e1b:	48 8b 7d 08          	mov    0x8(%rbp),%rdi
+ e1f:	e8 00 00 00 00       	callq  e24 <get_fileinfo_from_selector+0x734>
+./src/selector.c:282
+ e24:	48 c7 45 08 00 00 00 	movq   $0x0,0x8(%rbp)
+ e2b:	00 
+ e2c:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # e32 <get_fileinfo_from_selector+0x742>
+ e32:	e9 92 fb ff ff       	jmpq   9c9 <get_fileinfo_from_selector+0x2d9>
+ e37:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ e3e:	00 00 
+get_fileinfo_from_selector():
+./src/selector.c:416
+ e40:	48 8b 7d 08          	mov    0x8(%rbp),%rdi
+ e44:	48 85 ff             	test   %rdi,%rdi
+ e47:	74 05                	je     e4e <get_fileinfo_from_selector+0x75e>
+./src/selector.c:417
+ e49:	e8 00 00 00 00       	callq  e4e <get_fileinfo_from_selector+0x75e>
+./src/selector.c:419
+ e4e:	31 ff                	xor    %edi,%edi
+./src/selector.c:418
+ e50:	31 ed                	xor    %ebp,%ebp
+./src/selector.c:419
+ e52:	e8 00 00 00 00       	callq  e57 <get_fileinfo_from_selector+0x767>
+ e57:	e9 3e fe ff ff       	jmpq   c9a <get_fileinfo_from_selector+0x5aa>
+ e5c:	0f 1f 40 00          	nopl   0x0(%rax)
+create_charset_menu():
+./src/selector.c:283
+ e60:	8b 75 10             	mov    0x10(%rbp),%esi
+ e63:	85 f6                	test   %esi,%esi
+ e65:	0f 85 5e fb ff ff    	jne    9c9 <get_fileinfo_from_selector+0x2d9>
+./src/selector.c:284
+ e6b:	48 8b 7d 08          	mov    0x8(%rbp),%rdi
+ e6f:	e8 fc f2 ff ff       	callq  170 <init_menu_item_manual_charset>
+ e74:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # e7a <get_fileinfo_from_selector+0x78a>
+ e7a:	e9 4a fb ff ff       	jmpq   9c9 <get_fileinfo_from_selector+0x2d9>
+ e7f:	90                   	nop
+ e80:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # e86 <get_fileinfo_from_selector+0x796>
+./src/selector.c:273
+ e86:	45 31 ed             	xor    %r13d,%r13d
+ e89:	e9 3e fb ff ff       	jmpq   9cc <get_fileinfo_from_selector+0x2dc>
+ e8e:	66 90                	xchg   %ax,%ax
+./src/selector.c:253
+ e90:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # e97 <get_fileinfo_from_selector+0x7a7>
+ e97:	ba 05 00 00 00       	mov    $0x5,%edx
+ e9c:	31 ff                	xor    %edi,%edi
+ e9e:	e8 00 00 00 00       	callq  ea3 <get_fileinfo_from_selector+0x7b3>
+ ea3:	48 89 c7             	mov    %rax,%rdi
+ ea6:	e8 00 00 00 00       	callq  eab <get_fileinfo_from_selector+0x7bb>
+ eab:	49 89 c4             	mov    %rax,%r12
+./src/selector.c:254
+ eae:	e8 00 00 00 00       	callq  eb3 <get_fileinfo_from_selector+0x7c3>
+ eb3:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+ eb8:	48 89 c6             	mov    %rax,%rsi
+ ebb:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ ec0:	e8 00 00 00 00       	callq  ec5 <get_fileinfo_from_selector+0x7d5>
+ ec5:	4c 89 e6             	mov    %r12,%rsi
+ ec8:	48 89 c7             	mov    %rax,%rdi
+ ecb:	e8 00 00 00 00       	callq  ed0 <get_fileinfo_from_selector+0x7e0>
+./src/selector.c:255
+ ed0:	4c 89 e7             	mov    %r12,%rdi
+ ed3:	e8 00 00 00 00       	callq  ed8 <get_fileinfo_from_selector+0x7e8>
+ ed8:	e9 7e f9 ff ff       	jmpq   85b <get_fileinfo_from_selector+0x16b>

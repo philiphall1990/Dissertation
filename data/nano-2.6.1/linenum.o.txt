@@ -1,0 +1,641 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-linenum.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <calculate_min_number_window_width>:
+calculate_min_number_window_width():
+./src/linenum.c:30
+   0:	55                   	push   %rbp
+   1:	53                   	push   %rbx
+./src/linenum.c:35
+   2:	be 20 00 00 00       	mov    $0x20,%esi
+./src/linenum.c:30
+   7:	48 89 fb             	mov    %rdi,%rbx
+./src/linenum.c:35
+   a:	bf 04 00 00 00       	mov    $0x4,%edi
+./src/linenum.c:30
+   f:	48 83 ec 18          	sub    $0x18,%rsp
+  13:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  1a:	00 00 
+  1c:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+  21:	31 c0                	xor    %eax,%eax
+./src/linenum.c:35
+  23:	e8 00 00 00 00       	callq  28 <calculate_min_number_window_width+0x28>
+./src/linenum.c:36
+  28:	48 89 df             	mov    %rbx,%rdi
+  2b:	48 89 c6             	mov    %rax,%rsi
+./src/linenum.c:35
+  2e:	48 89 c5             	mov    %rax,%rbp
+./src/linenum.c:36
+  31:	e8 00 00 00 00       	callq  36 <calculate_min_number_window_width+0x36>
+./src/linenum.c:37
+  36:	48 89 ef             	mov    %rbp,%rdi
+./src/linenum.c:36
+  39:	48 89 c3             	mov    %rax,%rbx
+./src/linenum.c:37
+  3c:	e8 00 00 00 00       	callq  41 <calculate_min_number_window_width+0x41>
+./src/linenum.c:39
+  41:	48 8d 74 24 04       	lea    0x4(%rsp),%rsi
+  46:	31 d2                	xor    %edx,%edx
+  48:	48 89 df             	mov    %rbx,%rdi
+  4b:	e8 00 00 00 00       	callq  50 <calculate_min_number_window_width+0x50>
+./src/linenum.c:40
+  50:	be 50 00 00 00       	mov    $0x50,%esi
+  55:	48 89 df             	mov    %rbx,%rdi
+  58:	e8 00 00 00 00       	callq  5d <calculate_min_number_window_width+0x5d>
+  5d:	48 89 c7             	mov    %rax,%rdi
+  60:	e8 00 00 00 00       	callq  65 <calculate_min_number_window_width+0x65>
+./src/linenum.c:43
+  65:	48 8b 4c 24 08       	mov    0x8(%rsp),%rcx
+  6a:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+  71:	00 00 
+  73:	8b 44 24 04          	mov    0x4(%rsp),%eax
+  77:	75 07                	jne    80 <calculate_min_number_window_width+0x80>
+  79:	48 83 c4 18          	add    $0x18,%rsp
+  7d:	5b                   	pop    %rbx
+  7e:	5d                   	pop    %rbp
+  7f:	c3                   	retq   
+  80:	e8 00 00 00 00       	callq  85 <calculate_min_number_window_width+0x85>
+  85:	90                   	nop
+  86:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  8d:	00 00 00 
+
+0000000000000090 <line_numbers_expose>:
+line_numbers_expose():
+./src/linenum.c:113
+  90:	41 57                	push   %r15
+  92:	41 56                	push   %r14
+  94:	41 55                	push   %r13
+  96:	41 54                	push   %r12
+  98:	55                   	push   %rbp
+  99:	53                   	push   %rbx
+  9a:	48 89 fb             	mov    %rdi,%rbx
+  9d:	48 89 f5             	mov    %rsi,%rbp
+  a0:	48 81 ec e8 00 00 00 	sub    $0xe8,%rsp
+./src/linenum.c:132
+  a7:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # ad <line_numbers_expose+0x1d>
+./src/linenum.c:113
+  ad:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  b4:	00 00 
+  b6:	48 89 84 24 d8 00 00 	mov    %rax,0xd8(%rsp)
+  bd:	00 
+  be:	31 c0                	xor    %eax,%eax
+./src/linenum.c:132
+  c0:	85 ff                	test   %edi,%edi
+  c2:	74 5c                	je     120 <line_numbers_expose+0x90>
+./src/linenum.c:134
+  c4:	e8 00 00 00 00       	callq  c9 <line_numbers_expose+0x39>
+  c9:	48 89 df             	mov    %rbx,%rdi
+  cc:	48 89 c6             	mov    %rax,%rsi
+  cf:	e8 00 00 00 00       	callq  d4 <line_numbers_expose+0x44>
+./src/linenum.c:155
+  d4:	be 03 00 00 00       	mov    $0x3,%esi
+  d9:	48 89 c7             	mov    %rax,%rdi
+./src/linenum.c:134
+  dc:	49 89 c6             	mov    %rax,%r14
+./src/linenum.c:155
+  df:	e8 00 00 00 00       	callq  e4 <line_numbers_expose+0x54>
+./src/linenum.c:157
+  e4:	48 3b 45 08          	cmp    0x8(%rbp),%rax
+./src/linenum.c:155
+  e8:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+./src/linenum.c:157
+  ed:	0f 84 c5 00 00 00    	je     1b8 <line_numbers_expose+0x128>
+./src/linenum.c:303
+  f3:	31 c0                	xor    %eax,%eax
+  f5:	48 8b 9c 24 d8 00 00 	mov    0xd8(%rsp),%rbx
+  fc:	00 
+  fd:	64 48 33 1c 25 28 00 	xor    %fs:0x28,%rbx
+ 104:	00 00 
+ 106:	0f 85 60 05 00 00    	jne    66c <line_numbers_expose+0x5dc>
+ 10c:	48 81 c4 e8 00 00 00 	add    $0xe8,%rsp
+ 113:	5b                   	pop    %rbx
+ 114:	5d                   	pop    %rbp
+ 115:	41 5c                	pop    %r12
+ 117:	41 5d                	pop    %r13
+ 119:	41 5e                	pop    %r14
+ 11b:	41 5f                	pop    %r15
+ 11d:	c3                   	retq   
+ 11e:	66 90                	xchg   %ax,%ax
+ 120:	4c 8d ac 24 80 00 00 	lea    0x80(%rsp),%r13
+ 127:	00 
+./src/linenum.c:125
+ 128:	c7 44 24 08 00 00 00 	movl   $0x0,0x8(%rsp)
+ 12f:	00 
+./src/linenum.c:291
+ 130:	48 8b 7d 08          	mov    0x8(%rbp),%rdi
+ 134:	e8 00 00 00 00       	callq  139 <line_numbers_expose+0xa9>
+./src/linenum.c:292
+ 139:	48 8b 73 30          	mov    0x30(%rbx),%rsi
+ 13d:	48 89 c7             	mov    %rax,%rdi
+./src/linenum.c:291
+ 140:	49 89 c4             	mov    %rax,%r12
+./src/linenum.c:292
+ 143:	48 81 c6 80 01 00 00 	add    $0x180,%rsi
+ 14a:	e8 00 00 00 00       	callq  14f <line_numbers_expose+0xbf>
+./src/linenum.c:293
+ 14f:	48 8b 7d 08          	mov    0x8(%rbp),%rdi
+ 153:	31 c9                	xor    %ecx,%ecx
+ 155:	31 f6                	xor    %esi,%esi
+ 157:	45 31 c9             	xor    %r9d,%r9d
+ 15a:	31 d2                	xor    %edx,%edx
+ 15c:	4d 89 e8             	mov    %r13,%r8
+ 15f:	e8 00 00 00 00       	callq  164 <line_numbers_expose+0xd4>
+./src/linenum.c:294
+ 164:	8b 35 00 00 00 00    	mov    0x0(%rip),%esi        # 16a <line_numbers_expose+0xda>
+ 16a:	31 c9                	xor    %ecx,%ecx
+ 16c:	8b 84 24 80 00 00 00 	mov    0x80(%rsp),%eax
+ 173:	85 f6                	test   %esi,%esi
+ 175:	74 0e                	je     185 <line_numbers_expose+0xf5>
+./src/linenum.c:296 (discriminator 1)
+ 177:	44 8b 74 24 08       	mov    0x8(%rsp),%r14d
+ 17c:	44 03 74 24 7c       	add    0x7c(%rsp),%r14d
+./src/linenum.c:294 (discriminator 1)
+ 181:	41 8d 4e 05          	lea    0x5(%r14),%ecx
+./src/linenum.c:294 (discriminator 4)
+ 185:	48 83 ec 08          	sub    $0x8,%rsp
+ 189:	48 8b 7d 08          	mov    0x8(%rbp),%rdi
+ 18d:	ba 01 00 00 00       	mov    $0x1,%edx
+ 192:	50                   	push   %rax
+ 193:	41 b9 02 00 00 00    	mov    $0x2,%r9d
+ 199:	45 31 c0             	xor    %r8d,%r8d
+ 19c:	4c 89 e6             	mov    %r12,%rsi
+ 19f:	e8 00 00 00 00       	callq  1a4 <line_numbers_expose+0x114>
+./src/linenum.c:300 (discriminator 4)
+ 1a4:	4c 89 e7             	mov    %r12,%rdi
+ 1a7:	e8 00 00 00 00       	callq  1ac <line_numbers_expose+0x11c>
+./src/linenum.c:302 (discriminator 4)
+ 1ac:	58                   	pop    %rax
+ 1ad:	5a                   	pop    %rdx
+ 1ae:	e9 40 ff ff ff       	jmpq   f3 <line_numbers_expose+0x63>
+ 1b3:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/linenum.c:163
+ 1b8:	8b 4d 18             	mov    0x18(%rbp),%ecx
+./src/linenum.c:164
+ 1bb:	8b 45 20             	mov    0x20(%rbp),%eax
+./src/linenum.c:166
+ 1be:	4c 8d 4c 24 68       	lea    0x68(%rsp),%r9
+ 1c3:	45 31 c0             	xor    %r8d,%r8d
+ 1c6:	31 d2                	xor    %edx,%edx
+ 1c8:	be 03 00 00 00       	mov    $0x3,%esi
+ 1cd:	4c 89 f7             	mov    %r14,%rdi
+get_lines():
+./src/linenum.c:65
+ 1d0:	4c 8d ac 24 80 00 00 	lea    0x80(%rsp),%r13
+ 1d7:	00 
+line_numbers_expose():
+./src/linenum.c:164
+ 1d8:	01 c8                	add    %ecx,%eax
+./src/linenum.c:163
+ 1da:	89 4c 24 68          	mov    %ecx,0x68(%rsp)
+./src/linenum.c:164
+ 1de:	89 44 24 6c          	mov    %eax,0x6c(%rsp)
+./src/linenum.c:166
+ 1e2:	e8 00 00 00 00       	callq  1e7 <line_numbers_expose+0x157>
+./src/linenum.c:173
+ 1e7:	8b 4c 24 6c          	mov    0x6c(%rsp),%ecx
+ 1eb:	4c 8d 4c 24 6c       	lea    0x6c(%rsp),%r9
+ 1f0:	45 31 c0             	xor    %r8d,%r8d
+ 1f3:	31 d2                	xor    %edx,%edx
+ 1f5:	be 03 00 00 00       	mov    $0x3,%esi
+ 1fa:	4c 89 f7             	mov    %r14,%rdi
+ 1fd:	e8 00 00 00 00       	callq  202 <line_numbers_expose+0x172>
+./src/linenum.c:180
+ 202:	ba 04 00 00 00       	mov    $0x4,%edx
+ 207:	31 f6                	xor    %esi,%esi
+ 209:	31 ff                	xor    %edi,%edi
+ 20b:	e8 00 00 00 00       	callq  210 <line_numbers_expose+0x180>
+./src/linenum.c:181
+ 210:	ba 04 00 00 00       	mov    $0x4,%edx
+ 215:	31 f6                	xor    %esi,%esi
+ 217:	31 ff                	xor    %edi,%edi
+./src/linenum.c:180
+ 219:	49 89 c7             	mov    %rax,%r15
+ 21c:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+./src/linenum.c:181
+ 221:	e8 00 00 00 00       	callq  226 <line_numbers_expose+0x196>
+./src/linenum.c:183
+ 226:	8b 54 24 6c          	mov    0x6c(%rsp),%edx
+ 22a:	44 8b 64 24 68       	mov    0x68(%rsp),%r12d
+get_lines():
+./src/linenum.c:61
+ 22f:	31 f6                	xor    %esi,%esi
+ 231:	48 89 c7             	mov    %rax,%rdi
+line_numbers_expose():
+./src/linenum.c:181
+ 234:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+./src/linenum.c:183
+ 239:	89 54 24 10          	mov    %edx,0x10(%rsp)
+get_lines():
+./src/linenum.c:61
+ 23d:	e8 00 00 00 00       	callq  242 <line_numbers_expose+0x1b2>
+./src/linenum.c:62
+ 242:	4c 89 ff             	mov    %r15,%rdi
+ 245:	31 f6                	xor    %esi,%esi
+./src/linenum.c:70
+ 247:	45 31 ff             	xor    %r15d,%r15d
+./src/linenum.c:62
+ 24a:	e8 00 00 00 00       	callq  24f <line_numbers_expose+0x1bf>
+./src/linenum.c:65
+ 24f:	44 89 e2             	mov    %r12d,%edx
+ 252:	31 c9                	xor    %ecx,%ecx
+ 254:	4c 89 ee             	mov    %r13,%rsi
+ 257:	4c 89 f7             	mov    %r14,%rdi
+./src/linenum.c:77
+ 25a:	4c 8d 64 24 78       	lea    0x78(%rsp),%r12
+./src/linenum.c:65
+ 25f:	e8 00 00 00 00       	callq  264 <line_numbers_expose+0x1d4>
+ 264:	48 8d 44 24 7c       	lea    0x7c(%rsp),%rax
+ 269:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 26e:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 273:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+./src/linenum.c:81
+ 278:	48 8d 44 24 70       	lea    0x70(%rsp),%rax
+ 27d:	48 89 c3             	mov    %rax,%rbx
+ 280:	eb 67                	jmp    2e9 <line_numbers_expose+0x259>
+ 282:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/linenum.c:77
+ 288:	48 8b 4c 24 08       	mov    0x8(%rsp),%rcx
+ 28d:	4c 89 e2             	mov    %r12,%rdx
+ 290:	4c 89 ee             	mov    %r13,%rsi
+ 293:	4c 89 f7             	mov    %r14,%rdi
+./src/linenum.c:83
+ 296:	41 83 c7 01          	add    $0x1,%r15d
+./src/linenum.c:77
+ 29a:	e8 00 00 00 00       	callq  29f <line_numbers_expose+0x20f>
+./src/linenum.c:79
+ 29f:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 2a4:	ba 01 00 00 00       	mov    $0x1,%edx
+ 2a9:	4c 89 e6             	mov    %r12,%rsi
+ 2ac:	e8 00 00 00 00       	callq  2b1 <line_numbers_expose+0x221>
+./src/linenum.c:80
+ 2b1:	4c 89 ef             	mov    %r13,%rdi
+ 2b4:	e8 00 00 00 00       	callq  2b9 <line_numbers_expose+0x229>
+./src/linenum.c:81
+ 2b9:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 2be:	ba 01 00 00 00       	mov    $0x1,%edx
+ 2c3:	48 89 de             	mov    %rbx,%rsi
+./src/linenum.c:80
+ 2c6:	89 44 24 70          	mov    %eax,0x70(%rsp)
+./src/linenum.c:81
+ 2ca:	e8 00 00 00 00       	callq  2cf <line_numbers_expose+0x23f>
+./src/linenum.c:85
+ 2cf:	8b 44 24 7c          	mov    0x7c(%rsp),%eax
+ 2d3:	03 44 24 78          	add    0x78(%rsp),%eax
+ 2d7:	39 44 24 10          	cmp    %eax,0x10(%rsp)
+ 2db:	0f 8e ef 02 00 00    	jle    5d0 <line_numbers_expose+0x540>
+./src/linenum.c:88
+ 2e1:	4c 89 ef             	mov    %r13,%rdi
+ 2e4:	e8 00 00 00 00       	callq  2e9 <line_numbers_expose+0x259>
+./src/linenum.c:73
+ 2e9:	4c 89 ef             	mov    %r13,%rdi
+ 2ec:	e8 00 00 00 00       	callq  2f1 <line_numbers_expose+0x261>
+ 2f1:	85 c0                	test   %eax,%eax
+ 2f3:	74 93                	je     288 <line_numbers_expose+0x1f8>
+./src/linenum.c:91
+ 2f5:	4c 89 ef             	mov    %r13,%rdi
+ 2f8:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 2fd:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 302:	e8 00 00 00 00       	callq  307 <line_numbers_expose+0x277>
+ 307:	85 c0                	test   %eax,%eax
+ 309:	0f 85 51 03 00 00    	jne    660 <line_numbers_expose+0x5d0>
+line_numbers_expose():
+./src/linenum.c:193
+ 30f:	45 85 ff             	test   %r15d,%r15d
+ 312:	75 3f                	jne    353 <line_numbers_expose+0x2c3>
+./src/linenum.c:198
+ 314:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+ 319:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 31e:	ba 01 00 00 00       	mov    $0x1,%edx
+./src/linenum.c:195
+ 323:	c7 44 24 7c 00 00 00 	movl   $0x0,0x7c(%rsp)
+ 32a:	00 
+./src/linenum.c:196
+ 32b:	c7 84 24 80 00 00 00 	movl   $0x0,0x80(%rsp)
+ 332:	00 00 00 00 
+./src/linenum.c:197
+ 336:	41 bf 01 00 00 00    	mov    $0x1,%r15d
+./src/linenum.c:198
+ 33c:	e8 00 00 00 00       	callq  341 <line_numbers_expose+0x2b1>
+./src/linenum.c:199
+ 341:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 346:	ba 01 00 00 00       	mov    $0x1,%edx
+ 34b:	4c 89 ee             	mov    %r13,%rsi
+ 34e:	e8 00 00 00 00       	callq  353 <line_numbers_expose+0x2c3>
+./src/linenum.c:206
+ 353:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 35a <line_numbers_expose+0x2ca>
+ 35a:	48 89 df             	mov    %rbx,%rdi
+ 35d:	e8 00 00 00 00       	callq  362 <line_numbers_expose+0x2d2>
+./src/linenum.c:210
+ 362:	49 8b 7e 78          	mov    0x78(%r14),%rdi
+./src/linenum.c:206
+ 366:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+./src/linenum.c:210
+ 36b:	e8 00 00 00 00       	callq  370 <line_numbers_expose+0x2e0>
+./src/linenum.c:209
+ 370:	83 f8 62             	cmp    $0x62,%eax
+ 373:	b9 63 00 00 00       	mov    $0x63,%ecx
+ 378:	0f 8f d2 02 00 00    	jg     650 <line_numbers_expose+0x5c0>
+./src/linenum.c:209 (discriminator 4)
+ 37e:	48 8d 84 24 d0 00 00 	lea    0xd0(%rsp),%rax
+ 385:	00 
+ 386:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 38d <line_numbers_expose+0x2fd>
+ 38d:	be 08 00 00 00       	mov    $0x8,%esi
+ 392:	49 89 c4             	mov    %rax,%r12
+ 395:	48 89 c7             	mov    %rax,%rdi
+ 398:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 39d:	31 c0                	xor    %eax,%eax
+ 39f:	e8 00 00 00 00       	callq  3a4 <line_numbers_expose+0x314>
+./src/linenum.c:211 (discriminator 4)
+ 3a4:	4c 89 e6             	mov    %r12,%rsi
+ 3a7:	4c 8b 64 24 10       	mov    0x10(%rsp),%r12
+ 3ac:	ba ff ff ff ff       	mov    $0xffffffff,%edx
+ 3b1:	4c 89 e7             	mov    %r12,%rdi
+ 3b4:	e8 00 00 00 00       	callq  3b9 <line_numbers_expose+0x329>
+./src/linenum.c:214 (discriminator 4)
+ 3b9:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+ 3be:	31 d2                	xor    %edx,%edx
+ 3c0:	4c 89 e7             	mov    %r12,%rdi
+ 3c3:	e8 00 00 00 00       	callq  3c8 <line_numbers_expose+0x338>
+./src/linenum.c:216 (discriminator 4)
+ 3c8:	48 89 df             	mov    %rbx,%rdi
+ 3cb:	e8 30 fc ff ff       	callq  0 <calculate_min_number_window_width>
+./src/linenum.c:217 (discriminator 4)
+ 3d0:	8b 54 24 7c          	mov    0x7c(%rsp),%edx
+./src/linenum.c:216 (discriminator 4)
+ 3d4:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 3da <line_numbers_expose+0x34a>
+./src/linenum.c:217 (discriminator 4)
+ 3da:	39 d0                	cmp    %edx,%eax
+ 3dc:	0f 8d c6 01 00 00    	jge    5a8 <line_numbers_expose+0x518>
+./src/linenum.c:218
+ 3e2:	be 03 00 00 00       	mov    $0x3,%esi
+ 3e7:	83 c2 07             	add    $0x7,%edx
+ 3ea:	4c 89 f7             	mov    %r14,%rdi
+ 3ed:	e8 00 00 00 00       	callq  3f2 <line_numbers_expose+0x362>
+ 3f2:	8b 74 24 7c          	mov    0x7c(%rsp),%esi
+./src/linenum.c:125
+ 3f6:	c7 44 24 08 00 00 00 	movl   $0x0,0x8(%rsp)
+ 3fd:	00 
+./src/linenum.c:228
+ 3fe:	4c 8b 64 24 10       	mov    0x10(%rsp),%r12
+ 403:	4c 89 e7             	mov    %r12,%rdi
+ 406:	e8 00 00 00 00       	callq  40b <line_numbers_expose+0x37b>
+./src/linenum.c:229
+ 40b:	4c 89 e7             	mov    %r12,%rdi
+ 40e:	be 02 00 00 00       	mov    $0x2,%esi
+ 413:	4c 89 64 24 10       	mov    %r12,0x10(%rsp)
+ 418:	e8 00 00 00 00       	callq  41d <line_numbers_expose+0x38d>
+./src/linenum.c:231
+ 41d:	e8 00 00 00 00       	callq  422 <line_numbers_expose+0x392>
+ 422:	49 89 c4             	mov    %rax,%r12
+./src/linenum.c:235
+ 425:	48 8b 43 30          	mov    0x30(%rbx),%rax
+./src/linenum.c:232
+ 429:	0f b7 90 c4 01 00 00 	movzwl 0x1c4(%rax),%edx
+ 430:	0f b7 b0 c2 01 00 00 	movzwl 0x1c2(%rax),%esi
+ 437:	0f b7 b8 c0 01 00 00 	movzwl 0x1c0(%rax),%edi
+ 43e:	e8 00 00 00 00       	callq  443 <line_numbers_expose+0x3b3>
+./src/linenum.c:238
+ 443:	4c 89 e7             	mov    %r12,%rdi
+ 446:	48 89 c6             	mov    %rax,%rsi
+./src/linenum.c:236
+ 449:	c7 40 08 00 00 00 00 	movl   $0x0,0x8(%rax)
+./src/linenum.c:237
+ 450:	c7 40 0c ff ff ff ff 	movl   $0xffffffff,0xc(%rax)
+./src/linenum.c:238
+ 457:	e8 00 00 00 00       	callq  45c <line_numbers_expose+0x3cc>
+./src/linenum.c:239
+ 45c:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+ 461:	4c 89 e6             	mov    %r12,%rsi
+ 464:	e8 00 00 00 00       	callq  469 <line_numbers_expose+0x3d9>
+./src/linenum.c:240
+ 469:	4c 89 e7             	mov    %r12,%rdi
+ 46c:	e8 00 00 00 00       	callq  471 <line_numbers_expose+0x3e1>
+ 471:	e8 00 00 00 00       	callq  476 <line_numbers_expose+0x3e6>
+ 476:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 47b:	41 8d 47 ff          	lea    -0x1(%r15),%eax
+ 47f:	45 31 ff             	xor    %r15d,%r15d
+./src/linenum.c:257
+ 482:	4c 89 74 24 50       	mov    %r14,0x50(%rsp)
+ 487:	4c 89 6c 24 30       	mov    %r13,0x30(%rsp)
+ 48c:	4d 89 fd             	mov    %r15,%r13
+ 48f:	48 8d 04 85 04 00 00 	lea    0x4(,%rax,4),%rax
+ 496:	00 
+ 497:	4c 8b 74 24 20       	mov    0x20(%rsp),%r14
+ 49c:	4c 8b 7c 24 28       	mov    0x28(%rsp),%r15
+ 4a1:	48 89 6c 24 58       	mov    %rbp,0x58(%rsp)
+ 4a6:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 4ab:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/linenum.c:249
+ 4b0:	49 8b 07             	mov    (%r15),%rax
+ 4b3:	4c 8b 4c 24 30       	mov    0x30(%rsp),%r9
+ 4b8:	45 31 c0             	xor    %r8d,%r8d
+ 4bb:	48 8b 7c 24 50       	mov    0x50(%rsp),%rdi
+ 4c0:	31 d2                	xor    %edx,%edx
+ 4c2:	be 03 00 00 00       	mov    $0x3,%esi
+ 4c7:	42 8b 0c 28          	mov    (%rax,%r13,1),%ecx
+ 4cb:	e8 00 00 00 00       	callq  4d0 <line_numbers_expose+0x440>
+./src/linenum.c:258
+ 4d0:	49 8b 06             	mov    (%r14),%rax
+./src/linenum.c:257
+ 4d3:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 4d8:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 4df <line_numbers_expose+0x44f>
+ 4df:	be 08 00 00 00       	mov    $0x8,%esi
+ 4e4:	42 8b 0c 28          	mov    (%rax,%r13,1),%ecx
+ 4e8:	48 89 ef             	mov    %rbp,%rdi
+ 4eb:	31 c0                	xor    %eax,%eax
+ 4ed:	49 83 c5 04          	add    $0x4,%r13
+ 4f1:	83 c1 01             	add    $0x1,%ecx
+ 4f4:	e8 00 00 00 00       	callq  4f9 <line_numbers_expose+0x469>
+./src/linenum.c:260
+ 4f9:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+ 4fe:	ba ff ff ff ff       	mov    $0xffffffff,%edx
+ 503:	48 89 ee             	mov    %rbp,%rsi
+ 506:	e8 00 00 00 00       	callq  50b <line_numbers_expose+0x47b>
+./src/linenum.c:270
+ 50b:	8b 6c 24 08          	mov    0x8(%rsp),%ebp
+ 50f:	03 6c 24 7c          	add    0x7c(%rsp),%ebp
+./src/linenum.c:264
+ 513:	48 89 df             	mov    %rbx,%rdi
+ 516:	48 8b 74 24 40       	mov    0x40(%rsp),%rsi
+./src/linenum.c:262
+ 51b:	44 8b a4 24 80 00 00 	mov    0x80(%rsp),%r12d
+ 522:	00 
+ 523:	83 c5 03             	add    $0x3,%ebp
+./src/linenum.c:264
+ 526:	e8 00 00 00 00       	callq  52b <line_numbers_expose+0x49b>
+./src/linenum.c:262
+ 52b:	0f b6 50 22          	movzbl 0x22(%rax),%edx
+ 52f:	48 8b 7b 30          	mov    0x30(%rbx),%rdi
+ 533:	45 31 c0             	xor    %r8d,%r8d
+ 536:	ff 74 24 10          	pushq  0x10(%rsp)
+ 53a:	41 54                	push   %r12
+ 53c:	31 c9                	xor    %ecx,%ecx
+ 53e:	55                   	push   %rbp
+ 53f:	6a 00                	pushq  $0x0
+ 541:	49 89 d9             	mov    %rbx,%r9
+ 544:	48 8b 74 24 38       	mov    0x38(%rsp),%rsi
+ 549:	e8 00 00 00 00       	callq  54e <line_numbers_expose+0x4be>
+./src/linenum.c:245
+ 54e:	48 83 c4 20          	add    $0x20,%rsp
+ 552:	4c 39 6c 24 38       	cmp    %r13,0x38(%rsp)
+ 557:	0f 85 53 ff ff ff    	jne    4b0 <line_numbers_expose+0x420>
+./src/linenum.c:281
+ 55d:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 562:	be 01 00 00 00       	mov    $0x1,%esi
+ 567:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 56c:	4c 8b 6c 24 30       	mov    0x30(%rsp),%r13
+ 571:	e8 00 00 00 00       	callq  576 <line_numbers_expose+0x4e6>
+./src/linenum.c:282
+ 576:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 57b:	be 01 00 00 00       	mov    $0x1,%esi
+ 580:	e8 00 00 00 00       	callq  585 <line_numbers_expose+0x4f5>
+./src/linenum.c:284
+ 585:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+ 58a:	be 50 00 00 00       	mov    $0x50,%esi
+ 58f:	e8 00 00 00 00       	callq  594 <line_numbers_expose+0x504>
+ 594:	48 89 c7             	mov    %rax,%rdi
+ 597:	e8 00 00 00 00       	callq  59c <line_numbers_expose+0x50c>
+ 59c:	e9 8f fb ff ff       	jmpq   130 <line_numbers_expose+0xa0>
+ 5a1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+./src/linenum.c:222
+ 5a8:	8d 50 07             	lea    0x7(%rax),%edx
+ 5ab:	be 03 00 00 00       	mov    $0x3,%esi
+ 5b0:	4c 89 f7             	mov    %r14,%rdi
+ 5b3:	e8 00 00 00 00       	callq  5b8 <line_numbers_expose+0x528>
+./src/linenum.c:225
+ 5b8:	8b 74 24 7c          	mov    0x7c(%rsp),%esi
+ 5bc:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 5c2 <line_numbers_expose+0x532>
+ 5c2:	29 f0                	sub    %esi,%eax
+ 5c4:	89 44 24 08          	mov    %eax,0x8(%rsp)
+ 5c8:	e9 31 fe ff ff       	jmpq   3fe <line_numbers_expose+0x36e>
+ 5cd:	0f 1f 00             	nopl   (%rax)
+get_lines():
+./src/linenum.c:91
+ 5d0:	4c 89 ef             	mov    %r13,%rdi
+ 5d3:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 5d8:	4c 89 64 24 10       	mov    %r12,0x10(%rsp)
+ 5dd:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 5e2:	e8 00 00 00 00       	callq  5e7 <line_numbers_expose+0x557>
+ 5e7:	85 c0                	test   %eax,%eax
+ 5e9:	0f 84 64 fd ff ff    	je     353 <line_numbers_expose+0x2c3>
+./src/linenum.c:96
+ 5ef:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 5f4:	4c 8d 64 24 74       	lea    0x74(%rsp),%r12
+ 5f9:	4c 89 ee             	mov    %r13,%rsi
+ 5fc:	4c 89 f7             	mov    %r14,%rdi
+ 5ff:	4c 89 e2             	mov    %r12,%rdx
+ 602:	e8 00 00 00 00       	callq  607 <line_numbers_expose+0x577>
+./src/linenum.c:98
+ 607:	4c 89 ef             	mov    %r13,%rdi
+ 60a:	e8 00 00 00 00       	callq  60f <line_numbers_expose+0x57f>
+./src/linenum.c:100
+ 60f:	3b 44 24 70          	cmp    0x70(%rsp),%eax
+./src/linenum.c:98
+ 613:	89 44 24 7c          	mov    %eax,0x7c(%rsp)
+./src/linenum.c:100
+ 617:	0f 84 f2 fc ff ff    	je     30f <line_numbers_expose+0x27f>
+./src/linenum.c:101
+ 61d:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 622:	ba 01 00 00 00       	mov    $0x1,%edx
+ 627:	4c 89 e6             	mov    %r12,%rsi
+./src/linenum.c:103
+ 62a:	41 83 c7 01          	add    $0x1,%r15d
+./src/linenum.c:101
+ 62e:	e8 00 00 00 00       	callq  633 <line_numbers_expose+0x5a3>
+./src/linenum.c:102
+ 633:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+ 638:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 63d:	ba 01 00 00 00       	mov    $0x1,%edx
+ 642:	e8 00 00 00 00       	callq  647 <line_numbers_expose+0x5b7>
+ 647:	e9 c3 fc ff ff       	jmpq   30f <line_numbers_expose+0x27f>
+ 64c:	0f 1f 40 00          	nopl   0x0(%rax)
+line_numbers_expose():
+./src/linenum.c:209 (discriminator 1)
+ 650:	49 8b 7e 78          	mov    0x78(%r14),%rdi
+ 654:	e8 00 00 00 00       	callq  659 <line_numbers_expose+0x5c9>
+ 659:	89 c1                	mov    %eax,%ecx
+ 65b:	e9 1e fd ff ff       	jmpq   37e <line_numbers_expose+0x2ee>
+ 660:	48 8d 44 24 78       	lea    0x78(%rsp),%rax
+ 665:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 66a:	eb 83                	jmp    5ef <line_numbers_expose+0x55f>
+./src/linenum.c:303
+ 66c:	e8 00 00 00 00       	callq  671 <line_numbers_expose+0x5e1>
+ 671:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 676:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 67d:	00 00 00 
+
+0000000000000680 <show_line_numbers>:
+show_line_numbers():
+./src/linenum.c:306
+ 680:	55                   	push   %rbp
+ 681:	53                   	push   %rbx
+ 682:	48 89 fb             	mov    %rdi,%rbx
+ 685:	48 83 ec 08          	sub    $0x8,%rsp
+./src/linenum.c:308
+ 689:	85 f6                	test   %esi,%esi
+./src/linenum.c:307
+ 68b:	89 35 00 00 00 00    	mov    %esi,0x0(%rip)        # 691 <show_line_numbers+0x11>
+./src/linenum.c:308
+ 691:	75 2d                	jne    6c0 <show_line_numbers+0x40>
+./src/linenum.c:315
+ 693:	e8 00 00 00 00       	callq  698 <show_line_numbers+0x18>
+ 698:	48 89 df             	mov    %rbx,%rdi
+ 69b:	48 89 c6             	mov    %rax,%rsi
+ 69e:	e8 00 00 00 00       	callq  6a3 <show_line_numbers+0x23>
+./src/linenum.c:314
+ 6a3:	ba 02 00 00 00       	mov    $0x2,%edx
+./src/linenum.c:319
+ 6a8:	48 83 c4 08          	add    $0x8,%rsp
+./src/linenum.c:314
+ 6ac:	be 03 00 00 00       	mov    $0x3,%esi
+ 6b1:	48 89 c7             	mov    %rax,%rdi
+./src/linenum.c:319
+ 6b4:	5b                   	pop    %rbx
+ 6b5:	5d                   	pop    %rbp
+./src/linenum.c:314
+ 6b6:	e9 00 00 00 00       	jmpq   6bb <show_line_numbers+0x3b>
+ 6bb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/linenum.c:309
+ 6c0:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 6c6 <show_line_numbers+0x46>
+ 6c6:	8d 68 07             	lea    0x7(%rax),%ebp
+./src/linenum.c:310
+ 6c9:	e8 00 00 00 00       	callq  6ce <show_line_numbers+0x4e>
+ 6ce:	48 89 df             	mov    %rbx,%rdi
+ 6d1:	48 89 c6             	mov    %rax,%rsi
+ 6d4:	e8 00 00 00 00       	callq  6d9 <show_line_numbers+0x59>
+./src/linenum.c:309
+ 6d9:	89 ea                	mov    %ebp,%edx
+ 6db:	eb cb                	jmp    6a8 <show_line_numbers+0x28>
+ 6dd:	0f 1f 00             	nopl   (%rax)
+
+00000000000006e0 <linenum_init>:
+linenum_init():
+./src/linenum.c:322
+ 6e0:	53                   	push   %rbx
+ 6e1:	48 89 fb             	mov    %rdi,%rbx
+./src/linenum.c:323
+ 6e4:	e8 17 f9 ff ff       	callq  0 <calculate_min_number_window_width>
+./src/linenum.c:324
+ 6e9:	48 89 df             	mov    %rbx,%rdi
+ 6ec:	be 50 00 00 00       	mov    $0x50,%esi
+./src/linenum.c:323
+ 6f1:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 6f7 <linenum_init+0x17>
+./src/linenum.c:324
+ 6f7:	e8 00 00 00 00       	callq  6fc <linenum_init+0x1c>
+ 6fc:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 703 <linenum_init+0x23>
+ 703:	48 8d 15 86 f9 ff ff 	lea    -0x67a(%rip),%rdx        # 90 <line_numbers_expose>
+ 70a:	48 89 c7             	mov    %rax,%rdi
+ 70d:	45 31 c9             	xor    %r9d,%r9d
+ 710:	45 31 c0             	xor    %r8d,%r8d
+ 713:	31 c9                	xor    %ecx,%ecx
+ 715:	e8 00 00 00 00       	callq  71a <linenum_init+0x3a>
+./src/linenum.c:329
+ 71a:	48 89 df             	mov    %rbx,%rdi
+ 71d:	31 f6                	xor    %esi,%esi
+./src/linenum.c:330
+ 71f:	5b                   	pop    %rbx
+./src/linenum.c:329
+ 720:	e9 5b ff ff ff       	jmpq   680 <show_line_numbers>

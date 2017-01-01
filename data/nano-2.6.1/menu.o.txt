@@ -1,0 +1,269 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-menu.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <menu_translate>:
+menu_translate():
+./src/menu.c:116
+   0:	48 89 fe             	mov    %rdi,%rsi
+./src/menu.c:119
+   3:	ba 05 00 00 00       	mov    $0x5,%edx
+   8:	31 ff                	xor    %edi,%edi
+   a:	e9 00 00 00 00       	jmpq   f <menu_translate+0xf>
+   f:	90                   	nop
+
+0000000000000010 <menu_sensitivity_from_modified_flag>:
+menu_sensitivity_from_modified_flag():
+./src/menu.c:125
+  10:	89 fe                	mov    %edi,%esi
+./src/menu.c:126
+  12:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 19 <menu_sensitivity_from_modified_flag+0x9>
+  19:	e9 00 00 00 00       	jmpq   1e <menu_sensitivity_from_modified_flag+0xe>
+  1e:	66 90                	xchg   %ax,%ax
+
+0000000000000020 <menu_sensitivity_from_selection_bound>:
+menu_sensitivity_from_selection_bound():
+./src/menu.c:130
+  20:	53                   	push   %rbx
+./src/menu.c:131
+  21:	89 fe                	mov    %edi,%esi
+./src/menu.c:130
+  23:	89 fb                	mov    %edi,%ebx
+./src/menu.c:131
+  25:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 2c <menu_sensitivity_from_selection_bound+0xc>
+  2c:	e8 00 00 00 00       	callq  31 <menu_sensitivity_from_selection_bound+0x11>
+./src/menu.c:132
+  31:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 38 <menu_sensitivity_from_selection_bound+0x18>
+  38:	89 de                	mov    %ebx,%esi
+  3a:	e8 00 00 00 00       	callq  3f <menu_sensitivity_from_selection_bound+0x1f>
+./src/menu.c:133
+  3f:	89 de                	mov    %ebx,%esi
+  41:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 48 <menu_sensitivity_from_selection_bound+0x28>
+./src/menu.c:134
+  48:	5b                   	pop    %rbx
+./src/menu.c:133
+  49:	e9 00 00 00 00       	jmpq   4e <menu_sensitivity_from_selection_bound+0x2e>
+  4e:	66 90                	xchg   %ax,%ax
+
+0000000000000050 <menu_sensitivity_from_clipboard>:
+menu_sensitivity_from_clipboard():
+./src/menu.c:138
+  50:	48 83 ec 08          	sub    $0x8,%rsp
+./src/menu.c:140
+  54:	bf 45 00 00 00       	mov    $0x45,%edi
+  59:	e8 00 00 00 00       	callq  5e <menu_sensitivity_from_clipboard+0xe>
+  5e:	48 89 c7             	mov    %rax,%rdi
+  61:	e8 00 00 00 00       	callq  66 <menu_sensitivity_from_clipboard+0x16>
+  66:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 6d <menu_sensitivity_from_clipboard+0x1d>
+  6d:	89 c6                	mov    %eax,%esi
+./src/menu.c:143
+  6f:	48 83 c4 08          	add    $0x8,%rsp
+./src/menu.c:140
+  73:	e9 00 00 00 00       	jmpq   78 <menu_sensitivity_from_clipboard+0x28>
+  78:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  7f:	00 
+
+0000000000000080 <create_menu_bar>:
+create_menu_bar():
+./src/menu.c:146
+  80:	41 54                	push   %r12
+  82:	55                   	push   %rbp
+  83:	49 89 fc             	mov    %rdi,%r12
+  86:	53                   	push   %rbx
+  87:	48 83 ec 10          	sub    $0x10,%rsp
+  8b:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  92:	00 00 
+  94:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+  99:	31 c0                	xor    %eax,%eax
+./src/menu.c:151
+  9b:	48 c7 04 24 00 00 00 	movq   $0x0,(%rsp)
+  a2:	00 
+./src/menu.c:152
+  a3:	e8 00 00 00 00       	callq  a8 <create_menu_bar+0x28>
+./src/menu.c:153
+  a8:	48 85 c0             	test   %rax,%rax
+  ab:	74 34                	je     e1 <create_menu_bar+0x61>
+./src/menu.c:154
+  ad:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # b4 <create_menu_bar+0x34>
+  b4:	48 89 c7             	mov    %rax,%rdi
+  b7:	31 c9                	xor    %ecx,%ecx
+  b9:	31 c0                	xor    %eax,%eax
+  bb:	48 89 e2             	mov    %rsp,%rdx
+  be:	e8 00 00 00 00       	callq  c3 <create_menu_bar+0x43>
+./src/menu.c:155
+  c3:	48 8b 3c 24          	mov    (%rsp),%rdi
+  c7:	48 85 ff             	test   %rdi,%rdi
+  ca:	74 15                	je     e1 <create_menu_bar+0x61>
+./src/menu.c:156
+  cc:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # d3 <create_menu_bar+0x53>
+  d3:	e8 00 00 00 00       	callq  d8 <create_menu_bar+0x58>
+./src/menu.c:158
+  d8:	48 8b 3c 24          	mov    (%rsp),%rdi
+  dc:	e8 00 00 00 00       	callq  e1 <create_menu_bar+0x61>
+./src/menu.c:162
+  e1:	e8 00 00 00 00       	callq  e6 <create_menu_bar+0x66>
+  e6:	48 89 c5             	mov    %rax,%rbp
+./src/menu.c:163
+  e9:	e8 00 00 00 00       	callq  ee <create_menu_bar+0x6e>
+  ee:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # f5 <create_menu_bar+0x75>
+  f5:	48 89 ea             	mov    %rbp,%rdx
+  f8:	48 89 c7             	mov    %rax,%rdi
+  fb:	e8 00 00 00 00       	callq  100 <create_menu_bar+0x80>
+./src/menu.c:164
+ 100:	48 8d 35 f9 fe ff ff 	lea    -0x107(%rip),%rsi        # 0 <menu_translate>
+ 107:	48 89 c7             	mov    %rax,%rdi
+ 10a:	31 c9                	xor    %ecx,%ecx
+ 10c:	31 d2                	xor    %edx,%edx
+./src/menu.c:163
+ 10e:	48 89 c3             	mov    %rax,%rbx
+./src/menu.c:164
+ 111:	e8 00 00 00 00       	callq  116 <create_menu_bar+0x96>
+./src/menu.c:165
+ 116:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 11d <create_menu_bar+0x9d>
+ 11d:	31 c9                	xor    %ecx,%ecx
+ 11f:	be 23 00 00 00       	mov    $0x23,%esi
+ 124:	48 89 df             	mov    %rbx,%rdi
+ 127:	e8 00 00 00 00       	callq  12c <create_menu_bar+0xac>
+./src/menu.c:166
+ 12c:	e8 00 00 00 00       	callq  131 <create_menu_bar+0xb1>
+ 131:	4c 89 e7             	mov    %r12,%rdi
+ 134:	48 89 c6             	mov    %rax,%rsi
+ 137:	e8 00 00 00 00       	callq  13c <create_menu_bar+0xbc>
+ 13c:	48 89 ee             	mov    %rbp,%rsi
+ 13f:	48 89 c7             	mov    %rax,%rdi
+ 142:	e8 00 00 00 00       	callq  147 <create_menu_bar+0xc7>
+./src/menu.c:169
+ 147:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 14e <create_menu_bar+0xce>
+ 14e:	31 d2                	xor    %edx,%edx
+ 150:	31 f6                	xor    %esi,%esi
+ 152:	e8 00 00 00 00       	callq  157 <create_menu_bar+0xd7>
+ 157:	31 c9                	xor    %ecx,%ecx
+ 159:	49 89 c0             	mov    %rax,%r8
+ 15c:	ba 04 00 00 00       	mov    $0x4,%edx
+ 161:	be 57 00 00 00       	mov    $0x57,%esi
+ 166:	48 89 ef             	mov    %rbp,%rdi
+ 169:	e8 00 00 00 00       	callq  16e <create_menu_bar+0xee>
+./src/menu.c:172
+ 16e:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 175 <create_menu_bar+0xf5>
+ 175:	31 d2                	xor    %edx,%edx
+ 177:	31 f6                	xor    %esi,%esi
+ 179:	e8 00 00 00 00       	callq  17e <create_menu_bar+0xfe>
+ 17e:	31 c9                	xor    %ecx,%ecx
+ 180:	49 89 c0             	mov    %rax,%r8
+ 183:	ba 04 00 00 00       	mov    $0x4,%edx
+ 188:	be 54 00 00 00       	mov    $0x54,%esi
+ 18d:	48 89 ef             	mov    %rbp,%rdi
+ 190:	e8 00 00 00 00       	callq  195 <create_menu_bar+0x115>
+./src/menu.c:175
+ 195:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 19c <create_menu_bar+0x11c>
+ 19c:	48 89 df             	mov    %rbx,%rdi
+ 19f:	e8 00 00 00 00       	callq  1a4 <create_menu_bar+0x124>
+ 1a4:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1ab <create_menu_bar+0x12b>
+ 1ab:	45 31 c9             	xor    %r9d,%r9d
+ 1ae:	41 b8 04 00 00 00    	mov    $0x4,%r8d
+ 1b4:	b9 59 00 00 00       	mov    $0x59,%ecx
+ 1b9:	48 89 ea             	mov    %rbp,%rdx
+ 1bc:	48 89 c7             	mov    %rax,%rdi
+ 1bf:	e8 00 00 00 00       	callq  1c4 <create_menu_bar+0x144>
+./src/menu.c:178
+ 1c4:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1cb <create_menu_bar+0x14b>
+ 1cb:	48 89 df             	mov    %rbx,%rdi
+ 1ce:	e8 00 00 00 00       	callq  1d3 <create_menu_bar+0x153>
+ 1d3:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1da <create_menu_bar+0x15a>
+ 1da:	45 31 c9             	xor    %r9d,%r9d
+ 1dd:	45 31 c0             	xor    %r8d,%r8d
+ 1e0:	b9 c0 ff 00 00       	mov    $0xffc0,%ecx
+ 1e5:	48 89 ea             	mov    %rbp,%rdx
+ 1e8:	48 89 c7             	mov    %rax,%rdi
+ 1eb:	e8 00 00 00 00       	callq  1f0 <create_menu_bar+0x170>
+./src/menu.c:181
+ 1f0:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1f7 <create_menu_bar+0x177>
+ 1f7:	48 89 df             	mov    %rbx,%rdi
+ 1fa:	e8 00 00 00 00       	callq  1ff <create_menu_bar+0x17f>
+ 1ff:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 206 <create_menu_bar+0x186>
+ 206:	45 31 c9             	xor    %r9d,%r9d
+ 209:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 20f:	b9 c0 ff 00 00       	mov    $0xffc0,%ecx
+ 214:	48 89 ea             	mov    %rbp,%rdx
+ 217:	48 89 c7             	mov    %rax,%rdi
+ 21a:	e8 00 00 00 00       	callq  21f <create_menu_bar+0x19f>
+./src/menu.c:184
+ 21f:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 226 <create_menu_bar+0x1a6>
+ 226:	48 89 df             	mov    %rbx,%rdi
+ 229:	e8 00 00 00 00       	callq  22e <create_menu_bar+0x1ae>
+ 22e:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 235 <create_menu_bar+0x1b5>
+ 235:	45 31 c9             	xor    %r9d,%r9d
+ 238:	b9 52 00 00 00       	mov    $0x52,%ecx
+ 23d:	41 b8 04 00 00 00    	mov    $0x4,%r8d
+ 243:	48 89 ea             	mov    %rbp,%rdx
+ 246:	48 89 c7             	mov    %rax,%rdi
+ 249:	e8 00 00 00 00       	callq  24e <create_menu_bar+0x1ce>
+./src/menu.c:189
+ 24e:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 255 <create_menu_bar+0x1d5>
+ 255:	48 89 df             	mov    %rbx,%rdi
+ 258:	e8 00 00 00 00       	callq  25d <create_menu_bar+0x1dd>
+ 25d:	31 f6                	xor    %esi,%esi
+ 25f:	48 89 c7             	mov    %rax,%rdi
+ 262:	e8 00 00 00 00       	callq  267 <create_menu_bar+0x1e7>
+./src/menu.c:192
+ 267:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 26e <create_menu_bar+0x1ee>
+ 26e:	48 89 df             	mov    %rbx,%rdi
+ 271:	e8 00 00 00 00       	callq  276 <create_menu_bar+0x1f6>
+ 276:	31 f6                	xor    %esi,%esi
+ 278:	48 89 c7             	mov    %rax,%rdi
+ 27b:	e8 00 00 00 00       	callq  280 <create_menu_bar+0x200>
+./src/menu.c:196
+ 280:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 287 <create_menu_bar+0x207>
+ 287:	48 89 df             	mov    %rbx,%rdi
+ 28a:	e8 00 00 00 00       	callq  28f <create_menu_bar+0x20f>
+./src/menu.c:197
+ 28f:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 296 <create_menu_bar+0x216>
+ 296:	48 89 df             	mov    %rbx,%rdi
+./src/menu.c:196
+ 299:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 2a0 <create_menu_bar+0x220>
+./src/menu.c:197
+ 2a0:	e8 00 00 00 00       	callq  2a5 <create_menu_bar+0x225>
+./src/menu.c:198
+ 2a5:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 2ac <create_menu_bar+0x22c>
+ 2ac:	48 89 df             	mov    %rbx,%rdi
+./src/menu.c:197
+ 2af:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 2b6 <create_menu_bar+0x236>
+./src/menu.c:198
+ 2b6:	e8 00 00 00 00       	callq  2bb <create_menu_bar+0x23b>
+./src/menu.c:199
+ 2bb:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 2c2 <create_menu_bar+0x242>
+ 2c2:	48 89 df             	mov    %rbx,%rdi
+./src/menu.c:198
+ 2c5:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 2cc <create_menu_bar+0x24c>
+./src/menu.c:199
+ 2cc:	e8 00 00 00 00       	callq  2d1 <create_menu_bar+0x251>
+./src/menu.c:200
+ 2d1:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 2d8 <create_menu_bar+0x258>
+ 2d8:	48 89 df             	mov    %rbx,%rdi
+./src/menu.c:199
+ 2db:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 2e2 <create_menu_bar+0x262>
+./src/menu.c:200
+ 2e2:	e8 00 00 00 00       	callq  2e7 <create_menu_bar+0x267>
+./src/menu.c:201
+ 2e7:	31 ff                	xor    %edi,%edi
+./src/menu.c:200
+ 2e9:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 2f0 <create_menu_bar+0x270>
+./src/menu.c:201
+ 2f0:	e8 00 00 00 00       	callq  2f5 <create_menu_bar+0x275>
+./src/menu.c:203
+ 2f5:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 2fc <create_menu_bar+0x27c>
+ 2fc:	48 89 df             	mov    %rbx,%rdi
+ 2ff:	e8 00 00 00 00       	callq  304 <create_menu_bar+0x284>
+./src/menu.c:204
+ 304:	48 8b 4c 24 08       	mov    0x8(%rsp),%rcx
+ 309:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+ 310:	00 00 
+ 312:	75 09                	jne    31d <create_menu_bar+0x29d>
+ 314:	48 83 c4 10          	add    $0x10,%rsp
+ 318:	5b                   	pop    %rbx
+ 319:	5d                   	pop    %rbp
+ 31a:	41 5c                	pop    %r12
+ 31c:	c3                   	retq   
+ 31d:	e8 00 00 00 00       	callq  322 <.LC12+0x287>

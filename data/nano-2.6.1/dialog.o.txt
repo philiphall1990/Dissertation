@@ -1,0 +1,324 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-dialog.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <run_dialog_message>:
+run_dialog_message():
+./src/dialog.c:26
+   0:	41 55                	push   %r13
+   2:	41 54                	push   %r12
+   4:	49 89 fd             	mov    %rdi,%r13
+   7:	55                   	push   %rbp
+   8:	53                   	push   %rbx
+   9:	89 f3                	mov    %esi,%ebx
+   b:	48 81 ec d8 00 00 00 	sub    $0xd8,%rsp
+  12:	84 c0                	test   %al,%al
+  14:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+  19:	4c 89 44 24 40       	mov    %r8,0x40(%rsp)
+  1e:	4c 89 4c 24 48       	mov    %r9,0x48(%rsp)
+  23:	74 37                	je     5c <run_dialog_message+0x5c>
+  25:	0f 29 44 24 50       	movaps %xmm0,0x50(%rsp)
+  2a:	0f 29 4c 24 60       	movaps %xmm1,0x60(%rsp)
+  2f:	0f 29 54 24 70       	movaps %xmm2,0x70(%rsp)
+  34:	0f 29 9c 24 80 00 00 	movaps %xmm3,0x80(%rsp)
+  3b:	00 
+  3c:	0f 29 a4 24 90 00 00 	movaps %xmm4,0x90(%rsp)
+  43:	00 
+  44:	0f 29 ac 24 a0 00 00 	movaps %xmm5,0xa0(%rsp)
+  4b:	00 
+  4c:	0f 29 b4 24 b0 00 00 	movaps %xmm6,0xb0(%rsp)
+  53:	00 
+  54:	0f 29 bc 24 c0 00 00 	movaps %xmm7,0xc0(%rsp)
+  5b:	00 
+  5c:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  63:	00 00 
+  65:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+  6a:	31 c0                	xor    %eax,%eax
+./src/dialog.c:31
+  6c:	48 8d 84 24 00 01 00 	lea    0x100(%rsp),%rax
+  73:	00 
+./src/dialog.c:32
+  74:	48 89 d7             	mov    %rdx,%rdi
+  77:	48 89 e6             	mov    %rsp,%rsi
+./src/dialog.c:31
+  7a:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+  7f:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+  84:	c7 04 24 18 00 00 00 	movl   $0x18,(%rsp)
+  8b:	c7 44 24 04 30 00 00 	movl   $0x30,0x4(%rsp)
+  92:	00 
+  93:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+./src/dialog.c:32
+  98:	e8 00 00 00 00       	callq  9d <run_dialog_message+0x9d>
+  9d:	49 89 c4             	mov    %rax,%r12
+./src/dialog.c:35
+  a0:	e8 00 00 00 00       	callq  a5 <run_dialog_message+0xa5>
+  a5:	4c 89 ef             	mov    %r13,%rdi
+  a8:	48 89 c6             	mov    %rax,%rsi
+  ab:	48 89 c5             	mov    %rax,%rbp
+  ae:	e8 00 00 00 00       	callq  b3 <run_dialog_message+0xb3>
+  b3:	4c 8d 0d 00 00 00 00 	lea    0x0(%rip),%r9        # ba <run_dialog_message+0xba>
+  ba:	4d 89 e0             	mov    %r12,%r8
+  bd:	31 c9                	xor    %ecx,%ecx
+  bf:	89 da                	mov    %ebx,%edx
+  c1:	48 89 c7             	mov    %rax,%rdi
+  c4:	be 02 00 00 00       	mov    $0x2,%esi
+  c9:	31 c0                	xor    %eax,%eax
+  cb:	e8 00 00 00 00       	callq  d0 <run_dialog_message+0xd0>
+./src/dialog.c:40
+  d0:	48 89 ee             	mov    %rbp,%rsi
+  d3:	48 89 c7             	mov    %rax,%rdi
+./src/dialog.c:35
+  d6:	48 89 c3             	mov    %rax,%rbx
+./src/dialog.c:40
+  d9:	e8 00 00 00 00       	callq  de <run_dialog_message+0xde>
+  de:	31 f6                	xor    %esi,%esi
+  e0:	48 89 c7             	mov    %rax,%rdi
+  e3:	e8 00 00 00 00       	callq  e8 <run_dialog_message+0xe8>
+./src/dialog.c:41
+  e8:	e8 00 00 00 00       	callq  ed <run_dialog_message+0xed>
+  ed:	48 89 df             	mov    %rbx,%rdi
+  f0:	48 89 c6             	mov    %rax,%rsi
+  f3:	48 89 c5             	mov    %rax,%rbp
+  f6:	e8 00 00 00 00       	callq  fb <run_dialog_message+0xfb>
+  fb:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 102 <run_dialog_message+0x102>
+ 102:	31 c9                	xor    %ecx,%ecx
+ 104:	ba fa ff ff ff       	mov    $0xfffffffa,%edx
+ 109:	48 89 c7             	mov    %rax,%rdi
+ 10c:	31 c0                	xor    %eax,%eax
+ 10e:	e8 00 00 00 00       	callq  113 <run_dialog_message+0x113>
+./src/dialog.c:43
+ 113:	48 89 ee             	mov    %rbp,%rsi
+ 116:	48 89 df             	mov    %rbx,%rdi
+ 119:	e8 00 00 00 00       	callq  11e <run_dialog_message+0x11e>
+ 11e:	be fa ff ff ff       	mov    $0xfffffffa,%esi
+ 123:	48 89 c7             	mov    %rax,%rdi
+ 126:	e8 00 00 00 00       	callq  12b <run_dialog_message+0x12b>
+./src/dialog.c:44
+ 12b:	4c 89 e7             	mov    %r12,%rdi
+ 12e:	e8 00 00 00 00       	callq  133 <run_dialog_message+0x133>
+./src/dialog.c:46
+ 133:	48 89 ee             	mov    %rbp,%rsi
+ 136:	48 89 df             	mov    %rbx,%rdi
+ 139:	e8 00 00 00 00       	callq  13e <run_dialog_message+0x13e>
+ 13e:	48 89 c7             	mov    %rax,%rdi
+ 141:	e8 00 00 00 00       	callq  146 <run_dialog_message+0x146>
+./src/dialog.c:47
+ 146:	48 89 df             	mov    %rbx,%rdi
+ 149:	e8 00 00 00 00       	callq  14e <run_dialog_message+0x14e>
+./src/dialog.c:48
+ 14e:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 153:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+ 15a:	00 00 
+ 15c:	75 0e                	jne    16c <run_dialog_message+0x16c>
+ 15e:	48 81 c4 d8 00 00 00 	add    $0xd8,%rsp
+ 165:	5b                   	pop    %rbx
+ 166:	5d                   	pop    %rbp
+ 167:	41 5c                	pop    %r12
+ 169:	41 5d                	pop    %r13
+ 16b:	c3                   	retq   
+ 16c:	e8 00 00 00 00       	callq  171 <run_dialog_message+0x171>
+ 171:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 176:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 17d:	00 00 00 
+
+0000000000000180 <create_dialog_message_question>:
+create_dialog_message_question():
+./src/dialog.c:51
+ 180:	41 54                	push   %r12
+ 182:	55                   	push   %rbp
+ 183:	53                   	push   %rbx
+ 184:	48 89 fb             	mov    %rdi,%rbx
+ 187:	48 89 f7             	mov    %rsi,%rdi
+ 18a:	48 81 ec d0 00 00 00 	sub    $0xd0,%rsp
+ 191:	84 c0                	test   %al,%al
+ 193:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 198:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 19d:	4c 89 44 24 40       	mov    %r8,0x40(%rsp)
+ 1a2:	4c 89 4c 24 48       	mov    %r9,0x48(%rsp)
+ 1a7:	74 37                	je     1e0 <create_dialog_message_question+0x60>
+ 1a9:	0f 29 44 24 50       	movaps %xmm0,0x50(%rsp)
+ 1ae:	0f 29 4c 24 60       	movaps %xmm1,0x60(%rsp)
+ 1b3:	0f 29 54 24 70       	movaps %xmm2,0x70(%rsp)
+ 1b8:	0f 29 9c 24 80 00 00 	movaps %xmm3,0x80(%rsp)
+ 1bf:	00 
+ 1c0:	0f 29 a4 24 90 00 00 	movaps %xmm4,0x90(%rsp)
+ 1c7:	00 
+ 1c8:	0f 29 ac 24 a0 00 00 	movaps %xmm5,0xa0(%rsp)
+ 1cf:	00 
+ 1d0:	0f 29 b4 24 b0 00 00 	movaps %xmm6,0xb0(%rsp)
+ 1d7:	00 
+ 1d8:	0f 29 bc 24 c0 00 00 	movaps %xmm7,0xc0(%rsp)
+ 1df:	00 
+ 1e0:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 1e7:	00 00 
+ 1e9:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 1ee:	31 c0                	xor    %eax,%eax
+./src/dialog.c:56
+ 1f0:	48 8d 84 24 f0 00 00 	lea    0xf0(%rsp),%rax
+ 1f7:	00 
+./src/dialog.c:57
+ 1f8:	48 89 e6             	mov    %rsp,%rsi
+./src/dialog.c:56
+ 1fb:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 200:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+ 205:	c7 04 24 10 00 00 00 	movl   $0x10,(%rsp)
+ 20c:	c7 44 24 04 30 00 00 	movl   $0x30,0x4(%rsp)
+ 213:	00 
+ 214:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+./src/dialog.c:57
+ 219:	e8 00 00 00 00       	callq  21e <create_dialog_message_question+0x9e>
+ 21e:	48 89 c5             	mov    %rax,%rbp
+./src/dialog.c:60
+ 221:	e8 00 00 00 00       	callq  226 <create_dialog_message_question+0xa6>
+ 226:	48 89 df             	mov    %rbx,%rdi
+ 229:	48 89 c6             	mov    %rax,%rsi
+ 22c:	49 89 c4             	mov    %rax,%r12
+ 22f:	e8 00 00 00 00       	callq  234 <create_dialog_message_question+0xb4>
+ 234:	4c 8d 0d 00 00 00 00 	lea    0x0(%rip),%r9        # 23b <create_dialog_message_question+0xbb>
+ 23b:	31 c9                	xor    %ecx,%ecx
+ 23d:	49 89 e8             	mov    %rbp,%r8
+ 240:	ba 02 00 00 00       	mov    $0x2,%edx
+ 245:	48 89 c7             	mov    %rax,%rdi
+ 248:	be 02 00 00 00       	mov    $0x2,%esi
+ 24d:	31 c0                	xor    %eax,%eax
+ 24f:	e8 00 00 00 00       	callq  254 <create_dialog_message_question+0xd4>
+./src/dialog.c:65
+ 254:	4c 89 e6             	mov    %r12,%rsi
+ 257:	48 89 c7             	mov    %rax,%rdi
+./src/dialog.c:60
+ 25a:	48 89 c3             	mov    %rax,%rbx
+./src/dialog.c:65
+ 25d:	e8 00 00 00 00       	callq  262 <create_dialog_message_question+0xe2>
+ 262:	31 f6                	xor    %esi,%esi
+ 264:	48 89 c7             	mov    %rax,%rdi
+ 267:	e8 00 00 00 00       	callq  26c <create_dialog_message_question+0xec>
+./src/dialog.c:66
+ 26c:	e8 00 00 00 00       	callq  271 <create_dialog_message_question+0xf1>
+ 271:	48 89 df             	mov    %rbx,%rdi
+ 274:	48 89 c6             	mov    %rax,%rsi
+ 277:	49 89 c4             	mov    %rax,%r12
+ 27a:	e8 00 00 00 00       	callq  27f <create_dialog_message_question+0xff>
+ 27f:	6a 00                	pushq  $0x0
+ 281:	4c 8d 0d 00 00 00 00 	lea    0x0(%rip),%r9        # 288 <create_dialog_message_question+0x108>
+ 288:	6a f8                	pushq  $0xfffffffffffffff8
+ 28a:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 291 <create_dialog_message_question+0x111>
+ 291:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 298 <create_dialog_message_question+0x118>
+ 298:	ba f7 ff ff ff       	mov    $0xfffffff7,%edx
+ 29d:	41 b8 fa ff ff ff    	mov    $0xfffffffa,%r8d
+ 2a3:	48 89 c7             	mov    %rax,%rdi
+ 2a6:	31 c0                	xor    %eax,%eax
+ 2a8:	e8 00 00 00 00       	callq  2ad <create_dialog_message_question+0x12d>
+./src/dialog.c:71
+ 2ad:	4c 89 e6             	mov    %r12,%rsi
+ 2b0:	48 89 df             	mov    %rbx,%rdi
+ 2b3:	e8 00 00 00 00       	callq  2b8 <create_dialog_message_question+0x138>
+ 2b8:	be f8 ff ff ff       	mov    $0xfffffff8,%esi
+ 2bd:	48 89 c7             	mov    %rax,%rdi
+ 2c0:	e8 00 00 00 00       	callq  2c5 <create_dialog_message_question+0x145>
+./src/dialog.c:72
+ 2c5:	48 89 ef             	mov    %rbp,%rdi
+ 2c8:	e8 00 00 00 00       	callq  2cd <create_dialog_message_question+0x14d>
+./src/dialog.c:74
+ 2cd:	58                   	pop    %rax
+ 2ce:	5a                   	pop    %rdx
+./src/dialog.c:75
+ 2cf:	48 89 d8             	mov    %rbx,%rax
+ 2d2:	48 8b 54 24 18       	mov    0x18(%rsp),%rdx
+ 2d7:	64 48 33 14 25 28 00 	xor    %fs:0x28,%rdx
+ 2de:	00 00 
+ 2e0:	75 0c                	jne    2ee <create_dialog_message_question+0x16e>
+ 2e2:	48 81 c4 d0 00 00 00 	add    $0xd0,%rsp
+ 2e9:	5b                   	pop    %rbx
+ 2ea:	5d                   	pop    %rbp
+ 2eb:	41 5c                	pop    %r12
+ 2ed:	c3                   	retq   
+ 2ee:	e8 00 00 00 00       	callq  2f3 <create_dialog_message_question+0x173>
+ 2f3:	0f 1f 00             	nopl   (%rax)
+ 2f6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 2fd:	00 00 00 
+
+0000000000000300 <run_dialog_message_question>:
+run_dialog_message_question():
+./src/dialog.c:78
+ 300:	55                   	push   %rbp
+ 301:	53                   	push   %rbx
+ 302:	48 89 fb             	mov    %rdi,%rbx
+ 305:	48 89 f7             	mov    %rsi,%rdi
+ 308:	48 81 ec d8 00 00 00 	sub    $0xd8,%rsp
+ 30f:	84 c0                	test   %al,%al
+ 311:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 316:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 31b:	4c 89 44 24 40       	mov    %r8,0x40(%rsp)
+ 320:	4c 89 4c 24 48       	mov    %r9,0x48(%rsp)
+ 325:	74 37                	je     35e <run_dialog_message_question+0x5e>
+ 327:	0f 29 44 24 50       	movaps %xmm0,0x50(%rsp)
+ 32c:	0f 29 4c 24 60       	movaps %xmm1,0x60(%rsp)
+ 331:	0f 29 54 24 70       	movaps %xmm2,0x70(%rsp)
+ 336:	0f 29 9c 24 80 00 00 	movaps %xmm3,0x80(%rsp)
+ 33d:	00 
+ 33e:	0f 29 a4 24 90 00 00 	movaps %xmm4,0x90(%rsp)
+ 345:	00 
+ 346:	0f 29 ac 24 a0 00 00 	movaps %xmm5,0xa0(%rsp)
+ 34d:	00 
+ 34e:	0f 29 b4 24 b0 00 00 	movaps %xmm6,0xb0(%rsp)
+ 355:	00 
+ 356:	0f 29 bc 24 c0 00 00 	movaps %xmm7,0xc0(%rsp)
+ 35d:	00 
+ 35e:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 365:	00 00 
+ 367:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 36c:	31 c0                	xor    %eax,%eax
+./src/dialog.c:84
+ 36e:	48 8d 84 24 f0 00 00 	lea    0xf0(%rsp),%rax
+ 375:	00 
+./src/dialog.c:85
+ 376:	48 89 e6             	mov    %rsp,%rsi
+./src/dialog.c:84
+ 379:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 37e:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+ 383:	c7 04 24 10 00 00 00 	movl   $0x10,(%rsp)
+ 38a:	c7 44 24 04 30 00 00 	movl   $0x30,0x4(%rsp)
+ 391:	00 
+ 392:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+./src/dialog.c:85
+ 397:	e8 00 00 00 00       	callq  39c <run_dialog_message_question+0x9c>
+./src/dialog.c:88
+ 39c:	48 89 df             	mov    %rbx,%rdi
+ 39f:	48 89 c6             	mov    %rax,%rsi
+./src/dialog.c:85
+ 3a2:	48 89 c5             	mov    %rax,%rbp
+./src/dialog.c:88
+ 3a5:	31 c0                	xor    %eax,%eax
+ 3a7:	e8 00 00 00 00       	callq  3ac <run_dialog_message_question+0xac>
+./src/dialog.c:89
+ 3ac:	48 89 ef             	mov    %rbp,%rdi
+./src/dialog.c:88
+ 3af:	48 89 c3             	mov    %rax,%rbx
+./src/dialog.c:89
+ 3b2:	e8 00 00 00 00       	callq  3b7 <run_dialog_message_question+0xb7>
+./src/dialog.c:91
+ 3b7:	e8 00 00 00 00       	callq  3bc <run_dialog_message_question+0xbc>
+ 3bc:	48 89 df             	mov    %rbx,%rdi
+ 3bf:	48 89 c6             	mov    %rax,%rsi
+ 3c2:	e8 00 00 00 00       	callq  3c7 <run_dialog_message_question+0xc7>
+ 3c7:	48 89 c7             	mov    %rax,%rdi
+ 3ca:	e8 00 00 00 00       	callq  3cf <run_dialog_message_question+0xcf>
+./src/dialog.c:92
+ 3cf:	48 89 df             	mov    %rbx,%rdi
+./src/dialog.c:91
+ 3d2:	89 c5                	mov    %eax,%ebp
+./src/dialog.c:92
+ 3d4:	e8 00 00 00 00       	callq  3d9 <run_dialog_message_question+0xd9>
+./src/dialog.c:95
+ 3d9:	48 8b 54 24 18       	mov    0x18(%rsp),%rdx
+ 3de:	64 48 33 14 25 28 00 	xor    %fs:0x28,%rdx
+ 3e5:	00 00 
+ 3e7:	89 e8                	mov    %ebp,%eax
+ 3e9:	75 0a                	jne    3f5 <run_dialog_message_question+0xf5>
+ 3eb:	48 81 c4 d8 00 00 00 	add    $0xd8,%rsp
+ 3f2:	5b                   	pop    %rbx
+ 3f3:	5d                   	pop    %rbp
+ 3f4:	c3                   	retq   
+ 3f5:	e8 00 00 00 00       	callq  3fa <run_dialog_message_question+0xfa>

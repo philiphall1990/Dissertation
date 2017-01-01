@@ -1,0 +1,230 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-hlight.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <cb_changed>:
+cb_changed():
+./src/hlight.c:27
+   0:	41 54                	push   %r12
+   2:	55                   	push   %rbp
+   3:	53                   	push   %rbx
+   4:	48 89 fb             	mov    %rdi,%rbx
+   7:	48 81 ec b0 00 00 00 	sub    $0xb0,%rsp
+./src/hlight.c:30
+   e:	4c 8d 64 24 50       	lea    0x50(%rsp),%r12
+  13:	48 89 e6             	mov    %rsp,%rsi
+./src/hlight.c:27
+  16:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  1d:	00 00 
+  1f:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+  26:	00 
+  27:	31 c0                	xor    %eax,%eax
+./src/hlight.c:30
+  29:	4c 89 e2             	mov    %r12,%rdx
+  2c:	e8 00 00 00 00       	callq  31 <cb_changed+0x31>
+./src/hlight.c:33
+  31:	4c 89 e2             	mov    %r12,%rdx
+  34:	48 89 e6             	mov    %rsp,%rsi
+  37:	48 89 df             	mov    %rbx,%rdi
+  3a:	e8 00 00 00 00       	callq  3f <cb_changed+0x3f>
+./src/hlight.c:34
+  3f:	be 50 00 00 00       	mov    $0x50,%esi
+  44:	48 89 df             	mov    %rbx,%rdi
+  47:	e8 00 00 00 00       	callq  4c <cb_changed+0x4c>
+  4c:	48 83 ec 08          	sub    $0x8,%rsp
+  50:	4c 8d 0d a9 ff ff ff 	lea    -0x57(%rip),%r9        # 0 <cb_changed>
+  57:	31 d2                	xor    %edx,%edx
+  59:	6a 00                	pushq  $0x0
+  5b:	45 31 c0             	xor    %r8d,%r8d
+  5e:	31 c9                	xor    %ecx,%ecx
+  60:	be 18 00 00 00       	mov    $0x18,%esi
+  65:	48 89 c7             	mov    %rax,%rdi
+  68:	e8 00 00 00 00       	callq  6d <cb_changed+0x6d>
+./src/hlight.c:37
+  6d:	58                   	pop    %rax
+  6e:	5a                   	pop    %rdx
+./src/hlight.c:36
+  6f:	c7 05 00 00 00 00 00 	movl   $0x0,0x0(%rip)        # 79 <cb_changed+0x79>
+  76:	00 00 00 
+./src/hlight.c:37
+  79:	48 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%rax
+  80:	00 
+  81:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+  88:	00 00 
+  8a:	75 0c                	jne    98 <cb_changed+0x98>
+  8c:	48 81 c4 b0 00 00 00 	add    $0xb0,%rsp
+  93:	5b                   	pop    %rbx
+  94:	5d                   	pop    %rbp
+  95:	41 5c                	pop    %r12
+  97:	c3                   	retq   
+  98:	e8 00 00 00 00       	callq  9d <cb_changed+0x9d>
+  9d:	0f 1f 00             	nopl   (%rax)
+
+00000000000000a0 <cb_paste_clipboard>:
+cb_paste_clipboard():
+./src/hlight.c:40
+  a0:	53                   	push   %rbx
+./src/hlight.c:43
+  a1:	bf 45 00 00 00       	mov    $0x45,%edi
+  a6:	e8 00 00 00 00       	callq  ab <cb_paste_clipboard+0xb>
+  ab:	48 89 c7             	mov    %rax,%rdi
+  ae:	e8 00 00 00 00       	callq  b3 <cb_paste_clipboard+0x13>
+./src/hlight.c:45
+  b3:	48 85 c0             	test   %rax,%rax
+  b6:	74 28                	je     e0 <cb_paste_clipboard+0x40>
+  b8:	48 89 c3             	mov    %rax,%rbx
+./src/hlight.c:46
+  bb:	bf 45 00 00 00       	mov    $0x45,%edi
+  c0:	e8 00 00 00 00       	callq  c5 <cb_paste_clipboard+0x25>
+  c5:	48 89 de             	mov    %rbx,%rsi
+  c8:	48 89 c7             	mov    %rax,%rdi
+  cb:	ba ff ff ff ff       	mov    $0xffffffff,%edx
+  d0:	e8 00 00 00 00       	callq  d5 <cb_paste_clipboard+0x35>
+./src/hlight.c:48
+  d5:	48 89 df             	mov    %rbx,%rdi
+./src/hlight.c:50
+  d8:	5b                   	pop    %rbx
+./src/hlight.c:48
+  d9:	e9 00 00 00 00       	jmpq   de <cb_paste_clipboard+0x3e>
+  de:	66 90                	xchg   %ax,%ax
+./src/hlight.c:50
+  e0:	5b                   	pop    %rbx
+  e1:	c3                   	retq   
+  e2:	0f 1f 40 00          	nopl   0x0(%rax)
+  e6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  ed:	00 00 00 
+
+00000000000000f0 <hlight_check_searched>:
+hlight_check_searched():
+./src/hlight.c:55
+  f0:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # f6 <hlight_check_searched+0x6>
+  f6:	c3                   	retq   
+  f7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  fe:	00 00 
+
+0000000000000100 <hlight_toggle_searched>:
+hlight_toggle_searched():
+./src/hlight.c:58
+ 100:	48 83 ec 08          	sub    $0x8,%rsp
+./src/hlight.c:59
+ 104:	44 8b 05 00 00 00 00 	mov    0x0(%rip),%r8d        # 10b <hlight_toggle_searched+0xb>
+./src/hlight.c:60
+ 10b:	be 50 00 00 00       	mov    $0x50,%esi
+./src/hlight.c:59
+ 110:	45 85 c0             	test   %r8d,%r8d
+ 113:	74 3b                	je     150 <hlight_toggle_searched+0x50>
+./src/hlight.c:64
+ 115:	e8 00 00 00 00       	callq  11a <hlight_toggle_searched+0x1a>
+ 11a:	48 83 ec 08          	sub    $0x8,%rsp
+ 11e:	4c 8d 0d db fe ff ff 	lea    -0x125(%rip),%r9        # 0 <cb_changed>
+ 125:	31 d2                	xor    %edx,%edx
+ 127:	6a 00                	pushq  $0x0
+ 129:	45 31 c0             	xor    %r8d,%r8d
+ 12c:	31 c9                	xor    %ecx,%ecx
+ 12e:	be 18 00 00 00       	mov    $0x18,%esi
+ 133:	48 89 c7             	mov    %rax,%rdi
+ 136:	e8 00 00 00 00       	callq  13b <hlight_toggle_searched+0x3b>
+./src/hlight.c:66
+ 13b:	58                   	pop    %rax
+ 13c:	5a                   	pop    %rdx
+ 13d:	c7 05 00 00 00 00 00 	movl   $0x0,0x0(%rip)        # 147 <hlight_toggle_searched+0x47>
+ 144:	00 00 00 
+ 147:	31 c0                	xor    %eax,%eax
+./src/hlight.c:69
+ 149:	48 83 c4 08          	add    $0x8,%rsp
+ 14d:	c3                   	retq   
+ 14e:	66 90                	xchg   %ax,%ax
+./src/hlight.c:60
+ 150:	e8 00 00 00 00       	callq  155 <hlight_toggle_searched+0x55>
+ 155:	48 83 ec 08          	sub    $0x8,%rsp
+ 159:	4c 8d 0d a0 fe ff ff 	lea    -0x160(%rip),%r9        # 0 <cb_changed>
+ 160:	31 c9                	xor    %ecx,%ecx
+ 162:	6a 00                	pushq  $0x0
+ 164:	be 18 00 00 00       	mov    $0x18,%esi
+ 169:	45 31 c0             	xor    %r8d,%r8d
+ 16c:	31 d2                	xor    %edx,%edx
+ 16e:	48 89 c7             	mov    %rax,%rdi
+ 171:	e8 00 00 00 00       	callq  176 <hlight_toggle_searched+0x76>
+ 176:	59                   	pop    %rcx
+ 177:	5e                   	pop    %rsi
+./src/hlight.c:62
+ 178:	c7 05 00 00 00 00 01 	movl   $0x1,0x0(%rip)        # 182 <hlight_toggle_searched+0x82>
+ 17f:	00 00 00 
+ 182:	b8 01 00 00 00       	mov    $0x1,%eax
+./src/hlight.c:69
+ 187:	48 83 c4 08          	add    $0x8,%rsp
+ 18b:	c3                   	retq   
+ 18c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000000190 <hlight_init>:
+hlight_init():
+./src/hlight.c:72
+ 190:	53                   	push   %rbx
+./src/hlight.c:73
+ 191:	4c 8d 0d 00 00 00 00 	lea    0x0(%rip),%r9        # 198 <hlight_init+0x8>
+ 198:	4c 8d 05 00 00 00 00 	lea    0x0(%rip),%r8        # 19f <hlight_init+0xf>
+ 19f:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 1a6 <hlight_init+0x16>
+ 1a6:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 1ad <hlight_init+0x1d>
+ 1ad:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1b4 <hlight_init+0x24>
+ 1b4:	48 83 ec 08          	sub    $0x8,%rsp
+ 1b8:	31 c0                	xor    %eax,%eax
+./src/hlight.c:72
+ 1ba:	48 89 fb             	mov    %rdi,%rbx
+./src/hlight.c:73
+ 1bd:	6a 00                	pushq  $0x0
+ 1bf:	e8 00 00 00 00       	callq  1c4 <hlight_init+0x34>
+./src/hlight.c:77
+ 1c4:	4c 8d 0d 00 00 00 00 	lea    0x0(%rip),%r9        # 1cb <hlight_init+0x3b>
+ 1cb:	4c 8d 05 00 00 00 00 	lea    0x0(%rip),%r8        # 1d2 <hlight_init+0x42>
+ 1d2:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 1d9 <hlight_init+0x49>
+ 1d9:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 1e0 <hlight_init+0x50>
+ 1e0:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1e7 <hlight_init+0x57>
+ 1e7:	48 89 df             	mov    %rbx,%rdi
+ 1ea:	31 c0                	xor    %eax,%eax
+ 1ec:	48 c7 04 24 00 00 00 	movq   $0x0,(%rsp)
+ 1f3:	00 
+ 1f4:	e8 00 00 00 00       	callq  1f9 <hlight_init+0x69>
+./src/hlight.c:81
+ 1f9:	48 89 df             	mov    %rbx,%rdi
+ 1fc:	be 50 00 00 00       	mov    $0x50,%esi
+ 201:	e8 00 00 00 00       	callq  206 <hlight_init+0x76>
+ 206:	48 8d 15 f3 fd ff ff 	lea    -0x20d(%rip),%rdx        # 0 <cb_changed>
+ 20d:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 214 <hlight_init+0x84>
+ 214:	45 31 c9             	xor    %r9d,%r9d
+ 217:	45 31 c0             	xor    %r8d,%r8d
+ 21a:	31 c9                	xor    %ecx,%ecx
+ 21c:	48 89 c7             	mov    %rax,%rdi
+ 21f:	e8 00 00 00 00       	callq  224 <hlight_init+0x94>
+./src/hlight.c:83
+ 224:	48 89 df             	mov    %rbx,%rdi
+ 227:	be 50 00 00 00       	mov    $0x50,%esi
+ 22c:	e8 00 00 00 00       	callq  231 <hlight_init+0xa1>
+ 231:	4c 8d 0d c8 fd ff ff 	lea    -0x238(%rip),%r9        # 0 <cb_changed>
+ 238:	45 31 c0             	xor    %r8d,%r8d
+ 23b:	31 c9                	xor    %ecx,%ecx
+ 23d:	31 d2                	xor    %edx,%edx
+ 23f:	be 18 00 00 00       	mov    $0x18,%esi
+ 244:	48 89 c7             	mov    %rax,%rdi
+ 247:	48 c7 04 24 00 00 00 	movq   $0x0,(%rsp)
+ 24e:	00 
+ 24f:	e8 00 00 00 00       	callq  254 <hlight_init+0xc4>
+./src/hlight.c:86
+ 254:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 25b <hlight_init+0xcb>
+ 25b:	be 50 00 00 00       	mov    $0x50,%esi
+ 260:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 264:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 268:	e8 00 00 00 00       	callq  26d <hlight_init+0xdd>
+ 26d:	5a                   	pop    %rdx
+ 26e:	59                   	pop    %rcx
+./src/hlight.c:88
+ 26f:	5b                   	pop    %rbx
+./src/hlight.c:86
+ 270:	48 8d 15 29 fe ff ff 	lea    -0x1d7(%rip),%rdx        # a0 <cb_paste_clipboard>
+ 277:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 27e <hlight_init+0xee>
+ 27e:	45 31 c9             	xor    %r9d,%r9d
+ 281:	45 31 c0             	xor    %r8d,%r8d
+ 284:	31 c9                	xor    %ecx,%ecx
+ 286:	48 89 c7             	mov    %rax,%rdi
+ 289:	e9 00 00 00 00       	jmpq   28e <hlight_init+0xfe>

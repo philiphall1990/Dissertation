@@ -1,0 +1,701 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-gtkprint.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <cb_end_print>:
+cb_end_print():
+./src/gtkprint.c:128
+   0:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 7 <cb_end_print+0x7>
+   7:	e9 00 00 00 00       	jmpq   c <cb_end_print+0xc>
+   c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000000010 <create_print_operation>:
+create_print_operation():
+./src/gtkprint.c:134
+  10:	55                   	push   %rbp
+  11:	53                   	push   %rbx
+  12:	48 89 fd             	mov    %rdi,%rbp
+  15:	48 83 ec 08          	sub    $0x8,%rsp
+./src/gtkprint.c:138
+  19:	e8 00 00 00 00       	callq  1e <create_print_operation+0xe>
+./src/gtkprint.c:140
+  1e:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 25 <create_print_operation+0x15>
+./src/gtkprint.c:138
+  25:	48 89 c3             	mov    %rax,%rbx
+./src/gtkprint.c:140
+  28:	48 85 f6             	test   %rsi,%rsi
+  2b:	74 08                	je     35 <create_print_operation+0x25>
+./src/gtkprint.c:141
+  2d:	48 89 c7             	mov    %rax,%rdi
+  30:	e8 00 00 00 00       	callq  35 <create_print_operation+0x25>
+./src/gtkprint.c:143
+  35:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 3c <create_print_operation+0x2c>
+  3c:	48 85 f6             	test   %rsi,%rsi
+  3f:	74 6f                	je     b0 <create_print_operation+0xa0>
+./src/gtkprint.c:150
+  41:	48 89 df             	mov    %rbx,%rdi
+  44:	e8 00 00 00 00       	callq  49 <create_print_operation+0x39>
+./src/gtkprint.c:152
+  49:	48 8d 15 90 02 00 00 	lea    0x290(%rip),%rdx        # 2e0 <cb_begin_print>
+  50:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 57 <create_print_operation+0x47>
+  57:	48 89 e9             	mov    %rbp,%rcx
+  5a:	48 89 df             	mov    %rbx,%rdi
+  5d:	45 31 c9             	xor    %r9d,%r9d
+  60:	45 31 c0             	xor    %r8d,%r8d
+  63:	e8 00 00 00 00       	callq  68 <create_print_operation+0x58>
+./src/gtkprint.c:153
+  68:	48 8d 15 c1 00 00 00 	lea    0xc1(%rip),%rdx        # 130 <cb_draw_page>
+  6f:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 76 <create_print_operation+0x66>
+  76:	48 89 df             	mov    %rbx,%rdi
+  79:	45 31 c9             	xor    %r9d,%r9d
+  7c:	45 31 c0             	xor    %r8d,%r8d
+  7f:	31 c9                	xor    %ecx,%ecx
+  81:	e8 00 00 00 00       	callq  86 <create_print_operation+0x76>
+./src/gtkprint.c:154
+  86:	48 8d 15 73 ff ff ff 	lea    -0x8d(%rip),%rdx        # 0 <cb_end_print>
+  8d:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 94 <create_print_operation+0x84>
+  94:	48 89 df             	mov    %rbx,%rdi
+  97:	45 31 c9             	xor    %r9d,%r9d
+  9a:	45 31 c0             	xor    %r8d,%r8d
+  9d:	31 c9                	xor    %ecx,%ecx
+  9f:	e8 00 00 00 00       	callq  a4 <create_print_operation+0x94>
+./src/gtkprint.c:157
+  a4:	48 83 c4 08          	add    $0x8,%rsp
+  a8:	48 89 d8             	mov    %rbx,%rax
+  ab:	5b                   	pop    %rbx
+  ac:	5d                   	pop    %rbp
+  ad:	c3                   	retq   
+  ae:	66 90                	xchg   %ax,%ax
+./src/gtkprint.c:144
+  b0:	e8 00 00 00 00       	callq  b5 <create_print_operation+0xa5>
+./src/gtkprint.c:145
+  b5:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # bd <create_print_operation+0xad>
+  bc:	00 
+  bd:	48 89 c7             	mov    %rax,%rdi
+  c0:	be 03 00 00 00       	mov    $0x3,%esi
+./src/gtkprint.c:144
+  c5:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # cc <create_print_operation+0xbc>
+./src/gtkprint.c:145
+  cc:	e8 00 00 00 00       	callq  d1 <create_print_operation+0xc1>
+./src/gtkprint.c:146
+  d1:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # d8 <create_print_operation+0xc8>
+  d8:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # e0 <create_print_operation+0xd0>
+  df:	00 
+  e0:	be 03 00 00 00       	mov    $0x3,%esi
+  e5:	e8 00 00 00 00       	callq  ea <create_print_operation+0xda>
+./src/gtkprint.c:147
+  ea:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # f1 <create_print_operation+0xe1>
+  f1:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # f9 <create_print_operation+0xe9>
+  f8:	00 
+  f9:	be 03 00 00 00       	mov    $0x3,%esi
+  fe:	e8 00 00 00 00       	callq  103 <create_print_operation+0xf3>
+./src/gtkprint.c:148
+ 103:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 10a <create_print_operation+0xfa>
+ 10a:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # 112 <create_print_operation+0x102>
+ 111:	00 
+ 112:	be 03 00 00 00       	mov    $0x3,%esi
+ 117:	e8 00 00 00 00       	callq  11c <create_print_operation+0x10c>
+ 11c:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 123 <create_print_operation+0x113>
+ 123:	e9 19 ff ff ff       	jmpq   41 <create_print_operation+0x31>
+ 128:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 12f:	00 
+
+0000000000000130 <cb_draw_page>:
+cb_draw_page():
+./src/gtkprint.c:84
+ 130:	41 56                	push   %r14
+ 132:	41 55                	push   %r13
+./src/gtkprint.c:93
+ 134:	48 89 f7             	mov    %rsi,%rdi
+./src/gtkprint.c:84
+ 137:	41 54                	push   %r12
+ 139:	55                   	push   %rbp
+ 13a:	41 89 d4             	mov    %edx,%r12d
+ 13d:	53                   	push   %rbx
+ 13e:	48 89 f3             	mov    %rsi,%rbx
+./src/gtkprint.c:101
+ 141:	41 83 c4 01          	add    $0x1,%r12d
+./src/gtkprint.c:84
+ 145:	48 83 ec 10          	sub    $0x10,%rsp
+ 149:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 150:	00 00 
+ 152:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 157:	31 c0                	xor    %eax,%eax
+./src/gtkprint.c:93
+ 159:	e8 00 00 00 00       	callq  15e <cb_draw_page+0x2e>
+./src/gtkprint.c:95
+ 15e:	48 89 df             	mov    %rbx,%rdi
+./src/gtkprint.c:93
+ 161:	48 89 c5             	mov    %rax,%rbp
+./src/gtkprint.c:95
+ 164:	e8 00 00 00 00       	callq  169 <cb_draw_page+0x39>
+./src/gtkprint.c:96
+ 169:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 170 <cb_draw_page+0x40>
+ 170:	48 89 c7             	mov    %rax,%rdi
+./src/gtkprint.c:95
+ 173:	49 89 c5             	mov    %rax,%r13
+./src/gtkprint.c:96
+ 176:	e8 00 00 00 00       	callq  17b <cb_draw_page+0x4b>
+./src/gtkprint.c:97
+ 17b:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 182 <cb_draw_page+0x52>
+ 182:	ba ff ff ff ff       	mov    $0xffffffff,%edx
+ 187:	4c 89 ef             	mov    %r13,%rdi
+ 18a:	e8 00 00 00 00       	callq  18f <cb_draw_page+0x5f>
+./src/gtkprint.c:98
+ 18f:	66 0f ef c0          	pxor   %xmm0,%xmm0
+ 193:	48 89 ef             	mov    %rbp,%rdi
+ 196:	f2 0f 10 0d 00 00 00 	movsd  0x0(%rip),%xmm1        # 19e <cb_draw_page+0x6e>
+ 19d:	00 
+ 19e:	e8 00 00 00 00       	callq  1a3 <cb_draw_page+0x73>
+./src/gtkprint.c:99
+ 1a3:	4c 89 ee             	mov    %r13,%rsi
+ 1a6:	48 89 ef             	mov    %rbp,%rdi
+ 1a9:	e8 00 00 00 00       	callq  1ae <cb_draw_page+0x7e>
+./src/gtkprint.c:101
+ 1ae:	8b 15 00 00 00 00    	mov    0x0(%rip),%edx        # 1b4 <cb_draw_page+0x84>
+ 1b4:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 1bb <cb_draw_page+0x8b>
+ 1bb:	44 89 e6             	mov    %r12d,%esi
+ 1be:	31 c0                	xor    %eax,%eax
+ 1c0:	e8 00 00 00 00       	callq  1c5 <cb_draw_page+0x95>
+./src/gtkprint.c:102
+ 1c5:	48 89 df             	mov    %rbx,%rdi
+./src/gtkprint.c:101
+ 1c8:	49 89 c5             	mov    %rax,%r13
+./src/gtkprint.c:102
+ 1cb:	e8 00 00 00 00       	callq  1d0 <cb_draw_page+0xa0>
+./src/gtkprint.c:103
+ 1d0:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 1d7 <cb_draw_page+0xa7>
+./src/gtkprint.c:102
+ 1d7:	48 89 c3             	mov    %rax,%rbx
+./src/gtkprint.c:103
+ 1da:	48 89 c7             	mov    %rax,%rdi
+ 1dd:	e8 00 00 00 00       	callq  1e2 <cb_draw_page+0xb2>
+./src/gtkprint.c:104
+ 1e2:	ba ff ff ff ff       	mov    $0xffffffff,%edx
+ 1e7:	4c 89 ee             	mov    %r13,%rsi
+ 1ea:	48 89 df             	mov    %rbx,%rdi
+ 1ed:	e8 00 00 00 00       	callq  1f2 <cb_draw_page+0xc2>
+./src/gtkprint.c:106
+ 1f2:	48 8d 74 24 04       	lea    0x4(%rsp),%rsi
+ 1f7:	31 d2                	xor    %edx,%edx
+ 1f9:	48 89 df             	mov    %rbx,%rdi
+ 1fc:	e8 00 00 00 00       	callq  201 <cb_draw_page+0xd1>
+./src/gtkprint.c:108
+ 201:	8b 54 24 04          	mov    0x4(%rsp),%edx
+./src/gtkprint.c:107
+ 205:	66 0f ef c9          	pxor   %xmm1,%xmm1
+ 209:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # 211 <cb_draw_page+0xe1>
+ 210:	00 
+ 211:	48 89 ef             	mov    %rbp,%rdi
+./src/gtkprint.c:108
+ 214:	8d 82 ff 03 00 00    	lea    0x3ff(%rdx),%eax
+ 21a:	85 d2                	test   %edx,%edx
+ 21c:	0f 49 c2             	cmovns %edx,%eax
+ 21f:	c1 f8 0a             	sar    $0xa,%eax
+./src/gtkprint.c:107
+ 222:	f2 0f 2a c8          	cvtsi2sd %eax,%xmm1
+ 226:	f2 0f 5c c1          	subsd  %xmm1,%xmm0
+ 22a:	f2 0f 10 0d 00 00 00 	movsd  0x0(%rip),%xmm1        # 232 <cb_draw_page+0x102>
+ 231:	00 
+ 232:	e8 00 00 00 00       	callq  237 <cb_draw_page+0x107>
+./src/gtkprint.c:109
+ 237:	48 89 de             	mov    %rbx,%rsi
+ 23a:	48 89 ef             	mov    %rbp,%rdi
+ 23d:	e8 00 00 00 00       	callq  242 <cb_draw_page+0x112>
+./src/gtkprint.c:110
+ 242:	4c 89 ef             	mov    %r13,%rdi
+ 245:	e8 00 00 00 00       	callq  24a <cb_draw_page+0x11a>
+./src/gtkprint.c:112
+ 24a:	8b 15 00 00 00 00    	mov    0x0(%rip),%edx        # 250 <cb_draw_page+0x120>
+ 250:	44 0f af e2          	imul   %edx,%r12d
+ 254:	44 39 25 00 00 00 00 	cmp    %r12d,0x0(%rip)        # 25b <cb_draw_page+0x12b>
+ 25b:	44 89 e0             	mov    %r12d,%eax
+ 25e:	0f 4e 05 00 00 00 00 	cmovle 0x0(%rip),%eax        # 265 <cb_draw_page+0x135>
+./src/gtkprint.c:117
+ 265:	41 29 d4             	sub    %edx,%r12d
+ 268:	41 89 c6             	mov    %eax,%r14d
+ 26b:	45 29 e6             	sub    %r12d,%r14d
+ 26e:	41 39 c4             	cmp    %eax,%r12d
+ 271:	7d 48                	jge    2bb <cb_draw_page+0x18b>
+ 273:	31 db                	xor    %ebx,%ebx
+ 275:	0f 1f 00             	nopl   (%rax)
+./src/gtkprint.c:118 (discriminator 3)
+ 278:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 27f <cb_draw_page+0x14f>
+ 27f:	42 8d 34 23          	lea    (%rbx,%r12,1),%esi
+./src/gtkprint.c:119 (discriminator 3)
+ 283:	83 c3 01             	add    $0x1,%ebx
+./src/gtkprint.c:118 (discriminator 3)
+ 286:	e8 00 00 00 00       	callq  28b <cb_draw_page+0x15b>
+ 28b:	49 89 c5             	mov    %rax,%r13
+./src/gtkprint.c:119 (discriminator 3)
+ 28e:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 294 <cb_draw_page+0x164>
+ 294:	48 89 ef             	mov    %rbp,%rdi
+ 297:	66 0f ef c9          	pxor   %xmm1,%xmm1
+ 29b:	66 0f ef c0          	pxor   %xmm0,%xmm0
+ 29f:	0f af c3             	imul   %ebx,%eax
+ 2a2:	f2 0f 2a c8          	cvtsi2sd %eax,%xmm1
+ 2a6:	e8 00 00 00 00       	callq  2ab <cb_draw_page+0x17b>
+./src/gtkprint.c:120 (discriminator 3)
+ 2ab:	4c 89 ee             	mov    %r13,%rsi
+ 2ae:	48 89 ef             	mov    %rbp,%rdi
+ 2b1:	e8 00 00 00 00       	callq  2b6 <cb_draw_page+0x186>
+./src/gtkprint.c:117 (discriminator 3)
+ 2b6:	44 39 f3             	cmp    %r14d,%ebx
+ 2b9:	75 bd                	jne    278 <cb_draw_page+0x148>
+./src/gtkprint.c:123
+ 2bb:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 2c0:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+ 2c7:	00 00 
+ 2c9:	75 0d                	jne    2d8 <cb_draw_page+0x1a8>
+ 2cb:	48 83 c4 10          	add    $0x10,%rsp
+ 2cf:	5b                   	pop    %rbx
+ 2d0:	5d                   	pop    %rbp
+ 2d1:	41 5c                	pop    %r12
+ 2d3:	41 5d                	pop    %r13
+ 2d5:	41 5e                	pop    %r14
+ 2d7:	c3                   	retq   
+ 2d8:	e8 00 00 00 00       	callq  2dd <cb_draw_page+0x1ad>
+ 2dd:	0f 1f 00             	nopl   (%rax)
+
+00000000000002e0 <cb_begin_print>:
+cb_begin_print():
+./src/gtkprint.c:47
+ 2e0:	41 57                	push   %r15
+ 2e2:	41 56                	push   %r14
+ 2e4:	41 55                	push   %r13
+ 2e6:	41 54                	push   %r12
+ 2e8:	49 89 fc             	mov    %rdi,%r12
+ 2eb:	55                   	push   %rbp
+ 2ec:	53                   	push   %rbx
+./src/gtkprint.c:51
+ 2ed:	48 89 d7             	mov    %rdx,%rdi
+./src/gtkprint.c:47
+ 2f0:	49 89 f5             	mov    %rsi,%r13
+ 2f3:	48 89 d3             	mov    %rdx,%rbx
+ 2f6:	48 81 ec d8 00 00 00 	sub    $0xd8,%rsp
+./src/gtkprint.c:54
+ 2fd:	4c 8d 74 24 20       	lea    0x20(%rsp),%r14
+ 302:	4c 8d 7c 24 70       	lea    0x70(%rsp),%r15
+./src/gtkprint.c:47
+ 307:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 30e:	00 00 
+ 310:	48 89 84 24 c8 00 00 	mov    %rax,0xc8(%rsp)
+ 317:	00 
+ 318:	31 c0                	xor    %eax,%eax
+./src/gtkprint.c:51
+ 31a:	e8 00 00 00 00       	callq  31f <cb_begin_print+0x3f>
+./src/gtkprint.c:54
+ 31f:	4c 89 f6             	mov    %r14,%rsi
+./src/gtkprint.c:51
+ 322:	48 89 c5             	mov    %rax,%rbp
+./src/gtkprint.c:54
+ 325:	48 89 c7             	mov    %rax,%rdi
+ 328:	4c 89 fa             	mov    %r15,%rdx
+ 32b:	e8 00 00 00 00       	callq  330 <cb_begin_print+0x50>
+./src/gtkprint.c:55
+ 330:	31 c9                	xor    %ecx,%ecx
+ 332:	4c 89 fa             	mov    %r15,%rdx
+ 335:	4c 89 f6             	mov    %r14,%rsi
+ 338:	48 89 ef             	mov    %rbp,%rdi
+ 33b:	4c 8d 74 24 1c       	lea    0x1c(%rsp),%r14
+ 340:	e8 00 00 00 00       	callq  345 <cb_begin_print+0x65>
+ 345:	48 89 c7             	mov    %rax,%rdi
+ 348:	e8 00 00 00 00       	callq  34d <cb_begin_print+0x6d>
+./src/gtkprint.c:57
+ 34d:	4c 89 ef             	mov    %r13,%rdi
+./src/gtkprint.c:55
+ 350:	48 89 c5             	mov    %rax,%rbp
+./src/gtkprint.c:57
+ 353:	e8 00 00 00 00       	callq  358 <cb_begin_print+0x78>
+./src/gtkprint.c:58
+ 358:	4c 89 ef             	mov    %r13,%rdi
+./src/gtkprint.c:57
+ 35b:	f2 0f 11 05 00 00 00 	movsd  %xmm0,0x0(%rip)        # 363 <cb_begin_print+0x83>
+ 362:	00 
+./src/gtkprint.c:58
+ 363:	e8 00 00 00 00       	callq  368 <cb_begin_print+0x88>
+./src/gtkprint.c:59
+ 368:	48 89 df             	mov    %rbx,%rdi
+./src/gtkprint.c:58
+ 36b:	f2 0f 11 05 00 00 00 	movsd  %xmm0,0x0(%rip)        # 373 <cb_begin_print+0x93>
+ 372:	00 
+./src/gtkprint.c:59
+ 373:	e8 00 00 00 00       	callq  378 <cb_begin_print+0x98>
+ 378:	48 8b 80 10 02 00 00 	mov    0x210(%rax),%rax
+./src/gtkprint.c:60
+ 37f:	4c 89 ef             	mov    %r13,%rdi
+./src/gtkprint.c:59
+ 382:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 389 <cb_begin_print+0xa9>
+./src/gtkprint.c:60
+ 389:	e8 00 00 00 00       	callq  38e <cb_begin_print+0xae>
+./src/gtkprint.c:61
+ 38e:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # 396 <cb_begin_print+0xb6>
+ 395:	00 
+ 396:	48 89 c7             	mov    %rax,%rdi
+./src/gtkprint.c:60
+ 399:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 3a0 <cb_begin_print+0xc0>
+./src/gtkprint.c:61
+ 3a0:	f2 0f 59 05 00 00 00 	mulsd  0x0(%rip),%xmm0        # 3a8 <cb_begin_print+0xc8>
+ 3a7:	00 
+ 3a8:	f2 0f 2c f0          	cvttsd2si %xmm0,%esi
+ 3ac:	e8 00 00 00 00       	callq  3b1 <cb_begin_print+0xd1>
+./src/gtkprint.c:62
+ 3b1:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 3b8 <cb_begin_print+0xd8>
+ 3b8:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 3bf <cb_begin_print+0xdf>
+ 3bf:	e8 00 00 00 00       	callq  3c4 <cb_begin_print+0xe4>
+./src/gtkprint.c:63
+ 3c4:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 3cb <cb_begin_print+0xeb>
+ 3cb:	ba ff ff ff ff       	mov    $0xffffffff,%edx
+ 3d0:	48 89 ee             	mov    %rbp,%rsi
+ 3d3:	e8 00 00 00 00       	callq  3d8 <cb_begin_print+0xf8>
+get_tab_array():
+./src/gtkprint.c:35
+ 3d8:	e8 00 00 00 00       	callq  3dd <cb_begin_print+0xfd>
+./src/gtkprint.c:37
+ 3dd:	48 8d 54 24 18       	lea    0x18(%rsp),%rdx
+ 3e2:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 3e9 <cb_begin_print+0x109>
+ 3e9:	31 c9                	xor    %ecx,%ecx
+ 3eb:	48 89 c7             	mov    %rax,%rdi
+ 3ee:	31 c0                	xor    %eax,%eax
+ 3f0:	e8 00 00 00 00       	callq  3f5 <cb_begin_print+0x115>
+./src/gtkprint.c:38
+ 3f5:	48 89 df             	mov    %rbx,%rdi
+ 3f8:	e8 00 00 00 00       	callq  3fd <cb_begin_print+0x11d>
+ 3fd:	48 85 c0             	test   %rax,%rax
+ 400:	74 7a                	je     47c <cb_begin_print+0x19c>
+./src/gtkprint.c:39
+ 402:	4c 8d 74 24 1c       	lea    0x1c(%rsp),%r14
+ 407:	31 d2                	xor    %edx,%edx
+ 409:	31 f6                	xor    %esi,%esi
+ 40b:	48 89 c7             	mov    %rax,%rdi
+ 40e:	48 89 c3             	mov    %rax,%rbx
+ 411:	4c 89 f1             	mov    %r14,%rcx
+ 414:	e8 00 00 00 00       	callq  419 <cb_begin_print+0x139>
+./src/gtkprint.c:41
+ 419:	66 0f ef d2          	pxor   %xmm2,%xmm2
+ 41d:	4c 89 ef             	mov    %r13,%rdi
+ 420:	f2 0f 2a 54 24 1c    	cvtsi2sdl 0x1c(%rsp),%xmm2
+ 426:	f2 0f 11 54 24 08    	movsd  %xmm2,0x8(%rsp)
+ 42c:	e8 00 00 00 00       	callq  431 <cb_begin_print+0x151>
+ 431:	8b 44 24 18          	mov    0x18(%rsp),%eax
+ 435:	66 0f ef c9          	pxor   %xmm1,%xmm1
+ 439:	f2 0f 59 44 24 08    	mulsd  0x8(%rsp),%xmm0
+./src/gtkprint.c:40
+ 43f:	48 89 df             	mov    %rbx,%rdi
+./src/gtkprint.c:41
+ 442:	8d 90 ff 03 00 00    	lea    0x3ff(%rax),%edx
+ 448:	85 c0                	test   %eax,%eax
+ 44a:	0f 49 d0             	cmovns %eax,%edx
+./src/gtkprint.c:40
+ 44d:	31 f6                	xor    %esi,%esi
+./src/gtkprint.c:41
+ 44f:	c1 fa 0a             	sar    $0xa,%edx
+ 452:	f2 0f 2a ca          	cvtsi2sd %edx,%xmm1
+./src/gtkprint.c:40
+ 456:	31 d2                	xor    %edx,%edx
+./src/gtkprint.c:41
+ 458:	f2 0f 5e c1          	divsd  %xmm1,%xmm0
+./src/gtkprint.c:40
+ 45c:	f2 0f 2c c8          	cvttsd2si %xmm0,%ecx
+ 460:	e8 00 00 00 00       	callq  465 <cb_begin_print+0x185>
+cb_begin_print():
+./src/gtkprint.c:67
+ 465:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 46c <cb_begin_print+0x18c>
+ 46c:	48 89 de             	mov    %rbx,%rsi
+ 46f:	e8 00 00 00 00       	callq  474 <cb_begin_print+0x194>
+./src/gtkprint.c:68
+ 474:	48 89 df             	mov    %rbx,%rdi
+ 477:	e8 00 00 00 00       	callq  47c <cb_begin_print+0x19c>
+./src/gtkprint.c:70
+ 47c:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 483 <cb_begin_print+0x1a3>
+ 483:	31 f6                	xor    %esi,%esi
+ 485:	4c 89 f2             	mov    %r14,%rdx
+ 488:	e8 00 00 00 00       	callq  48d <cb_begin_print+0x1ad>
+./src/gtkprint.c:72
+ 48d:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 494 <cb_begin_print+0x1b4>
+ 494:	e8 00 00 00 00       	callq  499 <cb_begin_print+0x1b9>
+./src/gtkprint.c:73
+ 499:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 4a0 <cb_begin_print+0x1c0>
+./src/gtkprint.c:72
+ 4a0:	89 c3                	mov    %eax,%ebx
+ 4a2:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 4a8 <cb_begin_print+0x1c8>
+./src/gtkprint.c:73
+ 4a8:	e8 00 00 00 00       	callq  4ad <cb_begin_print+0x1cd>
+ 4ad:	8d 90 ff 03 00 00    	lea    0x3ff(%rax),%edx
+ 4b3:	85 c0                	test   %eax,%eax
+./src/gtkprint.c:77
+ 4b5:	4c 89 e7             	mov    %r12,%rdi
+./src/gtkprint.c:74
+ 4b8:	66 0f ef c0          	pxor   %xmm0,%xmm0
+./src/gtkprint.c:73
+ 4bc:	0f 48 c2             	cmovs  %edx,%eax
+./src/gtkprint.c:74
+ 4bf:	f2 0f 10 0d 00 00 00 	movsd  0x0(%rip),%xmm1        # 4c7 <cb_begin_print+0x1e7>
+ 4c6:	00 
+./src/gtkprint.c:73
+ 4c7:	c1 f8 0a             	sar    $0xa,%eax
+./src/gtkprint.c:74
+ 4ca:	f2 0f 2a c0          	cvtsi2sd %eax,%xmm0
+./src/gtkprint.c:73
+ 4ce:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 4d4 <cb_begin_print+0x1f4>
+./src/gtkprint.c:76
+ 4d4:	8d 43 ff             	lea    -0x1(%rbx),%eax
+ 4d7:	99                   	cltd   
+./src/gtkprint.c:74
+ 4d8:	f2 0f 5e c8          	divsd  %xmm0,%xmm1
+ 4dc:	f2 0f 2c c9          	cvttsd2si %xmm1,%ecx
+./src/gtkprint.c:76
+ 4e0:	f7 f9                	idiv   %ecx
+./src/gtkprint.c:74
+ 4e2:	89 0d 00 00 00 00    	mov    %ecx,0x0(%rip)        # 4e8 <cb_begin_print+0x208>
+./src/gtkprint.c:76
+ 4e8:	8d 70 01             	lea    0x1(%rax),%esi
+ 4eb:	89 35 00 00 00 00    	mov    %esi,0x0(%rip)        # 4f1 <cb_begin_print+0x211>
+./src/gtkprint.c:77
+ 4f1:	e8 00 00 00 00       	callq  4f6 <cb_begin_print+0x216>
+./src/gtkprint.c:79
+ 4f6:	48 89 ef             	mov    %rbp,%rdi
+ 4f9:	e8 00 00 00 00       	callq  4fe <cb_begin_print+0x21e>
+./src/gtkprint.c:80
+ 4fe:	48 8b 84 24 c8 00 00 	mov    0xc8(%rsp),%rax
+ 505:	00 
+ 506:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+ 50d:	00 00 
+ 50f:	75 12                	jne    523 <cb_begin_print+0x243>
+ 511:	48 81 c4 d8 00 00 00 	add    $0xd8,%rsp
+ 518:	5b                   	pop    %rbx
+ 519:	5d                   	pop    %rbp
+ 51a:	41 5c                	pop    %r12
+ 51c:	41 5d                	pop    %r13
+ 51e:	41 5e                	pop    %r14
+ 520:	41 5f                	pop    %r15
+ 522:	c3                   	retq   
+ 523:	e8 00 00 00 00       	callq  528 <cb_begin_print+0x248>
+ 528:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 52f:	00 
+
+0000000000000530 <create_error_dialog>:
+create_error_dialog():
+./src/gtkprint.c:160
+ 530:	41 54                	push   %r12
+ 532:	55                   	push   %rbp
+ 533:	49 89 fc             	mov    %rdi,%r12
+ 536:	53                   	push   %rbx
+ 537:	48 89 f3             	mov    %rsi,%rbx
+./src/gtkprint.c:164
+ 53a:	e8 00 00 00 00       	callq  53f <create_error_dialog+0xf>
+ 53f:	48 89 c5             	mov    %rax,%rbp
+ 542:	e8 00 00 00 00       	callq  547 <create_error_dialog+0x17>
+ 547:	4c 89 e7             	mov    %r12,%rdi
+ 54a:	48 89 c6             	mov    %rax,%rsi
+ 54d:	e8 00 00 00 00       	callq  552 <create_error_dialog+0x22>
+ 552:	48 89 c7             	mov    %rax,%rdi
+ 555:	e8 00 00 00 00       	callq  55a <create_error_dialog+0x2a>
+ 55a:	48 89 ee             	mov    %rbp,%rsi
+ 55d:	48 89 c7             	mov    %rax,%rdi
+ 560:	e8 00 00 00 00       	callq  565 <create_error_dialog+0x35>
+./src/gtkprint.c:163
+ 565:	4c 8d 0d 00 00 00 00 	lea    0x0(%rip),%r9        # 56c <create_error_dialog+0x3c>
+ 56c:	49 89 d8             	mov    %rbx,%r8
+ 56f:	31 c9                	xor    %ecx,%ecx
+ 571:	ba 03 00 00 00       	mov    $0x3,%edx
+ 576:	48 89 c7             	mov    %rax,%rdi
+ 579:	be 02 00 00 00       	mov    $0x2,%esi
+ 57e:	31 c0                	xor    %eax,%eax
+ 580:	e8 00 00 00 00       	callq  585 <create_error_dialog+0x55>
+./src/gtkprint.c:169
+ 585:	48 89 ee             	mov    %rbp,%rsi
+ 588:	48 89 c7             	mov    %rax,%rdi
+./src/gtkprint.c:163
+ 58b:	48 89 c3             	mov    %rax,%rbx
+./src/gtkprint.c:169
+ 58e:	e8 00 00 00 00       	callq  593 <create_error_dialog+0x63>
+ 593:	31 f6                	xor    %esi,%esi
+ 595:	48 89 c7             	mov    %rax,%rdi
+ 598:	e8 00 00 00 00       	callq  59d <create_error_dialog+0x6d>
+./src/gtkprint.c:170
+ 59d:	e8 00 00 00 00       	callq  5a2 <create_error_dialog+0x72>
+ 5a2:	48 89 df             	mov    %rbx,%rdi
+ 5a5:	48 89 c6             	mov    %rax,%rsi
+ 5a8:	48 89 c5             	mov    %rax,%rbp
+ 5ab:	e8 00 00 00 00       	callq  5b0 <create_error_dialog+0x80>
+ 5b0:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 5b7 <create_error_dialog+0x87>
+ 5b7:	31 c9                	xor    %ecx,%ecx
+ 5b9:	ba fa ff ff ff       	mov    $0xfffffffa,%edx
+ 5be:	48 89 c7             	mov    %rax,%rdi
+ 5c1:	31 c0                	xor    %eax,%eax
+ 5c3:	e8 00 00 00 00       	callq  5c8 <create_error_dialog+0x98>
+./src/gtkprint.c:172
+ 5c8:	48 89 ee             	mov    %rbp,%rsi
+ 5cb:	48 89 df             	mov    %rbx,%rdi
+ 5ce:	e8 00 00 00 00       	callq  5d3 <create_error_dialog+0xa3>
+ 5d3:	be fa ff ff ff       	mov    $0xfffffffa,%esi
+ 5d8:	48 89 c7             	mov    %rax,%rdi
+ 5db:	e8 00 00 00 00       	callq  5e0 <create_error_dialog+0xb0>
+./src/gtkprint.c:173
+ 5e0:	48 89 ee             	mov    %rbp,%rsi
+ 5e3:	48 89 df             	mov    %rbx,%rdi
+ 5e6:	e8 00 00 00 00       	callq  5eb <create_error_dialog+0xbb>
+ 5eb:	48 89 c7             	mov    %rax,%rdi
+ 5ee:	e8 00 00 00 00       	callq  5f3 <create_error_dialog+0xc3>
+./src/gtkprint.c:174
+ 5f3:	48 89 df             	mov    %rbx,%rdi
+./src/gtkprint.c:175
+ 5f6:	5b                   	pop    %rbx
+ 5f7:	5d                   	pop    %rbp
+ 5f8:	41 5c                	pop    %r12
+./src/gtkprint.c:174
+ 5fa:	e9 00 00 00 00       	jmpq   5ff <create_error_dialog+0xcf>
+ 5ff:	90                   	nop
+
+0000000000000600 <create_gtkprint_session>:
+create_gtkprint_session():
+./src/gtkprint.c:178
+ 600:	41 54                	push   %r12
+ 602:	55                   	push   %rbp
+ 603:	48 89 fd             	mov    %rdi,%rbp
+ 606:	53                   	push   %rbx
+ 607:	48 83 ec 10          	sub    $0x10,%rsp
+./src/gtkprint.c:183
+ 60b:	48 89 35 00 00 00 00 	mov    %rsi,0x0(%rip)        # 612 <create_gtkprint_session+0x12>
+./src/gtkprint.c:178
+ 612:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 619:	00 00 
+ 61b:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 620:	31 c0                	xor    %eax,%eax
+./src/gtkprint.c:181
+ 622:	48 c7 04 24 00 00 00 	movq   $0x0,(%rsp)
+ 629:	00 
+./src/gtkprint.c:184
+ 62a:	e8 e1 f9 ff ff       	callq  10 <create_print_operation>
+ 62f:	48 89 c3             	mov    %rax,%rbx
+./src/gtkprint.c:187
+ 632:	e8 00 00 00 00       	callq  637 <create_gtkprint_session+0x37>
+ 637:	49 89 c4             	mov    %rax,%r12
+ 63a:	e8 00 00 00 00       	callq  63f <create_gtkprint_session+0x3f>
+ 63f:	48 89 ef             	mov    %rbp,%rdi
+ 642:	48 89 c6             	mov    %rax,%rsi
+ 645:	e8 00 00 00 00       	callq  64a <create_gtkprint_session+0x4a>
+ 64a:	48 89 c7             	mov    %rax,%rdi
+ 64d:	e8 00 00 00 00       	callq  652 <create_gtkprint_session+0x52>
+ 652:	4c 89 e6             	mov    %r12,%rsi
+ 655:	48 89 c7             	mov    %rax,%rdi
+ 658:	e8 00 00 00 00       	callq  65d <create_gtkprint_session+0x5d>
+./src/gtkprint.c:186
+ 65d:	31 f6                	xor    %esi,%esi
+ 65f:	48 89 e1             	mov    %rsp,%rcx
+ 662:	48 89 c2             	mov    %rax,%rdx
+ 665:	48 89 df             	mov    %rbx,%rdi
+ 668:	e8 00 00 00 00       	callq  66d <create_gtkprint_session+0x6d>
+./src/gtkprint.c:188
+ 66d:	85 c0                	test   %eax,%eax
+ 66f:	74 2f                	je     6a0 <create_gtkprint_session+0xa0>
+ 671:	83 f8 01             	cmp    $0x1,%eax
+ 674:	74 43                	je     6b9 <create_gtkprint_session+0xb9>
+./src/gtkprint.c:200
+ 676:	48 89 df             	mov    %rbx,%rdi
+ 679:	e8 00 00 00 00       	callq  67e <create_gtkprint_session+0x7e>
+./src/gtkprint.c:201
+ 67e:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 683:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+ 68a:	00 00 
+ 68c:	75 55                	jne    6e3 <create_gtkprint_session+0xe3>
+ 68e:	48 83 c4 10          	add    $0x10,%rsp
+ 692:	5b                   	pop    %rbx
+ 693:	5d                   	pop    %rbp
+ 694:	41 5c                	pop    %r12
+ 696:	c3                   	retq   
+ 697:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 69e:	00 00 
+./src/gtkprint.c:190
+ 6a0:	48 8b 04 24          	mov    (%rsp),%rax
+ 6a4:	48 89 ef             	mov    %rbp,%rdi
+ 6a7:	48 8b 70 08          	mov    0x8(%rax),%rsi
+ 6ab:	e8 80 fe ff ff       	callq  530 <create_error_dialog>
+./src/gtkprint.c:191
+ 6b0:	48 8b 3c 24          	mov    (%rsp),%rdi
+ 6b4:	e8 00 00 00 00       	callq  6b9 <create_gtkprint_session+0xb9>
+./src/gtkprint.c:193
+ 6b9:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 6c0 <create_gtkprint_session+0xc0>
+ 6c0:	48 85 ff             	test   %rdi,%rdi
+ 6c3:	74 05                	je     6ca <create_gtkprint_session+0xca>
+./src/gtkprint.c:194
+ 6c5:	e8 00 00 00 00       	callq  6ca <create_gtkprint_session+0xca>
+./src/gtkprint.c:195
+ 6ca:	48 89 df             	mov    %rbx,%rdi
+ 6cd:	e8 00 00 00 00       	callq  6d2 <create_gtkprint_session+0xd2>
+ 6d2:	48 89 c7             	mov    %rax,%rdi
+ 6d5:	e8 00 00 00 00       	callq  6da <create_gtkprint_session+0xda>
+ 6da:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 6e1 <create_gtkprint_session+0xe1>
+ 6e1:	eb 93                	jmp    676 <create_gtkprint_session+0x76>
+./src/gtkprint.c:201
+ 6e3:	e8 00 00 00 00       	callq  6e8 <create_gtkprint_session+0xe8>
+ 6e8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 6ef:	00 
+
+00000000000006f0 <create_gtkprint_preview_session>:
+create_gtkprint_preview_session():
+./src/gtkprint.c:204
+ 6f0:	41 54                	push   %r12
+ 6f2:	55                   	push   %rbp
+ 6f3:	53                   	push   %rbx
+ 6f4:	48 89 fb             	mov    %rdi,%rbx
+ 6f7:	48 83 ec 10          	sub    $0x10,%rsp
+./src/gtkprint.c:209
+ 6fb:	48 89 35 00 00 00 00 	mov    %rsi,0x0(%rip)        # 702 <create_gtkprint_preview_session+0x12>
+./src/gtkprint.c:204
+ 702:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 709:	00 00 
+ 70b:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 710:	31 c0                	xor    %eax,%eax
+./src/gtkprint.c:207
+ 712:	48 c7 04 24 00 00 00 	movq   $0x0,(%rsp)
+ 719:	00 
+./src/gtkprint.c:210
+ 71a:	e8 f1 f8 ff ff       	callq  10 <create_print_operation>
+ 71f:	48 89 c5             	mov    %rax,%rbp
+./src/gtkprint.c:213
+ 722:	e8 00 00 00 00       	callq  727 <create_gtkprint_preview_session+0x37>
+ 727:	49 89 c4             	mov    %rax,%r12
+ 72a:	e8 00 00 00 00       	callq  72f <create_gtkprint_preview_session+0x3f>
+ 72f:	48 89 df             	mov    %rbx,%rdi
+ 732:	48 89 c6             	mov    %rax,%rsi
+ 735:	e8 00 00 00 00       	callq  73a <create_gtkprint_preview_session+0x4a>
+ 73a:	48 89 c7             	mov    %rax,%rdi
+ 73d:	e8 00 00 00 00       	callq  742 <create_gtkprint_preview_session+0x52>
+ 742:	4c 89 e6             	mov    %r12,%rsi
+ 745:	48 89 c7             	mov    %rax,%rdi
+ 748:	e8 00 00 00 00       	callq  74d <create_gtkprint_preview_session+0x5d>
+./src/gtkprint.c:212
+ 74d:	48 89 e1             	mov    %rsp,%rcx
+ 750:	48 89 c2             	mov    %rax,%rdx
+ 753:	be 02 00 00 00       	mov    $0x2,%esi
+ 758:	48 89 ef             	mov    %rbp,%rdi
+ 75b:	e8 00 00 00 00       	callq  760 <create_gtkprint_preview_session+0x70>
+./src/gtkprint.c:214
+ 760:	85 c0                	test   %eax,%eax
+ 762:	75 19                	jne    77d <create_gtkprint_preview_session+0x8d>
+./src/gtkprint.c:215
+ 764:	48 8b 04 24          	mov    (%rsp),%rax
+ 768:	48 89 df             	mov    %rbx,%rdi
+ 76b:	48 8b 70 08          	mov    0x8(%rax),%rsi
+ 76f:	e8 bc fd ff ff       	callq  530 <create_error_dialog>
+./src/gtkprint.c:216
+ 774:	48 8b 3c 24          	mov    (%rsp),%rdi
+ 778:	e8 00 00 00 00       	callq  77d <create_gtkprint_preview_session+0x8d>
+./src/gtkprint.c:219
+ 77d:	48 89 ef             	mov    %rbp,%rdi
+ 780:	e8 00 00 00 00       	callq  785 <create_gtkprint_preview_session+0x95>
+./src/gtkprint.c:220
+ 785:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 78a:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+ 791:	00 00 
+ 793:	75 09                	jne    79e <create_gtkprint_preview_session+0xae>
+ 795:	48 83 c4 10          	add    $0x10,%rsp
+ 799:	5b                   	pop    %rbx
+ 79a:	5d                   	pop    %rbp
+ 79b:	41 5c                	pop    %r12
+ 79d:	c3                   	retq   
+ 79e:	e8 00 00 00 00       	callq  7a3 <create_gtkprint_preview_session+0xb3>

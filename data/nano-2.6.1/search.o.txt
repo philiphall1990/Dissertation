@@ -1,0 +1,1785 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-search.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <hlight_searched_strings>:
+hlight_searched_strings():
+./src/search.c:45
+       0:	41 57                	push   %r15
+       2:	41 56                	push   %r14
+       4:	41 55                	push   %r13
+       6:	41 54                	push   %r12
+       8:	55                   	push   %rbp
+       9:	53                   	push   %rbx
+       a:	48 81 ec 18 01 00 00 	sub    $0x118,%rsp
+      11:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+      18:	00 00 
+      1a:	48 89 84 24 08 01 00 	mov    %rax,0x108(%rsp)
+      21:	00 
+      22:	31 c0                	xor    %eax,%eax
+./src/search.c:51
+      24:	48 83 3d 00 00 00 00 	cmpq   $0x0,0x0(%rip)        # 2c <hlight_searched_strings+0x2c>
+      2b:	00 
+      2c:	0f 84 be 01 00 00    	je     1f0 <hlight_searched_strings+0x1f0>
+./src/search.c:55
+      32:	83 3d 00 00 00 00 01 	cmpl   $0x1,0x0(%rip)        # 39 <hlight_searched_strings+0x39>
+./src/search.c:57
+      39:	48 8d ac 24 b0 00 00 	lea    0xb0(%rsp),%rbp
+      40:	00 
+      41:	48 8d 5c 24 60       	lea    0x60(%rsp),%rbx
+      46:	49 89 fd             	mov    %rdi,%r13
+      49:	49 89 f6             	mov    %rsi,%r14
+      4c:	4c 8d 7c 24 10       	lea    0x10(%rsp),%r15
+      51:	48 89 ea             	mov    %rbp,%rdx
+      54:	48 89 de             	mov    %rbx,%rsi
+./src/search.c:55
+      57:	45 19 e4             	sbb    %r12d,%r12d
+./src/search.c:57
+      5a:	e8 00 00 00 00       	callq  5f <hlight_searched_strings+0x5f>
+./src/search.c:62
+      5f:	48 89 ea             	mov    %rbp,%rdx
+      62:	48 89 de             	mov    %rbx,%rsi
+      65:	4c 89 ef             	mov    %r13,%rdi
+      68:	e8 00 00 00 00       	callq  6d <hlight_searched_strings+0x6d>
+./src/search.c:63
+      6d:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+./src/search.c:55
+      72:	41 83 e4 02          	and    $0x2,%r12d
+./src/search.c:47
+      76:	c7 44 24 0c 00 00 00 	movl   $0x0,0xc(%rsp)
+      7d:	00 
+./src/search.c:55
+      7e:	41 83 c4 01          	add    $0x1,%r12d
+./src/search.c:63
+      82:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+      87:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+      8c:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+      91:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+      96:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+      9b:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+      a0:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+      a5:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+      ac:	00 
+      ad:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+      b2:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+      b9:	00 
+      ba:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+      bf:	48 8b 84 24 90 00 00 	mov    0x90(%rsp),%rax
+      c6:	00 
+      c7:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+      cc:	48 8b 84 24 98 00 00 	mov    0x98(%rsp),%rax
+      d3:	00 
+      d4:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+      d9:	48 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%rax
+      e0:	00 
+      e1:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+      e6:	48 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%rax
+      ed:	00 
+      ee:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+./src/search.c:65
+      f3:	45 31 c9             	xor    %r9d,%r9d
+      f6:	49 89 e8             	mov    %rbp,%r8
+      f9:	48 89 d9             	mov    %rbx,%rcx
+      fc:	44 89 e2             	mov    %r12d,%edx
+      ff:	4c 89 f6             	mov    %r14,%rsi
+     102:	4c 89 ff             	mov    %r15,%rdi
+     105:	e8 00 00 00 00       	callq  10a <hlight_searched_strings+0x10a>
+./src/search.c:67
+     10a:	85 c0                	test   %eax,%eax
+     10c:	75 3a                	jne    148 <hlight_searched_strings+0x148>
+./src/search.c:78
+     10e:	4c 89 ef             	mov    %r13,%rdi
+     111:	e8 00 00 00 00       	callq  116 <hlight_searched_strings+0x116>
+./src/search.c:81
+     116:	48 8b 8c 24 08 01 00 	mov    0x108(%rsp),%rcx
+     11d:	00 
+     11e:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+     125:	00 00 
+     127:	8b 44 24 0c          	mov    0xc(%rsp),%eax
+     12b:	0f 85 cc 00 00 00    	jne    1fd <hlight_searched_strings+0x1fd>
+     131:	48 81 c4 18 01 00 00 	add    $0x118,%rsp
+     138:	5b                   	pop    %rbx
+     139:	5d                   	pop    %rbp
+     13a:	41 5c                	pop    %r12
+     13c:	41 5d                	pop    %r13
+     13e:	41 5e                	pop    %r14
+     140:	41 5f                	pop    %r15
+     142:	c3                   	retq   
+     143:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/search.c:69
+     148:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 14f <hlight_searched_strings+0x14f>
+     14f:	48 89 e9             	mov    %rbp,%rcx
+     152:	48 89 da             	mov    %rbx,%rdx
+     155:	4c 89 ef             	mov    %r13,%rdi
+     158:	e8 00 00 00 00       	callq  15d <hlight_searched_strings+0x15d>
+./src/search.c:72
+     15d:	48 8b 84 24 b0 00 00 	mov    0xb0(%rsp),%rax
+     164:	00 
+./src/search.c:68
+     165:	c7 44 24 0c 01 00 00 	movl   $0x1,0xc(%rsp)
+     16c:	00 
+./src/search.c:72
+     16d:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+     172:	48 8b 84 24 b8 00 00 	mov    0xb8(%rsp),%rax
+     179:	00 
+     17a:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+     17f:	48 8b 84 24 c0 00 00 	mov    0xc0(%rsp),%rax
+     186:	00 
+     187:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+     18c:	48 8b 84 24 c8 00 00 	mov    0xc8(%rsp),%rax
+     193:	00 
+     194:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+     199:	48 8b 84 24 d0 00 00 	mov    0xd0(%rsp),%rax
+     1a0:	00 
+     1a1:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+     1a6:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+     1ad:	00 
+     1ae:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+     1b3:	48 8b 84 24 e0 00 00 	mov    0xe0(%rsp),%rax
+     1ba:	00 
+     1bb:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+     1c0:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+     1c7:	00 
+     1c8:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+     1cd:	48 8b 84 24 f0 00 00 	mov    0xf0(%rsp),%rax
+     1d4:	00 
+     1d5:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+     1da:	48 8b 84 24 f8 00 00 	mov    0xf8(%rsp),%rax
+     1e1:	00 
+     1e2:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+     1e7:	e9 07 ff ff ff       	jmpq   f3 <hlight_searched_strings+0xf3>
+     1ec:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/search.c:52
+     1f0:	c7 44 24 0c 00 00 00 	movl   $0x0,0xc(%rsp)
+     1f7:	00 
+     1f8:	e9 19 ff ff ff       	jmpq   116 <hlight_searched_strings+0x116>
+./src/search.c:81
+     1fd:	e8 00 00 00 00       	callq  202 <hlight_searched_strings+0x202>
+     202:	0f 1f 40 00          	nopl   0x0(%rax)
+     206:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+     20d:	00 00 00 
+
+0000000000000210 <toggle_check_all>:
+toggle_check_all():
+./src/search.c:292
+     210:	53                   	push   %rbx
+     211:	48 89 fb             	mov    %rdi,%rbx
+./src/search.c:293
+     214:	e8 00 00 00 00       	callq  219 <toggle_check_all+0x9>
+     219:	48 89 df             	mov    %rbx,%rdi
+     21c:	48 89 c6             	mov    %rax,%rsi
+     21f:	e8 00 00 00 00       	callq  224 <toggle_check_all+0x14>
+     224:	48 89 c7             	mov    %rax,%rdi
+     227:	e8 00 00 00 00       	callq  22c <toggle_check_all+0x1c>
+./src/search.c:294
+     22c:	5b                   	pop    %rbx
+./src/search.c:293
+     22d:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 233 <toggle_check_all+0x23>
+./src/search.c:294
+     233:	c3                   	retq   
+     234:	66 90                	xchg   %ax,%ax
+     236:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+     23d:	00 00 00 
+
+0000000000000240 <toggle_check_case>:
+toggle_check_case():
+./src/search.c:287
+     240:	53                   	push   %rbx
+     241:	48 89 fb             	mov    %rdi,%rbx
+./src/search.c:288
+     244:	e8 00 00 00 00       	callq  249 <toggle_check_case+0x9>
+     249:	48 89 df             	mov    %rbx,%rdi
+     24c:	48 89 c6             	mov    %rax,%rsi
+     24f:	e8 00 00 00 00       	callq  254 <toggle_check_case+0x14>
+     254:	48 89 c7             	mov    %rax,%rdi
+     257:	e8 00 00 00 00       	callq  25c <toggle_check_case+0x1c>
+./src/search.c:289
+     25c:	5b                   	pop    %rbx
+./src/search.c:288
+     25d:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 263 <toggle_check_case+0x23>
+./src/search.c:289
+     263:	c3                   	retq   
+     264:	66 90                	xchg   %ax,%ax
+     266:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+     26d:	00 00 00 
+
+0000000000000270 <toggle_sensitivity>:
+toggle_sensitivity():
+./src/search.c:271
+     270:	55                   	push   %rbp
+     271:	53                   	push   %rbx
+     272:	89 d3                	mov    %edx,%ebx
+     274:	48 83 ec 18          	sub    $0x18,%rsp
+./src/search.c:272
+     278:	48 85 c9             	test   %rcx,%rcx
+     27b:	74 53                	je     2d0 <toggle_sensitivity+0x60>
+./src/search.c:273
+     27d:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 283 <toggle_sensitivity+0x13>
+     283:	85 c0                	test   %eax,%eax
+     285:	75 3a                	jne    2c1 <toggle_sensitivity+0x51>
+     287:	48 89 7c 24 08       	mov    %rdi,0x8(%rsp)
+./src/search.c:274
+     28c:	e8 00 00 00 00       	callq  291 <toggle_sensitivity+0x21>
+     291:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+     296:	48 89 c5             	mov    %rax,%rbp
+     299:	e8 00 00 00 00       	callq  29e <toggle_sensitivity+0x2e>
+     29e:	48 89 ee             	mov    %rbp,%rsi
+     2a1:	48 89 c7             	mov    %rax,%rdi
+     2a4:	e8 00 00 00 00       	callq  2a9 <toggle_sensitivity+0x39>
+     2a9:	ba 01 00 00 00       	mov    $0x1,%edx
+     2ae:	48 89 c7             	mov    %rax,%rdi
+     2b1:	be fb ff ff ff       	mov    $0xfffffffb,%esi
+     2b6:	e8 00 00 00 00       	callq  2bb <toggle_sensitivity+0x4b>
+     2bb:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 2c1 <toggle_sensitivity+0x51>
+./src/search.c:276
+     2c1:	01 c3                	add    %eax,%ebx
+     2c3:	89 1d 00 00 00 00    	mov    %ebx,0x0(%rip)        # 2c9 <toggle_sensitivity+0x59>
+./src/search.c:284
+     2c9:	48 83 c4 18          	add    $0x18,%rsp
+     2cd:	5b                   	pop    %rbx
+     2ce:	5d                   	pop    %rbp
+     2cf:	c3                   	retq   
+./src/search.c:279
+     2d0:	03 35 00 00 00 00    	add    0x0(%rip),%esi        # 2d6 <toggle_sensitivity+0x66>
+     2d6:	29 d6                	sub    %edx,%esi
+./src/search.c:280
+     2d8:	85 f6                	test   %esi,%esi
+./src/search.c:279
+     2da:	89 35 00 00 00 00    	mov    %esi,0x0(%rip)        # 2e0 <toggle_sensitivity+0x70>
+./src/search.c:280
+     2e0:	75 e7                	jne    2c9 <toggle_sensitivity+0x59>
+     2e2:	48 89 7c 24 08       	mov    %rdi,0x8(%rsp)
+./src/search.c:281
+     2e7:	e8 00 00 00 00       	callq  2ec <toggle_sensitivity+0x7c>
+     2ec:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+     2f1:	48 89 c3             	mov    %rax,%rbx
+     2f4:	e8 00 00 00 00       	callq  2f9 <toggle_sensitivity+0x89>
+     2f9:	48 89 de             	mov    %rbx,%rsi
+     2fc:	48 89 c7             	mov    %rax,%rdi
+     2ff:	e8 00 00 00 00       	callq  304 <toggle_sensitivity+0x94>
+./src/search.c:284
+     304:	48 83 c4 18          	add    $0x18,%rsp
+./src/search.c:281
+     308:	31 d2                	xor    %edx,%edx
+     30a:	be fb ff ff ff       	mov    $0xfffffffb,%esi
+./src/search.c:284
+     30f:	5b                   	pop    %rbx
+     310:	5d                   	pop    %rbp
+./src/search.c:281
+     311:	48 89 c7             	mov    %rax,%rdi
+     314:	e9 00 00 00 00       	jmpq   319 <toggle_sensitivity+0xa9>
+     319:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000000320 <document_search_real>:
+document_search_real():
+./src/search.c:84
+     320:	41 57                	push   %r15
+     322:	41 56                	push   %r14
+     324:	49 89 fe             	mov    %rdi,%r14
+     327:	41 55                	push   %r13
+     329:	41 54                	push   %r12
+     32b:	41 89 f5             	mov    %esi,%r13d
+     32e:	55                   	push   %rbp
+     32f:	53                   	push   %rbx
+     330:	48 81 ec 18 01 00 00 	sub    $0x118,%rsp
+     337:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+     33e:	00 00 
+     340:	48 89 84 24 08 01 00 	mov    %rax,0x108(%rsp)
+     347:	00 
+     348:	31 c0                	xor    %eax,%eax
+./src/search.c:88
+     34a:	e8 00 00 00 00       	callq  34f <document_search_real+0x2f>
+     34f:	4c 89 f7             	mov    %r14,%rdi
+     352:	48 89 c6             	mov    %rax,%rsi
+     355:	48 89 c5             	mov    %rax,%rbp
+     358:	e8 00 00 00 00       	callq  35d <document_search_real+0x3d>
+     35d:	48 89 c7             	mov    %rax,%rdi
+     360:	e8 00 00 00 00       	callq  365 <document_search_real+0x45>
+./src/search.c:90
+     365:	4c 8b 3d 00 00 00 00 	mov    0x0(%rip),%r15        # 36c <document_search_real+0x4c>
+     36c:	4d 85 ff             	test   %r15,%r15
+     36f:	0f 84 f2 00 00 00    	je     467 <document_search_real+0x147>
+./src/search.c:87
+     375:	83 3d 00 00 00 00 01 	cmpl   $0x1,0x0(%rip)        # 37c <document_search_real+0x5c>
+     37c:	49 89 c4             	mov    %rax,%r12
+     37f:	19 db                	sbb    %ebx,%ebx
+     381:	83 e3 02             	and    $0x2,%ebx
+     384:	83 c3 01             	add    $0x1,%ebx
+./src/search.c:97
+     387:	45 85 ed             	test   %r13d,%r13d
+     38a:	0f 84 b7 01 00 00    	je     547 <document_search_real+0x227>
+./src/search.c:97 (discriminator 1)
+     390:	41 83 fd 02          	cmp    $0x2,%r13d
+     394:	0f 84 fe 00 00 00    	je     498 <document_search_real+0x178>
+./src/search.c:97 (discriminator 2)
+     39a:	e8 00 00 00 00       	callq  39f <document_search_real+0x7f>
+     39f:	85 c0                	test   %eax,%eax
+     3a1:	0f 84 99 01 00 00    	je     540 <document_search_real+0x220>
+./src/search.c:102
+     3a7:	48 89 ee             	mov    %rbp,%rsi
+     3aa:	4c 89 f7             	mov    %r14,%rdi
+./src/search.c:104
+     3ad:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+./src/search.c:102
+     3b2:	e8 00 00 00 00       	callq  3b7 <document_search_real+0x97>
+./src/search.c:100
+     3b7:	48 8b 78 78          	mov    0x78(%rax),%rdi
+     3bb:	e8 00 00 00 00       	callq  3c0 <document_search_real+0xa0>
+     3c0:	31 f6                	xor    %esi,%esi
+     3c2:	48 89 c7             	mov    %rax,%rdi
+     3c5:	e8 00 00 00 00       	callq  3ca <document_search_real+0xaa>
+./src/search.c:104
+     3ca:	4c 89 e7             	mov    %r12,%rdi
+     3cd:	e8 00 00 00 00       	callq  3d2 <document_search_real+0xb2>
+     3d2:	48 89 ee             	mov    %rbp,%rsi
+     3d5:	48 89 c2             	mov    %rax,%rdx
+     3d8:	4c 89 e7             	mov    %r12,%rdi
+     3db:	e8 00 00 00 00       	callq  3e0 <document_search_real+0xc0>
+./src/search.c:105
+     3e0:	45 85 ed             	test   %r13d,%r13d
+     3e3:	0f 89 e8 00 00 00    	jns    4d1 <document_search_real+0x1b1>
+./src/search.c:106
+     3e9:	48 8d 44 24 60       	lea    0x60(%rsp),%rax
+     3ee:	4c 8d bc 24 b0 00 00 	lea    0xb0(%rsp),%r15
+     3f5:	00 
+     3f6:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 3fd <document_search_real+0xdd>
+     3fd:	45 31 c9             	xor    %r9d,%r9d
+     400:	89 da                	mov    %ebx,%edx
+     402:	48 89 ef             	mov    %rbp,%rdi
+     405:	48 89 c1             	mov    %rax,%rcx
+     408:	4d 89 f8             	mov    %r15,%r8
+     40b:	48 89 04 24          	mov    %rax,(%rsp)
+     40f:	e8 00 00 00 00       	callq  414 <document_search_real+0xf4>
+./src/search.c:108
+     414:	4c 89 fe             	mov    %r15,%rsi
+     417:	48 89 ef             	mov    %rbp,%rdi
+./src/search.c:106
+     41a:	89 44 24 0c          	mov    %eax,0xc(%rsp)
+./src/search.c:108
+     41e:	e8 00 00 00 00       	callq  423 <document_search_real+0x103>
+     423:	85 c0                	test   %eax,%eax
+     425:	8b 4c 24 0c          	mov    0xc(%rsp),%ecx
+     429:	0f 85 b1 01 00 00    	jne    5e0 <document_search_real+0x2c0>
+./src/search.c:120
+     42f:	85 c9                	test   %ecx,%ecx
+     431:	0f 85 cb 00 00 00    	jne    502 <document_search_real+0x1e2>
+./src/search.c:122
+     437:	48 89 ee             	mov    %rbp,%rsi
+     43a:	4c 89 e7             	mov    %r12,%rdi
+     43d:	e8 00 00 00 00       	callq  442 <document_search_real+0x122>
+./src/search.c:123
+     442:	48 8b 0c 24          	mov    (%rsp),%rcx
+     446:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 44d <document_search_real+0x12d>
+     44d:	45 31 c9             	xor    %r9d,%r9d
+     450:	4d 89 f8             	mov    %r15,%r8
+     453:	89 da                	mov    %ebx,%edx
+     455:	48 89 ef             	mov    %rbp,%rdi
+     458:	e8 00 00 00 00       	callq  45d <document_search_real+0x13d>
+./src/search.c:132
+     45d:	85 c0                	test   %eax,%eax
+./src/search.c:123
+     45f:	89 c1                	mov    %eax,%ecx
+./src/search.c:132
+     461:	0f 85 9b 00 00 00    	jne    502 <document_search_real+0x1e2>
+./src/search.c:91
+     467:	31 c9                	xor    %ecx,%ecx
+./src/search.c:143
+     469:	48 8b 94 24 08 01 00 	mov    0x108(%rsp),%rdx
+     470:	00 
+     471:	64 48 33 14 25 28 00 	xor    %fs:0x28,%rdx
+     478:	00 00 
+     47a:	89 c8                	mov    %ecx,%eax
+     47c:	0f 85 80 01 00 00    	jne    602 <document_search_real+0x2e2>
+     482:	48 81 c4 18 01 00 00 	add    $0x118,%rsp
+     489:	5b                   	pop    %rbx
+     48a:	5d                   	pop    %rbp
+     48b:	41 5c                	pop    %r12
+     48d:	41 5d                	pop    %r13
+     48f:	41 5e                	pop    %r14
+     491:	41 5f                	pop    %r15
+     493:	c3                   	retq   
+     494:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/search.c:102
+     498:	48 89 ee             	mov    %rbp,%rsi
+     49b:	4c 89 f7             	mov    %r14,%rdi
+./src/search.c:104
+     49e:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+./src/search.c:102
+     4a3:	e8 00 00 00 00       	callq  4a8 <document_search_real+0x188>
+./src/search.c:100
+     4a8:	48 8b 78 78          	mov    0x78(%rax),%rdi
+     4ac:	e8 00 00 00 00       	callq  4b1 <document_search_real+0x191>
+     4b1:	31 f6                	xor    %esi,%esi
+     4b3:	48 89 c7             	mov    %rax,%rdi
+     4b6:	e8 00 00 00 00       	callq  4bb <document_search_real+0x19b>
+./src/search.c:104
+     4bb:	4c 89 e7             	mov    %r12,%rdi
+     4be:	e8 00 00 00 00       	callq  4c3 <document_search_real+0x1a3>
+     4c3:	48 89 ee             	mov    %rbp,%rsi
+     4c6:	48 89 c2             	mov    %rax,%rdx
+     4c9:	4c 89 e7             	mov    %r12,%rdi
+     4cc:	e8 00 00 00 00       	callq  4d1 <document_search_real+0x1b1>
+./src/search.c:113
+     4d1:	48 8d 44 24 60       	lea    0x60(%rsp),%rax
+     4d6:	4c 8d bc 24 b0 00 00 	lea    0xb0(%rsp),%r15
+     4dd:	00 
+     4de:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 4e5 <document_search_real+0x1c5>
+     4e5:	45 31 c9             	xor    %r9d,%r9d
+     4e8:	89 da                	mov    %ebx,%edx
+     4ea:	48 89 ef             	mov    %rbp,%rdi
+     4ed:	48 89 c1             	mov    %rax,%rcx
+     4f0:	4d 89 f8             	mov    %r15,%r8
+     4f3:	48 89 04 24          	mov    %rax,(%rsp)
+     4f7:	e8 00 00 00 00       	callq  4fc <document_search_real+0x1dc>
+./src/search.c:120
+     4fc:	85 c0                	test   %eax,%eax
+./src/search.c:113
+     4fe:	89 c1                	mov    %eax,%ecx
+./src/search.c:120
+     500:	74 66                	je     568 <document_search_real+0x248>
+./src/search.c:133
+     502:	48 8b 34 24          	mov    (%rsp),%rsi
+     506:	4c 89 e7             	mov    %r12,%rdi
+     509:	89 4c 24 0c          	mov    %ecx,0xc(%rsp)
+     50d:	e8 00 00 00 00       	callq  512 <document_search_real+0x1f2>
+./src/search.c:134
+     512:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 519 <document_search_real+0x1f9>
+     519:	4c 89 fa             	mov    %r15,%rdx
+     51c:	4c 89 e7             	mov    %r12,%rdi
+     51f:	e8 00 00 00 00       	callq  524 <document_search_real+0x204>
+./src/search.c:136
+     524:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # 52c <document_search_real+0x20c>
+     52b:	00 
+     52c:	4c 89 e7             	mov    %r12,%rdi
+     52f:	e8 00 00 00 00       	callq  534 <document_search_real+0x214>
+     534:	8b 4c 24 0c          	mov    0xc(%rsp),%ecx
+     538:	e9 2c ff ff ff       	jmpq   469 <document_search_real+0x149>
+     53d:	0f 1f 00             	nopl   (%rax)
+     540:	4c 8b 3d 00 00 00 00 	mov    0x0(%rip),%r15        # 547 <document_search_real+0x227>
+./src/search.c:98
+     547:	48 89 ee             	mov    %rbp,%rsi
+     54a:	4c 89 f7             	mov    %r14,%rdi
+     54d:	e8 00 00 00 00       	callq  552 <document_search_real+0x232>
+     552:	48 8b 78 78          	mov    0x78(%rax),%rdi
+     556:	4c 89 fe             	mov    %r15,%rsi
+     559:	e8 a2 fa ff ff       	callq  0 <hlight_searched_strings>
+     55e:	e9 44 fe ff ff       	jmpq   3a7 <document_search_real+0x87>
+     563:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/search.c:126
+     568:	48 89 ee             	mov    %rbp,%rsi
+     56b:	4c 89 e7             	mov    %r12,%rdi
+     56e:	e8 00 00 00 00       	callq  573 <document_search_real+0x253>
+./src/search.c:127
+     573:	48 8b 0c 24          	mov    (%rsp),%rcx
+     577:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 57e <document_search_real+0x25e>
+     57e:	45 31 c9             	xor    %r9d,%r9d
+     581:	4d 89 f8             	mov    %r15,%r8
+     584:	89 da                	mov    %ebx,%edx
+     586:	48 89 ef             	mov    %rbp,%rdi
+     589:	e8 00 00 00 00       	callq  58e <document_search_real+0x26e>
+./src/search.c:132
+     58e:	85 c0                	test   %eax,%eax
+./src/search.c:127
+     590:	89 c1                	mov    %eax,%ecx
+./src/search.c:132
+     592:	0f 85 6a ff ff ff    	jne    502 <document_search_real+0x1e2>
+./src/search.c:138
+     598:	45 85 ed             	test   %r13d,%r13d
+     59b:	89 04 24             	mov    %eax,(%rsp)
+     59e:	0f 85 c3 fe ff ff    	jne    467 <document_search_real+0x147>
+./src/search.c:140
+     5a4:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 5ab <document_search_real+0x28b>
+     5ab:	ba 05 00 00 00       	mov    $0x5,%edx
+     5b0:	31 ff                	xor    %edi,%edi
+     5b2:	e8 00 00 00 00       	callq  5b7 <document_search_real+0x297>
+./src/search.c:139
+     5b7:	4c 89 f7             	mov    %r14,%rdi
+./src/search.c:140
+     5ba:	48 89 c3             	mov    %rax,%rbx
+./src/search.c:139
+     5bd:	e8 00 00 00 00       	callq  5c2 <document_search_real+0x2a2>
+     5c2:	48 89 da             	mov    %rbx,%rdx
+     5c5:	48 89 c7             	mov    %rax,%rdi
+     5c8:	be 01 00 00 00       	mov    $0x1,%esi
+     5cd:	31 c0                	xor    %eax,%eax
+     5cf:	e8 00 00 00 00       	callq  5d4 <document_search_real+0x2b4>
+     5d4:	8b 0c 24             	mov    (%rsp),%ecx
+     5d7:	e9 8d fe ff ff       	jmpq   469 <document_search_real+0x149>
+     5dc:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/search.c:109
+     5e0:	48 8b 3c 24          	mov    (%rsp),%rdi
+     5e4:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 5eb <document_search_real+0x2cb>
+     5eb:	45 31 c9             	xor    %r9d,%r9d
+     5ee:	4d 89 f8             	mov    %r15,%r8
+     5f1:	89 da                	mov    %ebx,%edx
+     5f3:	48 89 f9             	mov    %rdi,%rcx
+     5f6:	e8 00 00 00 00       	callq  5fb <document_search_real+0x2db>
+     5fb:	89 c1                	mov    %eax,%ecx
+     5fd:	e9 2d fe ff ff       	jmpq   42f <document_search_real+0x10f>
+./src/search.c:143
+     602:	e8 00 00 00 00       	callq  607 <document_search_real+0x2e7>
+     607:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+     60e:	00 00 
+
+0000000000000610 <document_replace_real>:
+document_replace_real():
+./src/search.c:146
+     610:	41 57                	push   %r15
+     612:	41 56                	push   %r14
+     614:	41 55                	push   %r13
+     616:	41 54                	push   %r12
+     618:	55                   	push   %rbp
+     619:	53                   	push   %rbx
+     61a:	48 89 fb             	mov    %rdi,%rbx
+     61d:	48 81 ec 28 02 00 00 	sub    $0x228,%rsp
+     624:	48 89 7c 24 10       	mov    %rdi,0x10(%rsp)
+     629:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+     630:	00 00 
+     632:	48 89 84 24 18 02 00 	mov    %rax,0x218(%rsp)
+     639:	00 
+     63a:	31 c0                	xor    %eax,%eax
+./src/search.c:153
+     63c:	e8 00 00 00 00       	callq  641 <document_replace_real+0x31>
+     641:	48 89 df             	mov    %rbx,%rdi
+     644:	48 89 c6             	mov    %rax,%rsi
+     647:	e8 00 00 00 00       	callq  64c <document_replace_real+0x3c>
+     64c:	48 89 c7             	mov    %rax,%rdi
+     64f:	e8 00 00 00 00       	callq  654 <document_replace_real+0x44>
+./src/search.c:156
+     654:	83 3d 00 00 00 00 01 	cmpl   $0x1,0x0(%rip)        # 65b <document_replace_real+0x4b>
+./src/search.c:158
+     65b:	8b 35 00 00 00 00    	mov    0x0(%rip),%esi        # 661 <document_replace_real+0x51>
+./src/search.c:153
+     661:	48 89 c3             	mov    %rax,%rbx
+./src/search.c:156
+     664:	19 c0                	sbb    %eax,%eax
+     666:	83 e0 02             	and    $0x2,%eax
+     669:	83 c0 01             	add    $0x1,%eax
+./src/search.c:158
+     66c:	85 f6                	test   %esi,%esi
+./src/search.c:156
+     66e:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+./src/search.c:158
+     672:	0f 84 a8 03 00 00    	je     a20 <document_replace_real+0x410>
+./src/search.c:159
+     678:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+     67d:	48 89 df             	mov    %rbx,%rdi
+./src/search.c:164
+     680:	4c 8d a4 24 d0 00 00 	lea    0xd0(%rsp),%r12
+     687:	00 
+./src/search.c:159
+     688:	e8 00 00 00 00       	callq  68d <document_replace_real+0x7d>
+     68d:	48 89 ee             	mov    %rbp,%rsi
+     690:	48 89 c2             	mov    %rax,%rdx
+     693:	48 89 df             	mov    %rbx,%rdi
+     696:	e8 00 00 00 00       	callq  69b <document_replace_real+0x8b>
+./src/search.c:161
+     69b:	48 89 ea             	mov    %rbp,%rdx
+     69e:	31 c9                	xor    %ecx,%ecx
+     6a0:	31 f6                	xor    %esi,%esi
+     6a2:	48 89 df             	mov    %rbx,%rdi
+     6a5:	e8 00 00 00 00       	callq  6aa <document_replace_real+0x9a>
+./src/search.c:162
+     6aa:	48 89 ee             	mov    %rbp,%rsi
+     6ad:	48 89 df             	mov    %rbx,%rdi
+./src/search.c:161
+     6b0:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+./src/search.c:162
+     6b5:	e8 00 00 00 00       	callq  6ba <document_replace_real+0xaa>
+./src/search.c:164
+     6ba:	4c 89 e6             	mov    %r12,%rsi
+     6bd:	48 89 df             	mov    %rbx,%rdi
+     6c0:	e8 00 00 00 00       	callq  6c5 <document_replace_real+0xb5>
+./src/search.c:167
+     6c5:	4c 89 e2             	mov    %r12,%rdx
+     6c8:	48 89 ee             	mov    %rbp,%rsi
+     6cb:	48 89 df             	mov    %rbx,%rdi
+     6ce:	e8 00 00 00 00       	callq  6d3 <document_replace_real+0xc3>
+./src/search.c:176
+     6d3:	48 8d 84 24 d0 00 00 	lea    0xd0(%rsp),%rax
+     6da:	00 
+     6db:	4c 8d 64 24 30       	lea    0x30(%rsp),%r12
+./src/search.c:148
+     6e0:	45 31 ed             	xor    %r13d,%r13d
+     6e3:	31 ed                	xor    %ebp,%ebp
+./src/search.c:176
+     6e5:	48 89 04 24          	mov    %rax,(%rsp)
+     6e9:	48 8d 84 24 80 00 00 	lea    0x80(%rsp),%rax
+     6f0:	00 
+     6f1:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+./src/search.c:216
+     6f6:	48 8d 84 24 20 01 00 	lea    0x120(%rsp),%rax
+     6fd:	00 
+     6fe:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+./src/search.c:175
+     703:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 709 <document_replace_real+0xf9>
+     709:	85 c9                	test   %ecx,%ecx
+     70b:	0f 84 d7 00 00 00    	je     7e8 <document_replace_real+0x1d8>
+./src/search.c:176
+     711:	4c 8b 04 24          	mov    (%rsp),%r8
+     715:	48 8b 4c 24 08       	mov    0x8(%rsp),%rcx
+     71a:	45 31 c9             	xor    %r9d,%r9d
+     71d:	8b 54 24 1c          	mov    0x1c(%rsp),%edx
+     721:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 728 <document_replace_real+0x118>
+     728:	4c 89 e7             	mov    %r12,%rdi
+     72b:	e8 00 00 00 00       	callq  730 <document_replace_real+0x120>
+./src/search.c:178
+     730:	85 c0                	test   %eax,%eax
+     732:	0f 85 68 02 00 00    	jne    9a0 <document_replace_real+0x390>
+./src/search.c:247
+     738:	e8 00 00 00 00       	callq  73d <document_replace_real+0x12d>
+     73d:	85 c0                	test   %eax,%eax
+     73f:	0f 84 ca 02 00 00    	je     a0f <document_replace_real+0x3ff>
+     745:	0f 1f 00             	nopl   (%rax)
+./src/search.c:250
+     748:	4d 85 ed             	test   %r13,%r13
+     74b:	74 08                	je     755 <document_replace_real+0x145>
+./src/search.c:251
+     74d:	4c 89 ef             	mov    %r13,%rdi
+     750:	e8 00 00 00 00       	callq  755 <document_replace_real+0x145>
+./src/search.c:256
+     755:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 75b <document_replace_real+0x14b>
+     75b:	85 c0                	test   %eax,%eax
+     75d:	74 58                	je     7b7 <document_replace_real+0x1a7>
+./src/search.c:257
+     75f:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+     764:	4c 8d 64 24 30       	lea    0x30(%rsp),%r12
+     769:	48 89 df             	mov    %rbx,%rdi
+     76c:	4c 89 e6             	mov    %r12,%rsi
+     76f:	e8 00 00 00 00       	callq  774 <document_replace_real+0x164>
+./src/search.c:258
+     774:	48 89 df             	mov    %rbx,%rdi
+     777:	4c 89 e6             	mov    %r12,%rsi
+     77a:	e8 00 00 00 00       	callq  77f <document_replace_real+0x16f>
+./src/search.c:260
+     77f:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 786 <document_replace_real+0x176>
+     786:	ba 05 00 00 00       	mov    $0x5,%edx
+     78b:	31 ff                	xor    %edi,%edi
+     78d:	e8 00 00 00 00       	callq  792 <document_replace_real+0x182>
+./src/search.c:259
+     792:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+./src/search.c:260
+     797:	48 89 c3             	mov    %rax,%rbx
+./src/search.c:259
+     79a:	e8 00 00 00 00       	callq  79f <document_replace_real+0x18f>
+     79f:	89 e9                	mov    %ebp,%ecx
+     7a1:	48 89 c7             	mov    %rax,%rdi
+     7a4:	48 89 da             	mov    %rbx,%rdx
+     7a7:	31 f6                	xor    %esi,%esi
+     7a9:	31 c0                	xor    %eax,%eax
+     7ab:	e8 00 00 00 00       	callq  7b0 <document_replace_real+0x1a0>
+./src/search.c:261
+     7b0:	31 ff                	xor    %edi,%edi
+     7b2:	e8 00 00 00 00       	callq  7b7 <document_replace_real+0x1a7>
+./src/search.c:265
+     7b7:	48 8b 8c 24 18 02 00 	mov    0x218(%rsp),%rcx
+     7be:	00 
+     7bf:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+     7c6:	00 00 
+     7c8:	89 e8                	mov    %ebp,%eax
+     7ca:	0f 85 75 02 00 00    	jne    a45 <document_replace_real+0x435>
+     7d0:	48 81 c4 28 02 00 00 	add    $0x228,%rsp
+     7d7:	5b                   	pop    %rbx
+     7d8:	5d                   	pop    %rbp
+     7d9:	41 5c                	pop    %r12
+     7db:	41 5d                	pop    %r13
+     7dd:	41 5e                	pop    %r14
+     7df:	41 5f                	pop    %r15
+     7e1:	c3                   	retq   
+     7e2:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/search.c:187
+     7e8:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+     7ed:	be 02 00 00 00       	mov    $0x2,%esi
+     7f2:	e8 00 00 00 00       	callq  7f7 <document_replace_real+0x1e7>
+./src/search.c:189
+     7f7:	85 c0                	test   %eax,%eax
+     7f9:	0f 84 39 ff ff ff    	je     738 <document_replace_real+0x128>
+./src/search.c:190
+     7ff:	8b 15 00 00 00 00    	mov    0x0(%rip),%edx        # 805 <document_replace_real+0x1f5>
+     805:	85 d2                	test   %edx,%edx
+     807:	0f 85 8f 00 00 00    	jne    89c <document_replace_real+0x28c>
+./src/search.c:191
+     80d:	85 ed                	test   %ebp,%ebp
+     80f:	75 35                	jne    846 <document_replace_real+0x236>
+     811:	4d 85 ed             	test   %r13,%r13
+     814:	75 30                	jne    846 <document_replace_real+0x236>
+./src/search.c:193
+     816:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 81d <document_replace_real+0x20d>
+     81d:	ba 05 00 00 00       	mov    $0x5,%edx
+     822:	31 ff                	xor    %edi,%edi
+     824:	e8 00 00 00 00       	callq  829 <document_replace_real+0x219>
+./src/search.c:192
+     829:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+./src/search.c:193
+     82e:	49 89 c5             	mov    %rax,%r13
+./src/search.c:192
+     831:	e8 00 00 00 00       	callq  836 <document_replace_real+0x226>
+     836:	4c 89 ee             	mov    %r13,%rsi
+     839:	48 89 c7             	mov    %rax,%rdi
+     83c:	31 c0                	xor    %eax,%eax
+     83e:	e8 00 00 00 00       	callq  843 <document_replace_real+0x233>
+     843:	49 89 c5             	mov    %rax,%r13
+./src/search.c:196
+     846:	4c 8d b4 24 c0 01 00 	lea    0x1c0(%rsp),%r14
+     84d:	00 
+     84e:	4c 8d bc 24 70 01 00 	lea    0x170(%rsp),%r15
+     855:	00 
+     856:	48 89 df             	mov    %rbx,%rdi
+     859:	4c 89 f2             	mov    %r14,%rdx
+     85c:	4c 89 fe             	mov    %r15,%rsi
+     85f:	e8 00 00 00 00       	callq  864 <document_replace_real+0x254>
+./src/search.c:198
+     864:	e8 00 00 00 00       	callq  869 <document_replace_real+0x259>
+     869:	4c 89 ef             	mov    %r13,%rdi
+     86c:	48 89 c6             	mov    %rax,%rsi
+     86f:	e8 00 00 00 00       	callq  874 <document_replace_real+0x264>
+     874:	48 89 c7             	mov    %rax,%rdi
+     877:	e8 00 00 00 00       	callq  87c <document_replace_real+0x26c>
+     87c:	83 f8 f7             	cmp    $0xfffffff7,%eax
+     87f:	0f 84 7e fe ff ff    	je     703 <document_replace_real+0xf3>
+     885:	83 f8 f8             	cmp    $0xfffffff8,%eax
+     888:	0f 85 6a 01 00 00    	jne    9f8 <document_replace_real+0x3e8>
+./src/search.c:201
+     88e:	4c 89 f2             	mov    %r14,%rdx
+     891:	4c 89 fe             	mov    %r15,%rsi
+     894:	48 89 df             	mov    %rbx,%rdi
+     897:	e8 00 00 00 00       	callq  89c <document_replace_real+0x28c>
+./src/search.c:214
+     89c:	48 89 df             	mov    %rbx,%rdi
+     89f:	ba 01 00 00 00       	mov    $0x1,%edx
+     8a4:	be 01 00 00 00       	mov    $0x1,%esi
+     8a9:	e8 00 00 00 00       	callq  8ae <document_replace_real+0x29e>
+./src/search.c:215
+     8ae:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 8b5 <document_replace_real+0x2a5>
+./src/search.c:216
+     8b5:	48 89 df             	mov    %rbx,%rdi
+./src/search.c:215
+     8b8:	80 38 00             	cmpb   $0x0,(%rax)
+     8bb:	0f 84 1f 01 00 00    	je     9e0 <document_replace_real+0x3d0>
+./src/search.c:216
+     8c1:	e8 00 00 00 00       	callq  8c6 <document_replace_real+0x2b6>
+     8c6:	4c 8b 74 24 20       	mov    0x20(%rsp),%r14
+     8cb:	48 89 c2             	mov    %rax,%rdx
+     8ce:	48 89 df             	mov    %rbx,%rdi
+     8d1:	4c 89 f6             	mov    %r14,%rsi
+     8d4:	e8 00 00 00 00       	callq  8d9 <document_replace_real+0x2c9>
+./src/search.c:219
+     8d9:	4c 89 f7             	mov    %r14,%rdi
+     8dc:	4c 89 74 24 20       	mov    %r14,0x20(%rsp)
+     8e1:	e8 00 00 00 00       	callq  8e6 <document_replace_real+0x2d6>
+./src/search.c:220
+     8e6:	bf 01 00 00 00       	mov    $0x1,%edi
+./src/search.c:219
+     8eb:	41 89 c6             	mov    %eax,%r14d
+./src/search.c:220
+     8ee:	e8 00 00 00 00       	callq  8f3 <document_replace_real+0x2e3>
+./src/search.c:221
+     8f3:	be 50 00 00 00       	mov    $0x50,%esi
+     8f8:	48 89 df             	mov    %rbx,%rdi
+     8fb:	e8 00 00 00 00       	callq  900 <document_replace_real+0x2f0>
+     900:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 907 <document_replace_real+0x2f7>
+     907:	48 89 c7             	mov    %rax,%rdi
+     90a:	31 c0                	xor    %eax,%eax
+     90c:	e8 00 00 00 00       	callq  911 <document_replace_real+0x301>
+./src/search.c:224
+     911:	4c 8b 3d 00 00 00 00 	mov    0x0(%rip),%r15        # 918 <document_replace_real+0x308>
+     918:	4c 89 ff             	mov    %r15,%rdi
+     91b:	e8 00 00 00 00       	callq  920 <document_replace_real+0x310>
+./src/search.c:223
+     920:	4c 89 fe             	mov    %r15,%rsi
+     923:	89 c2                	mov    %eax,%edx
+     925:	48 89 df             	mov    %rbx,%rdi
+     928:	e8 00 00 00 00       	callq  92d <document_replace_real+0x31d>
+./src/search.c:225
+     92d:	be 50 00 00 00       	mov    $0x50,%esi
+     932:	48 89 df             	mov    %rbx,%rdi
+     935:	e8 00 00 00 00       	callq  93a <document_replace_real+0x32a>
+     93a:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 941 <document_replace_real+0x331>
+     941:	48 89 c7             	mov    %rax,%rdi
+     944:	31 c0                	xor    %eax,%eax
+     946:	e8 00 00 00 00       	callq  94b <document_replace_real+0x33b>
+./src/search.c:227
+     94b:	48 89 df             	mov    %rbx,%rdi
+     94e:	e8 00 00 00 00       	callq  953 <document_replace_real+0x343>
+     953:	4c 89 e6             	mov    %r12,%rsi
+     956:	48 89 c2             	mov    %rax,%rdx
+     959:	48 89 df             	mov    %rbx,%rdi
+     95c:	e8 00 00 00 00       	callq  961 <document_replace_real+0x351>
+./src/search.c:230
+     961:	44 89 f2             	mov    %r14d,%edx
+     964:	4c 8b 74 24 20       	mov    0x20(%rsp),%r14
+     969:	48 89 df             	mov    %rbx,%rdi
+     96c:	4c 89 f6             	mov    %r14,%rsi
+     96f:	e8 00 00 00 00       	callq  974 <document_replace_real+0x364>
+./src/search.c:232
+     974:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 97b <document_replace_real+0x36b>
+     97b:	4c 89 e1             	mov    %r12,%rcx
+     97e:	4c 89 f2             	mov    %r14,%rdx
+     981:	48 89 df             	mov    %rbx,%rdi
+     984:	e8 00 00 00 00       	callq  989 <document_replace_real+0x379>
+./src/search.c:244
+     989:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # 98f <document_replace_real+0x37f>
+./src/search.c:239
+     98f:	83 c5 01             	add    $0x1,%ebp
+./src/search.c:244
+     992:	e8 00 00 00 00       	callq  997 <document_replace_real+0x387>
+     997:	e9 67 fd ff ff       	jmpq   703 <document_replace_real+0xf3>
+     99c:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/search.c:179
+     9a0:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+     9a5:	48 89 df             	mov    %rbx,%rdi
+     9a8:	e8 00 00 00 00       	callq  9ad <document_replace_real+0x39d>
+./src/search.c:180
+     9ad:	48 8b 14 24          	mov    (%rsp),%rdx
+     9b1:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 9b8 <document_replace_real+0x3a8>
+     9b8:	48 89 df             	mov    %rbx,%rdi
+     9bb:	e8 00 00 00 00       	callq  9c0 <document_replace_real+0x3b0>
+./src/search.c:181
+     9c0:	48 89 df             	mov    %rbx,%rdi
+     9c3:	e8 00 00 00 00       	callq  9c8 <document_replace_real+0x3b8>
+     9c8:	4c 89 e6             	mov    %r12,%rsi
+     9cb:	48 89 c2             	mov    %rax,%rdx
+     9ce:	48 89 df             	mov    %rbx,%rdi
+     9d1:	e8 00 00 00 00       	callq  9d6 <document_replace_real+0x3c6>
+     9d6:	e9 24 fe ff ff       	jmpq   7ff <document_replace_real+0x1ef>
+     9db:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/search.c:235
+     9e0:	e8 00 00 00 00       	callq  9e5 <document_replace_real+0x3d5>
+     9e5:	4c 89 e6             	mov    %r12,%rsi
+     9e8:	48 89 c2             	mov    %rax,%rdx
+     9eb:	48 89 df             	mov    %rbx,%rdi
+     9ee:	e8 00 00 00 00       	callq  9f3 <document_replace_real+0x3e3>
+     9f3:	eb 94                	jmp    989 <document_replace_real+0x379>
+     9f5:	0f 1f 00             	nopl   (%rax)
+./src/search.c:210
+     9f8:	85 ed                	test   %ebp,%ebp
+     9fa:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+     9ff:	0f 44 e8             	cmove  %eax,%ebp
+./src/search.c:247
+     a02:	e8 00 00 00 00       	callq  a07 <document_replace_real+0x3f7>
+     a07:	85 c0                	test   %eax,%eax
+     a09:	0f 85 39 fd ff ff    	jne    748 <document_replace_real+0x138>
+./src/search.c:248
+     a0f:	48 89 df             	mov    %rbx,%rdi
+     a12:	e8 00 00 00 00       	callq  a17 <document_replace_real+0x407>
+     a17:	e9 2c fd ff ff       	jmpq   748 <document_replace_real+0x138>
+     a1c:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/search.c:170
+     a20:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # a27 <document_replace_real+0x417>
+     a27:	48 89 df             	mov    %rbx,%rdi
+     a2a:	e8 d1 f5 ff ff       	callq  0 <hlight_searched_strings>
+./src/search.c:171
+     a2f:	48 89 df             	mov    %rbx,%rdi
+     a32:	e8 00 00 00 00       	callq  a37 <document_replace_real+0x427>
+./src/search.c:148
+     a37:	48 c7 44 24 28 00 00 	movq   $0x0,0x28(%rsp)
+     a3e:	00 00 
+     a40:	e9 8e fc ff ff       	jmpq   6d3 <document_replace_real+0xc3>
+./src/search.c:265
+     a45:	e8 00 00 00 00       	callq  a4a <document_replace_real+0x43a>
+     a4a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000000a50 <run_dialog_search>:
+run_dialog_search():
+./src/search.c:297
+     a50:	41 57                	push   %r15
+     a52:	41 56                	push   %r14
+     a54:	41 89 f6             	mov    %esi,%r14d
+     a57:	41 55                	push   %r13
+     a59:	41 54                	push   %r12
+     a5b:	55                   	push   %rbp
+     a5c:	53                   	push   %rbx
+     a5d:	48 83 ec 58          	sub    $0x58,%rsp
+./src/search.c:305
+     a61:	85 f6                	test   %esi,%esi
+./src/search.c:297
+     a63:	48 89 7c 24 28       	mov    %rdi,0x28(%rsp)
+./src/search.c:305
+     a68:	0f 84 e2 03 00 00    	je     e50 <run_dialog_search+0x400>
+     a6e:	48 89 fb             	mov    %rdi,%rbx
+./src/search.c:307
+     a71:	e8 00 00 00 00       	callq  a76 <run_dialog_search+0x26>
+     a76:	48 89 df             	mov    %rbx,%rdi
+     a79:	49 89 c7             	mov    %rax,%r15
+     a7c:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+     a81:	e8 00 00 00 00       	callq  a86 <run_dialog_search+0x36>
+     a86:	4c 89 fe             	mov    %r15,%rsi
+     a89:	48 89 c7             	mov    %rax,%rdi
+     a8c:	e8 00 00 00 00       	callq  a91 <run_dialog_search+0x41>
+./src/search.c:306
+     a91:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # a98 <run_dialog_search+0x48>
+     a98:	ba 05 00 00 00       	mov    $0x5,%edx
+     a9d:	31 ff                	xor    %edi,%edi
+./src/search.c:307
+     a9f:	48 89 c3             	mov    %rax,%rbx
+./src/search.c:306
+     aa2:	e8 00 00 00 00       	callq  aa7 <run_dialog_search+0x57>
+     aa7:	6a 00                	pushq  $0x0
+     aa9:	4c 8d 0d 00 00 00 00 	lea    0x0(%rip),%r9        # ab0 <run_dialog_search+0x60>
+     ab0:	6a fb                	pushq  $0xfffffffffffffffb
+./src/search.c:313
+     ab2:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # ab9 <run_dialog_search+0x69>
+     ab9:	41 b8 fa ff ff ff    	mov    $0xfffffffa,%r8d
+     abf:	48 89 de             	mov    %rbx,%rsi
+     ac2:	48 89 c7             	mov    %rax,%rdi
+     ac5:	ba 02 00 00 00       	mov    $0x2,%edx
+     aca:	31 c0                	xor    %eax,%eax
+     acc:	e8 00 00 00 00       	callq  ad1 <run_dialog_search+0x81>
+     ad1:	48 89 c5             	mov    %rax,%rbp
+     ad4:	58                   	pop    %rax
+     ad5:	5a                   	pop    %rdx
+./src/search.c:319
+     ad6:	e8 00 00 00 00       	callq  adb <run_dialog_search+0x8b>
+     adb:	48 89 ef             	mov    %rbp,%rdi
+     ade:	48 89 c6             	mov    %rax,%rsi
+     ae1:	49 89 c5             	mov    %rax,%r13
+     ae4:	e8 00 00 00 00       	callq  ae9 <run_dialog_search+0x99>
+     ae9:	31 f6                	xor    %esi,%esi
+     aeb:	48 89 c7             	mov    %rax,%rdi
+     aee:	e8 00 00 00 00       	callq  af3 <run_dialog_search+0xa3>
+./src/search.c:321
+     af3:	41 8d 46 02          	lea    0x2(%r14),%eax
+     af7:	31 d2                	xor    %edx,%edx
+     af9:	be 02 00 00 00       	mov    $0x2,%esi
+     afe:	89 c7                	mov    %eax,%edi
+     b00:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+     b04:	e8 00 00 00 00       	callq  b09 <run_dialog_search+0xb9>
+     b09:	48 89 c3             	mov    %rax,%rbx
+./src/search.c:322
+     b0c:	e8 00 00 00 00       	callq  b11 <run_dialog_search+0xc1>
+     b11:	48 89 df             	mov    %rbx,%rdi
+     b14:	48 89 c6             	mov    %rax,%rsi
+     b17:	49 89 c7             	mov    %rax,%r15
+     b1a:	e8 00 00 00 00       	callq  b1f <run_dialog_search+0xcf>
+     b1f:	be 08 00 00 00       	mov    $0x8,%esi
+     b24:	48 89 c7             	mov    %rax,%rdi
+     b27:	e8 00 00 00 00       	callq  b2c <run_dialog_search+0xdc>
+./src/search.c:323
+     b2c:	4c 89 fe             	mov    %r15,%rsi
+     b2f:	48 89 df             	mov    %rbx,%rdi
+     b32:	e8 00 00 00 00       	callq  b37 <run_dialog_search+0xe7>
+     b37:	be 08 00 00 00       	mov    $0x8,%esi
+     b3c:	48 89 c7             	mov    %rax,%rdi
+     b3f:	e8 00 00 00 00       	callq  b44 <run_dialog_search+0xf4>
+./src/search.c:324
+     b44:	e8 00 00 00 00       	callq  b49 <run_dialog_search+0xf9>
+     b49:	48 89 df             	mov    %rbx,%rdi
+     b4c:	48 89 c6             	mov    %rax,%rsi
+     b4f:	e8 00 00 00 00       	callq  b54 <run_dialog_search+0x104>
+     b54:	be 08 00 00 00       	mov    $0x8,%esi
+     b59:	48 89 c7             	mov    %rax,%rdi
+     b5c:	e8 00 00 00 00       	callq  b61 <run_dialog_search+0x111>
+./src/search.c:325
+     b61:	e8 00 00 00 00       	callq  b66 <run_dialog_search+0x116>
+     b66:	4c 89 ee             	mov    %r13,%rsi
+     b69:	48 89 ef             	mov    %rbp,%rdi
+     b6c:	49 89 c4             	mov    %rax,%r12
+     b6f:	4c 89 6c 24 08       	mov    %r13,0x8(%rsp)
+     b74:	e8 00 00 00 00       	callq  b79 <run_dialog_search+0x129>
+     b79:	48 8b b8 f0 00 00 00 	mov    0xf0(%rax),%rdi
+     b80:	4c 89 e6             	mov    %r12,%rsi
+     b83:	e8 00 00 00 00       	callq  b88 <run_dialog_search+0x138>
+     b88:	45 31 c0             	xor    %r8d,%r8d
+     b8b:	31 c9                	xor    %ecx,%ecx
+     b8d:	31 d2                	xor    %edx,%edx
+     b8f:	48 89 c7             	mov    %rax,%rdi
+     b92:	48 89 de             	mov    %rbx,%rsi
+     b95:	e8 00 00 00 00       	callq  b9a <run_dialog_search+0x14a>
+./src/search.c:326
+     b9a:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # ba1 <run_dialog_search+0x151>
+     ba1:	ba 05 00 00 00       	mov    $0x5,%edx
+     ba6:	31 ff                	xor    %edi,%edi
+     ba8:	e8 00 00 00 00       	callq  bad <run_dialog_search+0x15d>
+     bad:	48 89 c7             	mov    %rax,%rdi
+     bb0:	e8 00 00 00 00       	callq  bb5 <run_dialog_search+0x165>
+     bb5:	49 89 c5             	mov    %rax,%r13
+./src/search.c:327
+     bb8:	e8 00 00 00 00       	callq  bbd <run_dialog_search+0x16d>
+     bbd:	4c 89 ef             	mov    %r13,%rdi
+     bc0:	48 89 c6             	mov    %rax,%rsi
+     bc3:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+     bc8:	e8 00 00 00 00       	callq  bcd <run_dialog_search+0x17d>
+     bcd:	66 0f ef c0          	pxor   %xmm0,%xmm0
+     bd1:	48 89 c7             	mov    %rax,%rdi
+     bd4:	f3 0f 10 0d 00 00 00 	movss  0x0(%rip),%xmm1        # bdc <run_dialog_search+0x18c>
+     bdb:	00 
+     bdc:	e8 00 00 00 00       	callq  be1 <run_dialog_search+0x191>
+./src/search.c:328
+     be1:	4c 89 fe             	mov    %r15,%rsi
+     be4:	48 89 df             	mov    %rbx,%rdi
+     be7:	e8 00 00 00 00       	callq  bec <run_dialog_search+0x19c>
+     bec:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+     bf2:	45 31 c0             	xor    %r8d,%r8d
+     bf5:	b9 01 00 00 00       	mov    $0x1,%ecx
+     bfa:	31 d2                	xor    %edx,%edx
+     bfc:	4c 89 ee             	mov    %r13,%rsi
+     bff:	48 89 c7             	mov    %rax,%rdi
+     c02:	e8 00 00 00 00       	callq  c07 <run_dialog_search+0x1b7>
+./src/search.c:329
+     c07:	e8 00 00 00 00       	callq  c0c <run_dialog_search+0x1bc>
+./src/search.c:330
+     c0c:	4c 89 fe             	mov    %r15,%rsi
+./src/search.c:329
+     c0f:	49 89 c4             	mov    %rax,%r12
+./src/search.c:330
+     c12:	48 89 df             	mov    %rbx,%rdi
+     c15:	e8 00 00 00 00       	callq  c1a <run_dialog_search+0x1ca>
+     c1a:	45 31 c0             	xor    %r8d,%r8d
+     c1d:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+     c23:	b9 02 00 00 00       	mov    $0x2,%ecx
+     c28:	ba 01 00 00 00       	mov    $0x1,%edx
+     c2d:	4c 89 e6             	mov    %r12,%rsi
+     c30:	48 89 c7             	mov    %rax,%rdi
+     c33:	e8 00 00 00 00       	callq  c38 <run_dialog_search+0x1e8>
+./src/search.c:331
+     c38:	e8 00 00 00 00       	callq  c3d <run_dialog_search+0x1ed>
+     c3d:	4c 89 ef             	mov    %r13,%rdi
+     c40:	48 89 c6             	mov    %rax,%rsi
+     c43:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+     c48:	e8 00 00 00 00       	callq  c4d <run_dialog_search+0x1fd>
+     c4d:	4c 89 e6             	mov    %r12,%rsi
+     c50:	48 89 c7             	mov    %rax,%rdi
+     c53:	e8 00 00 00 00       	callq  c58 <run_dialog_search+0x208>
+./src/search.c:332
+     c58:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+     c5d:	48 89 ef             	mov    %rbp,%rdi
+     c60:	e8 00 00 00 00       	callq  c65 <run_dialog_search+0x215>
+     c65:	31 d2                	xor    %edx,%edx
+     c67:	48 89 c7             	mov    %rax,%rdi
+     c6a:	be fb ff ff ff       	mov    $0xfffffffb,%esi
+     c6f:	e8 00 00 00 00       	callq  c74 <run_dialog_search+0x224>
+./src/search.c:335
+     c74:	be 50 00 00 00       	mov    $0x50,%esi
+     c79:	4c 89 e7             	mov    %r12,%rdi
+./src/search.c:334
+     c7c:	c7 05 00 00 00 00 00 	movl   $0x0,0x0(%rip)        # c86 <run_dialog_search+0x236>
+     c83:	00 00 00 
+./src/search.c:335
+     c86:	e8 00 00 00 00       	callq  c8b <run_dialog_search+0x23b>
+     c8b:	48 8d 15 de f5 ff ff 	lea    -0xa22(%rip),%rdx        # 270 <toggle_sensitivity>
+     c92:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # c99 <run_dialog_search+0x249>
+     c99:	45 31 c9             	xor    %r9d,%r9d
+     c9c:	45 31 c0             	xor    %r8d,%r8d
+     c9f:	31 c9                	xor    %ecx,%ecx
+     ca1:	48 89 c7             	mov    %rax,%rdi
+     ca4:	e8 00 00 00 00       	callq  ca9 <run_dialog_search+0x259>
+./src/search.c:337
+     ca9:	be 50 00 00 00       	mov    $0x50,%esi
+     cae:	4c 89 e7             	mov    %r12,%rdi
+     cb1:	e8 00 00 00 00       	callq  cb6 <run_dialog_search+0x266>
+     cb6:	48 8d 15 b3 f5 ff ff 	lea    -0xa4d(%rip),%rdx        # 270 <toggle_sensitivity>
+     cbd:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # cc4 <run_dialog_search+0x274>
+     cc4:	45 31 c9             	xor    %r9d,%r9d
+     cc7:	45 31 c0             	xor    %r8d,%r8d
+     cca:	31 c9                	xor    %ecx,%ecx
+     ccc:	48 89 c7             	mov    %rax,%rdi
+     ccf:	e8 00 00 00 00       	callq  cd4 <run_dialog_search+0x284>
+./src/search.c:339
+     cd4:	4c 8b 2d 00 00 00 00 	mov    0x0(%rip),%r13        # cdb <run_dialog_search+0x28b>
+     cdb:	4d 85 ed             	test   %r13,%r13
+     cde:	0f 84 bc 01 00 00    	je     ea0 <run_dialog_search+0x450>
+./src/search.c:340
+     ce4:	e8 00 00 00 00       	callq  ce9 <run_dialog_search+0x299>
+     ce9:	4c 89 e7             	mov    %r12,%rdi
+     cec:	48 89 c6             	mov    %rax,%rsi
+     cef:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+     cf4:	e8 00 00 00 00       	callq  cf9 <run_dialog_search+0x2a9>
+     cf9:	4c 89 ee             	mov    %r13,%rsi
+     cfc:	48 89 c7             	mov    %rax,%rdi
+     cff:	e8 00 00 00 00       	callq  d04 <run_dialog_search+0x2b4>
+./src/search.c:341
+     d04:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+     d09:	48 89 ef             	mov    %rbp,%rdi
+     d0c:	e8 00 00 00 00       	callq  d11 <run_dialog_search+0x2c1>
+     d11:	ba 01 00 00 00       	mov    $0x1,%edx
+     d16:	be fb ff ff ff       	mov    $0xfffffffb,%esi
+     d1b:	48 89 c7             	mov    %rax,%rdi
+     d1e:	e8 00 00 00 00       	callq  d23 <run_dialog_search+0x2d3>
+./src/search.c:344
+     d23:	45 85 f6             	test   %r14d,%r14d
+     d26:	0f 85 87 01 00 00    	jne    eb3 <run_dialog_search+0x463>
+./src/search.c:354
+     d2c:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+     d31:	48 89 ef             	mov    %rbp,%rdi
+     d34:	e8 00 00 00 00       	callq  d39 <run_dialog_search+0x2e9>
+     d39:	be fb ff ff ff       	mov    $0xfffffffb,%esi
+     d3e:	48 89 c7             	mov    %rax,%rdi
+     d41:	e8 00 00 00 00       	callq  d46 <run_dialog_search+0x2f6>
+./src/search.c:355
+     d46:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+     d4b:	4c 89 e7             	mov    %r12,%rdi
+     d4e:	e8 00 00 00 00       	callq  d53 <run_dialog_search+0x303>
+     d53:	be 01 00 00 00       	mov    $0x1,%esi
+     d58:	48 89 c7             	mov    %rax,%rdi
+     d5b:	e8 00 00 00 00       	callq  d60 <run_dialog_search+0x310>
+./src/search.c:359
+     d60:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # d67 <run_dialog_search+0x317>
+     d67:	ba 05 00 00 00       	mov    $0x5,%edx
+     d6c:	31 ff                	xor    %edi,%edi
+     d6e:	e8 00 00 00 00       	callq  d73 <run_dialog_search+0x323>
+     d73:	48 89 c7             	mov    %rax,%rdi
+     d76:	e8 00 00 00 00       	callq  d7b <run_dialog_search+0x32b>
+./src/search.c:360
+     d7b:	44 8b 35 00 00 00 00 	mov    0x0(%rip),%r14d        # d82 <run_dialog_search+0x332>
+./src/search.c:359
+     d82:	49 89 c5             	mov    %rax,%r13
+./src/search.c:360
+     d85:	e8 00 00 00 00       	callq  d8a <run_dialog_search+0x33a>
+     d8a:	4c 89 ef             	mov    %r13,%rdi
+     d8d:	48 89 c6             	mov    %rax,%rsi
+     d90:	e8 00 00 00 00       	callq  d95 <run_dialog_search+0x345>
+     d95:	44 89 f6             	mov    %r14d,%esi
+     d98:	48 89 c7             	mov    %rax,%rdi
+     d9b:	e8 00 00 00 00       	callq  da0 <run_dialog_search+0x350>
+./src/search.c:361
+     da0:	e8 00 00 00 00       	callq  da5 <run_dialog_search+0x355>
+     da5:	4c 89 ef             	mov    %r13,%rdi
+     da8:	48 89 c6             	mov    %rax,%rsi
+     dab:	e8 00 00 00 00       	callq  db0 <run_dialog_search+0x360>
+     db0:	48 8d 15 89 f4 ff ff 	lea    -0xb77(%rip),%rdx        # 240 <toggle_check_case>
+     db7:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # dbe <run_dialog_search+0x36e>
+     dbe:	45 31 c9             	xor    %r9d,%r9d
+     dc1:	45 31 c0             	xor    %r8d,%r8d
+     dc4:	31 c9                	xor    %ecx,%ecx
+     dc6:	48 89 c7             	mov    %rax,%rdi
+     dc9:	e8 00 00 00 00       	callq  dce <run_dialog_search+0x37e>
+./src/search.c:362
+     dce:	48 89 df             	mov    %rbx,%rdi
+     dd1:	4c 89 fe             	mov    %r15,%rsi
+     dd4:	e8 00 00 00 00       	callq  dd9 <run_dialog_search+0x389>
+     dd9:	44 8b 4c 24 1c       	mov    0x1c(%rsp),%r9d
+     dde:	31 d2                	xor    %edx,%edx
+     de0:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+     de6:	b9 02 00 00 00       	mov    $0x2,%ecx
+     deb:	48 89 c7             	mov    %rax,%rdi
+     dee:	4c 89 ee             	mov    %r13,%rsi
+     df1:	e8 00 00 00 00       	callq  df6 <run_dialog_search+0x3a6>
+./src/search.c:369
+     df6:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+     dfb:	48 89 ef             	mov    %rbp,%rdi
+     dfe:	e8 00 00 00 00       	callq  e03 <run_dialog_search+0x3b3>
+     e03:	31 f6                	xor    %esi,%esi
+     e05:	48 89 c7             	mov    %rax,%rdi
+     e08:	e8 00 00 00 00       	callq  e0d <run_dialog_search+0x3bd>
+./src/search.c:370
+     e0d:	48 89 df             	mov    %rbx,%rdi
+     e10:	e8 00 00 00 00       	callq  e15 <run_dialog_search+0x3c5>
+./src/search.c:372
+     e15:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+     e1a:	48 89 ef             	mov    %rbp,%rdi
+     e1d:	e8 00 00 00 00       	callq  e22 <run_dialog_search+0x3d2>
+     e22:	48 89 c7             	mov    %rax,%rdi
+     e25:	e8 00 00 00 00       	callq  e2a <run_dialog_search+0x3da>
+./src/search.c:373
+     e2a:	83 f8 fb             	cmp    $0xfffffffb,%eax
+./src/search.c:372
+     e2d:	89 c3                	mov    %eax,%ebx
+./src/search.c:373
+     e2f:	0f 84 b3 03 00 00    	je     11e8 <run_dialog_search+0x798>
+./src/search.c:382
+     e35:	48 89 ef             	mov    %rbp,%rdi
+     e38:	e8 00 00 00 00       	callq  e3d <run_dialog_search+0x3ed>
+./src/search.c:394
+     e3d:	48 83 c4 58          	add    $0x58,%rsp
+     e41:	89 d8                	mov    %ebx,%eax
+     e43:	5b                   	pop    %rbx
+     e44:	5d                   	pop    %rbp
+     e45:	41 5c                	pop    %r12
+     e47:	41 5d                	pop    %r13
+     e49:	41 5e                	pop    %r14
+     e4b:	41 5f                	pop    %r15
+     e4d:	c3                   	retq   
+     e4e:	66 90                	xchg   %ax,%ax
+./src/search.c:314
+     e50:	e8 00 00 00 00       	callq  e55 <run_dialog_search+0x405>
+     e55:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+     e5a:	48 89 c3             	mov    %rax,%rbx
+     e5d:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+     e62:	e8 00 00 00 00       	callq  e67 <run_dialog_search+0x417>
+     e67:	48 89 de             	mov    %rbx,%rsi
+     e6a:	48 89 c7             	mov    %rax,%rdi
+     e6d:	e8 00 00 00 00       	callq  e72 <run_dialog_search+0x422>
+./src/search.c:313
+     e72:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # e79 <run_dialog_search+0x429>
+     e79:	ba 05 00 00 00       	mov    $0x5,%edx
+     e7e:	31 ff                	xor    %edi,%edi
+./src/search.c:314
+     e80:	48 89 c3             	mov    %rax,%rbx
+./src/search.c:313
+     e83:	e8 00 00 00 00       	callq  e88 <run_dialog_search+0x438>
+     e88:	6a 00                	pushq  $0x0
+     e8a:	4c 8d 0d 00 00 00 00 	lea    0x0(%rip),%r9        # e91 <run_dialog_search+0x441>
+     e91:	6a fb                	pushq  $0xfffffffffffffffb
+     e93:	e9 1a fc ff ff       	jmpq   ab2 <run_dialog_search+0x62>
+     e98:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+     e9f:	00 
+     ea0:	e8 00 00 00 00       	callq  ea5 <run_dialog_search+0x455>
+./src/search.c:344
+     ea5:	45 85 f6             	test   %r14d,%r14d
+     ea8:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+     ead:	0f 84 79 fe ff ff    	je     d2c <run_dialog_search+0x2dc>
+./src/search.c:345
+     eb3:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # eba <run_dialog_search+0x46a>
+     eba:	ba 05 00 00 00       	mov    $0x5,%edx
+     ebf:	31 ff                	xor    %edi,%edi
+     ec1:	e8 00 00 00 00       	callq  ec6 <run_dialog_search+0x476>
+     ec6:	48 89 c7             	mov    %rax,%rdi
+     ec9:	e8 00 00 00 00       	callq  ece <run_dialog_search+0x47e>
+./src/search.c:346
+     ece:	48 8b 74 24 30       	mov    0x30(%rsp),%rsi
+     ed3:	48 89 c7             	mov    %rax,%rdi
+./src/search.c:345
+     ed6:	49 89 c5             	mov    %rax,%r13
+./src/search.c:346
+     ed9:	e8 00 00 00 00       	callq  ede <run_dialog_search+0x48e>
+     ede:	66 0f ef c0          	pxor   %xmm0,%xmm0
+     ee2:	48 89 c7             	mov    %rax,%rdi
+     ee5:	f3 0f 10 0d 00 00 00 	movss  0x0(%rip),%xmm1        # eed <run_dialog_search+0x49d>
+     eec:	00 
+     eed:	e8 00 00 00 00       	callq  ef2 <run_dialog_search+0x4a2>
+./src/search.c:347
+     ef2:	4c 89 fe             	mov    %r15,%rsi
+     ef5:	48 89 df             	mov    %rbx,%rdi
+     ef8:	e8 00 00 00 00       	callq  efd <run_dialog_search+0x4ad>
+     efd:	31 d2                	xor    %edx,%edx
+     eff:	41 b9 02 00 00 00    	mov    $0x2,%r9d
+     f05:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+     f0b:	b9 01 00 00 00       	mov    $0x1,%ecx
+     f10:	4c 89 ee             	mov    %r13,%rsi
+     f13:	48 89 c7             	mov    %rax,%rdi
+     f16:	e8 00 00 00 00       	callq  f1b <run_dialog_search+0x4cb>
+./src/search.c:348
+     f1b:	e8 00 00 00 00       	callq  f20 <run_dialog_search+0x4d0>
+./src/search.c:349
+     f20:	4c 89 fe             	mov    %r15,%rsi
+     f23:	48 89 df             	mov    %rbx,%rdi
+./src/search.c:348
+     f26:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+./src/search.c:349
+     f2b:	e8 00 00 00 00       	callq  f30 <run_dialog_search+0x4e0>
+     f30:	48 8b 74 24 30       	mov    0x30(%rsp),%rsi
+     f35:	41 b9 02 00 00 00    	mov    $0x2,%r9d
+     f3b:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+     f41:	b9 02 00 00 00       	mov    $0x2,%ecx
+     f46:	ba 01 00 00 00       	mov    $0x1,%edx
+     f4b:	48 89 c7             	mov    %rax,%rdi
+     f4e:	e8 00 00 00 00       	callq  f53 <run_dialog_search+0x503>
+./src/search.c:350
+     f53:	48 8b 74 24 38       	mov    0x38(%rsp),%rsi
+     f58:	4c 89 ef             	mov    %r13,%rdi
+     f5b:	e8 00 00 00 00       	callq  f60 <run_dialog_search+0x510>
+     f60:	48 8b 74 24 30       	mov    0x30(%rsp),%rsi
+     f65:	48 89 c7             	mov    %rax,%rdi
+     f68:	e8 00 00 00 00       	callq  f6d <run_dialog_search+0x51d>
+./src/search.c:351
+     f6d:	4c 8b 2d 00 00 00 00 	mov    0x0(%rip),%r13        # f74 <run_dialog_search+0x524>
+     f74:	4d 85 ed             	test   %r13,%r13
+     f77:	74 1a                	je     f93 <run_dialog_search+0x543>
+./src/search.c:352
+     f79:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+     f7e:	48 8b 7c 24 30       	mov    0x30(%rsp),%rdi
+     f83:	e8 00 00 00 00       	callq  f88 <run_dialog_search+0x538>
+     f88:	4c 89 ee             	mov    %r13,%rsi
+     f8b:	48 89 c7             	mov    %rax,%rdi
+     f8e:	e8 00 00 00 00       	callq  f93 <run_dialog_search+0x543>
+./src/search.c:354
+     f93:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+     f98:	48 89 ef             	mov    %rbp,%rdi
+     f9b:	e8 00 00 00 00       	callq  fa0 <run_dialog_search+0x550>
+     fa0:	be fb ff ff ff       	mov    $0xfffffffb,%esi
+     fa5:	48 89 c7             	mov    %rax,%rdi
+     fa8:	e8 00 00 00 00       	callq  fad <run_dialog_search+0x55d>
+./src/search.c:355
+     fad:	4c 8b 6c 24 10       	mov    0x10(%rsp),%r13
+     fb2:	4c 89 e7             	mov    %r12,%rdi
+     fb5:	4c 89 ee             	mov    %r13,%rsi
+     fb8:	e8 00 00 00 00       	callq  fbd <run_dialog_search+0x56d>
+     fbd:	be 01 00 00 00       	mov    $0x1,%esi
+     fc2:	48 89 c7             	mov    %rax,%rdi
+     fc5:	e8 00 00 00 00       	callq  fca <run_dialog_search+0x57a>
+./src/search.c:357
+     fca:	48 8b 7c 24 30       	mov    0x30(%rsp),%rdi
+     fcf:	4c 89 ee             	mov    %r13,%rsi
+     fd2:	e8 00 00 00 00       	callq  fd7 <run_dialog_search+0x587>
+     fd7:	be 01 00 00 00       	mov    $0x1,%esi
+     fdc:	48 89 c7             	mov    %rax,%rdi
+     fdf:	e8 00 00 00 00       	callq  fe4 <run_dialog_search+0x594>
+./src/search.c:359
+     fe4:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # feb <run_dialog_search+0x59b>
+     feb:	ba 05 00 00 00       	mov    $0x5,%edx
+     ff0:	31 ff                	xor    %edi,%edi
+     ff2:	e8 00 00 00 00       	callq  ff7 <run_dialog_search+0x5a7>
+     ff7:	48 89 c7             	mov    %rax,%rdi
+     ffa:	e8 00 00 00 00       	callq  fff <run_dialog_search+0x5af>
+     fff:	49 89 c5             	mov    %rax,%r13
+./src/search.c:360
+    1002:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 1008 <run_dialog_search+0x5b8>
+    1008:	89 44 24 38          	mov    %eax,0x38(%rsp)
+    100c:	e8 00 00 00 00       	callq  1011 <run_dialog_search+0x5c1>
+    1011:	4c 89 ef             	mov    %r13,%rdi
+    1014:	48 89 c6             	mov    %rax,%rsi
+    1017:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+    101c:	e8 00 00 00 00       	callq  1021 <run_dialog_search+0x5d1>
+    1021:	8b 74 24 38          	mov    0x38(%rsp),%esi
+    1025:	48 89 c7             	mov    %rax,%rdi
+    1028:	e8 00 00 00 00       	callq  102d <run_dialog_search+0x5dd>
+./src/search.c:361
+    102d:	e8 00 00 00 00       	callq  1032 <run_dialog_search+0x5e2>
+    1032:	4c 89 ef             	mov    %r13,%rdi
+    1035:	48 89 c6             	mov    %rax,%rsi
+    1038:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+    103d:	e8 00 00 00 00       	callq  1042 <run_dialog_search+0x5f2>
+    1042:	48 8d 15 f7 f1 ff ff 	lea    -0xe09(%rip),%rdx        # 240 <toggle_check_case>
+    1049:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1050 <run_dialog_search+0x600>
+    1050:	45 31 c9             	xor    %r9d,%r9d
+    1053:	45 31 c0             	xor    %r8d,%r8d
+    1056:	31 c9                	xor    %ecx,%ecx
+    1058:	48 89 c7             	mov    %rax,%rdi
+    105b:	e8 00 00 00 00       	callq  1060 <run_dialog_search+0x610>
+./src/search.c:362
+    1060:	48 89 df             	mov    %rbx,%rdi
+    1063:	4c 89 fe             	mov    %r15,%rsi
+    1066:	e8 00 00 00 00       	callq  106b <run_dialog_search+0x61b>
+    106b:	44 8b 4c 24 1c       	mov    0x1c(%rsp),%r9d
+    1070:	45 8d 46 01          	lea    0x1(%r14),%r8d
+    1074:	b9 02 00 00 00       	mov    $0x2,%ecx
+    1079:	31 d2                	xor    %edx,%edx
+    107b:	4c 89 ee             	mov    %r13,%rsi
+    107e:	48 89 c7             	mov    %rax,%rdi
+    1081:	e8 00 00 00 00       	callq  1086 <run_dialog_search+0x636>
+./src/search.c:364
+    1086:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 108d <run_dialog_search+0x63d>
+    108d:	ba 05 00 00 00       	mov    $0x5,%edx
+    1092:	31 ff                	xor    %edi,%edi
+    1094:	e8 00 00 00 00       	callq  1099 <run_dialog_search+0x649>
+    1099:	48 89 c7             	mov    %rax,%rdi
+    109c:	e8 00 00 00 00       	callq  10a1 <run_dialog_search+0x651>
+./src/search.c:365
+    10a1:	4c 8b 5c 24 48       	mov    0x48(%rsp),%r11
+./src/search.c:364
+    10a6:	49 89 c5             	mov    %rax,%r13
+./src/search.c:365
+    10a9:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 10af <run_dialog_search+0x65f>
+    10af:	4c 89 ef             	mov    %r13,%rdi
+    10b2:	4c 89 de             	mov    %r11,%rsi
+    10b5:	89 44 24 38          	mov    %eax,0x38(%rsp)
+    10b9:	e8 00 00 00 00       	callq  10be <run_dialog_search+0x66e>
+    10be:	8b 74 24 38          	mov    0x38(%rsp),%esi
+    10c2:	48 89 c7             	mov    %rax,%rdi
+    10c5:	e8 00 00 00 00       	callq  10ca <run_dialog_search+0x67a>
+./src/search.c:366
+    10ca:	4c 8b 54 24 40       	mov    0x40(%rsp),%r10
+    10cf:	4c 89 ef             	mov    %r13,%rdi
+    10d2:	4c 89 d6             	mov    %r10,%rsi
+    10d5:	e8 00 00 00 00       	callq  10da <run_dialog_search+0x68a>
+    10da:	48 8d 15 2f f1 ff ff 	lea    -0xed1(%rip),%rdx        # 210 <toggle_check_all>
+    10e1:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 10e8 <run_dialog_search+0x698>
+    10e8:	45 31 c9             	xor    %r9d,%r9d
+    10eb:	45 31 c0             	xor    %r8d,%r8d
+    10ee:	31 c9                	xor    %ecx,%ecx
+    10f0:	48 89 c7             	mov    %rax,%rdi
+    10f3:	e8 00 00 00 00       	callq  10f8 <run_dialog_search+0x6a8>
+./src/search.c:367
+    10f8:	48 89 df             	mov    %rbx,%rdi
+    10fb:	4c 89 fe             	mov    %r15,%rsi
+    10fe:	e8 00 00 00 00       	callq  1103 <run_dialog_search+0x6b3>
+    1103:	44 8b 44 24 1c       	mov    0x1c(%rsp),%r8d
+    1108:	45 8d 4e 03          	lea    0x3(%r14),%r9d
+    110c:	31 d2                	xor    %edx,%edx
+    110e:	b9 02 00 00 00       	mov    $0x2,%ecx
+    1113:	48 89 c7             	mov    %rax,%rdi
+    1116:	4c 89 ee             	mov    %r13,%rsi
+    1119:	e8 00 00 00 00       	callq  111e <run_dialog_search+0x6ce>
+./src/search.c:369
+    111e:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+    1123:	48 89 ef             	mov    %rbp,%rdi
+    1126:	e8 00 00 00 00       	callq  112b <run_dialog_search+0x6db>
+    112b:	31 f6                	xor    %esi,%esi
+    112d:	48 89 c7             	mov    %rax,%rdi
+    1130:	e8 00 00 00 00       	callq  1135 <run_dialog_search+0x6e5>
+./src/search.c:370
+    1135:	48 89 df             	mov    %rbx,%rdi
+    1138:	e8 00 00 00 00       	callq  113d <run_dialog_search+0x6ed>
+./src/search.c:372
+    113d:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    1142:	48 89 ef             	mov    %rbp,%rdi
+    1145:	e8 00 00 00 00       	callq  114a <run_dialog_search+0x6fa>
+    114a:	48 89 c7             	mov    %rax,%rdi
+    114d:	e8 00 00 00 00       	callq  1152 <run_dialog_search+0x702>
+./src/search.c:373
+    1152:	83 f8 fb             	cmp    $0xfffffffb,%eax
+./src/search.c:372
+    1155:	89 c3                	mov    %eax,%ebx
+./src/search.c:373
+    1157:	0f 85 d8 fc ff ff    	jne    e35 <run_dialog_search+0x3e5>
+./src/search.c:374
+    115d:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 1164 <run_dialog_search+0x714>
+    1164:	e8 00 00 00 00       	callq  1169 <run_dialog_search+0x719>
+./src/search.c:375
+    1169:	4c 8b 74 24 10       	mov    0x10(%rsp),%r14
+    116e:	4c 89 e7             	mov    %r12,%rdi
+    1171:	4c 89 f6             	mov    %r14,%rsi
+    1174:	e8 00 00 00 00       	callq  1179 <run_dialog_search+0x729>
+    1179:	48 89 c7             	mov    %rax,%rdi
+    117c:	e8 00 00 00 00       	callq  1181 <run_dialog_search+0x731>
+    1181:	48 89 c7             	mov    %rax,%rdi
+    1184:	e8 00 00 00 00       	callq  1189 <run_dialog_search+0x739>
+./src/search.c:377
+    1189:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 1190 <run_dialog_search+0x740>
+./src/search.c:375
+    1190:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 1197 <run_dialog_search+0x747>
+./src/search.c:377
+    1197:	e8 00 00 00 00       	callq  119c <run_dialog_search+0x74c>
+./src/search.c:378
+    119c:	48 8b 7c 24 30       	mov    0x30(%rsp),%rdi
+    11a1:	4c 89 f6             	mov    %r14,%rsi
+    11a4:	e8 00 00 00 00       	callq  11a9 <run_dialog_search+0x759>
+    11a9:	48 89 c7             	mov    %rax,%rdi
+    11ac:	e8 00 00 00 00       	callq  11b1 <run_dialog_search+0x761>
+    11b1:	48 89 c7             	mov    %rax,%rdi
+    11b4:	e8 00 00 00 00       	callq  11b9 <run_dialog_search+0x769>
+./src/search.c:382
+    11b9:	48 89 ef             	mov    %rbp,%rdi
+./src/search.c:378
+    11bc:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 11c3 <run_dialog_search+0x773>
+./src/search.c:382
+    11c3:	e8 00 00 00 00       	callq  11c8 <run_dialog_search+0x778>
+./src/search.c:385
+    11c8:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 11cf <run_dialog_search+0x77f>
+    11cf:	80 38 00             	cmpb   $0x0,(%rax)
+    11d2:	74 69                	je     123d <run_dialog_search+0x7ed>
+./src/search.c:387
+    11d4:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+    11d9:	e8 32 f4 ff ff       	callq  610 <document_replace_real>
+    11de:	e9 5a fc ff ff       	jmpq   e3d <run_dialog_search+0x3ed>
+    11e3:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+./src/search.c:374
+    11e8:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 11ef <run_dialog_search+0x79f>
+    11ef:	e8 00 00 00 00       	callq  11f4 <run_dialog_search+0x7a4>
+./src/search.c:375
+    11f4:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+    11f9:	4c 89 e7             	mov    %r12,%rdi
+    11fc:	e8 00 00 00 00       	callq  1201 <run_dialog_search+0x7b1>
+    1201:	48 89 c7             	mov    %rax,%rdi
+    1204:	e8 00 00 00 00       	callq  1209 <run_dialog_search+0x7b9>
+    1209:	48 89 c7             	mov    %rax,%rdi
+    120c:	e8 00 00 00 00       	callq  1211 <run_dialog_search+0x7c1>
+./src/search.c:382
+    1211:	48 89 ef             	mov    %rbp,%rdi
+./src/search.c:375
+    1214:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 121b <run_dialog_search+0x7cb>
+./src/search.c:382
+    121b:	e8 00 00 00 00       	callq  1220 <run_dialog_search+0x7d0>
+./src/search.c:385
+    1220:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 1227 <run_dialog_search+0x7d7>
+    1227:	80 38 00             	cmpb   $0x0,(%rax)
+    122a:	74 11                	je     123d <run_dialog_search+0x7ed>
+./src/search.c:389
+    122c:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+    1231:	31 f6                	xor    %esi,%esi
+    1233:	e8 00 00 00 00       	callq  1238 <run_dialog_search+0x7e8>
+./src/search.c:393
+    1238:	e9 00 fc ff ff       	jmpq   e3d <run_dialog_search+0x3ed>
+./src/search.c:297
+    123d:	bb fb ff ff ff       	mov    $0xfffffffb,%ebx
+    1242:	e9 f6 fb ff ff       	jmpq   e3d <run_dialog_search+0x3ed>
+    1247:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    124e:	00 00 
+
+0000000000001250 <run_dialog_jump_to>:
+run_dialog_jump_to():
+./src/search.c:397
+    1250:	41 57                	push   %r15
+    1252:	41 56                	push   %r14
+    1254:	41 55                	push   %r13
+    1256:	41 54                	push   %r12
+    1258:	55                   	push   %rbp
+    1259:	53                   	push   %rbx
+    125a:	48 89 fb             	mov    %rdi,%rbx
+    125d:	48 81 ec 98 00 00 00 	sub    $0x98,%rsp
+    1264:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    126b:	00 00 
+    126d:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+    1274:	00 
+    1275:	31 c0                	xor    %eax,%eax
+./src/search.c:407
+    1277:	e8 00 00 00 00       	callq  127c <run_dialog_jump_to+0x2c>
+    127c:	48 89 df             	mov    %rbx,%rdi
+    127f:	48 89 c6             	mov    %rax,%rsi
+./src/search.c:409
+    1282:	4c 8d 6c 24 30       	lea    0x30(%rsp),%r13
+./src/search.c:407
+    1287:	e8 00 00 00 00       	callq  128c <run_dialog_jump_to+0x3c>
+    128c:	48 89 c7             	mov    %rax,%rdi
+    128f:	e8 00 00 00 00       	callq  1294 <run_dialog_jump_to+0x44>
+    1294:	49 89 c7             	mov    %rax,%r15
+./src/search.c:409
+    1297:	48 89 c7             	mov    %rax,%rdi
+    129a:	e8 00 00 00 00       	callq  129f <run_dialog_jump_to+0x4f>
+    129f:	4c 89 ee             	mov    %r13,%rsi
+    12a2:	48 89 c2             	mov    %rax,%rdx
+    12a5:	4c 89 ff             	mov    %r15,%rdi
+    12a8:	e8 00 00 00 00       	callq  12ad <run_dialog_jump_to+0x5d>
+./src/search.c:411
+    12ad:	4c 89 ef             	mov    %r13,%rdi
+    12b0:	e8 00 00 00 00       	callq  12b5 <run_dialog_jump_to+0x65>
+./src/search.c:412
+    12b5:	4c 89 ee             	mov    %r13,%rsi
+    12b8:	4c 89 ff             	mov    %r15,%rdi
+./src/search.c:411
+    12bb:	89 44 24 18          	mov    %eax,0x18(%rsp)
+./src/search.c:412
+    12bf:	e8 00 00 00 00       	callq  12c4 <run_dialog_jump_to+0x74>
+./src/search.c:413
+    12c4:	4c 89 ef             	mov    %r13,%rdi
+    12c7:	e8 00 00 00 00       	callq  12cc <run_dialog_jump_to+0x7c>
+    12cc:	89 44 24 24          	mov    %eax,0x24(%rsp)
+./src/search.c:416
+    12d0:	e8 00 00 00 00       	callq  12d5 <run_dialog_jump_to+0x85>
+    12d5:	48 89 df             	mov    %rbx,%rdi
+    12d8:	49 89 c6             	mov    %rax,%r14
+    12db:	e8 00 00 00 00       	callq  12e0 <run_dialog_jump_to+0x90>
+    12e0:	4c 89 f6             	mov    %r14,%rsi
+    12e3:	48 89 c7             	mov    %rax,%rdi
+    12e6:	4c 89 74 24 28       	mov    %r14,0x28(%rsp)
+    12eb:	e8 00 00 00 00       	callq  12f0 <run_dialog_jump_to+0xa0>
+./src/search.c:415
+    12f0:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 12f7 <run_dialog_jump_to+0xa7>
+    12f7:	31 ff                	xor    %edi,%edi
+    12f9:	ba 05 00 00 00       	mov    $0x5,%edx
+./src/search.c:416
+    12fe:	48 89 c3             	mov    %rax,%rbx
+./src/search.c:415
+    1301:	e8 00 00 00 00       	callq  1306 <run_dialog_jump_to+0xb6>
+    1306:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 130d <run_dialog_jump_to+0xbd>
+    130d:	45 31 c9             	xor    %r9d,%r9d
+    1310:	41 b8 fa ff ff ff    	mov    $0xfffffffa,%r8d
+    1316:	ba 02 00 00 00       	mov    $0x2,%edx
+    131b:	48 89 de             	mov    %rbx,%rsi
+    131e:	48 89 c7             	mov    %rax,%rdi
+    1321:	31 c0                	xor    %eax,%eax
+    1323:	e8 00 00 00 00       	callq  1328 <run_dialog_jump_to+0xd8>
+    1328:	48 89 c3             	mov    %rax,%rbx
+./src/search.c:420
+    132b:	e8 00 00 00 00       	callq  1330 <run_dialog_jump_to+0xe0>
+    1330:	48 89 df             	mov    %rbx,%rdi
+    1333:	48 89 c6             	mov    %rax,%rsi
+    1336:	48 89 c5             	mov    %rax,%rbp
+    1339:	e8 00 00 00 00       	callq  133e <run_dialog_jump_to+0xee>
+    133e:	31 f6                	xor    %esi,%esi
+    1340:	48 89 c7             	mov    %rax,%rdi
+    1343:	e8 00 00 00 00       	callq  1348 <run_dialog_jump_to+0xf8>
+./src/search.c:421
+    1348:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 134f <run_dialog_jump_to+0xff>
+    134f:	ba 05 00 00 00       	mov    $0x5,%edx
+    1354:	31 ff                	xor    %edi,%edi
+    1356:	e8 00 00 00 00       	callq  135b <run_dialog_jump_to+0x10b>
+    135b:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1362 <run_dialog_jump_to+0x112>
+    1362:	48 89 c7             	mov    %rax,%rdi
+    1365:	e8 00 00 00 00       	callq  136a <run_dialog_jump_to+0x11a>
+    136a:	49 89 c4             	mov    %rax,%r12
+./src/search.c:422
+    136d:	e8 00 00 00 00       	callq  1372 <run_dialog_jump_to+0x122>
+    1372:	4c 89 e7             	mov    %r12,%rdi
+    1375:	48 89 c6             	mov    %rax,%rsi
+    1378:	e8 00 00 00 00       	callq  137d <run_dialog_jump_to+0x12d>
+    137d:	81 48 18 00 20 00 00 	orl    $0x2000,0x18(%rax)
+./src/search.c:423
+    1384:	48 89 ee             	mov    %rbp,%rsi
+    1387:	48 89 df             	mov    %rbx,%rdi
+    138a:	e8 00 00 00 00       	callq  138f <run_dialog_jump_to+0x13f>
+    138f:	4c 89 e6             	mov    %r12,%rsi
+    1392:	48 89 c7             	mov    %rax,%rdi
+    1395:	ba fb ff ff ff       	mov    $0xfffffffb,%edx
+    139a:	e8 00 00 00 00       	callq  139f <run_dialog_jump_to+0x14f>
+./src/search.c:424
+    139f:	31 d2                	xor    %edx,%edx
+    13a1:	be 02 00 00 00       	mov    $0x2,%esi
+    13a6:	bf 01 00 00 00       	mov    $0x1,%edi
+    13ab:	e8 00 00 00 00       	callq  13b0 <run_dialog_jump_to+0x160>
+    13b0:	49 89 c4             	mov    %rax,%r12
+./src/search.c:425
+    13b3:	e8 00 00 00 00       	callq  13b8 <run_dialog_jump_to+0x168>
+    13b8:	4c 89 e7             	mov    %r12,%rdi
+    13bb:	48 89 c6             	mov    %rax,%rsi
+    13be:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    13c3:	e8 00 00 00 00       	callq  13c8 <run_dialog_jump_to+0x178>
+    13c8:	be 08 00 00 00       	mov    $0x8,%esi
+    13cd:	48 89 c7             	mov    %rax,%rdi
+    13d0:	e8 00 00 00 00       	callq  13d5 <run_dialog_jump_to+0x185>
+./src/search.c:426
+    13d5:	e8 00 00 00 00       	callq  13da <run_dialog_jump_to+0x18a>
+    13da:	4c 89 e7             	mov    %r12,%rdi
+    13dd:	48 89 c6             	mov    %rax,%rsi
+    13e0:	e8 00 00 00 00       	callq  13e5 <run_dialog_jump_to+0x195>
+    13e5:	be 08 00 00 00       	mov    $0x8,%esi
+    13ea:	48 89 c7             	mov    %rax,%rdi
+    13ed:	e8 00 00 00 00       	callq  13f2 <run_dialog_jump_to+0x1a2>
+./src/search.c:427
+    13f2:	e8 00 00 00 00       	callq  13f7 <run_dialog_jump_to+0x1a7>
+    13f7:	48 89 ee             	mov    %rbp,%rsi
+    13fa:	48 89 df             	mov    %rbx,%rdi
+    13fd:	49 89 c6             	mov    %rax,%r14
+    1400:	e8 00 00 00 00       	callq  1405 <run_dialog_jump_to+0x1b5>
+    1405:	48 8b b8 f0 00 00 00 	mov    0xf0(%rax),%rdi
+    140c:	4c 89 f6             	mov    %r14,%rsi
+    140f:	e8 00 00 00 00       	callq  1414 <run_dialog_jump_to+0x1c4>
+    1414:	45 31 c0             	xor    %r8d,%r8d
+    1417:	31 c9                	xor    %ecx,%ecx
+    1419:	31 d2                	xor    %edx,%edx
+    141b:	48 89 c7             	mov    %rax,%rdi
+    141e:	4c 89 e6             	mov    %r12,%rsi
+    1421:	e8 00 00 00 00       	callq  1426 <run_dialog_jump_to+0x1d6>
+./src/search.c:428
+    1426:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 142d <run_dialog_jump_to+0x1dd>
+    142d:	ba 05 00 00 00       	mov    $0x5,%edx
+    1432:	31 ff                	xor    %edi,%edi
+    1434:	e8 00 00 00 00       	callq  1439 <run_dialog_jump_to+0x1e9>
+    1439:	48 89 c7             	mov    %rax,%rdi
+    143c:	e8 00 00 00 00       	callq  1441 <run_dialog_jump_to+0x1f1>
+./src/search.c:413
+    1441:	8b 54 24 24          	mov    0x24(%rsp),%edx
+./src/search.c:428
+    1445:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+./src/search.c:411
+    144a:	8b 44 24 18          	mov    0x18(%rsp),%eax
+./src/search.c:429
+    144e:	66 0f ef c0          	pxor   %xmm0,%xmm0
+    1452:	66 0f ef d2          	pxor   %xmm2,%xmm2
+./src/search.c:413
+    1456:	83 c2 01             	add    $0x1,%edx
+./src/search.c:429
+    1459:	f2 0f 10 25 00 00 00 	movsd  0x0(%rip),%xmm4        # 1461 <run_dialog_jump_to+0x211>
+    1460:	00 
+./src/search.c:411
+    1461:	83 c0 01             	add    $0x1,%eax
+./src/search.c:429
+    1464:	66 0f ef ed          	pxor   %xmm5,%xmm5
+    1468:	f2 0f 2a d2          	cvtsi2sd %edx,%xmm2
+    146c:	f2 0f 2a c0          	cvtsi2sd %eax,%xmm0
+    1470:	66 0f 28 dc          	movapd %xmm4,%xmm3
+    1474:	66 0f 28 cc          	movapd %xmm4,%xmm1
+    1478:	e8 00 00 00 00       	callq  147d <run_dialog_jump_to+0x22d>
+./src/search.c:430
+    147d:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # 1485 <run_dialog_jump_to+0x235>
+    1484:	00 
+    1485:	31 f6                	xor    %esi,%esi
+    1487:	48 89 c7             	mov    %rax,%rdi
+    148a:	e8 00 00 00 00       	callq  148f <run_dialog_jump_to+0x23f>
+    148f:	49 89 c6             	mov    %rax,%r14
+./src/search.c:431
+    1492:	e8 00 00 00 00       	callq  1497 <run_dialog_jump_to+0x247>
+    1497:	4c 89 f7             	mov    %r14,%rdi
+    149a:	48 89 c6             	mov    %rax,%rsi
+    149d:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    14a2:	e8 00 00 00 00       	callq  14a7 <run_dialog_jump_to+0x257>
+    14a7:	be 08 00 00 00       	mov    $0x8,%esi
+    14ac:	48 89 c7             	mov    %rax,%rdi
+    14af:	e8 00 00 00 00       	callq  14b4 <run_dialog_jump_to+0x264>
+./src/search.c:432
+    14b4:	e8 00 00 00 00       	callq  14b9 <run_dialog_jump_to+0x269>
+    14b9:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+    14be:	48 89 c6             	mov    %rax,%rsi
+    14c1:	e8 00 00 00 00       	callq  14c6 <run_dialog_jump_to+0x276>
+    14c6:	4c 89 f6             	mov    %r14,%rsi
+    14c9:	48 89 c7             	mov    %rax,%rdi
+    14cc:	e8 00 00 00 00       	callq  14d1 <run_dialog_jump_to+0x281>
+./src/search.c:433
+    14d1:	48 8b 54 24 18       	mov    0x18(%rsp),%rdx
+    14d6:	4c 89 f7             	mov    %r14,%rdi
+    14d9:	48 89 d6             	mov    %rdx,%rsi
+    14dc:	e8 00 00 00 00       	callq  14e1 <run_dialog_jump_to+0x291>
+    14e1:	be 01 00 00 00       	mov    $0x1,%esi
+    14e6:	48 89 c7             	mov    %rax,%rdi
+    14e9:	e8 00 00 00 00       	callq  14ee <run_dialog_jump_to+0x29e>
+./src/search.c:434
+    14ee:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    14f3:	4c 89 e7             	mov    %r12,%rdi
+    14f6:	e8 00 00 00 00       	callq  14fb <run_dialog_jump_to+0x2ab>
+    14fb:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+    1500:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+    1506:	45 31 c0             	xor    %r8d,%r8d
+    1509:	b9 01 00 00 00       	mov    $0x1,%ecx
+    150e:	31 d2                	xor    %edx,%edx
+    1510:	48 89 c7             	mov    %rax,%rdi
+    1513:	e8 00 00 00 00       	callq  1518 <run_dialog_jump_to+0x2c8>
+./src/search.c:435
+    1518:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    151d:	4c 89 e7             	mov    %r12,%rdi
+    1520:	e8 00 00 00 00       	callq  1525 <run_dialog_jump_to+0x2d5>
+    1525:	45 31 c0             	xor    %r8d,%r8d
+    1528:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+    152e:	b9 02 00 00 00       	mov    $0x2,%ecx
+    1533:	ba 01 00 00 00       	mov    $0x1,%edx
+    1538:	48 89 c7             	mov    %rax,%rdi
+    153b:	4c 89 f6             	mov    %r14,%rsi
+    153e:	e8 00 00 00 00       	callq  1543 <run_dialog_jump_to+0x2f3>
+./src/search.c:437
+    1543:	48 89 ee             	mov    %rbp,%rsi
+    1546:	48 89 df             	mov    %rbx,%rdi
+    1549:	e8 00 00 00 00       	callq  154e <run_dialog_jump_to+0x2fe>
+    154e:	be fb ff ff ff       	mov    $0xfffffffb,%esi
+    1553:	48 89 c7             	mov    %rax,%rdi
+    1556:	e8 00 00 00 00       	callq  155b <run_dialog_jump_to+0x30b>
+./src/search.c:438
+    155b:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+    1560:	48 89 df             	mov    %rbx,%rdi
+    1563:	e8 00 00 00 00       	callq  1568 <run_dialog_jump_to+0x318>
+    1568:	31 f6                	xor    %esi,%esi
+    156a:	48 89 c7             	mov    %rax,%rdi
+    156d:	e8 00 00 00 00       	callq  1572 <run_dialog_jump_to+0x322>
+./src/search.c:439
+    1572:	48 89 df             	mov    %rbx,%rdi
+    1575:	e8 00 00 00 00       	callq  157a <run_dialog_jump_to+0x32a>
+./src/search.c:441
+    157a:	48 89 ee             	mov    %rbp,%rsi
+    157d:	48 89 df             	mov    %rbx,%rdi
+    1580:	e8 00 00 00 00       	callq  1585 <run_dialog_jump_to+0x335>
+    1585:	48 89 c7             	mov    %rax,%rdi
+    1588:	e8 00 00 00 00       	callq  158d <run_dialog_jump_to+0x33d>
+    158d:	83 f8 fb             	cmp    $0xfffffffb,%eax
+    1590:	74 2e                	je     15c0 <run_dialog_jump_to+0x370>
+./src/search.c:449
+    1592:	48 89 df             	mov    %rbx,%rdi
+    1595:	e8 00 00 00 00       	callq  159a <run_dialog_jump_to+0x34a>
+./src/search.c:450
+    159a:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+    15a1:	00 
+    15a2:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+    15a9:	00 00 
+    15ab:	75 56                	jne    1603 <run_dialog_jump_to+0x3b3>
+    15ad:	48 81 c4 98 00 00 00 	add    $0x98,%rsp
+    15b4:	5b                   	pop    %rbx
+    15b5:	5d                   	pop    %rbp
+    15b6:	41 5c                	pop    %r12
+    15b8:	41 5d                	pop    %r13
+    15ba:	41 5e                	pop    %r14
+    15bc:	41 5f                	pop    %r15
+    15be:	c3                   	retq   
+    15bf:	90                   	nop
+./src/search.c:443
+    15c0:	e8 00 00 00 00       	callq  15c5 <run_dialog_jump_to+0x375>
+    15c5:	4c 89 f7             	mov    %r14,%rdi
+    15c8:	48 89 c6             	mov    %rax,%rsi
+    15cb:	e8 00 00 00 00       	callq  15d0 <run_dialog_jump_to+0x380>
+    15d0:	48 89 c7             	mov    %rax,%rdi
+    15d3:	e8 00 00 00 00       	callq  15d8 <run_dialog_jump_to+0x388>
+./src/search.c:442
+    15d8:	8d 50 ff             	lea    -0x1(%rax),%edx
+    15db:	4c 89 ee             	mov    %r13,%rsi
+    15de:	4c 89 ff             	mov    %r15,%rdi
+    15e1:	e8 00 00 00 00       	callq  15e6 <run_dialog_jump_to+0x396>
+./src/search.c:444
+    15e6:	4c 89 ff             	mov    %r15,%rdi
+    15e9:	4c 89 ee             	mov    %r13,%rsi
+    15ec:	e8 00 00 00 00       	callq  15f1 <run_dialog_jump_to+0x3a1>
+./src/search.c:446
+    15f1:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # 15f9 <run_dialog_jump_to+0x3a9>
+    15f8:	00 
+    15f9:	4c 89 ff             	mov    %r15,%rdi
+    15fc:	e8 00 00 00 00       	callq  1601 <run_dialog_jump_to+0x3b1>
+    1601:	eb 8f                	jmp    1592 <run_dialog_jump_to+0x342>
+./src/search.c:450
+    1603:	e8 00 00 00 00       	callq  1608 <run_dialog_jump_to+0x3b8>

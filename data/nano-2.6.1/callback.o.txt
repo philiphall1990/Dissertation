@@ -1,0 +1,924 @@
+
+/root/Downloads/PycharmProjects/un/leafpad-callback.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <activate_quick_find.part.0>:
+activate_quick_find():
+./src/callback.c:226
+   0:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 7 <activate_quick_find.part.0+0x7>
+./src/callback.c:220
+   7:	53                   	push   %rbx
+./src/callback.c:226
+   8:	48 8b 40 08          	mov    0x8(%rax),%rax
+   c:	48 8b 78 08          	mov    0x8(%rax),%rdi
+  10:	e8 00 00 00 00       	callq  15 <activate_quick_find.part.0+0x15>
+./src/callback.c:227
+  15:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 1c <activate_quick_find.part.0+0x1c>
+  1c:	48 89 c7             	mov    %rax,%rdi
+./src/callback.c:226
+  1f:	48 89 c3             	mov    %rax,%rbx
+./src/callback.c:227
+  22:	e8 00 00 00 00       	callq  27 <activate_quick_find.part.0+0x27>
+  27:	be 01 00 00 00       	mov    $0x1,%esi
+  2c:	48 89 c7             	mov    %rax,%rdi
+  2f:	e8 00 00 00 00       	callq  34 <activate_quick_find.part.0+0x34>
+./src/callback.c:230
+  34:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 3b <activate_quick_find.part.0+0x3b>
+  3b:	48 89 df             	mov    %rbx,%rdi
+  3e:	e8 00 00 00 00       	callq  43 <activate_quick_find.part.0+0x43>
+  43:	be 01 00 00 00       	mov    $0x1,%esi
+  48:	48 89 c7             	mov    %rax,%rdi
+  4b:	e8 00 00 00 00       	callq  50 <activate_quick_find.part.0+0x50>
+./src/callback.c:233
+  50:	c7 05 00 00 00 00 01 	movl   $0x1,0x0(%rip)        # 5a <activate_quick_find.part.0+0x5a>
+  57:	00 00 00 
+./src/callback.c:235
+  5a:	5b                   	pop    %rbx
+  5b:	c3                   	retq   
+activate_quick_find.part.0():
+  5c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000000060 <on_file_new>:
+on_file_new():
+./src/callback.c:39
+  60:	55                   	push   %rbp
+  61:	53                   	push   %rbx
+  62:	48 8d 2d 00 00 00 00 	lea    0x0(%rip),%rbp        # 69 <on_file_new+0x9>
+  69:	48 83 ec 08          	sub    $0x8,%rsp
+./src/callback.c:43
+  6d:	e8 00 00 00 00       	callq  72 <on_file_new+0x12>
+./src/callback.c:44
+  72:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 79 <on_file_new+0x19>
+  79:	48 8b 00             	mov    (%rax),%rax
+./src/callback.c:45
+  7c:	8b 50 10             	mov    0x10(%rax),%edx
+  7f:	85 d2                	test   %edx,%edx
+  81:	75 4d                	jne    d0 <on_file_new+0x70>
+./src/callback.c:46
+  83:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 8a <on_file_new+0x2a>
+  8a:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 91 <on_file_new+0x31>
+  91:	31 c0                	xor    %eax,%eax
+  93:	48 89 ea             	mov    %rbp,%rdx
+  96:	e8 00 00 00 00       	callq  9b <on_file_new+0x3b>
+  9b:	48 89 c3             	mov    %rax,%rbx
+./src/callback.c:47
+  9e:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # a5 <on_file_new+0x45>
+  a5:	48 8b 00             	mov    (%rax),%rax
+  a8:	8b 40 10             	mov    0x10(%rax),%eax
+  ab:	85 c0                	test   %eax,%eax
+  ad:	74 08                	je     b7 <on_file_new+0x57>
+./src/callback.c:48
+  af:	48 89 ef             	mov    %rbp,%rdi
+  b2:	e8 00 00 00 00       	callq  b7 <on_file_new+0x57>
+./src/callback.c:49
+  b7:	48 89 df             	mov    %rbx,%rdi
+  ba:	31 f6                	xor    %esi,%esi
+  bc:	e8 00 00 00 00       	callq  c1 <on_file_new+0x61>
+./src/callback.c:51
+  c1:	48 83 c4 08          	add    $0x8,%rsp
+./src/callback.c:50
+  c5:	48 89 df             	mov    %rbx,%rdi
+./src/callback.c:51
+  c8:	5b                   	pop    %rbx
+  c9:	5d                   	pop    %rbp
+./src/callback.c:50
+  ca:	e9 00 00 00 00       	jmpq   cf <on_file_new+0x6f>
+  cf:	90                   	nop
+./src/callback.c:45 (discriminator 1)
+  d0:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  d4:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # db <on_file_new+0x7b>
+  db:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # e2 <on_file_new+0x82>
+  e2:	31 c0                	xor    %eax,%eax
+  e4:	e8 00 00 00 00       	callq  e9 <on_file_new+0x89>
+  e9:	48 89 c5             	mov    %rax,%rbp
+  ec:	eb 95                	jmp    83 <on_file_new+0x23>
+  ee:	66 90                	xchg   %ax,%ax
+
+00000000000000f0 <on_file_open>:
+on_file_open():
+./src/callback.c:74
+  f0:	53                   	push   %rbx
+./src/callback.c:77
+  f1:	e8 00 00 00 00       	callq  f6 <on_file_open+0x6>
+  f6:	85 c0                	test   %eax,%eax
+  f8:	74 06                	je     100 <on_file_open+0x10>
+./src/callback.c:92
+  fa:	5b                   	pop    %rbx
+  fb:	c3                   	retq   
+  fc:	0f 1f 40 00          	nopl   0x0(%rax)
+./src/callback.c:79
+ 100:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 107 <on_file_open+0x17>
+ 107:	be 01 00 00 00       	mov    $0x1,%esi
+ 10c:	48 8b 38             	mov    (%rax),%rdi
+ 10f:	e8 00 00 00 00       	callq  114 <on_file_open+0x24>
+./src/callback.c:80
+ 114:	48 85 c0             	test   %rax,%rax
+./src/callback.c:79
+ 117:	48 89 c3             	mov    %rax,%rbx
+./src/callback.c:80
+ 11a:	74 de                	je     fa <on_file_open+0xa>
+./src/callback.c:81
+ 11c:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 123 <on_file_open+0x33>
+ 123:	48 89 de             	mov    %rbx,%rsi
+ 126:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 12a:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 12e:	e8 00 00 00 00       	callq  133 <on_file_open+0x43>
+ 133:	85 c0                	test   %eax,%eax
+ 135:	75 41                	jne    178 <on_file_open+0x88>
+./src/callback.c:84
+ 137:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 13e <on_file_open+0x4e>
+ 13e:	48 8b 38             	mov    (%rax),%rdi
+ 141:	e8 00 00 00 00       	callq  146 <on_file_open+0x56>
+./src/callback.c:85
+ 146:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 14d <on_file_open+0x5d>
+ 14d:	48 89 18             	mov    %rbx,(%rax)
+./src/callback.c:86
+ 150:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 154:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 158:	e8 00 00 00 00       	callq  15d <on_file_open+0x6d>
+./src/callback.c:88
+ 15d:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 164 <on_file_open+0x74>
+./src/callback.c:92
+ 164:	5b                   	pop    %rbx
+./src/callback.c:88
+ 165:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 169:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 16d:	e9 00 00 00 00       	jmpq   172 <on_file_open+0x82>
+ 172:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/callback.c:82
+ 178:	48 89 df             	mov    %rbx,%rdi
+./src/callback.c:92
+ 17b:	5b                   	pop    %rbx
+./src/callback.c:82
+ 17c:	e9 00 00 00 00       	jmpq   181 <on_file_open+0x91>
+ 181:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 186:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 18d:	00 00 00 
+
+0000000000000190 <on_file_save_as>:
+on_file_save_as():
+./src/callback.c:110
+ 190:	55                   	push   %rbp
+ 191:	53                   	push   %rbx
+./src/callback.c:113
+ 192:	31 f6                	xor    %esi,%esi
+./src/callback.c:110
+ 194:	48 83 ec 08          	sub    $0x8,%rsp
+./src/callback.c:113
+ 198:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 19f <on_file_save_as+0xf>
+ 19f:	48 8b 38             	mov    (%rax),%rdi
+ 1a2:	e8 00 00 00 00       	callq  1a7 <on_file_save_as+0x17>
+./src/callback.c:114
+ 1a7:	48 85 c0             	test   %rax,%rax
+ 1aa:	74 74                	je     220 <on_file_save_as+0x90>
+ 1ac:	48 89 c3             	mov    %rax,%rbx
+./src/callback.c:116
+ 1af:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 1b6 <on_file_save_as+0x26>
+ 1b6:	48 89 de             	mov    %rbx,%rsi
+ 1b9:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 1bd:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 1c1:	e8 00 00 00 00       	callq  1c6 <on_file_save_as+0x36>
+ 1c6:	85 c0                	test   %eax,%eax
+ 1c8:	89 c5                	mov    %eax,%ebp
+ 1ca:	75 44                	jne    210 <on_file_save_as+0x80>
+./src/callback.c:120
+ 1cc:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 1d3 <on_file_save_as+0x43>
+ 1d3:	48 8b 38             	mov    (%rax),%rdi
+ 1d6:	e8 00 00 00 00       	callq  1db <on_file_save_as+0x4b>
+./src/callback.c:121
+ 1db:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 1e2 <on_file_save_as+0x52>
+ 1e2:	48 89 18             	mov    %rbx,(%rax)
+./src/callback.c:122
+ 1e5:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 1e9:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 1ed:	e8 00 00 00 00       	callq  1f2 <on_file_save_as+0x62>
+./src/callback.c:124
+ 1f2:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 1f9 <on_file_save_as+0x69>
+ 1f9:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 1fd:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 201:	e8 00 00 00 00       	callq  206 <on_file_save_as+0x76>
+./src/callback.c:127
+ 206:	48 83 c4 08          	add    $0x8,%rsp
+ 20a:	89 e8                	mov    %ebp,%eax
+ 20c:	5b                   	pop    %rbx
+ 20d:	5d                   	pop    %rbp
+ 20e:	c3                   	retq   
+ 20f:	90                   	nop
+./src/callback.c:117
+ 210:	48 89 df             	mov    %rbx,%rdi
+./src/callback.c:118
+ 213:	bd ff ff ff ff       	mov    $0xffffffff,%ebp
+./src/callback.c:117
+ 218:	e8 00 00 00 00       	callq  21d <on_file_save_as+0x8d>
+./src/callback.c:118
+ 21d:	eb e7                	jmp    206 <on_file_save_as+0x76>
+ 21f:	90                   	nop
+./src/callback.c:115
+ 220:	bd ff ff ff ff       	mov    $0xffffffff,%ebp
+ 225:	eb df                	jmp    206 <on_file_save_as+0x76>
+ 227:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 22e:	00 00 
+
+0000000000000230 <on_file_save>:
+on_file_save():
+./src/callback.c:97
+ 230:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 237 <on_file_save+0x7>
+ 237:	48 8b 00             	mov    (%rax),%rax
+ 23a:	48 8b 38             	mov    (%rax),%rdi
+ 23d:	48 85 ff             	test   %rdi,%rdi
+ 240:	74 47                	je     289 <on_file_save+0x59>
+./src/callback.c:96
+ 242:	53                   	push   %rbx
+./src/callback.c:99
+ 243:	e8 00 00 00 00       	callq  248 <on_file_save+0x18>
+ 248:	85 c0                	test   %eax,%eax
+ 24a:	74 3c                	je     288 <on_file_save+0x58>
+./src/callback.c:101
+ 24c:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 253 <on_file_save+0x23>
+ 253:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 257:	48 8b 30             	mov    (%rax),%rsi
+ 25a:	48 8b 7a 10          	mov    0x10(%rdx),%rdi
+ 25e:	e8 00 00 00 00       	callq  263 <on_file_save+0x33>
+ 263:	85 c0                	test   %eax,%eax
+ 265:	89 c3                	mov    %eax,%ebx
+ 267:	75 27                	jne    290 <on_file_save+0x60>
+./src/callback.c:104
+ 269:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 270 <on_file_save+0x40>
+ 270:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 274:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 278:	e8 00 00 00 00       	callq  27d <on_file_save+0x4d>
+./src/callback.c:107
+ 27d:	89 d8                	mov    %ebx,%eax
+ 27f:	5b                   	pop    %rbx
+ 280:	c3                   	retq   
+ 281:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 288:	5b                   	pop    %rbx
+./src/callback.c:100
+ 289:	e9 02 ff ff ff       	jmpq   190 <on_file_save_as>
+ 28e:	66 90                	xchg   %ax,%ax
+./src/callback.c:102
+ 290:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+ 295:	eb e6                	jmp    27d <on_file_save+0x4d>
+ 297:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 29e:	00 00 
+
+00000000000002a0 <on_file_print_preview>:
+on_file_print_preview():
+./src/callback.c:133
+ 2a0:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 2a7 <on_file_print_preview+0x7>
+./src/callback.c:131
+ 2a7:	53                   	push   %rbx
+./src/callback.c:133
+ 2a8:	31 f6                	xor    %esi,%esi
+ 2aa:	48 8b 00             	mov    (%rax),%rax
+ 2ad:	48 8b 38             	mov    (%rax),%rdi
+ 2b0:	e8 00 00 00 00       	callq  2b5 <on_file_print_preview+0x15>
+ 2b5:	48 89 c3             	mov    %rax,%rbx
+./src/callback.c:132
+ 2b8:	e8 00 00 00 00       	callq  2bd <on_file_print_preview+0x1d>
+ 2bd:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 2c4 <on_file_print_preview+0x24>
+ 2c4:	48 89 c6             	mov    %rax,%rsi
+ 2c7:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+ 2cb:	48 8b 7a 10          	mov    0x10(%rdx),%rdi
+ 2cf:	e8 00 00 00 00       	callq  2d4 <on_file_print_preview+0x34>
+ 2d4:	48 89 de             	mov    %rbx,%rsi
+ 2d7:	48 89 c7             	mov    %rax,%rdi
+./src/callback.c:134
+ 2da:	5b                   	pop    %rbx
+./src/callback.c:132
+ 2db:	e9 00 00 00 00       	jmpq   2e0 <on_file_print>
+
+00000000000002e0 <on_file_print>:
+on_file_print():
+./src/callback.c:139
+ 2e0:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 2e7 <on_file_print+0x7>
+./src/callback.c:137
+ 2e7:	53                   	push   %rbx
+./src/callback.c:139
+ 2e8:	31 f6                	xor    %esi,%esi
+ 2ea:	48 8b 00             	mov    (%rax),%rax
+ 2ed:	48 8b 38             	mov    (%rax),%rdi
+ 2f0:	e8 00 00 00 00       	callq  2f5 <on_file_print+0x15>
+ 2f5:	48 89 c3             	mov    %rax,%rbx
+./src/callback.c:138
+ 2f8:	e8 00 00 00 00       	callq  2fd <on_file_print+0x1d>
+ 2fd:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 304 <on_file_print+0x24>
+ 304:	48 89 c6             	mov    %rax,%rsi
+ 307:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+ 30b:	48 8b 7a 10          	mov    0x10(%rdx),%rdi
+ 30f:	e8 00 00 00 00       	callq  314 <on_file_print+0x34>
+ 314:	48 89 de             	mov    %rbx,%rsi
+ 317:	48 89 c7             	mov    %rax,%rdi
+./src/callback.c:140
+ 31a:	5b                   	pop    %rbx
+./src/callback.c:138
+ 31b:	e9 00 00 00 00       	jmpq   320 <on_file_close>
+
+0000000000000320 <on_file_close>:
+on_file_close():
+./src/callback.c:149
+ 320:	48 83 ec 08          	sub    $0x8,%rsp
+./src/callback.c:150
+ 324:	e8 00 00 00 00       	callq  329 <on_file_close+0x9>
+ 329:	85 c0                	test   %eax,%eax
+ 32b:	74 0b                	je     338 <on_file_close+0x18>
+./src/callback.c:170
+ 32d:	48 83 c4 08          	add    $0x8,%rsp
+ 331:	c3                   	retq   
+ 332:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/callback.c:151
+ 338:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 33f <on_file_close+0x1f>
+ 33f:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 343:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 347:	e8 00 00 00 00       	callq  34c <on_file_close+0x2c>
+./src/callback.c:153
+ 34c:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 353 <on_file_close+0x33>
+ 353:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 35a <on_file_close+0x3a>
+ 35a:	31 d2                	xor    %edx,%edx
+ 35c:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 360:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 364:	e8 00 00 00 00       	callq  369 <on_file_close+0x49>
+./src/callback.c:154
+ 369:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 370 <on_file_close+0x50>
+ 370:	31 f6                	xor    %esi,%esi
+ 372:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 376:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 37a:	e8 00 00 00 00       	callq  37f <on_file_close+0x5f>
+./src/callback.c:155
+ 37f:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 386 <on_file_close+0x66>
+ 386:	48 8b 02             	mov    (%rdx),%rax
+ 389:	48 8b 38             	mov    (%rax),%rdi
+ 38c:	48 85 ff             	test   %rdi,%rdi
+ 38f:	74 0f                	je     3a0 <on_file_close+0x80>
+./src/callback.c:156
+ 391:	e8 00 00 00 00       	callq  396 <on_file_close+0x76>
+ 396:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 39d <on_file_close+0x7d>
+ 39d:	48 8b 02             	mov    (%rdx),%rax
+./src/callback.c:158
+ 3a0:	48 8b 78 08          	mov    0x8(%rax),%rdi
+./src/callback.c:157
+ 3a4:	48 c7 00 00 00 00 00 	movq   $0x0,(%rax)
+./src/callback.c:158
+ 3ab:	48 85 ff             	test   %rdi,%rdi
+ 3ae:	74 0f                	je     3bf <on_file_close+0x9f>
+./src/callback.c:159
+ 3b0:	e8 00 00 00 00       	callq  3b5 <on_file_close+0x95>
+ 3b5:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 3bc <on_file_close+0x9c>
+ 3bc:	48 8b 02             	mov    (%rdx),%rax
+./src/callback.c:160
+ 3bf:	48 c7 40 08 00 00 00 	movq   $0x0,0x8(%rax)
+ 3c6:	00 
+./src/callback.c:161
+ 3c7:	c7 40 10 00 00 00 00 	movl   $0x0,0x10(%rax)
+./src/callback.c:162
+ 3ce:	c6 40 14 0a          	movb   $0xa,0x14(%rax)
+./src/callback.c:163
+ 3d2:	48 8b 42 08          	mov    0x8(%rdx),%rax
+ 3d6:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 3da:	e8 00 00 00 00       	callq  3df <on_file_close+0xbf>
+./src/callback.c:165
+ 3df:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 3e6 <on_file_close+0xc6>
+ 3e6:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 3ea:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 3ee:	e8 00 00 00 00       	callq  3f3 <on_file_close+0xd3>
+./src/callback.c:166
+ 3f3:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 3fa <on_file_close+0xda>
+ 3fa:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 3fe:	48 8b 78 10          	mov    0x10(%rax),%rdi
+./src/callback.c:170
+ 402:	48 83 c4 08          	add    $0x8,%rsp
+./src/callback.c:166
+ 406:	e9 00 00 00 00       	jmpq   40b <on_file_close+0xeb>
+ 40b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000000410 <on_file_quit>:
+on_file_quit():
+./src/callback.c:173
+ 410:	48 83 ec 08          	sub    $0x8,%rsp
+./src/callback.c:174
+ 414:	e8 00 00 00 00       	callq  419 <on_file_quit+0x9>
+ 419:	85 c0                	test   %eax,%eax
+ 41b:	74 0b                	je     428 <on_file_quit+0x18>
+./src/callback.c:178
+ 41d:	48 83 c4 08          	add    $0x8,%rsp
+ 421:	c3                   	retq   
+ 422:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+./src/callback.c:175
+ 428:	e8 00 00 00 00       	callq  42d <on_file_quit+0x1d>
+./src/callback.c:178
+ 42d:	48 83 c4 08          	add    $0x8,%rsp
+./src/callback.c:176
+ 431:	e9 00 00 00 00       	jmpq   436 <on_file_quit+0x26>
+ 436:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 43d:	00 00 00 
+
+0000000000000440 <on_edit_undo>:
+on_edit_undo():
+./src/callback.c:182
+ 440:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 447 <on_edit_undo+0x7>
+ 447:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 44b:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 44f:	e9 00 00 00 00       	jmpq   454 <on_edit_undo+0x14>
+ 454:	66 90                	xchg   %ax,%ax
+ 456:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 45d:	00 00 00 
+
+0000000000000460 <on_edit_redo>:
+on_edit_redo():
+./src/callback.c:187
+ 460:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 467 <on_edit_redo+0x7>
+ 467:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 46b:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 46f:	e9 00 00 00 00       	jmpq   474 <on_edit_redo+0x14>
+ 474:	66 90                	xchg   %ax,%ax
+ 476:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 47d:	00 00 00 
+
+0000000000000480 <on_edit_cut>:
+on_edit_cut():
+./src/callback.c:191
+ 480:	48 83 ec 08          	sub    $0x8,%rsp
+./src/callback.c:192
+ 484:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 48b <on_edit_cut+0xb>
+ 48b:	be 50 00 00 00       	mov    $0x50,%esi
+ 490:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 494:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 498:	e8 00 00 00 00       	callq  49d <on_edit_cut+0x1d>
+ 49d:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 4a4 <on_edit_cut+0x24>
+ 4a4:	48 89 c7             	mov    %rax,%rdi
+./src/callback.c:193
+ 4a7:	48 83 c4 08          	add    $0x8,%rsp
+./src/callback.c:192
+ 4ab:	31 c0                	xor    %eax,%eax
+ 4ad:	e9 00 00 00 00       	jmpq   4b2 <on_edit_cut+0x32>
+ 4b2:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 4bd:	00 00 00 
+
+00000000000004c0 <on_edit_copy>:
+on_edit_copy():
+./src/callback.c:196
+ 4c0:	48 83 ec 08          	sub    $0x8,%rsp
+./src/callback.c:197
+ 4c4:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 4cb <on_edit_copy+0xb>
+ 4cb:	be 50 00 00 00       	mov    $0x50,%esi
+ 4d0:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 4d4:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 4d8:	e8 00 00 00 00       	callq  4dd <on_edit_copy+0x1d>
+ 4dd:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 4e4 <on_edit_copy+0x24>
+ 4e4:	48 89 c7             	mov    %rax,%rdi
+./src/callback.c:198
+ 4e7:	48 83 c4 08          	add    $0x8,%rsp
+./src/callback.c:197
+ 4eb:	31 c0                	xor    %eax,%eax
+ 4ed:	e9 00 00 00 00       	jmpq   4f2 <on_edit_copy+0x32>
+ 4f2:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4f6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 4fd:	00 00 00 
+
+0000000000000500 <on_edit_paste>:
+on_edit_paste():
+./src/callback.c:201
+ 500:	48 83 ec 08          	sub    $0x8,%rsp
+./src/callback.c:202
+ 504:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 50b <on_edit_paste+0xb>
+ 50b:	be 50 00 00 00       	mov    $0x50,%esi
+ 510:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 514:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 518:	e8 00 00 00 00       	callq  51d <on_edit_paste+0x1d>
+ 51d:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 524 <on_edit_paste+0x24>
+ 524:	48 89 c7             	mov    %rax,%rdi
+./src/callback.c:207
+ 527:	48 83 c4 08          	add    $0x8,%rsp
+./src/callback.c:202
+ 52b:	31 c0                	xor    %eax,%eax
+ 52d:	e9 00 00 00 00       	jmpq   532 <on_edit_paste+0x32>
+ 532:	0f 1f 40 00          	nopl   0x0(%rax)
+ 536:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 53d:	00 00 00 
+
+0000000000000540 <on_edit_delete>:
+on_edit_delete():
+./src/callback.c:211
+ 540:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 547 <on_edit_delete+0x7>
+ 547:	ba 01 00 00 00       	mov    $0x1,%edx
+ 54c:	be 01 00 00 00       	mov    $0x1,%esi
+ 551:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 555:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 559:	e9 00 00 00 00       	jmpq   55e <on_edit_delete+0x1e>
+ 55e:	66 90                	xchg   %ax,%ax
+
+0000000000000560 <on_edit_select_all>:
+on_edit_select_all():
+./src/callback.c:215
+ 560:	41 54                	push   %r12
+ 562:	55                   	push   %rbp
+set_selection_bound():
+./src/callback.c:29
+ 563:	31 d2                	xor    %edx,%edx
+on_edit_select_all():
+./src/callback.c:215
+ 565:	53                   	push   %rbx
+ 566:	48 81 ec b0 00 00 00 	sub    $0xb0,%rsp
+ 56d:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 574:	00 00 
+ 576:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+ 57d:	00 
+ 57e:	31 c0                	xor    %eax,%eax
+./src/callback.c:216
+ 580:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 587 <on_edit_select_all+0x27>
+set_selection_bound():
+./src/callback.c:31
+ 587:	4c 8d 64 24 50       	lea    0x50(%rsp),%r12
+./src/callback.c:29
+ 58c:	48 89 e6             	mov    %rsp,%rsi
+on_edit_select_all():
+./src/callback.c:216
+ 58f:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 593:	48 8b 58 18          	mov    0x18(%rax),%rbx
+set_selection_bound():
+./src/callback.c:29
+ 597:	48 89 df             	mov    %rbx,%rdi
+ 59a:	e8 00 00 00 00       	callq  59f <on_edit_select_all+0x3f>
+./src/callback.c:31
+ 59f:	4c 89 e6             	mov    %r12,%rsi
+ 5a2:	48 89 df             	mov    %rbx,%rdi
+ 5a5:	e8 00 00 00 00       	callq  5aa <on_edit_select_all+0x4a>
+./src/callback.c:34
+ 5aa:	4c 89 e6             	mov    %r12,%rsi
+ 5ad:	48 89 df             	mov    %rbx,%rdi
+ 5b0:	e8 00 00 00 00       	callq  5b5 <on_edit_select_all+0x55>
+./src/callback.c:35
+ 5b5:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 5bc <on_edit_select_all+0x5c>
+ 5bc:	48 89 e2             	mov    %rsp,%rdx
+ 5bf:	48 89 df             	mov    %rbx,%rdi
+ 5c2:	e8 00 00 00 00       	callq  5c7 <on_edit_select_all+0x67>
+on_edit_select_all():
+./src/callback.c:218
+ 5c7:	48 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%rax
+ 5ce:	00 
+ 5cf:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+ 5d6:	00 00 
+ 5d8:	75 0c                	jne    5e6 <on_edit_select_all+0x86>
+ 5da:	48 81 c4 b0 00 00 00 	add    $0xb0,%rsp
+ 5e1:	5b                   	pop    %rbx
+ 5e2:	5d                   	pop    %rbp
+ 5e3:	41 5c                	pop    %r12
+ 5e5:	c3                   	retq   
+ 5e6:	e8 00 00 00 00       	callq  5eb <on_edit_select_all+0x8b>
+ 5eb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+00000000000005f0 <on_search_find>:
+on_search_find():
+./src/callback.c:238
+ 5f0:	48 83 ec 08          	sub    $0x8,%rsp
+./src/callback.c:239
+ 5f4:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 5fb <on_search_find+0xb>
+ 5fb:	31 f6                	xor    %esi,%esi
+ 5fd:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 601:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 605:	e8 00 00 00 00       	callq  60a <on_search_find+0x1a>
+ 60a:	83 f8 fb             	cmp    $0xfffffffb,%eax
+ 60d:	74 09                	je     618 <on_search_find+0x28>
+./src/callback.c:241
+ 60f:	48 83 c4 08          	add    $0x8,%rsp
+ 613:	c3                   	retq   
+ 614:	0f 1f 40 00          	nopl   0x0(%rax)
+activate_quick_find():
+./src/callback.c:225
+ 618:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 61e <on_search_find+0x2e>
+ 61e:	85 c0                	test   %eax,%eax
+ 620:	75 ed                	jne    60f <on_search_find+0x1f>
+on_search_find():
+./src/callback.c:241
+ 622:	48 83 c4 08          	add    $0x8,%rsp
+activate_quick_find():
+ 626:	e9 d5 f9 ff ff       	jmpq   0 <activate_quick_find.part.0>
+on_search_find():
+ 62b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000000630 <on_search_find_next>:
+on_search_find_next():
+./src/callback.c:245
+ 630:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 637 <on_search_find_next+0x7>
+ 637:	be 01 00 00 00       	mov    $0x1,%esi
+ 63c:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 640:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 644:	e9 00 00 00 00       	jmpq   649 <on_search_find_next+0x19>
+ 649:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000000650 <on_search_find_previous>:
+on_search_find_previous():
+./src/callback.c:250
+ 650:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 657 <on_search_find_previous+0x7>
+ 657:	be ff ff ff ff       	mov    $0xffffffff,%esi
+ 65c:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 660:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 664:	e9 00 00 00 00       	jmpq   669 <on_search_find_previous+0x19>
+ 669:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000000670 <on_search_replace>:
+on_search_replace():
+./src/callback.c:254
+ 670:	48 83 ec 08          	sub    $0x8,%rsp
+./src/callback.c:255
+ 674:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 67b <on_search_replace+0xb>
+ 67b:	be 01 00 00 00       	mov    $0x1,%esi
+ 680:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 684:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 688:	e8 00 00 00 00       	callq  68d <on_search_replace+0x1d>
+ 68d:	83 f8 fb             	cmp    $0xfffffffb,%eax
+ 690:	74 0e                	je     6a0 <on_search_replace+0x30>
+./src/callback.c:257
+ 692:	48 83 c4 08          	add    $0x8,%rsp
+ 696:	c3                   	retq   
+ 697:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 69e:	00 00 
+activate_quick_find():
+./src/callback.c:225
+ 6a0:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 6a6 <on_search_replace+0x36>
+ 6a6:	85 c0                	test   %eax,%eax
+ 6a8:	75 e8                	jne    692 <on_search_replace+0x22>
+on_search_replace():
+./src/callback.c:257
+ 6aa:	48 83 c4 08          	add    $0x8,%rsp
+activate_quick_find():
+ 6ae:	e9 4d f9 ff ff       	jmpq   0 <activate_quick_find.part.0>
+on_search_replace():
+ 6b3:	0f 1f 00             	nopl   (%rax)
+ 6b6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 6bd:	00 00 00 
+
+00000000000006c0 <on_search_jump_to>:
+on_search_jump_to():
+./src/callback.c:261
+ 6c0:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 6c7 <on_search_jump_to+0x7>
+ 6c7:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 6cb:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 6cf:	e9 00 00 00 00       	jmpq   6d4 <on_search_jump_to+0x14>
+ 6d4:	66 90                	xchg   %ax,%ax
+ 6d6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 6dd:	00 00 00 
+
+00000000000006e0 <on_option_font>:
+on_option_font():
+./src/callback.c:266
+ 6e0:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 6e7 <on_option_font+0x7>
+ 6e7:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 6eb:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 6ef:	e9 00 00 00 00       	jmpq   6f4 <on_option_font+0x14>
+ 6f4:	66 90                	xchg   %ax,%ax
+ 6f6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 6fd:	00 00 00 
+
+0000000000000700 <on_option_word_wrap>:
+on_option_word_wrap():
+./src/callback.c:270
+ 700:	55                   	push   %rbp
+ 701:	53                   	push   %rbx
+ 702:	48 83 ec 08          	sub    $0x8,%rsp
+./src/callback.c:274
+ 706:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 70d <on_option_word_wrap+0xd>
+ 70d:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 711:	48 8b 78 08          	mov    0x8(%rax),%rdi
+ 715:	e8 00 00 00 00       	callq  71a <on_option_word_wrap+0x1a>
+ 71a:	48 89 c5             	mov    %rax,%rbp
+./src/callback.c:276
+ 71d:	e8 00 00 00 00       	callq  722 <on_option_word_wrap+0x22>
+ 722:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 729 <on_option_word_wrap+0x29>
+ 729:	48 89 c3             	mov    %rax,%rbx
+ 72c:	48 89 ef             	mov    %rbp,%rdi
+ 72f:	e8 00 00 00 00       	callq  734 <on_option_word_wrap+0x34>
+ 734:	48 89 de             	mov    %rbx,%rsi
+ 737:	48 89 c7             	mov    %rax,%rdi
+./src/callback.c:277
+ 73a:	31 db                	xor    %ebx,%ebx
+./src/callback.c:276
+ 73c:	e8 00 00 00 00       	callq  741 <on_option_word_wrap+0x41>
+./src/callback.c:275
+ 741:	48 89 c7             	mov    %rax,%rdi
+ 744:	e8 00 00 00 00       	callq  749 <on_option_word_wrap+0x49>
+./src/callback.c:277
+ 749:	85 c0                	test   %eax,%eax
+ 74b:	0f 95 c3             	setne  %bl
+ 74e:	e8 00 00 00 00       	callq  753 <on_option_word_wrap+0x53>
+ 753:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 75a <on_option_word_wrap+0x5a>
+ 75a:	48 89 c6             	mov    %rax,%rsi
+ 75d:	01 db                	add    %ebx,%ebx
+ 75f:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+ 763:	48 8b 7a 10          	mov    0x10(%rdx),%rdi
+ 767:	e8 00 00 00 00       	callq  76c <on_option_word_wrap+0x6c>
+./src/callback.c:279
+ 76c:	48 83 c4 08          	add    $0x8,%rsp
+./src/callback.c:277
+ 770:	89 de                	mov    %ebx,%esi
+ 772:	48 89 c7             	mov    %rax,%rdi
+./src/callback.c:279
+ 775:	5b                   	pop    %rbx
+ 776:	5d                   	pop    %rbp
+./src/callback.c:277
+ 777:	e9 00 00 00 00       	jmpq   77c <on_option_word_wrap+0x7c>
+ 77c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000000780 <on_option_line_numbers>:
+on_option_line_numbers():
+./src/callback.c:282
+ 780:	55                   	push   %rbp
+ 781:	53                   	push   %rbx
+ 782:	48 83 ec 08          	sub    $0x8,%rsp
+./src/callback.c:286
+ 786:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 78d <on_option_line_numbers+0xd>
+ 78d:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 791:	48 8b 78 08          	mov    0x8(%rax),%rdi
+ 795:	e8 00 00 00 00       	callq  79a <on_option_line_numbers+0x1a>
+ 79a:	48 89 c5             	mov    %rax,%rbp
+./src/callback.c:288
+ 79d:	e8 00 00 00 00       	callq  7a2 <on_option_line_numbers+0x22>
+ 7a2:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 7a9 <on_option_line_numbers+0x29>
+ 7a9:	48 89 c3             	mov    %rax,%rbx
+ 7ac:	48 89 ef             	mov    %rbp,%rdi
+ 7af:	e8 00 00 00 00       	callq  7b4 <on_option_line_numbers+0x34>
+ 7b4:	48 89 de             	mov    %rbx,%rsi
+ 7b7:	48 89 c7             	mov    %rax,%rdi
+ 7ba:	e8 00 00 00 00       	callq  7bf <on_option_line_numbers+0x3f>
+./src/callback.c:287
+ 7bf:	48 89 c7             	mov    %rax,%rdi
+ 7c2:	e8 00 00 00 00       	callq  7c7 <on_option_line_numbers+0x47>
+./src/callback.c:289
+ 7c7:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 7ce <on_option_line_numbers+0x4e>
+ 7ce:	89 c6                	mov    %eax,%esi
+ 7d0:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+ 7d4:	48 8b 7a 10          	mov    0x10(%rdx),%rdi
+./src/callback.c:290
+ 7d8:	48 83 c4 08          	add    $0x8,%rsp
+ 7dc:	5b                   	pop    %rbx
+ 7dd:	5d                   	pop    %rbp
+./src/callback.c:289
+ 7de:	e9 00 00 00 00       	jmpq   7e3 <on_option_line_numbers+0x63>
+ 7e3:	0f 1f 00             	nopl   (%rax)
+ 7e6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 7ed:	00 00 00 
+
+00000000000007f0 <on_option_always_on_top>:
+on_option_always_on_top():
+./src/callback.c:297
+ 7f0:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 7f6 <on_option_always_on_top+0x6>
+./src/callback.c:293
+ 7f6:	53                   	push   %rbx
+./src/callback.c:297
+ 7f7:	31 db                	xor    %ebx,%ebx
+ 7f9:	85 c0                	test   %eax,%eax
+ 7fb:	0f 94 c3             	sete   %bl
+ 7fe:	89 1d 00 00 00 00    	mov    %ebx,0x0(%rip)        # 804 <on_option_always_on_top+0x14>
+./src/callback.c:298
+ 804:	e8 00 00 00 00       	callq  809 <on_option_always_on_top+0x19>
+ 809:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 810 <on_option_always_on_top+0x20>
+ 810:	48 89 c6             	mov    %rax,%rsi
+ 813:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+ 817:	48 8b 3a             	mov    (%rdx),%rdi
+ 81a:	e8 00 00 00 00       	callq  81f <on_option_always_on_top+0x2f>
+ 81f:	89 de                	mov    %ebx,%esi
+ 821:	48 89 c7             	mov    %rax,%rdi
+./src/callback.c:300
+ 824:	5b                   	pop    %rbx
+./src/callback.c:298
+ 825:	e9 00 00 00 00       	jmpq   82a <on_option_always_on_top+0x3a>
+ 82a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000000830 <on_option_auto_indent>:
+on_option_auto_indent():
+./src/callback.c:303
+ 830:	55                   	push   %rbp
+ 831:	53                   	push   %rbx
+ 832:	48 83 ec 08          	sub    $0x8,%rsp
+./src/callback.c:307
+ 836:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 83d <on_option_auto_indent+0xd>
+ 83d:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 841:	48 8b 78 08          	mov    0x8(%rax),%rdi
+ 845:	e8 00 00 00 00       	callq  84a <on_option_auto_indent+0x1a>
+ 84a:	48 89 c5             	mov    %rax,%rbp
+./src/callback.c:309
+ 84d:	e8 00 00 00 00       	callq  852 <on_option_auto_indent+0x22>
+ 852:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 859 <on_option_auto_indent+0x29>
+ 859:	48 89 c3             	mov    %rax,%rbx
+ 85c:	48 89 ef             	mov    %rbp,%rdi
+ 85f:	e8 00 00 00 00       	callq  864 <on_option_auto_indent+0x34>
+ 864:	48 89 de             	mov    %rbx,%rsi
+ 867:	48 89 c7             	mov    %rax,%rdi
+ 86a:	e8 00 00 00 00       	callq  86f <on_option_auto_indent+0x3f>
+./src/callback.c:308
+ 86f:	48 89 c7             	mov    %rax,%rdi
+ 872:	e8 00 00 00 00       	callq  877 <on_option_auto_indent+0x47>
+./src/callback.c:311
+ 877:	48 83 c4 08          	add    $0x8,%rsp
+./src/callback.c:310
+ 87b:	89 c7                	mov    %eax,%edi
+./src/callback.c:311
+ 87d:	5b                   	pop    %rbx
+ 87e:	5d                   	pop    %rbp
+./src/callback.c:310
+ 87f:	e9 00 00 00 00       	jmpq   884 <on_option_auto_indent+0x54>
+ 884:	66 90                	xchg   %ax,%ax
+ 886:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 88d:	00 00 00 
+
+0000000000000890 <on_help_about>:
+on_help_about():
+./src/callback.c:314
+ 890:	41 54                	push   %r12
+ 892:	55                   	push   %rbp
+./src/callback.c:316
+ 893:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 89a <on_help_about+0xa>
+./src/callback.c:314
+ 89a:	53                   	push   %rbx
+./src/callback.c:316
+ 89b:	31 ff                	xor    %edi,%edi
+ 89d:	ba 05 00 00 00       	mov    $0x5,%edx
+./src/callback.c:323
+ 8a2:	48 8d 2d 00 00 00 00 	lea    0x0(%rip),%rbp        # 8a9 <on_help_about+0x19>
+./src/callback.c:314
+ 8a9:	48 83 ec 30          	sub    $0x30,%rsp
+ 8ad:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+ 8b4:	00 00 
+ 8b6:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 8bb:	31 c0                	xor    %eax,%eax
+./src/callback.c:316
+ 8bd:	e8 00 00 00 00       	callq  8c2 <on_help_about+0x32>
+./src/callback.c:321
+ 8c2:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 8c9 <on_help_about+0x39>
+./src/callback.c:316
+ 8c9:	49 89 c4             	mov    %rax,%r12
+./src/callback.c:317
+ 8cc:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 8d3 <on_help_about+0x43>
+./src/callback.c:321
+ 8d3:	ba 05 00 00 00       	mov    $0x5,%edx
+ 8d8:	31 ff                	xor    %edi,%edi
+./src/callback.c:317
+ 8da:	48 c7 44 24 08 00 00 	movq   $0x0,0x8(%rsp)
+ 8e1:	00 00 
+ 8e3:	48 89 04 24          	mov    %rax,(%rsp)
+./src/callback.c:321
+ 8e7:	e8 00 00 00 00       	callq  8ec <on_help_about+0x5c>
+./src/callback.c:323
+ 8ec:	b9 13 00 00 00       	mov    $0x13,%ecx
+ 8f1:	48 89 c6             	mov    %rax,%rsi
+ 8f4:	48 89 ef             	mov    %rbp,%rdi
+./src/callback.c:324
+ 8f7:	f3 a6                	repz cmpsb %es:(%rdi),%ds:(%rsi)
+./src/callback.c:321
+ 8f9:	48 89 c3             	mov    %rax,%rbx
+./src/callback.c:324
+ 8fc:	b8 00 00 00 00       	mov    $0x0,%eax
+./src/callback.c:327
+ 901:	48 c7 44 24 18 00 00 	movq   $0x0,0x18(%rsp)
+ 908:	00 00 
+./src/callback.c:324
+ 90a:	48 0f 44 d8          	cmove  %rax,%rbx
+./src/callback.c:327
+ 90e:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 915 <on_help_about+0x85>
+ 915:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+./src/callback.c:331
+ 91a:	e8 00 00 00 00       	callq  91f <on_help_about+0x8f>
+ 91f:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 926 <on_help_about+0x96>
+ 926:	48 89 c6             	mov    %rax,%rsi
+ 929:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+ 92d:	48 8b 3a             	mov    (%rdx),%rdi
+ 930:	e8 00 00 00 00       	callq  935 <on_help_about+0xa5>
+ 935:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 93c <on_help_about+0xac>
+ 93c:	6a 00                	pushq  $0x0
+ 93e:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 945 <on_help_about+0xb5>
+ 945:	4c 8d 0d 00 00 00 00 	lea    0x0(%rip),%r9        # 94c <on_help_about+0xbc>
+ 94c:	4c 8d 05 00 00 00 00 	lea    0x0(%rip),%r8        # 953 <on_help_about+0xc3>
+ 953:	48 89 c7             	mov    %rax,%rdi
+ 956:	51                   	push   %rcx
+ 957:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 95e <on_help_about+0xce>
+ 95e:	31 c0                	xor    %eax,%eax
+ 960:	51                   	push   %rcx
+ 961:	53                   	push   %rbx
+ 962:	48 8d 1d 00 00 00 00 	lea    0x0(%rip),%rbx        # 969 <on_help_about+0xd9>
+ 969:	55                   	push   %rbp
+ 96a:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 971 <on_help_about+0xe1>
+ 971:	48 8d 54 24 38       	lea    0x38(%rsp),%rdx
+ 976:	52                   	push   %rdx
+ 977:	53                   	push   %rbx
+ 978:	48 8d 54 24 38       	lea    0x38(%rsp),%rdx
+ 97d:	52                   	push   %rdx
+ 97e:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # 985 <on_help_about+0xf5>
+ 985:	56                   	push   %rsi
+ 986:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 98d <on_help_about+0xfd>
+ 98d:	41 54                	push   %r12
+ 98f:	e8 00 00 00 00       	callq  994 <on_help_about+0x104>
+./src/callback.c:373
+ 994:	48 83 c4 50          	add    $0x50,%rsp
+ 998:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 99d:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+ 9a4:	00 00 
+ 9a6:	75 09                	jne    9b1 <on_help_about+0x121>
+ 9a8:	48 83 c4 30          	add    $0x30,%rsp
+ 9ac:	5b                   	pop    %rbx
+ 9ad:	5d                   	pop    %rbp
+ 9ae:	41 5c                	pop    %r12
+ 9b0:	c3                   	retq   
+ 9b1:	e8 00 00 00 00       	callq  9b6 <on_help_about+0x126>
