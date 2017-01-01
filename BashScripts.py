@@ -3,7 +3,8 @@ import subprocess
 import glob
 
 '''This class contains functions that execute bash scripts on behalf of the user. Specifically,
-the class is responsible for downloading and compiling packages, as well as executing the Objdump program on all pbject files within a given folder.'''
+the class is responsible for downloading and compiling packages, as well as executing the Objdump program
+on all pbject files within a given folder.'''
 
 class BashScripts:
     def find_and_compile(self, packages):
