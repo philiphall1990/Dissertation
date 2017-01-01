@@ -1,5 +1,3 @@
-
-
 '''This class holds global variables that persist and are used throughout the program'''
 class Vars:
     machine_code_instruction_list = list()
